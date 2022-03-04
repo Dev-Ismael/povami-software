@@ -425,7 +425,7 @@ nav.navbar .underline{
 ===================================================================*/
 #footer{
     background-image: url("../images/footer.jpg");
-    min-height: 400px;
+    min-height: 500px;
     color: #fff;
     padding-top: 180px;
 }
@@ -467,10 +467,10 @@ nav.navbar .underline{
 #register #form .form-inner{
 	padding: 15px;
 	border-radius: 7px;
-    box-shadow: 0px 0px 10px 1px #d8d8d8d9;
+    box-shadow: 0px 0px 10px 1px #bebebed9;
 	background-color: #fff;
 	margin: 0px auto;
-	width: 450px;
+	max-width: 450px;
 }
 #register #form .title{
 	font-size: 22px;

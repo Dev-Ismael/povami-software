@@ -46,11 +46,49 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
-                            <a class="nav-item nav-link" href="#">Home  </a>
-                            <a class="nav-item nav-link" href="#">Services  </a>
-                            <a class="nav-item nav-link" href="#"> Works  </a>
-                            <a class="nav-item nav-link" href="#">Testmonilas  </a>
-                            <a class="nav-item nav-link" href="#">Afilliate </a>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#"> Home  </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#"> Services  </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#"> Works  </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#"> Testmonilas  </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#"> Afilliate  </a>
+                            </li>
+                            @guest
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
                         </div>
                     </div>
                 </div>
@@ -61,51 +99,57 @@
             @yield('content')
 
 
+            <!---- Remove footer from register pages ---->
+            @if( preg_match('(login|register)', url()->current()) !== 1 )
 
-            <!---- Footer ---->
-            <div id="footer"  class="bg-parallax">
+                <!---- Footer ---->
+                <div id="footer"  class="bg-parallax">
 
-                <div class="container">
-                    <div class="row ">
+                    <div class="container">
+                        <div class="row ">
 
-                        <div class="col-md-4">
-                            <div class="box">
-                                <h3> Povami Software</h3>
-                                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                            <div class="col-md-4">
+                                <div class="box">
+                                    <h3> Povami Software</h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-4">
-                            <div class="box">
-                                <h3> Company </h3>
-                                <ul class="list-unstyled">
-                                    <li> <a href="#"> Home </a> </li>
-                                    <li> <a href="#"> Services </a> </li>
-                                    <li> <a href="#"> Works </a> </li>
-                                    <li> <a href="#"> Testmonilas </a> </li>
-                                </ul>
+                            <div class="col-md-4">
+                                <div class="box">
+                                    <h3> Company </h3>
+                                    <ul class="list-unstyled">
+                                        <li> <a href="#"> Home </a> </li>
+                                        <li> <a href="#"> Services </a> </li>
+                                        <li> <a href="#"> Works </a> </li>
+                                        <li> <a href="#"> Testmonilas </a> </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <h3> Social Media </h3>
-                                <p>You can contact with us in our social media to get services</p>
-                                <ul class="list-unstyled social-media">
-                                    <li> <a href="#"> <i class="fab fa-facebook-square"></i>  </a> </li>
-                                    <li> <a href="#"> <i class="fab fa-twitter-square"></i>  </a> </li>
-                                    <li> <a href="#"> <i class="fab fa-youtube-square"></i>  </a> </li>
-                                    <li> <a href="#"> <i class="fas fa-envelope-square"></i>  </a> </li>
-                                </ul>
+                            <div class="col-md-4">
+                                <div class="box">
+                                    <h3> Social Media </h3>
+                                    <p>You can contact with us in our social media to get services</p>
+                                    <ul class="list-unstyled social-media">
+                                        <li> <a href="#"> <i class="fab fa-facebook-square"></i>  </a> </li>
+                                        <li> <a href="#"> <i class="fab fa-twitter-square"></i>  </a> </li>
+                                        <li> <a href="#"> <i class="fab fa-youtube-square"></i>  </a> </li>
+                                        <li> <a href="#"> <i class="fas fa-envelope-square"></i>  </a> </li>
+                                    </ul>
+                                </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
+
+                    
+
                 </div>
 
-                
 
-            </div>
+            @endif
+
             <!---- CopyRight ---->
             <div id="copyright">
                 All Right Reversed &copy; 2020 - Powerd By <i class="fas fa-heart"></i> Povami Software 
