@@ -12,21 +12,21 @@ $(document).ready( function (){
 			// At Scroll change backgroundColor
 			$(window).scroll(function() {
 				if ($(window).scrollTop() > 5 ) {
-					$("#home nav.navbar").css({
+					$(" nav.navbar").css({
 						'box-shadow' : '0px 0px 2px 2px #717171cc',
 						'background-color' : '#fff' ,
 					});
-					$("#home  nav.navbar a").css("color" , "#29004f");
-					$("#home  nav.navbar .navbar-toggler").css("color" , "#29004f");
-					$("#home .navbar-brand img").attr("src" , "images/icons/Logo1.png");
+					$("  nav.navbar a").css("color" , "#29004f");
+					$("  nav.navbar .navbar-toggler").css("color" , "#29004f");
+					$(" .navbar-brand img").attr("src" , "images/icons/Logo1.png");
 				} else {
-					$("#home  nav.navbar").css({
+					$("  nav.navbar").css({
 						'box-shadow' : 'none' ,
 						'background-color' : 'transparent' ,
 					});
-					$("#home  nav.navbar a").css("color" , "#fff");
-					$("#home  nav.navbar .navbar-toggler").css("color" , "#fff");
-					$("#home  .navbar-brand img").attr("src" , "images/icons/Logo2.png");
+					$("  nav.navbar a").css("color" , "#fff");
+					$("  nav.navbar .navbar-toggler").css("color" , "#fff");
+					$("  .navbar-brand img").attr("src" , "images/icons/Logo2.png");
 				}
 			});
 

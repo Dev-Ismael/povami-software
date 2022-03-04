@@ -36,8 +36,87 @@
     <body>
         <div id="app">
 
-            Hello
+
+            <!---- Navbar ---->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="#"> <img src="images/icons/Logo2.png" alt=""> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i> </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <a class="nav-item nav-link" href="#">Home  </a>
+                            <a class="nav-item nav-link" href="#">Services  </a>
+                            <a class="nav-item nav-link" href="#"> Works  </a>
+                            <a class="nav-item nav-link" href="#">Testmonilas  </a>
+                            <a class="nav-item nav-link" href="#">Afilliate </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <!---- Content ---->
             @yield('content')
+
+
+
+            <!---- Footer ---->
+            <div id="footer"  class="bg-parallax">
+
+                <div class="container">
+                    <div class="row ">
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <h3> Povami Software</h3>
+                                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <h3> Company </h3>
+                                <ul class="list-unstyled">
+                                    <li> <a href="#"> Home </a> </li>
+                                    <li> <a href="#"> Services </a> </li>
+                                    <li> <a href="#"> Works </a> </li>
+                                    <li> <a href="#"> Testmonilas </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box">
+                                <h3> Social Media </h3>
+                                <p>You can contact with us in our social media to get services</p>
+                                <ul class="list-unstyled social-media">
+                                    <li> <a href="#"> <i class="fab fa-facebook-square"></i>  </a> </li>
+                                    <li> <a href="#"> <i class="fab fa-twitter-square"></i>  </a> </li>
+                                    <li> <a href="#"> <i class="fab fa-youtube-square"></i>  </a> </li>
+                                    <li> <a href="#"> <i class="fas fa-envelope-square"></i>  </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <!---- CopyRight ---->
+            <div id="copyright">
+                All Right Reversed &copy; 2020 - Powerd By <i class="fas fa-heart"></i> Povami Software 
+            </div>
+
+
+
+
+
+
+
 
         </div>
 
@@ -50,7 +129,7 @@
 
 
 
-        
+
 
         <!-- JQUERY Framwork-->
         <script src="{{ asset('js/jquery.js') }} "></script>

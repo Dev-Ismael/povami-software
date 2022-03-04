@@ -87,16 +87,16 @@ nav.navbar .underline{
 /*=================================================================
 ===========  Home Header 
 ===================================================================*/
-#home #header{
+ #header{
     background-image: url("../images/bg.jpg");
     width: 100%;
     height: 650px;
 }
-#home #header .info{
+ #header .info{
     padding-top: 10rem;
     color: #fff;
 }
-#home #header .info a{
+ #header .info a{
     border-radius: 20px;
     padding: 8px 15px;
 }
@@ -111,27 +111,27 @@ nav.navbar .underline{
 /*===================================================================
 ============ Services
 ====================================================================*/
-#home #services .icon{
+ #services .icon{
     border-radius: 50%;
     display: inline-block;
     padding: 10px;
     box-shadow: 14px 4px 7px -4px #29004f40;
     border: 1px solid #29004f1a;
 }
-#home #services .box {
+ #services .box {
     margin: 35px 0px;
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 2px 4px 18px 1px #d8d8d859;
 }
-#home #services .box img{
+ #services .box img{
     width: 35px;
 }
-#home #services .box h3{
+ #services .box h3{
     margin: 10px 0px;
     color: #1b1b1b;
 }
-#home #services .box p {
+ #services .box p {
     line-height: 18px;
     color: #484848ab;
     font-size: 14px;
@@ -139,7 +139,7 @@ nav.navbar .underline{
 /*=================================================================
 ===========  Works
 ===================================================================*/
-#home #works .work-box{
+ #works .work-box{
     height: 400px;
 	border-radius: 7px;
     box-shadow: 2px 4px 18px 1px #d8d8d8d9;
@@ -148,27 +148,27 @@ nav.navbar .underline{
 	position: relative;
 	transition: all 0.5s ease-in-out;
 }
-#home #works .work-box:hover{
+ #works .work-box:hover{
 	transform: scale(1.05);
 }
-#home #works .work-box img{
+ #works .work-box img{
 	width: 100%;
 	height: 225px;
 }
-#home #works .work-box .site-title{
+ #works .work-box .site-title{
 	font-weight: 800;
     font-size: 20px;
 	padding-top: 10px;
 }
-#home #works .work-box .site-desc{
+ #works .work-box .site-desc{
 	color: #939393;
 	line-height: 16px;
 	font-size: 13px;
 }
-#home #works .work-box p { 
+ #works .work-box p { 
 	padding: 0px 10px;	
 }
-#home #works .work-box a{
+ #works .work-box a{
 	position: absolute;
 	bottom: 10px;
 	font-weight: lighter;
@@ -181,7 +181,7 @@ nav.navbar .underline{
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
-#home #works .work-box a:hover{
+ #works .work-box a:hover{
 	text-decoration: none;
 	background-color: #28a745;
 	color: #fff;
@@ -190,32 +190,32 @@ nav.navbar .underline{
 /*=================================================================
 ===========  stats 
 ===================================================================*/
-#home #stats{
+ #stats{
 	width: 100%;
     padding: 100px 0px;
     background-image: linear-gradient( to right , #38125b , #5e3f78  ) ;
 }
 
-#home #stats span{
+ #stats span{
     color: #fff;
     font-size: 26px;
 }
 /*=================================================================
 ===========  testmoilas
 ===================================================================*/
-#home .section-title:after,
-#home .section-title:before {
+ .section-title:after,
+ .section-title:before {
 	content: '';
 	position: absolute;
 	bottom: 0;
 }
-#home .section-title:after {
+ .section-title:after {
 	height: 2px;
 	background-color: rgba(252, 92, 15, 0.46);
 	left: 25%;
 	right: 25%;
 }
-#home .section-title:before {
+ .section-title:before {
 	width: 15px;
 	height: 15px;
 	border: 3px solid #fff;
@@ -226,26 +226,26 @@ nav.navbar .underline{
 	z-index: 9;
 	border-radius: 50%;
 }
-#home .customer-feedback .owl-item img {
+ .customer-feedback .owl-item img {
     border-radius: 5px;
 	width: 85px;
 	height: 85px;
 }
-#home .feedback-slider-item {
+ .feedback-slider-item {
 	position: relative;
 	padding: 60px;
 	margin-top: -40px;
 }
-#home .customer-name {
+ .customer-name {
 	margin-top: 15px;
 	margin-bottom: 25px;
 	font-size: 20px;
 	font-weight: 500;
 }
-#home .feedback-slider-item p {
+ .feedback-slider-item p {
 	line-height: 1.875;
 }
-#home .customer-rating {
+ .customer-rating {
 	background-color: #eee;
 	border: 3px solid #fff;
 	color: rgba(1, 1, 1, 0.702);
@@ -260,16 +260,16 @@ nav.navbar .underline{
 	top: 77px;
 	text-indent: -3px;
 }
-#home .thumb-prev .customer-rating {
+ .thumb-prev .customer-rating {
 	top: -20px;
 	left: 0;
 	right: auto;
 }
-#home .thumb-next .customer-rating {
+ .thumb-next .customer-rating {
 	top: -20px;
 	right: 0;
 }
-#home .customer-rating i {
+ .customer-rating i {
 	color: #29004f;
 	position: absolute;
 	top: 10px;
@@ -278,7 +278,7 @@ nav.navbar .underline{
 	font-size: 12px;
 }
 /* GREY BACKGROUND COLOR OF THE ACTIVE SLIDER */
-#home .feedback-slider-item:after {
+ .feedback-slider-item:after {
 	content: '';
 	position: absolute;
 	left: 20px;
@@ -290,8 +290,8 @@ nav.navbar .underline{
 	border-radius: 10px;
 	z-index: -1;
 }
-#home .thumb-prev,
-#home .thumb-next {
+ .thumb-prev,
+ .thumb-next {
 	position: absolute;
 	z-index: 99;
 	top: 45%;
@@ -302,54 +302,54 @@ nav.navbar .underline{
 	-webkit-transition: all .3s;
 	transition: all .3s;
 }
-#home .thumb-next {
+ .thumb-next {
 	left: auto;
 	right: -90px;
 }
-#home .feedback-slider-thumb img {
+ .feedback-slider-thumb img {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
 	overflow: hidden;
 }
-#home .feedback-slider-thumb:hover {
+ .feedback-slider-thumb:hover {
 	opacity: .8;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
-#home .customer-feedback .owl-nav [class*="owl-"] {
+ .customer-feedback .owl-nav [class*="owl-"] {
 	position: relative;
 	display: inline-block;
 	bottom: 45px;
 	transition: all .2s ease-in;
 }
-#home .customer-feedback .owl-nav i {
+ .customer-feedback .owl-nav i {
 	background-color: transparent;
     color: #29004f;
     	font-size: 25px;
 }
-#home .customer-feedback .owl-prev {
+ .customer-feedback .owl-prev {
 	left: -15px;
 }
-#home .customer-feedback .owl-prev:hover {
+ .customer-feedback .owl-prev:hover {
 	left: -20px;
 }
-#home .customer-feedback .owl-next {
+ .customer-feedback .owl-next {
 	right: -15px;
 }
-#home .customer-feedback .owl-next:hover {
+ .customer-feedback .owl-next:hover {
 	right: -20px;
 }
 /* DOTS */
-#home .customer-feedback .owl-dots {
+ .customer-feedback .owl-dots {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 35px;
 }
-#home .customer-feedback .owl-dot {
+ .customer-feedback .owl-dot {
 	display: inline-block;
 }
-#home .customer-feedback .owl-dots .owl-dot span {
+ .customer-feedback .owl-dots .owl-dot span {
 	width: 11px;
 	height: 11px;
 	margin: 0 5px;
@@ -361,50 +361,50 @@ nav.navbar .underline{
 	transition: all 200ms ease;
 	border-radius: 50%;
 }
-#home .customer-feedback .owl-dots .owl-dot.active span {
+ .customer-feedback .owl-dots .owl-dot.active span {
 	background-color: #29004fcb;
 }
 /* RESPONSIVE */
 @media screen and (max-width: 767px) {
-	#home .feedback-slider-item:after {
+	 .feedback-slider-item:after {
 		left: 30px;
 		right: 30px;
 	}
-	#home .customer-feedback .owl-nav [class*="owl-"] {
+	 .customer-feedback .owl-nav [class*="owl-"] {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		margin-top: 45px;
 		bottom: auto;
 	}
-	#home .customer-feedback .owl-prev {
+	 .customer-feedback .owl-prev {
 		left: 0;
 	}
-	#home .customer-feedback .owl-next {
+	 .customer-feedback .owl-next {
 		right: 0;
 	}
 }
 /*=================================================================
 ===========  what-wait 
 ===================================================================*/
-#home #what-wait{
+ #what-wait{
     border-bottom: 1px solid rgb(24, 24, 24);
 }
-#home #what-wait a {
+ #what-wait a {
     color: #fff;
 }
-#home #what-wait .buttons a{
+ #what-wait .buttons a{
     border-radius: 20px;
     padding: 10px 18px;
     border: none;
 }
-#home #what-wait .buttons a:nth-of-type(1){
+ #what-wait .buttons a:nth-of-type(1){
     background-color: #29004fde;
 }
 /*=================================================================
 ===========  Payments 
 ===================================================================*/
-#home #payments img {
+ #payments img {
     cursor: pointer;
     height: 30px;
     margin: 15px;
@@ -416,7 +416,7 @@ nav.navbar .underline{
     -webkit-transition: .5s ease;
     -moz-transition: .5s ease;
 }
-#home #payments img:hover{
+ #payments img:hover{
     filter: grayscale(0%);
     opacity: 1
 }
