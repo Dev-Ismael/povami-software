@@ -182,13 +182,16 @@ nav.navbar .navbar-toggler{
 ===================================================================*/
  #stats{
 	width: 100%;
-    padding: 100px 0px;
+    padding: 40px 0px;
     background-image: linear-gradient( to right , #38125b , #5e3f78  ) ;
 }
-
- #stats span{
+#stats p{
     color: #fff;
-    font-size: 26px;
+    font-size: 22px;
+	margin-bottom: 0px;
+}
+#stats p i {
+	font-size: 40px;
 }
 /*=================================================================
 ===========  testmoilas

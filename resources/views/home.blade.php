@@ -192,33 +192,41 @@
         <div class="container text-center align-middle">
             <div class="row">
 
-                <div class="col-sm-6 col-md-3">
-                    <span class="num"> 725 </span>
-                    <br>
-                    <span class="text"> Clients </span>
+                <div class="col-sm-6 col-md-2 offset-md-1">
+                    <p class="icon"> <i class="fa-solid fa-handshake"></i>   </p>
+                    <p class="num"> + <span class="counter"> 458 </span> </p>
+                    <p class="text"> Clients </p>
                 </div>
                 <br>
                 
-                <div class="col-sm-6 col-md-3">
-                    <span class="num"> 825 </span>
-                    <br>
-                    <span class="text"> Projects </span>
+                <div class="col-sm-6 col-md-2">
+                    <p class="icon"> <i class="fa-solid fa-list-check"></i>  </p>
+                    <p class="num"> + <span class="counter"> 306 </span> </p>
+                    <p class="text"> Projects </p>
                 </div>
                 <br>
 
-                <div class="col-sm-6 col-md-3">
-                    <span class="num"> 126 </span>
-                    <br>
-                    <span class="text"> Empolyee </span>
+                <div class="col-sm-6 col-md-2">
+                    <p class="icon">  <i class="fa-solid fa-user-tie"></i>  </p>
+                    <p class="num"> +<span class="counter"> 48 </span> </p>
+                    <p class="text">  Empolyee </p>
                 </div>
                 <br>
 
-                <div class="col-sm-6 col-md-3">
-                    <span class="num"> 3 </span>
-                    <br>
-                    <span class="text"> Countries </span>
+                <div class="col-sm-6 col-md-2">
+                    <p class="icon">  <i class="fa-solid fa-square-share-nodes"></i>  </p>
+                    <p class="num"> + <span class="counter"> 500,000 </span>  </p>
+                    <p class="text"> Follower </p>
                 </div>
                 <br>
+
+                <div class="col-sm-6 col-md-2">
+                    <p class="icon">  <i class="fa-solid fa-earth-asia"></i>  </p>
+                    <p class="num"> + <span class="counter"> 3 </span>  </p>
+                    <p class="text"> Countries </p>
+                </div>
+                <br>
+
 
             </div>
         </div>
