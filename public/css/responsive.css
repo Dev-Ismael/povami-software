@@ -8,7 +8,7 @@
 
 @media (max-width:767px){
     #header{
-        background-image: url("../images/bg2.png");
+        background-image: url("../images/bg-sm.jpg");
         height: 550px;
     }
     nav.navbar .underline{

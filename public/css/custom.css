@@ -67,22 +67,11 @@ nav.navbar .container{
 nav.navbar a{
     margin: 0px 10px;
     position: relative;
-}
-nav.navbar a , 
-nav.navbar .navbar-toggler{
-	color: #29004f;
+	transition: all ease-in-out 0.3s;
 }
 nav.navbar a , 
 nav.navbar .navbar-toggler{
 	color: #fff;
-}
-nav.navbar .underline{
-    width: 40px;
-    height: 3px;
-    background-color: #29004fd0;
-    position: absolute;
-    left: calc( 50% - 20px );
-    border-radius: 20px;
 }
 /*=================================================================
 ===========  Home Header 
@@ -90,7 +79,7 @@ nav.navbar .underline{
  #header{
     background-image: url("../images/bg.jpg");
     width: 100%;
-    height: 650px;
+    height: 100vh;
 }
  #header .info{
     padding-top: 10rem;
@@ -104,7 +93,7 @@ nav.navbar .underline{
 ===========  Home Register 
 ===================================================================*/
 #register #header{
-    background-image: url("../images/register_bg.jpg");
+    background-image: url("../images/bg2.jpg");
     width: 100%;
     height: 400px;
 }

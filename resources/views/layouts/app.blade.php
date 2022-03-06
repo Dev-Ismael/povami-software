@@ -21,7 +21,8 @@
         <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
         <!------- FontAwesome  ------->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
+
         
         <!------- StyleSheet ------->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -47,24 +48,24 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="{{ route('home') }}"> Home  </a>
+                                <a class="nav-item nav-link" href="{{ route('home') }}"> <i class="fa-solid fa-house-chimney"></i>  Home  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> About US  </a>
+                                <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-circle-question"></i> About US  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> Contact   </a>
+                                <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> Afilliate  </a>
+                                <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-sitemap"></i> Afilliate  </a>
                             </li>
                             @guest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa-solid fa-right-to-bracket"></i> {{ __('Login') }} </a>
                                 </li>
                                 @if (Route::has('register'))
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a class="nav-link" href="{{ route('register') }}"> <i class="fa-solid fa-user-plus"></i> {{ __('Register') }} </a>
                                     </li>
                                 @endif
                             @else
@@ -149,7 +150,12 @@
 
             <!---- CopyRight ---->
             <div id="copyright">
-                All Right Reversed &copy; 2020 - Powerd By <i class="fas fa-heart"></i> Povami Software 
+                Copyright ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                All rights reserved <i class="fas fa-heart"></i>                    
+                Povami Software 
             </div>
 
 

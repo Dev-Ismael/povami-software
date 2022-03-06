@@ -8,11 +8,12 @@
         <div class="container">
             <div class="col-md-5">
                 <div class="info">
-                    <h2> Design & Development Agency in the world </h2>
+                    <h1> Hey There, Welcome to Povami Software! <i class="fa-solid fa-face-grin-wide" style="color:#ffe817"></i> </h1>
+                    <h5> Design & development Agency in the world </h5>
                     <p>
                         With us, you will receive the best services in the short time
                     </p>
-                    <a href="#" class="btn btn-success"> Get Started </a>
+                    <a href="#" class="btn btn-success"> <i class="fa-solid fa-file-lines"></i> View Works </a>
                 </div>
             </div>
         </div>
@@ -54,7 +55,7 @@
                             <img src="images/icons/graphic-tool.png" alt="">
                         </div>
                         <h3> Graphic Design </h3>
-                        <p> Behind every great design, there is a Beautiful Mind… It’s well known that graphic design is the process of visual communication and problem-solving through the use of type, space, image, and color. Here at Cord Digital, the main objective of our designs is to understand our clients’ needs in order to deliver the best interactive designs </p>    
+                        <p> Behind every great design, there is a Beautiful Mind… It’s well known that graphic design is the process of visual communication and problem-solving through the use of type, space, image, and color. Here at Povami Software, the main objective of our designs is to understand our clients’ needs in order to deliver the best interactive designs </p>    
                     </div>
                 </div>
 
@@ -74,7 +75,7 @@
                             <img src="images/icons/stats.png" alt="">
                         </div>
                         <h3> Digital Marketing </h3>
-                        <p> Social media is a part of digital marketing that is used for promoting your brand and increase conversion rate, In Cord Digital, we strive to deliver the best Social media services with various new perspectives which suit different types of businesses. </p>    
+                        <p> Social media is a part of digital marketing that is used for promoting your brand and increase conversion rate, In Povami Software, we strive to deliver the best Social media services with various new perspectives which suit different types of businesses. </p>    
                     </div>
                 </div>
 
