@@ -148,86 +148,37 @@
     <!------ testmoilas ------>
     <div id="testmoilas" class="content-padding" >
 
-        <h2 class="text-center"> Testmonilas</h2>
+        <h2 class="text-center"> <i class="fa-solid fa-pen-nib"></i> Testmonilas</h2>
         <div class="content-title-underline"></div>
 
         <section>
 
-            <div class="customer-feedback">
-                <div class="container text-center">
-                    
-        
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                            <div class="owl-carousel feedback-slider">
-        
-                                <!-- slider item -->
-                                <div class="feedback-slider-item">
-                                    <img src="//c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg" class="center-block img-circle" alt="Customer Feedback">
-                                    <h3 class="customer-name">Lisa Redfern</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
-                                    <span class="light-bg customer-rating" data-rating="5">
-                                        5
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-                                <!-- /slider item -->
-        
-                                <!-- slider item -->
-                                <div class="feedback-slider-item">
-                                    <img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg" class="center-block img-circle" alt="Customer Feedback">
-                                    <h3 class="customer-name">Cassi</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
-                                    <span class="light-bg customer-rating" data-rating="4">
-                                        4
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-                                <!-- /slider item -->
-        
-                                <!-- slider item -->
-                                <div class="feedback-slider-item">
-                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg" class="center-block img-circle" alt="Customer Feedback">
-                                    <h3 class="customer-name">Md Nahidul</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
-                                    <span class="light-bg customer-rating" data-rating="5">
-                                        5
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-                                <!-- /slider item -->
-                                
-                            </div><!-- /End feedback-slider -->
-        
-                            <!-- side thumbnail -->
-                            <div class="feedback-slider-thumb hidden-xs">
-                                <div class="thumb-prev">
-                                    <span>
-                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg" alt="Customer Feedback">
-                                    </span>
-                                    <span class="light-bg customer-rating">
-                                        5
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
-        
-                                <div class="thumb-next">
-                                    <span>
-                                        <img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg" alt="Customer Feedback">
-                                    </span>
-                                    <span class="light-bg customer-rating">
-                                        4
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                </div>
+            <div class="container">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-caption">
+                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> <img src="{{ asset('images/testmonilas/1.jpg') }}"  alt=""> 
+                                <div id="image-caption">Nick Doe</div>
                             </div>
-                            <!-- /side thumbnail -->
-        
-                        </div><!-- /End col -->
-                    </div><!-- /End row -->
-                </div><!-- /End container -->
-            </div><!-- /End customer-feedback -->
-
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p>  <img src="{{ asset('images/testmonilas/2.jpg') }}"  alt=""> 
+                                <div id="image-caption">Cromption Greves</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p>  <img src="{{ asset('images/testmonilas/3.jpg') }}"  alt=""> 
+                                <div id="image-caption">Harry Mon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev"> <i class='fas fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <i class='fas fa-arrow-right'></i> </a>
+                </div>
+            </div>
+            
         </section>
         
 
