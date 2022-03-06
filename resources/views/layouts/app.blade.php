@@ -40,23 +40,20 @@
             <!---- Navbar ---->
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand" href="#"> <img src="images/icons/Logo2.png" alt=""> </a>
+                    <a class="navbar-brand" href="{{ route('home') }}"> <img src="images/icons/Logo2.png" alt=""> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i> </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> Home  </a>
+                                <a class="nav-item nav-link" href="{{ route('home') }}"> Home  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> Services  </a>
+                                <a class="nav-item nav-link" href="#"> About US  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> Works  </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> Testmonilas  </a>
+                                <a class="nav-item nav-link" href="#"> Contact   </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-item nav-link" href="#"> Afilliate  </a>
@@ -99,7 +96,7 @@
             @yield('content')
 
 
-            <!---- Remove footer from register pages ---->
+            <!---- Add/Remove footer from register pages ---->
             @if( preg_match('(login|register)', url()->current()) !== 1 )
 
                 <!---- Footer ---->

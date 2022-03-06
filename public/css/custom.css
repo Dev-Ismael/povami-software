@@ -119,6 +119,7 @@ nav.navbar .underline{
     border: 1px solid #29004f1a;
 }
  #services .box {
+	min-height: 270px;
     margin: 35px 0px;
     padding: 10px 20px;
     border-radius: 5px;

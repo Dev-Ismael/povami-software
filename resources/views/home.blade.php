@@ -27,63 +27,64 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="box">
                         <div class="icon">
                             <img src="images/icons/html.png" alt="">
                         </div>
                         <h3> Web Design </h3>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                        <p> Awesome responsive web designs with usability and practicality in mind. Functionally correct standardized development puts out perfect solutions each time, every time.</p>    
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="box">
                         <div class="icon">
                             <img src="images/icons/ui.png" alt="">
                         </div>
                         <h3> UX / UI Design </h3>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                        <p> Good user experiences are very important to us for every software we create.
+                            By basing our software on human-centered design principles, we ensure your users get the best experience, and you get the best return on investment.</p>    
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="box">
                         <div class="icon">
                             <img src="images/icons/graphic-tool.png" alt="">
                         </div>
                         <h3> Graphic Design </h3>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                        <p> Behind every great design, there is a Beautiful Mind… It’s well known that graphic design is the process of visual communication and problem-solving through the use of type, space, image, and color. Here at Cord Digital, the main objective of our designs is to understand our clients’ needs in order to deliver the best interactive designs </p>    
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="box">
                         <div class="icon">
                             <img src="images/icons/analysis.png" alt="">
                         </div>
                         <h3> Business Analysis </h3>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                        <p> In a world inundated by data, you need fast and reliable data to help you recognize and capitalize on opportunities. With real insight at your fingertips, you can improve engagement levels with your customers, reduce costs, and seize upon exciting new revenue streams. </p>    
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="box">
                         <div class="icon">
                             <img src="images/icons/stats.png" alt="">
                         </div>
                         <h3> Digital Marketing </h3>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                        <p> Social media is a part of digital marketing that is used for promoting your brand and increase conversion rate, In Cord Digital, we strive to deliver the best Social media services with various new perspectives which suit different types of businesses. </p>    
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="box">
                         <div class="icon">
                             <img src="images/icons/website.png" alt="">
                         </div>
                         <h3> Web Development </h3>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                        <p> Leveraging new approaches to web development including progressive web apps, we bring development and architecture ability together to deliver on your business need and maximize delivery speed. </p>    
                     </div>
                 </div>
 
@@ -126,62 +127,6 @@
                     </div>    
                 </div>
 
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img2.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img2.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img2.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
 
                 <div class="col-md-4 col-sm-6"> 
                     <div class="work-box text-left">
