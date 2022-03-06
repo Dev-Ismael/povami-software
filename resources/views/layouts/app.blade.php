@@ -108,31 +108,42 @@
 
                             <div class="col-md-4">
                                 <div class="box">
-                                    <h3> Povami Software</h3>
-                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quo aperiam ratione excepturi voluptatibus asperiores sequi eos nesciunt aliquam illum. Rerum est iure dolor ratione harum id quaerat voluptatum enim? </p>    
+                                    <h2> Povami Software</h2>
+                                    <p class="company-content"> 
+                                        At our software development company, we create many projects for international corporations, small businesses and other organisations with an aim to open up new possibilities for expansion, 
+                                        process automatisation, and continuous improvement. We are a team of experienced developers, creators, designers and project managers you can rely on.
+                                    </p>    
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 text-md-center">
                                 <div class="box">
-                                    <h3> Company </h3>
-                                    <ul class="list-unstyled">
-                                        <li> <a href="#"> Home </a> </li>
-                                        <li> <a href="#"> Services </a> </li>
-                                        <li> <a href="#"> Works </a> </li>
-                                        <li> <a href="#"> Testmonilas </a> </li>
+                                    <h2> Company </h2>
+                                    <ul class="list-unstyled ">
+                                        <li class="nav-item">
+                                            <a class="nav-item nav-link" href="{{ route('home') }}"> <i class="fa-solid fa-house-chimney"></i>  Home  </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-circle-question"></i> About US  </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-sitemap"></i> Afilliate  </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="box">
-                                    <h3> Social Media </h3>
+                                    <h2> Social Media </h2>
                                     <p>You can contact with us in our social media to get services</p>
                                     <ul class="list-unstyled social-media">
-                                        <li> <a href="#"> <i class="fab fa-facebook-square"></i>  </a> </li>
-                                        <li> <a href="#"> <i class="fab fa-twitter-square"></i>  </a> </li>
-                                        <li> <a href="#"> <i class="fab fa-youtube-square"></i>  </a> </li>
-                                        <li> <a href="#"> <i class="fas fa-envelope-square"></i>  </a> </li>
+                                        <li> <a href="https://www.facebook.com/PovamiSoftware" target="_blank"> <i class="fab fa-facebook-square"></i>  </a> </li>
+                                        <li> <a href="https://wa.link/rtau8b" target="_blank" > <i class="fa-brands fa-whatsapp-square"></i>  </a> </li>
+                                        <li> <a href="https://www.youtube.com/channel/UCr9CUvVt3nqTxwZTT82EjhA" target="_blank" > <i class="fab fa-youtube-square"></i>  </a> </li>
+                                        <li> <a href="mailto:povami.software@gmail.com"> <i class="fas fa-envelope-square"></i> </a> </li>
                                     </ul>
                                 </div>
                             </div>

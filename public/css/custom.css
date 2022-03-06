@@ -419,9 +419,15 @@ nav.navbar .navbar-toggler{
     color: #fff;
     padding-top: 180px;
 }
+#footer .box ul li{
+	margin-top: -7px;
+}
 #footer .box ul li a {
     color: #fff;
     text-decoration: underline;
+}
+#footer .company-content{
+	font-size: 12px;
 }
 #footer ul.social-media li {
     margin: 0px 10px ;
