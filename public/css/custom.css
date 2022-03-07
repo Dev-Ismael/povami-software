@@ -73,6 +73,17 @@ nav.navbar a ,
 nav.navbar .navbar-toggler{
 	color: #fff;
 }
+/*====== nav sticky ========*/
+nav.navbar.sticky{
+    box-shadow: 0px 0px 2px 2px #717171cc;
+    background-color : #fff
+} 
+nav.navbar.sticky a{
+    color: #29004f;
+} 
+nav.navbar.sticky .navbar-toggler{
+    color: #29004f;
+}
 /*=================================================================
 ===========  Home Header 
 ===================================================================*/
