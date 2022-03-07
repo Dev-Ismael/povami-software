@@ -319,6 +319,15 @@ nav.navbar.sticky .navbar-toggler{
     color: #fff;
     text-decoration: underline;
 }
+#footer .box ul li  span{
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-left: -10px;
+    padding: 2px;
+    font-size: 14px;
+}
 #footer .company-content{
 	font-size: 12px;
 }

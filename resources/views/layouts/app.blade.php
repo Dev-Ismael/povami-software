@@ -51,23 +51,16 @@
                                 <a class="nav-item nav-link" href="{{ route('home') }}"> <i class="fa-solid fa-house-chimney"></i>  Home  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-circle-question"></i> About US  </a>
+                                <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-circle-question"></i> About US  </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-sitemap"></i> Afilliate  </a>
-                            </li>
+                            
                             @guest
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}"> <i class="fa-solid fa-right-to-bracket"></i> {{ __('Login') }} </a>
                                 </li>
-                                @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}"> <i class="fa-solid fa-user-plus"></i> {{ __('Register') }} </a>
-                                    </li>
-                                @endif
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -146,13 +139,13 @@
                                             <a class="nav-item nav-link" href="{{ route('home') }}"> <i class="fa-solid fa-house-chimney"></i>  Home  </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-circle-question"></i> About US  </a>
+                                            <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-circle-question"></i> About US  </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-sitemap"></i> Afilliate  </a>
+                                            <a class="nav-item nav-link" href="#" style="display: inline"> <i class="fa-solid fa-network-wired"></i> Affiliate Marketing   </a> <span>new</span> 
                                         </li>
                                     </ul>
                                 </div>
