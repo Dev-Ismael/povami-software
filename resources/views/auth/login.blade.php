@@ -5,13 +5,6 @@
 
 <div id="register">
 
-
-
-    <div id="header" class="bg-parallax">
-                
-    </div>
-
-
     <div id="form">
         <div class="form-inner">
             <form method="POST" action="{{ route('login') }}">
@@ -57,6 +50,6 @@
     </div>
 
     
-
+</div>
 
 @endsection

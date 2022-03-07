@@ -76,24 +76,24 @@ nav.navbar .navbar-toggler{
 /*=================================================================
 ===========  Home Header 
 ===================================================================*/
- #header{
-    background-image: url("../images/bg.jpg");
+#home-header{
+    background-image: url("../images/home_bg.jpg");
     width: 100%;
     height: 100vh;
 }
- #header .info{
+#home-header .info{
     padding-top: 10rem;
     color: #fff;
 }
- #header .info a{
+#home-header .info a{
     border-radius: 20px;
     padding: 8px 15px;
 }
 /*=================================================================
-===========  Home Register 
+===========  Header 
 ===================================================================*/
-#register #header{
-    background-image: url("../images/bg2.jpg");
+#header{
+    background-image: url("../images/bg.jpg");
     width: 100%;
     height: 400px;
 }

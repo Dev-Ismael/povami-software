@@ -3,21 +3,7 @@
 @section('content')
 
 
-    <!------ Header ------>
-    <div id="header" class="bg-parallax">
-        <div class="container">
-            <div class="col-md-5">
-                <div class="info">
-                    <h1> Hey There, Welcome to Povami Software! <i class="fa-solid fa-face-grin-wide" style="color:#ffe817"></i> </h1>
-                    <h5> Design & development Agency in the world </h5>
-                    <p>
-                        With us, you will receive the best services in the short time
-                    </p>
-                    <a href="#" class="btn btn-success"> <i class="fa-solid fa-file-lines"></i> View Works </a>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!------ services ------>
     <div id="services" class="content-padding">
