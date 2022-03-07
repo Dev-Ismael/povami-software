@@ -22,7 +22,7 @@
     <!------ services ------>
     <div id="services" class="content-padding">
 
-        <h2 class="text-center"> Our Services</h2>
+        <h2 class="text-center"> <i class="fa-solid fa-laptop-code"></i> Our Services</h2>
         <div class="content-title-underline"></div>
 
         <div class="container">
@@ -102,7 +102,7 @@
     <!------ works ------>
     <div id="works" class="content-padding">
 
-        <h2 class="text-center"> Our Works</h2>
+        <h2 class="text-center"> <i class="fa-solid fa-file-lines"></i> Our Works</h2>
         <div class="content-title-underline"></div>
 
         <div class="container">
@@ -232,28 +232,39 @@
         </div>
     </div>
 
-    <!------ what-wait ------>
-    <div id="what-wait" class="content-padding">
+
+    <!------ Skillset --------->
+    <div id="skillset">
         <div class="container">
-            <h2 class="text-center">So what are you waiting for !?</h2>
-            <div class="content-title-underline"></div>       
-            <div class="buttons text-center">
-                <a href="#" class="btn btn-primary"> Join Now <i class="fas fa-arrow-right"></i> </a>
-                <span>or</span>
-                <a class="btn btn-success">Contact Us <i class="fas fa-envelope"></i> </a>
+            <div class="row align-items-center h-100">
+                <div class="col-md-7">
+                    <h2>From strategy to deployment and beyond… </h2>
+                    <p>Once you conceive an idea, the next step is to find the best technology partner to bring your idea to life. Our team of developers, software architects,
+                        project managers and other technicians is equipped with advanced and up-to-date skill sets to cater to specific needs of your project.
+                        We are a full-scale software development firm that knows the value of lasting relationships and can combine focused detail-oriented action with long-term strategic thinking.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ asset("images/skillset.png") }}" alt="" class="img-fulid">
+                </div>
             </div>
-        </div>                    
+        </div>
     </div>
 
-    <!------ payments ------>
-    <div id="payments" class="col-md-12 text-center content-padding">
-        <img src="images/payments/paypal.png" alt="">
-        <img src="images/payments/bitcoin.png" alt="">
-        <img src="images/payments/payeer.png" alt="">
-        <img src="images/payments/skrill.png" alt="">
-        <img src="images/payments/western.png" alt="">
-        <img src="images/payments/Vodafone-Cash.png" alt="">
-    </div>
+    <!-- Absolute Icons -->
+    <section id="absolute-icons">
+        <div class="arrow-icon">
+            <i class="fas fa-arrow-alt-circle-up" ></i>
+        </div>
+        <div class="contact-icons">
+            <a href="https://wa.link/rtau8b" target="_blank">
+                <img src="{{ asset("images/icons/whatsapp.png") }}" alt="whatsapp">
+            </a>
+            <a href="https://www.facebook.com/PovamiSoftware" target="_blank">
+                <img src="{{ asset("images/icons/facebook.png") }}" alt="whatsapp">
+            </a>
+        </div>
+    </section>
 
 
 @endsection
