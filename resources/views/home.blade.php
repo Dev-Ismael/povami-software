@@ -8,7 +8,7 @@
     <!------ services ------>
     <div id="services" class="content-padding">
 
-        <h2 class="text-center"> <i class="fa-solid fa-laptop-code"></i> Our Services</h2>
+        <h2 class="text-center"> <i class="fa-solid fa-chalkboard-user"></i> Our Services</h2>
         <div class="content-title-underline"></div>
 
         <div class="container">
@@ -85,43 +85,31 @@
 
     </div>
 
-    <!------ works ------>
-    <div id="works" class="content-padding">
+    <!------ clients ------>
+    <div id="clients" class="content-padding">
 
-        <h2 class="text-center"> <i class="fa-solid fa-file-lines"></i> Our Works</h2>
+        <h2 class="text-center"> <i class="fa-solid fa-list-check"></i> Our Clients</h2>
         <div class="content-title-underline"></div>
 
         <div class="container">
             <div class="row text-center">
 
-
-                
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img2.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
-                </div>
-
-
-                <div class="col-md-4 col-sm-6"> 
-                    <div class="work-box text-left">
-                        <img src="images/works-imgs/img.png" alt="">
-                        <p class="site-title"> ahmed.com </p>
-                        <p class="site-desc">  Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem  </p>
-                        <a href="#" > <i class="fas fa-eye"></i> Live Preview</a>    
-                    </div>    
+                <div id="clients-logo" class="col-md-12 text-center">
+                    <img src="{{ asset('images/works/1.png') }}" alt="">
+                    <img src="{{ asset('images/works/2.png') }}" alt="">
+                    <img src="{{ asset('images/works/3.png') }}" alt="">
+                    <img src="{{ asset('images/works/4.png') }}" alt="">
+                    <img src="{{ asset('images/works/5.png') }}" alt="">
+                    <img src="{{ asset('images/works/6.png') }}" alt="">
+                    <img src="{{ asset('images/works/7.png') }}" alt="">
+                    <img src="{{ asset('images/works/8.png') }}" alt="">
+                    <img src="{{ asset('images/works/9.png') }}" alt="">
+                    <img src="{{ asset('images/works/10.png') }}" alt="">
+                    <img src="{{ asset('images/works/11.png') }}" alt="">
+                    <img src="{{ asset('images/works/12.png') }}" alt="">
+                    <img src="{{ asset('images/works/13.png') }}" alt="">
+                    <img src="{{ asset('images/works/14.jpg') }}" alt="">
+                    <img src="{{ asset('images/works/15.png') }}" alt="">
                 </div>
 
 
@@ -134,7 +122,7 @@
     <!------ testmoilas ------>
     <div id="testmoilas" class="content-padding" >
 
-        <h2 class="text-center"> <i class="fa-solid fa-pen-nib"></i> Testmonilas</h2>
+        <h2 class="text-center"> <i class="fa-solid fa-quote-left"></i> Testmonilas</h2>
         <div class="content-title-underline"></div>
 
         <section>
