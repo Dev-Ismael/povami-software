@@ -17,9 +17,6 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
 
-        <!------- Google Font ------->
-        <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
-
         <!------- FontAwesome  ------->
         <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
 

@@ -1,0 +1,24 @@
+/*=================================================================
+===========  Clients
+===================================================================*/
+#clients {
+    i {
+    color: #29004f;
+    }
+    img {
+        cursor: pointer;
+        height: 2.5rem;
+        margin: 30px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: .5;
+        -o-transition: .5s ease;
+        transition: .5s ease;
+        -webkit-transition: .5s ease;
+        -moz-transition: .5s ease;
+    }
+    &:hover{
+        filter: grayscale(0%);
+        opacity: 1
+    }
+}

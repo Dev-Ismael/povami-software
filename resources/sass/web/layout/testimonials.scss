@@ -1,0 +1,79 @@
+/*=================================================================
+===========  testimonials
+===================================================================*/
+#testimonials h2 i{
+	color: #29004f !important;
+}
+#testimonials #demo {
+    background: linear-gradient(110deg, #f8fafc 50%,  #29004f7a);
+    max-width: 900px;
+    margin: auto
+}
+#testimonials .carousel-caption {
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color:  #29004fcc;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2rem
+}
+@media(max-width:767px) {
+    #testimonials .carousel-caption {
+        position: initial;
+        z-index: 10;
+        padding: 3rem 2rem;
+        color: #29004fcc;
+        text-align: center;
+        font-size: 0.7rem;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 1.5rem
+    }
+}
+#testimonials .carousel-caption img {
+    width: 6rem;
+    border-radius: 5rem;
+    margin-top: 2rem
+}
+@media(max-width:767px) {
+    #testimonials .carousel-caption img {
+        width: 4rem;
+        border-radius: 4rem;
+        margin-top: 1rem
+    }
+}
+#testimonials  #image-caption {
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0.5rem
+}
+@media(max-width:767px) {
+    #image-caption {
+        font-style: normal;
+        font-size: 0.6rem;
+        margin-top: 0.5rem
+    }
+}
+#testimonials #demo i{
+    background-color: #29004fcc;
+    padding: 1.4rem
+}
+@media(max-width:767px) {
+    #testimonials i {
+        padding: 0.8rem
+    }
+}
+#testimonials .carousel-control-prev {
+    justify-content: flex-start
+}
+#testimonials .carousel-control-next {
+    justify-content: flex-end
+}
+#testimonials .carousel-control-prev,
+#testimonials .carousel-control-next {
+    transition: none;
+    opacity: unset
+}

@@ -1,8 +1,28 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Kanit');
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+// Web Scss
+/*========= helpers =========*/
+@import "web/helpers/vars";
+@import "web/helpers/global";
+@import "web/helpers/mixin";
+/*========= components =========*/
+@import "web/components/buttons";
+@import "web/components/navbar";
+@import "web/components/absolute_icons";
+@import "web/components/copyright";
+@import "web/components/navbar";
+@import "web/components/header";
+@import "web/components/footer";
+/*========= layout =========*/
+@import "web/layout/clients";
+@import "web/layout/register";
+@import "web/layout/services";
+@import "web/layout/skillset";
+@import "web/layout/stats";
+@import "web/layout/testimonials";

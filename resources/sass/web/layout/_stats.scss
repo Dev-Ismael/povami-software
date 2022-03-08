@@ -1,0 +1,22 @@
+/*=================================================================
+===========  stats 
+===================================================================*/
+#stats{
+	width: 100%;
+    padding: 40px 0px;
+    background-image: linear-gradient( to right , #38125b , #5e3f78  ) ;
+}
+#stats p{
+    color: #fff;
+    font-size: 22px;
+	margin-bottom: 0px;
+}
+#stats p i {
+	font-size: 40px;
+}
+/*============ Responsive ==================*/
+@media (max-width:767px){
+    #stats .col-sm-6.col-md-3{
+        margin: 20px 0px;
+    }
+}

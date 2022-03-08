@@ -1,0 +1,36 @@
+/*=================================================================
+===========  absolute-icons 
+===================================================================*/
+#absolute-icons .fa-arrow-alt-circle-up{
+    z-index: 999999999;
+    cursor: pointer;
+    color: #29004f;
+    font-size: 50px;
+    position: fixed;  
+    bottom: 10%;
+    right: 2%;  
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+    .contact-icons{
+        z-index: 999999999;
+        position: fixed;  
+        bottom: 8%;
+        left: 2%;  
+        a{
+            display: block;
+            margin: 20px 0px;
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
+/*====== Responsive ========*/
+@media (max-width: 576px) {
+    #absolute-icons .fa-arrow-alt-circle-up { 
+        font-size: 35px;
+        img{
+            width: 30px;
+        }
+    }
+}

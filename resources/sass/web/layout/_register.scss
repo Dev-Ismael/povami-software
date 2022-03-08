@@ -1,0 +1,38 @@
+
+/*=================================================================
+===========  register 
+===================================================================*/
+#register {
+	#form{
+		margin-top: -250px;
+		margin-bottom: 150px;
+		.form-inner{
+			padding: 15px;
+			border-radius: 7px;
+			box-shadow: 0px 0px 10px 1px #bebebed9;
+			background-color: #fff;
+			margin: 0px auto;
+			max-width: 450px;
+			.title{
+				font-size: 22px;
+				text-align: center;
+			}
+			.content-title-underline{
+				margin-bottom: 25px;
+				margin-top: -10px;
+			}
+			.form-inner{ 
+				.form-control{
+					border-radius: 10px;
+					label{
+						margin-bottom: 5px;
+						margin-left: 5px;
+					}
+				}
+				i{
+					color: #29004fcc;
+				}
+			}
+		}
+	}
+}

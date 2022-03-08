@@ -119,8 +119,8 @@
 
     </div>
 
-    <!------ testmoilas ------>
-    <div id="testmoilas" class="content-padding" >
+    <!------ testimonials ------>
+    <div id="testimonials" class="content-padding" >
 
         <h2 class="text-center"> <i class="fa-solid fa-quote-left"></i> Testmonilas</h2>
         <div class="content-title-underline"></div>
