@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Kanit");
+@import url("https://fonts.googleapis.com/css2?family=Hubballi");
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -10585,8 +10586,13 @@ h3 {
 ===========   Global Properties
 ===================================================================*/
 body {
+  background-color: #f9fafc;
   font-family: "Kanit", sans-serif !important;
   overflow-x: hidden;
+}
+
+.company-name {
+  font-family: "Hubballi", sans-serif !important;
 }
 
 .content-padding {
@@ -10820,7 +10826,7 @@ nav.navbar.sticky .navbar-toggler {
 
 /*============ Responsive ===============*/
 @media (max-width: 767px) {
-  #header {
+  #home-header {
     background-image: url("/images/bg-sm.jpg");
     height: 550px;
   }
@@ -10875,6 +10881,40 @@ nav.navbar.sticky .navbar-toggler {
 }
 /*========= layout =========*/
 /*=================================================================
+===========  register 
+===================================================================*/
+#register #form {
+  margin-top: -250px;
+  margin-bottom: 150px;
+}
+#register #form .form-inner {
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px 1px #bebebed9;
+  background-color: #fff;
+  margin: 0px auto;
+  max-width: 450px;
+}
+#register #form .form-inner .title {
+  font-size: 22px;
+  text-align: center;
+}
+#register #form .form-inner .content-title-underline {
+  margin-bottom: 25px;
+  margin-top: -10px;
+}
+#register #form .form-inner .form-inner .form-control {
+  border-radius: 10px;
+}
+#register #form .form-inner .form-inner .form-control label {
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+#register #form .form-inner .form-inner i {
+  color: #29004fcc;
+}
+
+/*=================================================================
 ===========  Clients
 ===================================================================*/
 #clients i {
@@ -10928,7 +10968,7 @@ nav.navbar.sticky .navbar-toggler {
   [ Button show form ]*/
 }
 #contact contact100-form-title i {
-  color: #29004f;
+  color: #29004f !important;
 }
 #contact a {
   font-size: 14px;
@@ -11451,40 +11491,6 @@ nav.navbar.sticky .navbar-toggler {
   z-index: 0;
 }
 
-/*=================================================================
-===========  register 
-===================================================================*/
-#register #form {
-  margin-top: -250px;
-  margin-bottom: 150px;
-}
-#register #form .form-inner {
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0px 0px 10px 1px #bebebed9;
-  background-color: #fff;
-  margin: 0px auto;
-  max-width: 450px;
-}
-#register #form .form-inner .title {
-  font-size: 22px;
-  text-align: center;
-}
-#register #form .form-inner .content-title-underline {
-  margin-bottom: 25px;
-  margin-top: -10px;
-}
-#register #form .form-inner .form-inner .form-control {
-  border-radius: 10px;
-}
-#register #form .form-inner .form-inner .form-control label {
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
-#register #form .form-inner .form-inner i {
-  color: #29004fcc;
-}
-
 /*===================================================================
 ============ Services
 ====================================================================*/
@@ -11649,6 +11655,60 @@ nav.navbar.sticky .navbar-toggler {
 #testimonials .carousel-control-next {
   transition: none;
   opacity: unset;
+}
+
+/*=================================================================
+===========  glance 
+===================================================================*/
+#glance {
+  margin-top: -200px;
+  padding-bottom: 150px;
+  font-weight: 100;
+  color: #fff;
+}
+#glance h4 a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+#glance p {
+  font-size: 15px;
+  color: #ebebeb;
+}
+
+/*=================================================================
+===========   Company info
+===================================================================*/
+#company-info h3 i {
+  color: #29004f;
+}
+#company-info p {
+  color: #595959;
+  line-height: 1.3;
+}
+
+/*=================================================================
+===========   What MAke Diffrenet
+===================================================================*/
+#what-make-different {
+  background-color: #29004f0a;
+  padding: 60px 0px;
+}
+#what-make-different i {
+  color: #29004f;
+}
+#what-make-different [class*=col-] {
+  border-right: 2px solid #29004f;
+}
+#what-make-different [class*=col-]:last-of-type {
+  border: none;
+}
+
+/*============= Responsive =============*/
+@media (max-width: 767px) {
+  #what-make-different [class*=col-] {
+    border: none;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

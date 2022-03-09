@@ -1,0 +1,25 @@
+/*=================================================================
+===========   What MAke Diffrenet
+===================================================================*/
+#what-make-different{
+    background-color: #29004f0a;
+    padding: 60px 0px;
+    i{
+        color: #29004f;
+    }
+    [class*=col-] {
+        border-right: 2px solid #29004f;
+    }
+    [class*=col-]:last-of-type{
+        border: none;
+    }
+
+}
+ /*============= Responsive =============*/
+@media (max-width:767px){
+    #what-make-different{
+        [class*=col-]{
+            border: none;
+        }
+    }
+}

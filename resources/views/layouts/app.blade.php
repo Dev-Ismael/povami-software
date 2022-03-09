@@ -175,6 +175,22 @@
             </div>
 
 
+            <!-- Absolute Icons -->
+            <section id="absolute-icons">
+                <div class="arrow-icon">
+                    <i class="fas fa-arrow-alt-circle-up" ></i>
+                </div>
+                <div class="contact-icons">
+                    <a href="https://wa.link/rtau8b" target="_blank">
+                        <img src="{{ asset("images/icons/whatsapp.png") }}" alt="whatsapp">
+                    </a>
+                    <a href="https://www.facebook.com/PovamiSoftware" target="_blank">
+                        <img src="{{ asset("images/icons/facebook.png") }}" alt="whatsapp">
+                    </a>
+                </div>
+            </section>
+
+
 
 
 

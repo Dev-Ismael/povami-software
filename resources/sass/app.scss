@@ -1,7 +1,7 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Kanit');
-
+@import url('https://fonts.googleapis.com/css2?family=Hubballi');
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';   // import bootstrap packags
 @import '../css/bootstrap';
@@ -21,10 +21,16 @@
 @import "web/components/header";
 @import "web/components/footer";
 /*========= layout =========*/
-@import "web/layout/clients";
-@import "web/layout/contact";
-@import "web/layout/register";
-@import "web/layout/services";
-@import "web/layout/skillset";
-@import "web/layout/stats";
-@import "web/layout/testimonials";
+// Register
+@import "web/layout/register/register";
+// Home
+@import "web/layout/home/clients";
+@import "web/layout/home/contact";
+@import "web/layout/home/services";
+@import "web/layout/home/skillset";
+@import "web/layout/home/stats";
+@import "web/layout/home/testimonials";
+// About
+@import "web/layout/about/glance";
+@import "web/layout/about/company_info";
+@import "web/layout/about/what_make_different";
