@@ -200,6 +200,9 @@
         <!-- bootstrap Framwork-->
         <script src="{{ asset('js/bootstrap.js') }} "></script>
 
+        <!-- owl-carousel Framwork-->
+        <script src="{{ asset('js/owl.carousel.min.js') }} "></script>
+
         <!-- countup -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <script src="{{ asset('js/jquery.counterup.min.js') }} "></script>

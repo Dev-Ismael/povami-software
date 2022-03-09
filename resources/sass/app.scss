@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit');
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';   // import bootstrap packags
+@import '../css/bootstrap';
 
 
 // Web Scss
@@ -21,6 +22,7 @@
 @import "web/components/footer";
 /*========= layout =========*/
 @import "web/layout/clients";
+@import "web/layout/contact";
 @import "web/layout/register";
 @import "web/layout/services";
 @import "web/layout/skillset";
