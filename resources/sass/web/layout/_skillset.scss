@@ -4,11 +4,17 @@
 ===================================================================*/
 #skillset{
     padding: 60px 0;
-}
-#skillset h2{
-    color: #29004f;
-}
-#skillset p {
-    font-size: 14px;
-    color: #626262;
+    h2{
+        color: #29004f;
+    }
+    p {
+        font-size: 14px;
+        color: #626262;
+        .view-work{
+            text-decoration: underline;
+            font-size: 18px;
+            color: #29004f;
+            display: block;
+        }
+    }
 }
