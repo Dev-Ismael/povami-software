@@ -11078,9 +11078,9 @@ nav.navbar.sticky .navbar-toggler {
   }
 }
 
-/*=================================================================
-===========  absolute-icons 
-===================================================================*/
+/*==================================================================
+============== Absolute Icons =============================================
+=================================================================*/
 
 #absolute-icons .fa-arrow-alt-circle-up {
   z-index: 999999999;
@@ -11094,19 +11094,19 @@ nav.navbar.sticky .navbar-toggler {
   transition: all ease-in-out 0.3s;
 }
 
-#absolute-icons .fa-arrow-alt-circle-up .contact-icons {
+#absolute-icons .contact-icons {
   z-index: 999999999;
   position: fixed;
   bottom: 8%;
   left: 2%;
 }
 
-#absolute-icons .fa-arrow-alt-circle-up .contact-icons a {
+#absolute-icons .contact-icons a {
   display: block;
   margin: 20px 0px;
 }
 
-#absolute-icons .fa-arrow-alt-circle-up .contact-icons a img {
+#absolute-icons .contact-icons a img {
   width: 40px;
 }
 
@@ -11117,7 +11117,7 @@ nav.navbar.sticky .navbar-toggler {
     font-size: 35px;
   }
 
-  #absolute-icons .fa-arrow-alt-circle-up img {
+  #absolute-icons .contact-icons a img {
     width: 30px;
   }
 }
@@ -11313,7 +11313,7 @@ nav.navbar.sticky .navbar-toggler {
   color: #29004f;
 }
 
-#clients img {
+#clients #clients-logo img {
   cursor: pointer;
   height: 2.5rem;
   margin: 30px;
@@ -11324,7 +11324,7 @@ nav.navbar.sticky .navbar-toggler {
   -moz-transition: 0.5s ease;
 }
 
-#clients:hover {
+#clients #clients-logo img:hover {
   filter: grayscale(0%);
   opacity: 1;
 }

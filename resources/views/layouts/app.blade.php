@@ -23,13 +23,6 @@
         
         <!------- StyleSheet ------->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/animated.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-        
     </head>
     <body>
         <div id="app">
@@ -206,9 +199,6 @@
 
         <!-- bootstrap Framwork-->
         <script src="{{ asset('js/bootstrap.js') }} "></script>
-
-        <!-- owl-carousel Framwork-->
-        <script src="{{ asset('js/owl.carousel.min.js') }} "></script>
 
         <!-- countup -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>

@@ -1,16 +1,19 @@
-/*=================================================================
-===========  absolute-icons 
-===================================================================*/
-#absolute-icons .fa-arrow-alt-circle-up{
-    z-index: 999999999;
-    cursor: pointer;
-    color: #29004f;
-    font-size: 50px;
-    position: fixed;  
-    bottom: 10%;
-    right: 2%;  
-    opacity: 0;
-    transition: all ease-in-out 0.3s;
+/*==================================================================
+============== Absolute Icons =============================================
+=================================================================*/
+#absolute-icons{
+
+    .fa-arrow-alt-circle-up{
+        z-index: 999999999;
+        cursor: pointer;
+        color: #29004f;
+        font-size: 50px;
+        position: fixed;  
+        bottom: 10%;
+        right: 2%;  
+        opacity: 0;
+        transition: all ease-in-out 0.3s;
+    }
     .contact-icons{
         z-index: 999999999;
         position: fixed;  
@@ -24,13 +27,20 @@
             }
         }
     }
+
 }
 /*====== Responsive ========*/
 @media (max-width: 576px) {
-    #absolute-icons .fa-arrow-alt-circle-up { 
-        font-size: 35px;
-        img{
-            width: 30px;
+    #absolute-icons{
+        .fa-arrow-alt-circle-up{
+            font-size: 35px;
+        }
+        .contact-icons{
+            a{
+                img{
+                    width: 30px;
+                }
+            }
         }
     }
 }

@@ -1,11 +1,12 @@
 /*=================================================================
 ===========  Clients
 ===================================================================*/
+
 #clients {
     i {
-    color: #29004f;
+        color: #29004f;
     }
-    img {
+    #clients-logo img {
         cursor: pointer;
         height: 2.5rem;
         margin: 30px;
@@ -16,9 +17,9 @@
         transition: .5s ease;
         -webkit-transition: .5s ease;
         -moz-transition: .5s ease;
-    }
-    &:hover{
-        filter: grayscale(0%);
-        opacity: 1
+        &:hover{
+            filter: grayscale(0%);
+            opacity: 1
+        }
     }
 }
