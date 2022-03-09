@@ -3,7 +3,7 @@
 ===========  Home Header 
 ===================================================================*/
 #home-header{
-    background-image: url("../images/home_bg.jpg");
+    background-image: url("/images/home_bg.jpg");
     width: 100%;
     height: 100vh;
 }
@@ -19,7 +19,7 @@
 ===========  Header 
 ===================================================================*/
 #header{
-    background-image: url("../images/bg.jpg");
+    background-image: url("/images/bg.jpg");
     width: 100%;
     height: 400px;
 }
@@ -27,7 +27,7 @@
 
 @media (max-width:767px){
     #header{
-        background-image: url("../images/bg-sm.jpg");
+        background-image: url("/images/bg-sm.jpg");
         height: 550px;
     }
 }

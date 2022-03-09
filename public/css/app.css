@@ -11211,7 +11211,7 @@ nav.navbar.sticky .navbar-toggler {
 ===================================================================*/
 
 #home-header {
-  background-image: url(/images/home_bg.jpg?ace89c272b37d8eda0103553e5b96af8);
+  background-image: url("/images/home_bg.jpg");
   width: 100%;
   height: 100vh;
 }
@@ -11231,7 +11231,7 @@ nav.navbar.sticky .navbar-toggler {
 ===================================================================*/
 
 #header {
-  background-image: url(/images/bg.jpg?4987260477c14bcef9d232f1687b8def);
+  background-image: url("/images/bg.jpg");
   width: 100%;
   height: 400px;
 }
@@ -11240,7 +11240,7 @@ nav.navbar.sticky .navbar-toggler {
 
 @media (max-width: 767px) {
   #header {
-    background-image: url(/images/bg-sm.jpg?633f9fb6be0d1c8e679ea1e7298b0a9a);
+    background-image: url("/images/bg-sm.jpg");
     height: 550px;
   }
 }
@@ -11250,7 +11250,7 @@ nav.navbar.sticky .navbar-toggler {
 ===================================================================*/
 
 #footer {
-  background-image: url(/images/footer.jpg?2dafef37f0848940131ce31570cb402f);
+  background-image: url("/images/footer.jpg");
   min-height: 500px;
   color: #fff;
   padding-top: 180px;
@@ -11297,7 +11297,7 @@ nav.navbar.sticky .navbar-toggler {
 
 @media (max-width: 991px) {
   #footer {
-    background-image: url(/images/footer2.jpg?feb74658da66059d2e1c01bdc45cb8fa);
+    background-image: url("/images/footer2.jpg");
     height: auto;
     padding-top: 40px;
   }
