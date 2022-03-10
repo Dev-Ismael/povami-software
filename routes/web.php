@@ -18,3 +18,4 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
+Route::get('/works', [App\Http\Controllers\WorkController::class, 'index'])->name('works');

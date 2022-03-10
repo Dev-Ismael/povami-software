@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi');
 // Bootstrap
-// @import '~bootstrap/scss/bootstrap';   // import bootstrap packags
+// @import '~bootstrap/scss/bootstrap';   // import bootstrap laravel packags
 @import '../css/bootstrap';
 
 
-// Web Scss
+//########### Web Scss
 /*========= helpers =========*/
 @import "web/helpers/vars";
 @import "web/helpers/global";
@@ -34,3 +34,6 @@
 @import "web/layout/about/glance";
 @import "web/layout/about/company_info";
 @import "web/layout/about/what_make_different";
+// Works
+@import "web/layout/works/works_info";
+@import "web/layout/works/works_examples";

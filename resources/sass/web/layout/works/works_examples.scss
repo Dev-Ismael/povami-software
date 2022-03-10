@@ -1,0 +1,203 @@
+/*=================================================================
+===========  Works Examples 
+===================================================================*/
+#works-examples {
+    /*=================================================================
+    ===========  Taps Bootstrap 
+    ===================================================================*/
+    @media (min-width: 576px) {
+        .rounded-nav {
+            border-radius: 50rem !important;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .rounded-nav .nav-link {
+            border-radius: 50rem !important;
+        }
+    }
+    .with-arrow .nav-link.active {
+        position: relative;
+    }
+    .with-arrow .nav-link.active::after {
+        content: "";
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #29004f;
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+    }
+    .lined .nav-link {
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+    .lined .nav-link:hover {
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+    .lined .nav-link.active {
+        background-color: #29004f;
+        color: #fff;
+        border-color: #29004f;
+    }
+    .nav-tabs .nav-item {
+        transition: all 0.3s ease-in-out;
+        font-size: 22px;
+        color: #fff;
+        a {
+            color: #29004f;
+        }
+    }
+    .nav-tabs .nav-item:hover .nav-link {
+        background-color: #29004f;
+        color: #fff;
+        position: relative;
+        background-color: #29004f;
+        a {
+            color: #fff;
+        }
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+        background-color: #29004f;
+    }
+    a.nav-link.active {
+        color: #fff;
+    }
+
+    /*=================================================================
+    ===========  Works Box 
+    ===================================================================*/
+
+    .box {
+        margin: 40px 0;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s;
+        box-shadow: 2px 2px 10px #999;
+        border-radius: 5px;
+        transition: all 0.35s ease;
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: all 0.35s ease;
+            z-index: 2;
+            p {
+                transition: all 0.35s ease;
+                color: #fff;
+                position: absolute;
+                bottom: 35px;
+                left: 25px;
+                font-size: 25px;
+                font-family: "Kanit", sans-serif !important;
+                border-left: 4px solid #fff;
+                padding-left: 5px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .box:hover {
+        box-shadow: 2px 2px 20px rgb(75, 75, 75);
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.2);
+            p {
+                display: none;
+            }
+        }
+    }
+    .box:before,
+    .box:after {
+        content: "";
+        background: #29004fab;
+        width: 150%;
+        height: 150%;
+        opacity: 0;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -10.5%;
+        right: -150%;
+        z-index: 1;
+        transition: all 0.35s ease;
+    }
+    .box:after {
+        background: rgba(255, 255, 255, 0.5);
+        width: 65%;
+        height: 55%;
+        right: auto;
+        left: -30%;
+        top: -70%;
+    }
+    .box:hover:before {
+        opacity: 1;
+        right: -85%;
+    }
+    .box:hover:after {
+        opacity: 1;
+        top: -42%;
+    }
+    .box img {
+        width: 100%;
+        height: auto;
+        transition: all 0.5s ease;
+        background-color: #1e272e;
+    }
+    .box:hover img {
+        transform: scale(1.2);
+    }
+    .box .box-content {
+        text-align: right;
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: -100%;
+        z-index: 2;
+        transition: all 0.5s;
+    }
+    .box:hover .box-content {
+        right: 5%;
+    }
+    .box .title {
+        color: #ffffff;
+        font-size: 23px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 3px 0;
+    }
+    .box .post {
+        font-size: 16px;
+        text-transform: capitalize;
+        margin: 0 0 10px;
+        display: block;
+        color: #fff;
+    }
+    .box .btn {
+        background-color: #fff;
+        color: #29004f;
+        border-radius: 15px;
+        transition: all 0.35s ease;
+        &:hover {
+            background-color: #29004f;
+            color: #fff;
+        }
+    }
+    @media only screen and (max-width: 990px) {
+        .box {
+            height: 300px;
+            margin: 0 0 30px;
+        }
+    }
+    @media only screen and (max-width: 479px) {
+        .box .title {
+            font-size: 20px;
+        }
+    }
+}

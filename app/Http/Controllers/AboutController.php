@@ -9,7 +9,7 @@ class AboutController extends Controller
     public function index()
     {
 
-        return view('about');
+        return view('web/about');
 
     }
 }

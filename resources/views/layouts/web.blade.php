@@ -44,7 +44,7 @@
                                 <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-circle-question"></i> About Us  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
+                                <a class="nav-item nav-link" href="{{ route('works') }}"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
                             </li>
                             
                             @guest
@@ -132,7 +132,7 @@
                                             <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-circle-question"></i> About Us  </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-item nav-link" href="#"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
+                                            <a class="nav-item nav-link" href="{{ route('works') }}""> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-item nav-link" href="#" style="display: inline"> <i class="fa-solid fa-diagram-project"></i> Affiliate Marketing   </a> <span>new</span> 
@@ -226,7 +226,7 @@
         <script src="{{ asset('js/custom.js') }} "></script>
 
 
-
+        
 
         
     </body>
