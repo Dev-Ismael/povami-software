@@ -1,0 +1,20 @@
+/*=================================================================
+===========  Works Header 
+===================================================================*/
+#works-page{
+    #header{
+        background-image: url(/images/backgrounds/works.jpg);
+        width: 100%;
+        height: 450px;
+        .works-info{
+            padding-top: 200px;
+            font-weight: 100;
+            color: #fff;
+            p{
+                font-size: 15px;
+                color: #ebebeb;
+            }
+        }
+        
+    }
+}

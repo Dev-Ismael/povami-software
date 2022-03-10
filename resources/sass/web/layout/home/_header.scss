@@ -1,0 +1,26 @@
+/*=================================================================
+===========  Home Header 
+===================================================================*/
+#home-page{
+    #header{
+        background-image: url("/images/home_bg.jpg");
+        width: 100%;
+        height: 100vh;
+    }
+    #header .info{
+        padding-top: 10rem;
+        color: #fff;
+    }
+    #header .info a{
+        border-radius: 20px;
+        padding: 8px 15px;
+    }
+    /*============ Responsive ===============*/
+    
+    @media (max-width:767px){
+        #header{
+            background-image: url("/images/home_bg_mob.jpg");
+            height: 550px;
+        }
+    }
+}

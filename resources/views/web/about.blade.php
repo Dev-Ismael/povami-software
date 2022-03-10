@@ -5,20 +5,28 @@
     <div id="about-page">
 
 
-        <div id="glance">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <h4> 
-                            <a href="{{url('/')}}">POVAMI SOFTWARE</a> AT A GLANCE   <i class="fa-solid fa-circle-question"></i>
-                        </h4>
-                        <p>POVAMI offers a right development approach for delivering the right experience to our customers. We develop and deliver cutting edge and innovative solutions based on your needs and preferences so you can transform your business. </p>          
+            
+        <!----- Header ----->
+        <div id="header" class="bg-parallax">
+            <div class="overlay"></div>   
+            <div class="glance">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h3> 
+                                <a href="{{url('/')}}">POVAMI SOFTWARE</a> AT A GLANCE   <i class="fa-solid fa-circle-question"></i>
+                            </h3>
+                            <p>POVAMI offers a right development approach for delivering the right experience to our customers. We develop and deliver cutting edge and innovative solutions based on your needs and preferences so you can transform your business. </p>          
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> 
+        </div> 
+
+        <!----- glance ----->
 
 
+        <!----- company-info ----->
         <div id="company-info" class="content-padding">
             <div class="container">
                 <div class="row">
@@ -53,9 +61,7 @@
             </div>
         </div>
 
-
-
-
+        <!----- what-make-different ----->
         <div id="what-make-different" class="content-padding" >
             <div class="container text-center">
 

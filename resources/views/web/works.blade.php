@@ -4,24 +4,30 @@
 
     <div id="works-page">
 
-        <div id="works-info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <h4> <i class="fa-solid fa-file-lines"></i> Our Works </h4>
-                        <p> 
-                            At our software development company, we create many projects for international corporations, small businesses
-                            and other organisations with an aim to open up new possibilities for expansion, process automatisation,
-                            and continuous improvement. We are a team of experienced developers, creators,
-                            designers and project managers you can rely on.
-                        </p>
+
+                   
+        <!----- Header ----->
+        <div id="header" class="bg-parallax">
+            <div class="overlay"></div>   
+            <div class="works-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h4> <i class="fa-solid fa-file-lines"></i> Our Works </h4>
+                            <p> 
+                                At our software development company, we create many projects for international corporations, small businesses
+                                and other organisations with an aim to open up new possibilities for expansion, process automatisation,
+                                and continuous improvement. We are a team of experienced developers, creators,
+                                designers and project managers you can rely on.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
 
 
-        <div id="works-page-content">
+        <div id="works-page-content" class="content-padding">
             <div class="container">
                 <div class="row">
                     <div class="">

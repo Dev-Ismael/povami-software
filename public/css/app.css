@@ -10607,6 +10607,7 @@ body {
 }
 
 .bg-parallax {
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10624,6 +10625,15 @@ body::-webkit-scrollbar-thumb {
   background-color: #29004f;
   border-radius: 8px;
   right: -10px;
+}
+
+#header .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #1c003782;
 }
 
 /*========= components =========*/
@@ -10793,45 +10803,10 @@ nav.navbar.sticky .navbar-toggler {
   }
 }
 /*=================================================================
-===========  Home Header 
-===================================================================*/
-#home-header {
-  background-image: url("/images/home_bg.jpg");
-  width: 100%;
-  height: 100vh;
-}
-
-#home-header .info {
-  padding-top: 10rem;
-  color: #fff;
-}
-
-#home-header .info a {
-  border-radius: 20px;
-  padding: 8px 15px;
-}
-
-/*=================================================================
-===========  Header 
-===================================================================*/
-#header {
-  background-image: url("/images/bg.jpg");
-  width: 100%;
-  height: 400px;
-}
-
-/*============ Responsive ===============*/
-@media (max-width: 767px) {
-  #home-header {
-    background-image: url("/images/bg-sm.jpg");
-    height: 550px;
-  }
-}
-/*=================================================================
 ===========  footer 
 ===================================================================*/
 #footer {
-  background-image: url("/images/footer.jpg");
+  background-image: url("/images/backgrounds/footer.jpg");
   min-height: 500px;
   color: #fff;
   padding-top: 180px;
@@ -10870,12 +10845,21 @@ nav.navbar.sticky .navbar-toggler {
 /*================== Responsive =================*/
 @media (max-width: 991px) {
   #footer {
-    background-image: url("/images/footer2.jpg");
+    background-image: url("/images/backgrounds/footer_md.jpg");
     height: auto;
     padding-top: 40px;
   }
 }
 /*========= layout =========*/
+/*=================================================================
+===========  Header 
+===================================================================*/
+#register #header {
+  background-image: url("/images/backgrounds/register_bg.jpg");
+  width: 100%;
+  height: 400px;
+}
+
 /*=================================================================
 ===========  register 
 ===================================================================*/
@@ -10908,6 +10892,32 @@ nav.navbar.sticky .navbar-toggler {
 }
 #register #form .form-inner .form-inner i {
   color: #29004fcc;
+}
+
+/*=================================================================
+===========  Home Header 
+===================================================================*/
+#home-page {
+  /*============ Responsive ===============*/
+}
+#home-page #header {
+  background-image: url("/images/home_bg.jpg");
+  width: 100%;
+  height: 100vh;
+}
+#home-page #header .info {
+  padding-top: 10rem;
+  color: #fff;
+}
+#home-page #header .info a {
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+@media (max-width: 767px) {
+  #home-page #header {
+    background-image: url("/images/home_bg_mob.jpg");
+    height: 550px;
+  }
 }
 
 /*=================================================================
@@ -11654,20 +11664,24 @@ nav.navbar.sticky .navbar-toggler {
 }
 
 /*=================================================================
-===========  glance 
+===========  Header 
 ===================================================================*/
-#glance {
-  margin-top: -200px;
-  padding-bottom: 150px;
+#about-page #header {
+  background-image: url(/images/backgrounds/about.jpg);
+  width: 100%;
+  height: 450px;
+}
+#about-page #header .glance {
+  padding-top: 200px;
   font-weight: 100;
   color: #fff;
 }
-#glance h4 a {
+#about-page #header .glance h3 a {
   color: #fff;
   text-transform: capitalize;
   text-decoration: underline;
 }
-#glance p {
+#about-page #header .glance p {
   font-size: 15px;
   color: #ebebeb;
 }
@@ -11707,15 +11721,19 @@ nav.navbar.sticky .navbar-toggler {
   }
 }
 /*=================================================================
-===========  Works Info 
+===========  Works Header 
 ===================================================================*/
-#works-info {
-  margin-top: -200px;
-  padding-bottom: 150px;
+#works-page #header {
+  background-image: url(/images/backgrounds/works.jpg);
+  width: 100%;
+  height: 450px;
+}
+#works-page #header .works-info {
+  padding-top: 200px;
   font-weight: 100;
   color: #fff;
 }
-#works-info p {
+#works-page #header .works-info p {
   font-size: 15px;
   color: #ebebeb;
 }
