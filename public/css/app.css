@@ -10606,6 +10606,15 @@ body {
   margin-top: 15px;
 }
 
+.content-title-underline-left {
+  width: 120px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #29004fd2 !important;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
 .bg-parallax {
   position: relative;
   background-repeat: no-repeat;
@@ -12031,5 +12040,9 @@ nav.navbar.sticky .navbar-toggler {
   height: 50px;
   border-right: 3px solid #6b6b6b;
 }
+
+/*=================================================================
+===========  Account Header 
+===================================================================*/
 
 /*# sourceMappingURL=app.css.map */

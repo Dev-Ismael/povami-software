@@ -20,3 +20,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 Route::get('/works', [App\Http\Controllers\WorkController::class, 'index'])->name('works');
 Route::get('/affiliate', [App\Http\Controllers\AffiliateController::class, 'index'])->name('affiliate');
+Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->name('account');

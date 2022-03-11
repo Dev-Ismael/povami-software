@@ -65,7 +65,7 @@
         <!---------- FAQ ----------->
         <div id="faq" class="content-padding">
             <div class="container">
-                <h2 class="pb-3">Frequently Asked Questions </h2>
+                <h2>Frequently Asked Questions </h2>
                 <div class="content-title-underline-left"></div>
                 <div class="row">
                     <div class="col-md-6">
