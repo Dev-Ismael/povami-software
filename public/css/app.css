@@ -10875,6 +10875,52 @@ nav.navbar.sticky .navbar-toggler {
     padding-top: 40px;
   }
 }
+/*=================================================================
+===========  vertical-tabs 
+===================================================================*/
+#vertical-tabs {
+  /* Add indicator arrow for the active tab */
+}
+#vertical-tabs .nav-pills-custom .nav-link {
+  cursor: pointer;
+  color: #aaa;
+  background: #fff;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+#vertical-tabs .nav-pills-custom .nav-link:hover {
+  background-color: #29004fd0;
+  color: #fff;
+}
+#vertical-tabs .nav-pills-custom .nav-link.active {
+  background-color: #29004fd0;
+  color: #fff;
+}
+#vertical-tabs .nav-pills-custom .nav-link.active:before {
+  opacity: 1;
+}
+#vertical-tabs .nav-pills-custom .nav-link.logout:hover {
+  background-color: #b80101d0;
+  color: #fff;
+}
+#vertical-tabs .tab-content .tab-pane {
+  min-height: 600px;
+}
+@media (min-width: 992px) {
+  #vertical-tabs .nav-pills-custom .nav-link::before {
+    content: "";
+    display: block;
+    border-top: 8px solid transparent;
+    border-left: 10px solid #29004fd0;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
 /*========= layout =========*/
 /*=================================================================
 ===========  Header 
