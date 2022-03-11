@@ -10637,6 +10637,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*========= components =========*/
+.btn {
+  padding: 7px 12px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.btn.purple {
+  background-color: #29004f;
+}
+.btn.purple:hover {
+  background-color: transparent;
+  color: #29004f;
+  border: 1px solid #29004f;
+}
+
 /*=================================================================
 ===========  Navbar 
 ===================================================================*/
