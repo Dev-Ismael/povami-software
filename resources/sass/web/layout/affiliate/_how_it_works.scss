@@ -1,0 +1,43 @@
+/*=================================================================
+===========  How it works 
+===================================================================*/
+#how-it-works {
+    .box {
+        margin-bottom: 20px;
+        i {
+            color: #29004f;
+            transition: all ease-in-out 0.3s;
+        }
+        .num i {
+            padding: 15px 20px;
+            border-radius: 50%;
+            background-color: #29004f;
+            color: #fff;
+        }
+        border-radius: 5px;
+        transition: all ease-in-out 0.3s;
+        padding: 20px;
+        min-height: 320px;
+        border: 1px solid rgb(160, 160, 160);
+
+        &:hover {
+            background-color: #29004f;
+            color: #fff;
+            i {
+                color: #fff;
+            }
+            .num i {
+                background-color: #fff;
+                color: #29004f;
+            }
+        }
+    }
+}
+/*============== Responsive =================*/
+@media (max-width: 768px) {
+    #how-it-works {
+        .box {
+            margin: 30px;
+        }
+    }
+}

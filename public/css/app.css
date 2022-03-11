@@ -10856,6 +10856,7 @@ nav.navbar.sticky .navbar-toggler {
 ===================================================================*/
 #register #header {
   background-image: url("/images/backgrounds/register_bg.jpg");
+  position: inherit;
   width: 100%;
   height: 400px;
 }
@@ -11429,7 +11430,7 @@ nav.navbar.sticky .navbar-toggler {
 }
 #contact .map-container {
   position: relative;
-  background-image: url(/images/map.jpg);
+  background-image: url(/images/backgrounds/map.jpg);
   background-repeat: no-repeat;
   background-position: cover;
 }
@@ -11937,6 +11938,82 @@ nav.navbar.sticky .navbar-toggler {
   #works-examples .box .title {
     font-size: 20px;
   }
+}
+
+/*=================================================================
+===========  affiliate Header 
+===================================================================*/
+#affiliate-page #header {
+  background-image: url(/images/backgrounds/affiliate.jpg);
+  width: 100%;
+  height: 450px;
+}
+#affiliate-page #header .affiliate-info {
+  padding-top: 200px;
+  font-weight: 100;
+  color: #fff;
+}
+#affiliate-page #header .affiliate-info h3 a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+#affiliate-page #header .affiliate-info p {
+  font-size: 15px;
+  color: #ebebeb;
+}
+
+/*=================================================================
+===========  How it works 
+===================================================================*/
+#how-it-works .box {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+  padding: 20px;
+  min-height: 320px;
+  border: 1px solid #a0a0a0;
+}
+#how-it-works .box i {
+  color: #29004f;
+  transition: all ease-in-out 0.3s;
+}
+#how-it-works .box .num i {
+  padding: 15px 20px;
+  border-radius: 50%;
+  background-color: #29004f;
+  color: #fff;
+}
+#how-it-works .box:hover {
+  background-color: #29004f;
+  color: #fff;
+}
+#how-it-works .box:hover i {
+  color: #fff;
+}
+#how-it-works .box:hover .num i {
+  background-color: #fff;
+  color: #29004f;
+}
+
+/*============== Responsive =================*/
+@media (max-width: 768px) {
+  #how-it-works .box {
+    margin: 30px;
+  }
+}
+/*=================================================================
+===========  Recommand footer 
+===================================================================*/
+#recommend .box {
+  border-radius: 3px;
+  padding: 40px 0;
+  background-color: #29004f0e;
+}
+#recommend .box img {
+  padding-right: 40px;
+  height: 50px;
+  border-right: 3px solid #6b6b6b;
 }
 
 /*# sourceMappingURL=app.css.map */

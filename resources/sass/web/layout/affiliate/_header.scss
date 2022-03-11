@@ -1,0 +1,27 @@
+/*=================================================================
+===========  affiliate Header 
+===================================================================*/
+#affiliate-page{
+    #header{
+        background-image: url(/images/backgrounds/affiliate.jpg);
+        width: 100%;
+        height: 450px;
+        .affiliate-info{
+            padding-top: 200px;
+            font-weight: 100;
+            color: #fff;
+            h3{ 
+                a{
+                    color: #fff;
+                    text-transform: capitalize;
+                    text-decoration: underline;
+                }
+            }
+            p{
+                font-size: 15px;
+                color: #ebebeb;
+            }
+        }
+    
+    }
+}
