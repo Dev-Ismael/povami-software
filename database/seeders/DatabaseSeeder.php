@@ -13,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+
+        // call seeders needed for default setup
+
+        $this->call([
+
+            UserSeeder::class,
+
+        ]);
     }
 }
