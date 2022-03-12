@@ -14,7 +14,7 @@
                         <p>
                             With us, you will receive the best services in the short time
                         </p>
-                        <a href="#" class="btn btn-success"> <i class="fa-solid fa-file-lines"></i> View Works </a>
+                        <a href="{{route('works')}}" class="btn green"> <i class="fa-solid fa-file-lines"></i> View Works </a>
                     </div>
                 </div>
             </div>

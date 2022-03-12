@@ -1,9 +1,10 @@
 .btn{
-    padding: 7px 12px;
-    border-radius: 10px;
+    padding: 0 20px;
+    border-radius: 25px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
     &.purple{
         background-color: #29004f;
         &:hover{
@@ -11,5 +12,13 @@
             color: #29004f;
             border: 1px solid #29004f;
         }
-    }   
+    }  
+    &.green{
+        background-color: #00b04e;
+        color: #fff;
+        &:hover{
+            background-color: rgba(0, 146, 66);
+            color: #fff;
+        }
+    } 
 }
