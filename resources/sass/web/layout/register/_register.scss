@@ -21,17 +21,21 @@
 				margin-bottom: 25px;
 				margin-top: -10px;
 			}
-			.form-inner{ 
-				.form-control{
-					border-radius: 10px;
-					label{
-						margin-bottom: 5px;
-						margin-left: 5px;
-					}
-				}
+			label{
 				i{
 					color: #29004fcc;
 				}
+			}
+			.form-inner{ 
+				.form-control{
+					border-radius: 10px;
+				}
+			}
+			.form-question{
+				color: #29004f;
+				text-decoration: underline;
+				display: block;
+				padding-bottom: 10px;
 			}
 		}
 	}

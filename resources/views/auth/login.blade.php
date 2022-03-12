@@ -46,8 +46,8 @@
                 </div>
                 <br>
 
-
-                <input type="submit" class="btn btn-success" value="Login">
+                <a href="{{route('register')}}" class="form-question">Don't Have an account yet ?!</a>
+                <button type="submit" class="btn purple"> <i class="fa-solid fa-right-to-bracket"></i> Login</button>
 
             </form>
         </div>

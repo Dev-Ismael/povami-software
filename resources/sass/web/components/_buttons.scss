@@ -1,24 +1,31 @@
 .btn{
-    padding: 0 20px;
+    padding: 7px 20px;
     border-radius: 25px;
-    color: #fff;
+    color: #fff ;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.295) !important;
+    i{
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+    }
     &.purple{
         background-color: #29004f;
         &:hover{
             background-color: transparent;
             color: #29004f;
             border: 1px solid #29004f;
+            i{
+                color: #29004f;
+            }
         }
     }  
     &.green{
         background-color: #00b04e;
-        color: #fff;
         &:hover{
             background-color: rgba(0, 146, 66);
             color: #fff;
+            color: #00b04e;
         }
     } 
 }

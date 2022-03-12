@@ -10647,12 +10647,16 @@ body::-webkit-scrollbar-thumb {
 
 /*========= components =========*/
 .btn {
-  padding: 0 20px;
+  padding: 7px 20px;
   border-radius: 25px;
   color: #fff;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.295) !important;
+}
+.btn i {
+  transition: all 0.3s ease-in-out;
+  color: #fff;
 }
 .btn.purple {
   background-color: #29004f;
@@ -10662,13 +10666,16 @@ body::-webkit-scrollbar-thumb {
   color: #29004f;
   border: 1px solid #29004f;
 }
+.btn.purple:hover i {
+  color: #29004f;
+}
 .btn.green {
   background-color: #00b04e;
-  color: #fff;
 }
 .btn.green:hover {
   background-color: #009242;
   color: #fff;
+  color: #00b04e;
 }
 
 /*=================================================================
@@ -11094,15 +11101,17 @@ nav.navbar.sticky li a.nav-link, nav.navbar.collapse-open li a.nav-link {
   margin-bottom: 25px;
   margin-top: -10px;
 }
+#register #form .form-inner label i {
+  color: #29004fcc;
+}
 #register #form .form-inner .form-inner .form-control {
   border-radius: 10px;
 }
-#register #form .form-inner .form-inner .form-control label {
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
-#register #form .form-inner .form-inner i {
-  color: #29004fcc;
+#register #form .form-inner .form-question {
+  color: #29004f;
+  text-decoration: underline;
+  display: block;
+  padding-bottom: 10px;
 }
 
 /*=================================================================
