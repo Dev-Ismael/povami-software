@@ -15,8 +15,8 @@ $(document).ready( function (){
 					$("nav.navbar").addClass('sticky');
 					$(".navbar-brand img").attr("src" , "images/icons/Logo1.png");
 				} else {
-					$("nav.navbar.show").removeClass('sticky');
-					$("nav.navbar.show .navbar-brand img").attr("src" , "images/icons/Logo2.png");
+					$("nav.navbar").removeClass('sticky');
+					$("nav.navbar .navbar-brand img").attr("src" , "images/icons/Logo2.png");
 				}
 			});
 

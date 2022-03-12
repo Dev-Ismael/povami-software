@@ -13,11 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+// Auth
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
-Route::get('/works', [App\Http\Controllers\WorkController::class, 'index'])->name('works');
-Route::get('/affiliate', [App\Http\Controllers\AffiliateController::class, 'index'])->name('affiliate');
-Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->name('account');
+// Web
+Route::group( ['namespace' => 'Web'] ,function(){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/about', 'AboutController@index')->name('about');
+    Route::get('/works', 'WorkController@index')->name('works');
+    Route::get('/affiliate', 'AffiliateController@index')->name('affiliate');
+    Route::get('/account', 'AccountController@index')->name('account');
+});
+
+// Admin
+Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin'] ,function(){
+    Route::get('dashboard' , function(){
+        return "Admin->Dashboard";
+    });
+});

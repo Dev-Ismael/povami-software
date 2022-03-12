@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Models\work;
-use App\Http\Requests\StoreworkRequest;
-use App\Http\Requests\UpdateworkRequest;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class WorkController extends Controller
+class AffiliateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        return view("web/works");
+        return view("web/affiliate");
     }
 
     /**
@@ -31,10 +30,10 @@ class WorkController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreworkRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreworkRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +41,10 @@ class WorkController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\work  $work
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(work $work)
+    public function show($id)
     {
         //
     }
@@ -53,10 +52,10 @@ class WorkController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\work  $work
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(work $work)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +63,11 @@ class WorkController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateworkRequest  $request
-     * @param  \App\Models\work  $work
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateworkRequest $request, work $work)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +75,10 @@ class WorkController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\work  $work
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(work $work)
+    public function destroy($id)
     {
         //
     }

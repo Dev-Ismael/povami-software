@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use Illuminate\Http\Request;
+use App\Models\work;
+use App\Http\Requests\StoreworkRequest;
+use App\Http\Requests\UpdateworkRequest;
+use App\Http\Controllers\Controller;
 
-class AffiliateController extends Controller
+class WorkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +16,7 @@ class AffiliateController extends Controller
      */
     public function index()
     {
-        return view("web/affiliate");
+        return view("web/works");
     }
 
     /**
@@ -29,10 +32,10 @@ class AffiliateController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreworkRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreworkRequest $request)
     {
         //
     }
@@ -40,10 +43,10 @@ class AffiliateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(work $work)
     {
         //
     }
@@ -51,10 +54,10 @@ class AffiliateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(work $work)
     {
         //
     }
@@ -62,11 +65,11 @@ class AffiliateController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\UpdateworkRequest  $request
+     * @param  \App\Models\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateworkRequest $request, work $work)
     {
         //
     }
@@ -74,10 +77,10 @@ class AffiliateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(work $work)
     {
         //
     }
