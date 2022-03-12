@@ -38,7 +38,24 @@ nav.navbar{
         .navbar-toggler{
             color: #29004f;
         }
-    } 
+    }
+
+    .dropdown-item , .dropdown-item.active, .dropdown-item:active,
+    .dropdown-item:hover, .dropdown-item:focus{
+        background-color: #ffffff;
+        margin: 0px 0px;
+    }
+    .dropdown-menu{
+        padding: 5px;
+        .dropdown-item{
+            padding: 5px 10px;
+            color: #29004f;
+            &:hover{
+                background-color: #29004fc5 !important;
+                color: #fff;
+            }
+        }
+    }
 }
 /*============= Responsive ================*/
 

@@ -15,15 +15,17 @@ $(document).ready( function (){
 					$("nav.navbar").addClass('sticky');
 					$(".navbar-brand img").attr("src" , "images/icons/Logo1.png");
 				} else {
-					$("nav.navbar").removeClass('sticky');
-					$(".navbar-brand img").attr("src" , "images/icons/Logo2.png");
+					$("nav.navbar.show").removeClass('sticky');
+					$("nav.navbar.show .navbar-brand img").attr("src" , "images/icons/Logo2.png");
 				}
 			});
 
 			// At Click Navbar Toggler
 			$(" button.navbar-toggler").click( function (){
 				$("nav.navbar").css("height" , "auto");
-				$("navbar-collapse.collapse.show").css("background-color" , "#fff");
+				// $("nav.navbar").css("background-color" , "#fff");
+				$("nav.navbar").addClass('sticky');
+				$(".navbar-brand img").attr("src" , "images/icons/Logo1.png");
 				$(this).css("color" , "#29004f")
 			}); 
 

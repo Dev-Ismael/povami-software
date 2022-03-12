@@ -10704,6 +10704,22 @@ nav.navbar.sticky a {
 nav.navbar.sticky .navbar-toggler {
   color: #29004f;
 }
+nav.navbar .dropdown-item, nav.navbar .dropdown-item.active, nav.navbar .dropdown-item:active,
+nav.navbar .dropdown-item:hover, nav.navbar .dropdown-item:focus {
+  background-color: #ffffff;
+  margin: 0px 0px;
+}
+nav.navbar .dropdown-menu {
+  padding: 5px;
+}
+nav.navbar .dropdown-menu .dropdown-item {
+  padding: 5px 10px;
+  color: #29004f;
+}
+nav.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #29004fc5 !important;
+  color: #fff;
+}
 
 /*============= Responsive ================*/
 @media (max-width: 767px) {
@@ -10811,6 +10827,22 @@ nav.navbar.sticky a {
 }
 nav.navbar.sticky .navbar-toggler {
   color: #29004f;
+}
+nav.navbar .dropdown-item, nav.navbar .dropdown-item.active, nav.navbar .dropdown-item:active,
+nav.navbar .dropdown-item:hover, nav.navbar .dropdown-item:focus {
+  background-color: #ffffff;
+  margin: 0px 0px;
+}
+nav.navbar .dropdown-menu {
+  padding: 5px;
+}
+nav.navbar .dropdown-menu .dropdown-item {
+  padding: 5px 10px;
+  color: #29004f;
+}
+nav.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #29004fc5 !important;
+  color: #fff;
 }
 
 /*============= Responsive ================*/
@@ -10987,7 +11019,7 @@ nav.navbar.sticky .navbar-toggler {
 }
 @media (max-width: 767px) {
   #home-page #header {
-    background-image: url("/images/home_bg_mob.jpg");
+    background-image: url("/images/backgrounds/home_bg_md.jpg");
     height: 550px;
   }
 }
