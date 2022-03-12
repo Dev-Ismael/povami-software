@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+// use App\Providers\RouteServiceProvider;
+// use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -19,14 +21,14 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    // use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/account';
+    // protected $redirectTo = '/account';
 
     /**
      * Create a new controller instance.
@@ -37,4 +39,23 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+        return view("auth/login");
+    }
+
+    
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+ 
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->intended('/account');
+        }
+    }
+
+
+    
 }

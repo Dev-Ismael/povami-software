@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 // Auth
 Auth::routes();
+Route::group( ['namespace' => 'Auth'] ,function(){
+    Route::get('/login', 'LoginController@showLoginForm')->name('login');
+    Route::post('/login', 'LoginController@authenticate')->name('login');
+    Route::post('/logout', 'LogoutController@logout')->name('logout');
+});
 
 // Web
 Route::group( ['namespace' => 'Web'] ,function(){
@@ -27,7 +32,5 @@ Route::group( ['namespace' => 'Web'] ,function(){
 
 // Admin
 Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin'] ,function(){
-    Route::get('dashboard' , function(){
-        return "Admin->Dashboard";
-    });
+    Route::get('/', 'DashboardController@index')->name('dashboard');
 });
