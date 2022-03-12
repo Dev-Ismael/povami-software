@@ -22,11 +22,8 @@ $(document).ready( function (){
 
 			// At Click Navbar Toggler
 			$(" button.navbar-toggler").click( function (){
+				$("nav.navbar").toggleClass('collapse-open');
 				$("nav.navbar").css("height" , "auto");
-				// $("nav.navbar").css("background-color" , "#fff");
-				$("nav.navbar").addClass('sticky');
-				$(".navbar-brand img").attr("src" , "images/icons/Logo1.png");
-				$(this).css("color" , "#29004f")
 			}); 
 
 		/*===== Counter Up ========*/

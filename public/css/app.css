@@ -10674,67 +10674,116 @@ nav.navbar {
   z-index: 99999999999999;
   height: 55px;
   background-color: transparent;
-}
-nav.navbar img {
-  height: 40px;
-}
-nav.navbar .navbar-nav.ml-auto {
-  padding-left: 7px;
+  /*============= sticky & collapse-open =================*/
+  /*============= Responsive ================*/
 }
 nav.navbar .container {
   padding-right: 0px;
   padding-left: 0px;
+  /*============= Image Brand ================*/
+  /*============= button icon ================*/
+  /*======= nav-link =======*/
+  /*===== Dropdown ======*/
 }
-nav.navbar a {
+nav.navbar .container .navbar-brand {
+  width: 140px;
+  height: 40px;
+  background-image: url("/images/logo_white.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.3s;
+}
+nav.navbar .container .navbar-toggler-icon {
+  display: inline;
   color: #fff;
+}
+nav.navbar .container .navbar-toggler-icon span {
+  font-size: 22px;
+}
+nav.navbar .container .navbar-toggler-icon i {
+  font-size: 21px;
+}
+nav.navbar .container .navbar-toggler,
+nav.navbar .container .navbar-toggler:focus,
+nav.navbar .container .navbar-toggler:active {
+  outline: none;
+}
+nav.navbar .container li a.nav-link {
+  color: #ffffff;
   margin: 0px 10px;
   position: relative;
   transition: all ease-in-out 0.3s;
 }
-nav.navbar .navbar-toggler {
-  color: #fff;
+nav.navbar .container .dropdown-menu {
+  transition: all ease-in-out 0.3s;
 }
-nav.navbar.sticky {
-  box-shadow: 0px 0px 2px 2px #717171cc;
-  background-color: #fff;
-}
-nav.navbar.sticky a {
-  color: #29004f;
-}
-nav.navbar.sticky .navbar-toggler {
-  color: #29004f;
-}
-nav.navbar .dropdown-item, nav.navbar .dropdown-item.active, nav.navbar .dropdown-item:active,
-nav.navbar .dropdown-item:hover, nav.navbar .dropdown-item:focus {
-  background-color: #ffffff;
-  margin: 0px 0px;
-}
-nav.navbar .dropdown-menu {
-  padding: 5px;
-}
-nav.navbar .dropdown-menu .dropdown-item {
+nav.navbar .container .dropdown-menu .dropdown-item {
   padding: 5px 10px;
   color: #29004f;
+  transition: all ease-in-out 0.3s;
 }
-nav.navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #29004fc5 !important;
-  color: #fff;
+nav.navbar .container .dropdown-menu .dropdown-item:hover {
+  padding-left: 20px;
+  background-color: #29004f2f;
+}
+nav.navbar.sticky, nav.navbar.collapse-open {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  /*=== Image brand ===*/
+  /*============= button icon ================*/
+  /*======= nav-link =======*/
+}
+nav.navbar.sticky .navbar-brand, nav.navbar.collapse-open .navbar-brand {
+  background-image: url("/images/logo_purple.png");
+}
+nav.navbar.sticky .navbar-toggler-icon, nav.navbar.collapse-open .navbar-toggler-icon {
+  color: #29004f;
+}
+nav.navbar.sticky li a.nav-link, nav.navbar.collapse-open li a.nav-link {
+  color: #29004f;
+}
+@media (max-width: 992px) {
+  nav.navbar.sticky, nav.navbar.collapse-open {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto, nav.navbar.collapse-open .navbar-nav.ml-auto {
+    position: relative;
+    padding: 20px;
+    padding-left: 10px;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto::before, nav.navbar.collapse-open .navbar-nav.ml-auto::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: #29004f;
+    position: absolute;
+    top: 10px;
+    left: 15%;
+    border-radius: 3px;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto li a.nav-item, nav.navbar.collapse-open .navbar-nav.ml-auto li a.nav-item {
+    padding-left: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto li a.nav-item:hover, nav.navbar.collapse-open .navbar-nav.ml-auto li a.nav-item:hover {
+    padding-left: 20px;
+    background-color: #29004f2f;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto .dropdown-menu, nav.navbar.collapse-open .navbar-nav.ml-auto .dropdown-menu {
+    background-color: transparent;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto .dropdown-menu .dropdown-item, nav.navbar.collapse-open .navbar-nav.ml-auto .dropdown-menu .dropdown-item {
+    background-color: transparent;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto .dropdown-menu .dropdown-item:hover, nav.navbar.collapse-open .navbar-nav.ml-auto .dropdown-menu .dropdown-item:hover {
+    padding-left: 25px;
+    background-color: #29004f2f;
+  }
 }
 
-/*============= Responsive ================*/
-@media (max-width: 767px) {
-  nav.navbar .underline {
-    left: 0px;
-  }
-
-  .navbar-brand img {
-    margin-top: -7px;
-  }
-
-  .navbar-nav.ml-auto {
-    border-top: 1px solid #29004f;
-  }
-}
 /*==================================================================
 ============== Absolute Icons =============================================
 =================================================================*/
@@ -10798,67 +10847,116 @@ nav.navbar {
   z-index: 99999999999999;
   height: 55px;
   background-color: transparent;
-}
-nav.navbar img {
-  height: 40px;
-}
-nav.navbar .navbar-nav.ml-auto {
-  padding-left: 7px;
+  /*============= sticky & collapse-open =================*/
+  /*============= Responsive ================*/
 }
 nav.navbar .container {
   padding-right: 0px;
   padding-left: 0px;
+  /*============= Image Brand ================*/
+  /*============= button icon ================*/
+  /*======= nav-link =======*/
+  /*===== Dropdown ======*/
 }
-nav.navbar a {
+nav.navbar .container .navbar-brand {
+  width: 140px;
+  height: 40px;
+  background-image: url("/images/logo_white.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.3s;
+}
+nav.navbar .container .navbar-toggler-icon {
+  display: inline;
   color: #fff;
+}
+nav.navbar .container .navbar-toggler-icon span {
+  font-size: 22px;
+}
+nav.navbar .container .navbar-toggler-icon i {
+  font-size: 21px;
+}
+nav.navbar .container .navbar-toggler,
+nav.navbar .container .navbar-toggler:focus,
+nav.navbar .container .navbar-toggler:active {
+  outline: none;
+}
+nav.navbar .container li a.nav-link {
+  color: #ffffff;
   margin: 0px 10px;
   position: relative;
   transition: all ease-in-out 0.3s;
 }
-nav.navbar .navbar-toggler {
-  color: #fff;
+nav.navbar .container .dropdown-menu {
+  transition: all ease-in-out 0.3s;
 }
-nav.navbar.sticky {
-  box-shadow: 0px 0px 2px 2px #717171cc;
-  background-color: #fff;
-}
-nav.navbar.sticky a {
-  color: #29004f;
-}
-nav.navbar.sticky .navbar-toggler {
-  color: #29004f;
-}
-nav.navbar .dropdown-item, nav.navbar .dropdown-item.active, nav.navbar .dropdown-item:active,
-nav.navbar .dropdown-item:hover, nav.navbar .dropdown-item:focus {
-  background-color: #ffffff;
-  margin: 0px 0px;
-}
-nav.navbar .dropdown-menu {
-  padding: 5px;
-}
-nav.navbar .dropdown-menu .dropdown-item {
+nav.navbar .container .dropdown-menu .dropdown-item {
   padding: 5px 10px;
   color: #29004f;
+  transition: all ease-in-out 0.3s;
 }
-nav.navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #29004fc5 !important;
-  color: #fff;
+nav.navbar .container .dropdown-menu .dropdown-item:hover {
+  padding-left: 20px;
+  background-color: #29004f2f;
+}
+nav.navbar.sticky, nav.navbar.collapse-open {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  /*=== Image brand ===*/
+  /*============= button icon ================*/
+  /*======= nav-link =======*/
+}
+nav.navbar.sticky .navbar-brand, nav.navbar.collapse-open .navbar-brand {
+  background-image: url("/images/logo_purple.png");
+}
+nav.navbar.sticky .navbar-toggler-icon, nav.navbar.collapse-open .navbar-toggler-icon {
+  color: #29004f;
+}
+nav.navbar.sticky li a.nav-link, nav.navbar.collapse-open li a.nav-link {
+  color: #29004f;
+}
+@media (max-width: 992px) {
+  nav.navbar.sticky, nav.navbar.collapse-open {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto, nav.navbar.collapse-open .navbar-nav.ml-auto {
+    position: relative;
+    padding: 20px;
+    padding-left: 10px;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto::before, nav.navbar.collapse-open .navbar-nav.ml-auto::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: #29004f;
+    position: absolute;
+    top: 10px;
+    left: 15%;
+    border-radius: 3px;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto li a.nav-item, nav.navbar.collapse-open .navbar-nav.ml-auto li a.nav-item {
+    padding-left: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto li a.nav-item:hover, nav.navbar.collapse-open .navbar-nav.ml-auto li a.nav-item:hover {
+    padding-left: 20px;
+    background-color: #29004f2f;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto .dropdown-menu, nav.navbar.collapse-open .navbar-nav.ml-auto .dropdown-menu {
+    background-color: transparent;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto .dropdown-menu .dropdown-item, nav.navbar.collapse-open .navbar-nav.ml-auto .dropdown-menu .dropdown-item {
+    background-color: transparent;
+  }
+  nav.navbar.sticky .navbar-nav.ml-auto .dropdown-menu .dropdown-item:hover, nav.navbar.collapse-open .navbar-nav.ml-auto .dropdown-menu .dropdown-item:hover {
+    padding-left: 25px;
+    background-color: #29004f2f;
+  }
 }
 
-/*============= Responsive ================*/
-@media (max-width: 767px) {
-  nav.navbar .underline {
-    left: 0px;
-  }
-
-  .navbar-brand img {
-    margin-top: -7px;
-  }
-
-  .navbar-nav.ml-auto {
-    border-top: 1px solid #29004f;
-  }
-}
 /*=================================================================
 ===========  footer 
 ===================================================================*/
@@ -11005,7 +11103,7 @@ nav.navbar .dropdown-menu .dropdown-item:hover {
   /*============ Responsive ===============*/
 }
 #home-page #header {
-  background-image: url("/images/home_bg.jpg");
+  background-image: url("/images/backgrounds/home_bg.jpg");
   width: 100%;
   height: 100vh;
 }

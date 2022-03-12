@@ -59,10 +59,15 @@
                             </a>
         
         
-                            <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false">
+                            <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
 
                         </div>
                     </div>

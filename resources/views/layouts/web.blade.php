@@ -31,9 +31,9 @@
             <!---- Navbar ---->
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ route('home') }}"> <img src="images/icons/Logo2.png" alt=""> </a>
+                    <a class="navbar-brand" href="{{ route('home') }}"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i> </span>
+                        <span class="navbar-toggler-icon"> <span>MENU</span> <i class="fa-solid fa-bars-staggered pr-1"></i> </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
@@ -59,12 +59,12 @@
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('account') }}" >
-                                            Account
+                                            <i class="fa fa-user-circle-o mr-2"></i> Account
                                         </a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            <i class="fa-solid fa-door-open pr-2"></i>  Logout
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
