@@ -51,9 +51,11 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
  
         if (Auth::attempt($credentials)) {
-            // Authentication passed...
             return redirect()->intended('/account');
         }
+        return  back() -> withErrors(['email' => 'Oppes! You have entered invalid credentials']);
+
+
     }
 
 

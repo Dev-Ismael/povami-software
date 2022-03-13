@@ -19,8 +19,8 @@
 
 
                 <label for="email"> <i class="fas fa-envelope-open-text"></i> Email</label>
-                <input type="text" name="email" class="form-control" placeholder="Type Email..">
-                @error('password')
+                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Type Email..">
+                @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -28,8 +28,9 @@
                 <br>
 
 
+                
                 <label for="password"> <i class="fas fa-lock"></i> Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Type password..">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Type Password..">
                 @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
