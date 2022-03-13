@@ -58,6 +58,11 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        @if( Auth::user()->role === 1 )
+                                                <a class="dropdown-item" href="{{ route('dashboard') }}"  >
+                                                    <i class="fa-solid fa-gauge"></i> Dashboard
+                                                </a> 
+                                        @endif
                                         <a class="dropdown-item" href="{{ route('account') }}" >
                                             <i class="fa fa-user-circle-o mr-2"></i> Account
                                         </a>
