@@ -27,6 +27,6 @@ Route::group( ['namespace' => 'Web'] ,function(){
 });
 
 // Admin
-Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin'] ,function(){
-    Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin'] ,function(){
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 });
