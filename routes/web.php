@@ -15,11 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Auth
 Auth::routes();
-Route::group( ['namespace' => 'Auth'] ,function(){
-    Route::get('/login', 'LoginController@showLoginForm')->name('login');
-    Route::post('/login', 'LoginController@authenticate')->name('login');
-    Route::post('/logout', 'LogoutController@logout')->name('logout');
-});
+
 
 // Web
 Route::group( ['namespace' => 'Web'] ,function(){
