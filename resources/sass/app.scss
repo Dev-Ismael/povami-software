@@ -1,47 +1,12 @@
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Kanit');
-@import url('https://fonts.googleapis.com/css2?family=Hubballi');
-// Bootstrap
-// @import '~bootstrap/scss/bootstrap';   // import bootstrap laravel packags
-@import '../css/bootstrap';
+
+//#################################################
+//########### Web Scss ############################
+//#################################################
+@import "web/web";
 
 
-//########### Web Scss
-/*========= helpers =========*/
-@import "web/helpers/vars";
-@import "web/helpers/global";
-@import "web/helpers/mixin";
-/*========= components =========*/
-@import "web/components/buttons";
-@import "web/components/navbar";
-@import "web/components/absolute_icons";
-@import "web/components/copyright";
-@import "web/components/navbar";
-@import "web/components/footer";
-@import "web/components/vertical_tabs";
-/*========= layout =========*/
-// Register
-@import "web/layout/register/header";
-@import "web/layout/register/register";
-// Home
-@import "web/layout/home/header";
-@import "web/layout/home/clients";
-@import "web/layout/home/contact";
-@import "web/layout/home/services";
-@import "web/layout/home/skillset";
-@import "web/layout/home/stats";
-@import "web/layout/home/testimonials";
-// About
-@import "web/layout/about/header";
-@import "web/layout/about/company_info";
-@import "web/layout/about/what_make_different";
-// Works
-@import "web/layout/works/header";
-@import "web/layout/works/works_examples";
-// Affiliate
-@import "web/layout/affiliate/header";
-@import "web/layout/affiliate/how_it_works";
-@import "web/layout/affiliate/recommend";
-// Account
-@import "web/layout/account/header";
+//#################################################
+//########### Admin Scss ############################
+//#################################################
+@import "admin/admin";
