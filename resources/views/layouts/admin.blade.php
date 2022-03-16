@@ -1,73 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
 
-        <!------- CSRF Token ------->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<head>
+	<!------- CSRF Token ------->
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <!------- Title ------->
-        <title>{{ config('app.name', 'Laravel') }}</title>
+	<!------- Title ------->
+	<title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!------- IE Compatibility Meta ------->
-        <meta http-equiv="X-UA-Compatibale" content="IE-=edge">
+	<!------- IE Compatibility Meta ------->
+	<meta http-equiv="X-UA-Compatibale" content="IE-=edge" />
 
-        <!------- Theme Color meta ------->
-        <meta name="theme-color" content="#ffffff"> 
+	<!------- Theme Color meta ------->
+	<meta name="theme-color" content="#ffffff" />
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
 
-        <!------- FontAwesome  ------->
-        <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
+	<!------- FontAwesome  ------->
+	<script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
 
-        
-        <!------- StyleSheet ------->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    </head>
-    <body>
-        <div id="app">
+	<!------- StyleSheet ------->
+	<link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+</head>
 
+<body>
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-primary">
+					<i class="fa fa-bars"></i>
+					<span class="sr-only">Toggle Menu</span>
+				</button>
+			</div>
+			<div class="p-4">
+				<h4>
+					<a href="index.html" class="logo">Povami Software <span>Abdulrahman ismael</span></a>
+				</h4>
+				<ul class="list-unstyled components mb-5">
+					<li class="active">
+						<a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+					</li>
+					<li>
+						<a href="#"><span class="fa fa-user mr-3"></span> About</a>
+					</li>
+					<li>
+						<a href="#"><span class="fa fa-briefcase mr-3"></span> Works</a>
+					</li>
+					<li>
+						<a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
+					</li>
+					<li>
+						<a href="#"><span class="fa fa-suitcase mr-3"></span> Gallery</a>
+					</li>
+					<li>
+						<a href="#"><span class="fa fa-cogs mr-3"></span> Services</a>
+					</li>
+					<li>
+						<a href="#"><span class="fa fa-paper-plane mr-3"></span> Contacts</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-            <!---- Content ---->
-            @yield('content')
+		<!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+      @yield('content')
+    </div>
+	</div>
 
+	<!-- JQUERY Framwork-->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
+	<!-- bootstrap Framwork-->
+	<script src="{{ asset('js/bootstrap.js') }} "></script>
 
+	<!-- countup -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script src="{{ asset('js/jquery.counterup.min.js') }} "></script>
 
+	<!-- JQUERY Framwork-->
+	<script src="{{ asset('js/custom.js') }} "></script>
+</body>
 
-
-
-
-
-        </div>
-
-    
-
-
-
-
-
-
-
-
-
-
-        <!-- JQUERY Framwork-->
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-        <!-- bootstrap Framwork-->
-        <script src="{{ asset('js/bootstrap.js') }} "></script>
-
-        <!-- countup -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-        <script src="{{ asset('js/jquery.counterup.min.js') }} "></script>
-        
-        <!-- JQUERY Framwork-->
-        <script src="{{ asset('js/custom.js') }} "></script>
-
-
-        
-
-        
-    </body>
 </html>
