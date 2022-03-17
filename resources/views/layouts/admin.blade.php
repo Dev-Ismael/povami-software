@@ -14,7 +14,7 @@
 	<!------- Theme Color meta ------->
 	<meta name="theme-color" content="#ffffff" />
 
-	<!-- Favicon -->
+	<!-- Fav	icon -->
 	<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
 
 	<!------- FontAwesome  ------->
@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 </head>
 
-<body>
+<body id="admin-body">
 	<div class="wrapper d-flex align-items-stretch">
 		<nav id="sidebar">
 			<div class="custom-menu">
@@ -39,7 +39,7 @@
 				</h4>
 				<ul class="list-unstyled components mb-5">
 					<li class="active">
-						<a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+						<a href="#"> <i class="fa-solid fa-gauge"></i>  Dashboard </a>
 					</li>
 					<li>
 						<a href="#"><span class="fa fa-user mr-3"></span> About</a>
@@ -66,7 +66,7 @@
 		<!-- Page Content  -->
 		<div id="content" class="p-4 p-md-5 pt-5">
       @yield('content')
-    </div>
+    	</div>
 	</div>
 
 	<!-- JQUERY Framwork-->

@@ -49,6 +49,9 @@
 		    &:hover{
 		    	color: #fff;
 		    }
+			i{
+				padding-right: 12px;
+			}
     	}
     	&.active{
     		> a{
@@ -78,8 +81,9 @@
 			border-radius: 50%;
 			position: relative;
 			i{
-				margin-right: -40px;
-				font-size: 14px;
+				margin-right: -50px;
+				font-size: 28px;
+				margin-top: 16px;
 			}
 			&.btn-primary{
 				background: transparent;
@@ -87,11 +91,11 @@
 				&:after{
 					z-index: -1;
 					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					content: '';
+					top: -10px;
+					left: -20px;
+					right: -20px;
+					bottom: -20px;
+					content: "";
 				  transform: rotate(45deg);
 				  background: #29004f;
 				  border-radius: 10px;
@@ -134,46 +138,5 @@ a[data-toggle="collapse"] {
 }
 
 
-.btn{
-	&.btn-primary{
-		background: #29004f;
-		border-color: #29004f;
-		&:hover, &:focus{
-			background: #29004f !important;
-			border-color: #29004f !important;
-		}
-	}
-}
-
-.footer{
-	p{
-		color: rgba(255,255,255,.5);
-	}
-}
 
 
-
-.form-control {
-	height: 40px!important;
-	background: #fff;
-	color: #000;
-	font-size: 13px;
-	border-radius: 4px;
-	box-shadow: none !important;
-	border: transparent;
-	&:focus, &:active {
-		border-color: #000;
-	}
-	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	  color: rgba(255,255,255,.5);
-	}
-	&::-moz-placeholder { /* Firefox 19+ */
-	  color: rgba(255,255,255,.5);
-	}
-	&:-ms-input-placeholder { /* IE 10+ */
-	  color: rgba(255,255,255,.5);
-	}
-	&:-moz-placeholder { /* Firefox 18- */
-	  color: rgba(255,255,255,.5);
-	}
-}
