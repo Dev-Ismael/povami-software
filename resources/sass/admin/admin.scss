@@ -1,4 +1,70 @@
-@import './helper/global';
-@import './components/sidebar';
-@import './components/table';
-@import './layout/dashboard';
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+@import url("https://fonts.googleapis.com/css2?family=Hubballi");
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';   // import bootstrap laravel packags
+@import "../../css/bootstrap";
+
+/*=================================================================
+===========   Global Properties
+===================================================================*/
+body{
+    #app.admin-view{
+        a {
+            transition: .3s all ease;
+            color: #9f9fa0;
+            &:hover, &:focus {
+                text-decoration: none !important;
+                outline: none !important;
+                box-shadow: none;
+            }
+        }
+        h1, h2, h3, h4, h5,
+        .h1, .h2, .h3, .h4, .h5 {
+            line-height: 1.5;
+            font-weight: 400;
+            color: #000;
+        }
+        .ftco-section{
+            padding: 7em 0;
+        }
+        .ftco-no-pt{
+            padding-top: 0;
+        }
+        .ftco-no-pb{
+            padding-bottom: 0;
+        }
+        //HEADING SECTION
+        .heading-section{
+            font-size: 28px;
+            color: #000;
+            small{
+                font-size: 18px;
+            }
+        }
+        //COVER BG
+        .img{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        //SIDEBAR
+        .wrapper {
+          width: 100%;
+        }
+        
+        
+        
+
+        /*========= components =========*/
+        @import './components/sidebar';
+        @import './components/table';
+        @import './components/buttons';
+        /*========= Layouts =========*/
+        @import './layout/dashboard';
+
+
+        
+    }
+	
+}

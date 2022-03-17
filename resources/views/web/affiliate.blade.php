@@ -30,7 +30,7 @@
         <div id="how-it-works" class="content-padding">
             <div class="container text-center">
                 <h2 class="pb-2"> HOW DOES IT WORKS? </h2>
-                <div class="content-title-underline"></div>
+                <div class="content-title-underline center"></div>
                 <div class="row ">
                     <div class="col-md-4">
                         <div class="box">
@@ -66,7 +66,7 @@
         <div id="faq" class="content-padding">
             <div class="container">
                 <h2>Frequently Asked Questions </h2>
-                <div class="content-title-underline-left"></div>
+                <div class="content-title-underline left"></div>
                 <div class="row">
                     <div class="col-md-6">
                         <h4>How does the Associates Program work?</h4>
@@ -107,7 +107,7 @@
                 <div class="box">
                     <div class="row align-items-center h-100">
                         <div class="col-md-4 logo text-center">
-                            <img src="{{ asset('images/icons/Logo1.png') }}" alt="">
+                            <img src="{{ asset('images/logo_purple.png') }}" alt="">
                         </div>
                         <div class="col-md-8">
                             <h2> Recommend Services. Earn Commissions. </h2>

@@ -66,7 +66,7 @@
             <div class="container text-center">
 
                 <h4> What Make Us Different? </h4>
-                <div class="content-title-underline"></div>
+                <div class="content-title-underline center"></div>
 
                 <div class="row">
                     <div class="col-md-4">

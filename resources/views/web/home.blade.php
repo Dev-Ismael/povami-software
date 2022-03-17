@@ -24,7 +24,7 @@
         <div id="services" class="content-padding">
 
             <h2 class="text-center"> <i class="fa-solid fa-chalkboard-user"></i> Our Services</h2>
-            <div class="content-title-underline"></div>
+            <div class="content-title-underline center"></div>
 
             <div class="container">
                 <div class="row">
@@ -104,7 +104,7 @@
         <div id="clients" class="content-padding">
 
             <h2 class="text-center"> <i class="fa-solid fa-list-check"></i> Our Clients</h2>
-            <div class="content-title-underline"></div>
+            <div class="content-title-underline center"></div>
 
             <div class="container">
                 <div class="row text-center">
@@ -138,7 +138,7 @@
         <div id="testimonials" class="content-padding" >
 
             <h2 class="text-center"> <i class="fa-solid fa-quote-left"></i> Testmonilas</h2>
-            <div class="content-title-underline"></div>
+            <div class="content-title-underline center"></div>
 
             <section>
 

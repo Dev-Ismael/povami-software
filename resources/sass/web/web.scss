@@ -1,47 +1,104 @@
-
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Kanit');
-@import url('https://fonts.googleapis.com/css2?family=Hubballi');
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+@import url("https://fonts.googleapis.com/css2?family=Hubballi");
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';   // import bootstrap laravel packags
-@import '../../css/bootstrap';
+@import "../../css/bootstrap";
 
+/*=================================================================
+===========   Global Properties
+===================================================================*/
+body {
+    background-color: #f9fafc;
+    overflow-x: hidden;
+    font-family: "Kanit", sans-serif !important;
+    // Scroll Bar
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar {
+        background-color: #6c757d36;
+        width: 5px;
+        right: -10px;
+    }
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb {
+        background-color: #29004f;
+        border-radius: 8px;
+        right: -10px;
+    }
+    #app.web-view{
+        // Scroll Bar
+        .content-padding {
+            padding: 60px 0px;
+            position: relative;
+        }
+        // Title UnderLine
+        .content-title-underline {
+            width: 60px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: #29004fd2 !important;
+            &.center {
+                margin: 15px auto 40px auto;
+            }
+            &.left {
+                margin-bottom: 40px;
+                margin-top: 15px;
+            }
+        }
+        // Bg Parallax
+        .bg-parallax {
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        // Overlay
+        #header {
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #1c003782;
+            }
+        }
 
-//########### Web Scss
-/*========= helpers =========*/
-@import "helpers/vars";
-@import "helpers/global";
-@import "helpers/mixin";
-/*========= components =========*/
-@import "components/buttons";
-@import "components/navbar";
-@import "components/absolute_icons";
-@import "components/copyright";
-@import "components/navbar";
-@import "components/footer";
-@import "components/vertical_tabs";
-/*========= layout =========*/
-// Register
-@import "layout/register/header";
-@import "layout/register/register";
-// Home
-@import "layout/home/header";
-@import "layout/home/clients";
-@import "layout/home/contact";
-@import "layout/home/services";
-@import "layout/home/skillset";
-@import "layout/home/stats";
-@import "layout/home/testimonials";
-// About
-@import "layout/about/header";
-@import "layout/about/company_info";
-@import "layout/about/what_make_different";
-// Works
-@import "layout/works/header";
-@import "layout/works/works_examples";
-// Affiliate
-@import "layout/affiliate/header";
-@import "layout/affiliate/how_it_works";
-@import "layout/affiliate/recommend";
-// Account
-@import "layout/account/header";
+        /*========= helpers =========*/
+        @import "helpers/vars";
+        @import "helpers/mixin";
+        /*========= components =========*/
+        @import "components/buttons";
+        @import "components/navbar";
+        @import "components/absolute_icons";
+        @import "components/copyright";
+        @import "components/navbar";
+        @import "components/footer";
+        @import "components/vertical_tabs";
+        /*========= layout =========*/
+        // Register
+        @import "layout/register/header";
+        @import "layout/register/register";
+        // Home
+        @import "layout/home/header";
+        @import "layout/home/clients";
+        @import "layout/home/contact";
+        @import "layout/home/services";
+        @import "layout/home/skillset";
+        @import "layout/home/stats";
+        @import "layout/home/testimonials";
+        // About
+        @import "layout/about/header";
+        @import "layout/about/company_info";
+        @import "layout/about/what_make_different";
+        // Works
+        @import "layout/works/header";
+        @import "layout/works/works_examples";
+        // Affiliate
+        @import "layout/affiliate/header";
+        @import "layout/affiliate/how_it_works";
+        @import "layout/affiliate/recommend";
+        // Account
+        @import "layout/account/header";
+    }
+}

@@ -1,0 +1,15 @@
+/*=================================================================
+===========   Buttons
+===================================================================*/      
+.btn{
+    background: #29004f;
+    box-shadow: none !important;
+    &.btn-primary{
+        background: #29004f !important;
+        border-color: #29004f;
+        &:hover, &:focus{
+            background: transparent !important;
+            border-color: #29004f !important;
+        }
+    }
+}
