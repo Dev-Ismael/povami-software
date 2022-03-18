@@ -39,10 +39,10 @@
 						<a href="index.html" class="logo">Povami Software <span>Abdulrahman ismael</span></a>
 					</h4>
 					<ul class="list-unstyled components mb-5">
-						<li class="active">
+						<li class="{{  request()->routeIs('dashboard') ? 'active' : '' }}">
 							<a href="{{route("dashboard")}}"> <i class="fa-solid fa-gauge"></i>  Dashboard </a>
 						</li>
-						<li>
+						<li class="{{  request()->routeIs('users.*') ? 'active' : '' }}">
 							<a href="{{route("users.index")}}"> <i class="fa-solid fa-user"></i>  Users </a>
 						</li>
 						<li>
@@ -77,11 +77,10 @@
 	<!-- bootstrap Framwork-->
 	<script src="{{ asset('js/bootstrap.js') }} "></script>
 
-	<!-- countup -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-	<script src="{{ asset('js/jquery.counterup.min.js') }} "></script>
+	<!-- admin Framwork-->
+	<script src="{{ asset('js/admin.js') }} "></script>
 
-	<!-- JQUERY Framwork-->
+	<!-- custom Framwork-->
 	<script src="{{ asset('js/custom.js') }} "></script>
 </body>
 

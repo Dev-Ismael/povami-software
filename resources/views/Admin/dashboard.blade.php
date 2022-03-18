@@ -232,7 +232,7 @@
                                     </tbody>
                                 </table>
                                 <div class="buttons text-center">
-                                    <a href="#" class="btn purple text-center relative"> <i class="fa-solid fa-spinner"></i> Load More! </a>
+                                    <a href="#" class="btn btn-purple text-center relative"> <i class="fa-solid fa-spinner"></i> Load More! </a>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +279,7 @@
                                     </tbody>
                                 </table>
                                 <div class="buttons text-center">
-                                    <a href="#" class="btn purple text-center relative"> <i class="fa-solid fa-spinner"></i> Load More! </a>
+                                    <a href="#" class="btn btn-purple text-center relative"> <i class="fa-solid fa-spinner"></i> Load More! </a>
     
                                 </div>
                             </div>

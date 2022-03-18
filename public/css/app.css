@@ -22838,10 +22838,8 @@ body #app.admin-view .h1, body #app.admin-view .h2, body #app.admin-view .h3, bo
 body #app.admin-view .table-heading h4 i {
   color: #29004f;
 }
-body #app.admin-view .table-heading .fa-circle-plus {
-  color: #30c451;
-  font-size: 36px;
-  cursor: pointer;
+body #app.admin-view .table-heading button {
+  border-radius: 30%;
 }
 body #app.admin-view .ftco-section {
   padding: 7em 0;
@@ -22953,8 +22951,8 @@ body #app.admin-view #sidebar .custom-menu .btn i {
   margin-top: 16px;
 }
 body #app.admin-view #sidebar .custom-menu .btn.btn-primary {
-  background: transparent;
-  border-color: transparent;
+  background: transparent !important;
+  border-color: transparent !important;
 }
 body #app.admin-view #sidebar .custom-menu .btn.btn-primary:after {
   z-index: -1;
@@ -23021,18 +23019,9 @@ body #app.admin-view .table-responsive tbody {
 body #app.admin-view .table-responsive tbody .fa-circle-xmark {
   font-size: 35px;
 }
-body #app.admin-view .table-responsive tbody .table-buttons a {
+body #app.admin-view .table-responsive tbody .table-buttons button {
   color: #fff;
   border-radius: 30%;
-}
-body #app.admin-view .table-responsive tbody .table-buttons a.btn-show {
-  background-color: #0ab993;
-}
-body #app.admin-view .table-responsive tbody .table-buttons a.btn-edit {
-  background-color: royalblue;
-}
-body #app.admin-view .table-responsive tbody .table-buttons a.btn-delete {
-  background-color: #e14141;
 }
 body #app.admin-view .table-responsive .buttons {
   background-color: #fff;
@@ -23051,14 +23040,13 @@ body #app.admin-view .table-responsive .buttons a:hover {
   border: 1px solid #29004f;
 }
 body #app.admin-view .btn {
-  background: #29004f;
   box-shadow: none !important;
 }
-body #app.admin-view .btn.btn-primary {
+body #app.admin-view .btn.btn-purple {
   background: #29004f !important;
   border-color: #29004f;
 }
-body #app.admin-view .btn.btn-primary:hover, body #app.admin-view .btn.btn-primary:focus {
+body #app.admin-view .btn.btn-purple:hover, body #app.admin-view .btn.btn-purple:focus {
   background: transparent !important;
   border-color: #29004f !important;
 }
