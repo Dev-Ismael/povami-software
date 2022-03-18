@@ -40,10 +40,10 @@
 					</h4>
 					<ul class="list-unstyled components mb-5">
 						<li class="active">
-							<a href="#"> <i class="fa-solid fa-gauge"></i>  Dashboard </a>
+							<a href="{{route("dashboard")}}"> <i class="fa-solid fa-gauge"></i>  Dashboard </a>
 						</li>
 						<li>
-							<a href="#"><span class="fa fa-user mr-3"></span> About</a>
+							<a href="{{route("users.index")}}"> <i class="fa-solid fa-user"></i>  Users </a>
 						</li>
 						<li>
 							<a href="#"><span class="fa fa-briefcase mr-3"></span> Works</a>

@@ -25,6 +25,17 @@ body{
             font-weight: 400;
             color: #000;
         }
+        .table-heading{
+            h4 i{
+                color: #29004f;
+
+            }
+            .fa-circle-plus{
+                color: #30c451;
+                font-size: 36px;
+                cursor: pointer;
+            }
+        }
         .ftco-section{
             padding: 7em 0;
         }
@@ -62,6 +73,7 @@ body{
         @import './components/buttons';
         /*========= Layouts =========*/
         @import './layout/dashboard';
+        @import './layout/users';
 
 
         

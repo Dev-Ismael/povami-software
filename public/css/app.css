@@ -22816,6 +22816,9 @@ body #app.admin-view {
   ===========   Buttons
   ===================================================================*/
   /*========= Layouts =========*/
+  /*=================================================================
+  ===========   Users
+  ===================================================================*/
 }
 body #app.admin-view a {
   transition: 0.3s all ease;
@@ -22831,6 +22834,14 @@ body #app.admin-view .h1, body #app.admin-view .h2, body #app.admin-view .h3, bo
   line-height: 1.5;
   font-weight: 400;
   color: #000;
+}
+body #app.admin-view .table-heading h4 i {
+  color: #29004f;
+}
+body #app.admin-view .table-heading .fa-circle-plus {
+  color: #30c451;
+  font-size: 36px;
+  cursor: pointer;
 }
 body #app.admin-view .ftco-section {
   padding: 7em 0;
@@ -23002,9 +23013,26 @@ body #app.admin-view .table-responsive .thead-light tr {
 body #app.admin-view .table-responsive .thead-light tr th {
   background-color: transparent;
   color: #fff;
+  text-transform: uppercase;
 }
 body #app.admin-view .table-responsive tbody {
   background-color: #fff;
+}
+body #app.admin-view .table-responsive tbody .fa-circle-xmark {
+  font-size: 35px;
+}
+body #app.admin-view .table-responsive tbody .table-buttons a {
+  color: #fff;
+  border-radius: 30%;
+}
+body #app.admin-view .table-responsive tbody .table-buttons a.btn-show {
+  background-color: #0ab993;
+}
+body #app.admin-view .table-responsive tbody .table-buttons a.btn-edit {
+  background-color: royalblue;
+}
+body #app.admin-view .table-responsive tbody .table-buttons a.btn-delete {
+  background-color: #e14141;
 }
 body #app.admin-view .table-responsive .buttons {
   background-color: #fff;
@@ -23041,6 +23069,9 @@ body #app.admin-view #dashboard-page .card span {
   text-transform: uppercase;
   color: #a1a1a1;
   font-size: 14px;
+}
+body #app.admin-view #users-page h4 i {
+  color: #29004f;
 }
 
 /*# sourceMappingURL=app.css.map */

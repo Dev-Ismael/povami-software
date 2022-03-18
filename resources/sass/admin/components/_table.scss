@@ -22,12 +22,31 @@
             th{
                 background-color: transparent;
                 color: #fff;
+                text-transform: uppercase;
             }
         }
 
     }
     tbody{
         background-color: #fff;
+        .fa-circle-xmark{
+            font-size: 35px;
+        }
+        .table-buttons{
+            a{
+                color: #fff;
+                border-radius: 30%;
+                &.btn-show{
+                    background-color: rgb(10, 185, 147);
+                }
+                &.btn-edit{
+                    background-color: royalblue
+                }
+                &.btn-delete{
+                    background-color: rgb(225, 65, 65);
+                }
+            }
+        }
     }
     .buttons{
         background-color: #fff;
