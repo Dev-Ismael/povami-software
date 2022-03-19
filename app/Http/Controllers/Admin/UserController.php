@@ -82,7 +82,19 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return "show.users";
+        $user = User::find( $id );  
+        if(!$user){  // If get user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "user get error" ,
+            ]);
+        }
+
+        return response() -> json([
+            "status" => 'success' ,   // get Successfully
+            "msg"    => "user get successfully" ,
+            "user"   => $user ,
+        ]);
     }
 
     /**

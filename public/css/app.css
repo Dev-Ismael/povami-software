@@ -22850,6 +22850,33 @@ body #app.admin-view .ftco-no-pt {
 body #app.admin-view .ftco-no-pb {
   padding-bottom: 0;
 }
+body #app.admin-view .modal-footer {
+  border: none !important;
+}
+body #app.admin-view .get_info {
+  position: relative;
+}
+body #app.admin-view .get_info hr {
+  width: 90%;
+}
+body #app.admin-view .get_info .heading {
+  margin: 0px;
+  color: #000;
+  display: inline;
+}
+body #app.admin-view .get_info .heading i {
+  color: #29004f;
+}
+body #app.admin-view .get_info .text {
+  color: #7f7f7f;
+}
+body #app.admin-view .get_info .fa-circle-question {
+  font-size: 25px;
+  position: absolute;
+  left: 90px;
+  color: #ce3c18;
+  top: 0;
+}
 body #app.admin-view .heading-section {
   font-size: 28px;
   color: #000;

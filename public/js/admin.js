@@ -3,9 +3,8 @@ $(document).ready( function (){
 
 
     /*=================================================================
-    ===========   Users
+    ===========  Create Users
     ===================================================================*/
-    // Create User
     $("button#create-user").on("click",function (e){
         e.preventDefault();
         var formData = new FormData( $("form#create-user")[0] );
@@ -38,4 +37,45 @@ $(document).ready( function (){
             }
         });  
     });
+
+    /*=================================================================
+    ===========  Show Users
+    ===================================================================*/
+    $("button#show-user").on("click",function (e){
+        var user_id = $(this).attr('user_id');
+        e.preventDefault();
+        $.ajax({
+            type: "GET",
+            enctype : "multipart/form-data" ,
+            url: '/admin/users/' + user_id ,
+            processData: false,
+            contentType : false , 
+            cache    : false,
+            success: function ( response ) {
+                console.log(response);
+                if( response.status == 'error' ){
+                    alert("Error get User!");
+                    window.location.href = "/admin/users";
+                }
+                else if( response.status == 'success' ){
+                    $.each( response.user , function( key , val ){
+                        if( val === null ){
+                            val = '<i class="fa-solid fa-circle-question"></i>';
+                        }
+                        $("#showUserModal .get_info." + key + " .text").html( val );
+                    });
+                }
+            },
+            error: function(response){
+                alert("Error");   // failed to with url
+            }
+        });  
+    });
+
+
+
+
+
+
+
 });  

@@ -23,7 +23,6 @@
                             <th scope="col">#</th>
                             <th scope="col"> <i class="fa-solid fa-address-card"></i> name</th>
                             <th scope="col"> <i class="fa-solid fa-envelope"></i> email</th>
-                            {{-- <th scope="col"> <i class="fa-solid fa-phone"></i> phone</th> --}}
                             <th scope="col"> <i class="fa-solid fa-circle-exclamation"></i> action</th>
                         </tr>
                     </thead>
@@ -33,18 +32,15 @@
                                 <th scope="row">{{ $key }}</th>
                                 <td> {{ Str::ucfirst($user->name) }}</td>
                                 <td> {{ $user->email }} </td>
-                                {{-- <td>
-                                    @if ($user->phone === null)
-                                        <span class="null text-danger"> <i class="fa-solid fa-circle-xmark"></i> </span>
-                                    @else
-                                        {{ $user->phone }}
-                                    @endif
-                                </td> --}}
                                 <td>
                                     <div class="table-buttons">
-                                        <button href="" type="button"  class="btn btn-secondary"><i class="fa-solid fa-eye"></i></button>
-                                        <button href="" type="button"  class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></button>
-                                        <button href="" type="button"  class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                        <button type="button" id="show-user" class="btn btn-secondary" data-toggle="modal" data-target="#showUserModal" user_id="{{$user->id}}">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button href="" type="button" class="btn btn-info"><i
+                                                class="fa-solid fa-pen-to-square"></i></button>
+                                        <button href="" type="button" class="btn btn-danger"><i
+                                                class="fa-solid fa-trash-can"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -56,7 +52,8 @@
 
     </div>
     <!---------- Add User Modal ------------>
-    <div class="modal fade" id="createUser" tabindex="-1" role="dialog" aria-labelledby="createUserLabel" aria-hidden="true">
+    <div class="modal fade" id="createUser" tabindex="-1" role="dialog" aria-labelledby="createUserLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -66,33 +63,37 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form  id="create-user"  enctype="multipart/form-data">
+                    <form id="create-user" enctype="multipart/form-data">
 
                         @csrf
 
                         <label for="name"> User Name..</label>
-                        <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Enter Name.." />
-                        <small class="form-text text-danger name">  </small> <!-- message is var in laravel -->
+                        <input type="text" name="name" class="form-control" value="{{ old('name') }}"
+                            placeholder="Enter Name.." />
+                        <small class="form-text text-danger name"> </small> <!-- message is var in laravel -->
                         <br>
 
                         <label for="email"> User Email..</label>
-                        <input type="text" name="email" class="form-control" value="{{ old('email') }}" placeholder="Enter email.." />
-                        <small class="form-text text-danger email">  </small> <!-- message is var in laravel -->
+                        <input type="text" name="email" class="form-control" value="{{ old('email') }}"
+                            placeholder="Enter email.." />
+                        <small class="form-text text-danger email"> </small> <!-- message is var in laravel -->
                         <br>
 
                         <label for="phone"> User Phone..</label>
-                        <input type="text" name="phone" class="form-control" value="{{ old('phone') }}" placeholder="Enter Phone.." />
-                        <small class="form-text text-danger phone">  </small> <!-- message is var in laravel -->
+                        <input type="text" name="phone" class="form-control" value="{{ old('phone') }}"
+                            placeholder="Enter Phone.." />
+                        <small class="form-text text-danger phone"> </small> <!-- message is var in laravel -->
                         <br>
 
                         <label for="address"> User Address..</label>
-                        <textarea type="text" name="address" class="form-control" value="{{ old('address') }}" placeholder="Enter Address.." ></textarea>
-                        <small class="form-text text-danger address">  </small> <!-- message is var in laravel -->
+                        <textarea type="text" name="address" class="form-control" value="{{ old('address') }}"
+                            placeholder="Enter Address.."></textarea>
+                        <small class="form-text text-danger address"> </small> <!-- message is var in laravel -->
                         <br>
-                        
+
                         <label for="password"> User Password..</label>
                         <input type="password" name="password" class="form-control" placeholder="Enter Password.." />
-                        <small class="form-text text-danger password">  </small> <!-- message is var in laravel -->
+                        <small class="form-text text-danger password"> </small> <!-- message is var in laravel -->
                         <br>
 
                     </form>
@@ -104,4 +105,43 @@
             </div>
         </div>
     </div>
+
+    <!---------- Show User Modal ------------>
+    <div class="modal fade" id="showUserModal" tabindex="-1" role="dialog" aria-labelledby="showUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="showUserModalLabel">User Info</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="get_info name">
+                    <p class="heading"> <i class="fa-solid fa-user"></i> Username : </p> 
+                    <p class="text"></p>
+                </div>
+                <hr>
+                <div class="get_info email">
+                    <p class="heading"> <i class="fa-solid fa-envelope"></i> Email : </p> 
+                    <p class="text"> </p>
+                </div>
+                <hr>
+                <div class="get_info phone">
+                    <p class="heading"> <i class="fa-solid fa-phone"></i> Phone : </p> 
+                    <p class="text"> </p>
+                </div>
+                <hr>
+                <div class="get_info address">
+                    <p class="heading"> <i class="fa-solid fa-address-card"></i> Address : </p> 
+                    <p class="text">  </p>
+                </div>
+                <hr>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 @endsection
