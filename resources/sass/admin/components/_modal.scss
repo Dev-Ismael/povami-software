@@ -1,0 +1,35 @@
+/*=================================================================
+===========   Modal
+===================================================================*/
+.modal{
+    i{
+        color: #29004f;
+    }
+    .modal-footer{
+        border: none !important;
+    }
+    .get_info{
+        position: relative;
+        hr{
+            width: 90%;
+        }
+        .heading{
+            i{
+                color: #29004f;
+            }
+            margin: 0px;
+            color: #000;
+            display: inline;
+        }
+        .text{
+            color: #7f7f7f;
+        }
+        .fa-circle-question{
+            font-size: 25px;
+            position: absolute;
+            left: 90px;
+            color: #ce3c18;
+            top: 0;
+        }
+    }
+}

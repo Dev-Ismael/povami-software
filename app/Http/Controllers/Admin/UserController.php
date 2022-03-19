@@ -98,17 +98,6 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        return "edit.users";
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -117,7 +106,49 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return "update.users";
+
+        
+        // Check Validator
+        $validator = Validator::make($request->all(), [
+            'name'      =>  ['required', 'string', 'max:55'],
+            'email'     =>  ['required', 'string', 'email', 'max:55'],
+            'phone'     =>  [ 'max:55' ],
+            'address'   =>  [ 'max:255' ],
+        ]);
+        if ($validator->fails()) {
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'validation error',
+                'errors' => $validator->getMessageBag()->toArray()
+            ]); 
+        }
+
+
+        // Get User
+        $user = User::find( $id );  
+        if(!$user){  // If get user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "user get error" ,
+            ]);
+        }
+
+
+        // Update in DB
+        $update = $user-> update( $request ->all() );
+        if(!$update){  // If update user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "update operation failed" ,
+            ]);
+        }
+
+        return response() -> json([
+            "status" => 'success' ,   // updated Successfully
+            "msg" => "user updated" ,
+        ]);
+
+
     }
 
     /**

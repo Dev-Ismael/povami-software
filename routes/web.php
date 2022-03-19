@@ -28,6 +28,16 @@ Route::group( ['namespace' => 'Web'] ,function(){
 
 // Admin
 Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin'] ,function(){
+        
+    // Dashboard Page
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    Route::resource("/users" , "UserController");
+    // Users Page
+    Route::get("/users" , "UserController@index")->name('users.index');
+    Route::post("/users" , "UserController@store")->name('users.store');
+    Route::get("/users/show/{id}" , "UserController@show")->name('users.show');
+    Route::post("/users/update/{id}" , "UserController@update")->name('users.update');
+    Route::post("/users/delete/{id}" , "UserController@delete")->name('users.delete');
+
+
+    
 });

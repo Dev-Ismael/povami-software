@@ -77,8 +77,13 @@
 	<!-- bootstrap Framwork-->
 	<script src="{{ asset('js/bootstrap.js') }} "></script>
 
-	<!-- admin Framwork-->
-	<script src="{{ asset('js/admin.js') }} "></script>
+
+	<!-- countup -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script src="{{ asset('js/jquery.counterup.min.js') }} "></script>
+
+	<!-- Ajax -->
+	<script src="{{ asset('js/ajax/admin.js') }} "></script>
 
 	<!-- custom Framwork-->
 	<script src="{{ asset('js/custom.js') }} "></script>
