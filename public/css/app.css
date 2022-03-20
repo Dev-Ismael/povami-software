@@ -22842,7 +22842,7 @@ body #app.admin-view .table-heading h4 i {
   color: #29004f;
 }
 body #app.admin-view .table-heading button {
-  border-radius: 30%;
+  border-radius: 50%;
 }
 body #app.admin-view .ftco-section {
   padding: 7em 0;
@@ -22867,6 +22867,24 @@ body #app.admin-view .img {
 }
 body #app.admin-view .wrapper {
   width: 100%;
+}
+body #app.admin-view .no_data {
+  width: 100%;
+  position: relative;
+}
+body #app.admin-view .no_data img {
+  max-width: 100%;
+}
+body #app.admin-view .no_data p {
+  font-size: 32px;
+}
+body #app.admin-view .no_data p i {
+  color: #e7d916;
+}
+@media (min-width: 768px) {
+  body #app.admin-view .no_data img {
+    width: 500px;
+  }
 }
 body #app.admin-view #sidebar {
   min-width: 270px;
@@ -22949,7 +22967,7 @@ body #app.admin-view #sidebar .custom-menu .btn {
   position: relative;
 }
 body #app.admin-view #sidebar .custom-menu .btn i {
-  margin-right: -50px;
+  margin-right: -60px;
   font-size: 28px;
   margin-top: 16px;
 }

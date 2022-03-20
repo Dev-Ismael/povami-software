@@ -2,55 +2,74 @@
 @section('content')
     <div id="users-page">
 
-        <div class="all-users">
-
-            <div class="table-heading">
-                <div class="row">
-                    <div class="col-6">
-                        <h4> <i class="fa-solid fa-user"></i> Users</h4>
-                    </div>
-                    <div class="col-6 text-right">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createUserModal">
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                    </div>
+        @if ( $users->isEmpty() )
+            
+            <div class="no_data">
+                <div class="container text-center">
+                    <img src="{{ asset('images/no_data.png') }}"  alt="no_data">
+                    <p>No data! <i class="fa-solid fa-face-frown"></i></p>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createUserModal">
+                        <i class="fa-solid fa-plus"></i> Create User Now!
+                    </button>
+                    
                 </div>
             </div>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col"> <i class="fa-solid fa-address-card"></i> name</th>
-                            <th scope="col"> <i class="fa-solid fa-envelope"></i> email</th>
-                            <th scope="col"> <i class="fa-solid fa-circle-exclamation"></i> action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($users as $key => $user)
+                
+        @else
+        
+            <div class="all-users">
+
+                <div class="table-heading col-12 mt-3 mb-1">
+                    <div class="row">
+                        <div class="col-6">
+                            <h4 class="text-uppercase"> <i class="fa-solid fa-user"></i> Users</h4>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createUserModal">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
                             <tr>
-                                <th scope="row">{{ $key }}</th>
-                                <td> {{ Str::ucfirst($user->name) }}</td>
-                                <td> {{ $user->email }} </td>
-                                <td>
-                                    <div class="table-buttons">
-                                        <button type="button" id="show-user" class="btn btn-secondary" data-toggle="modal" data-target="#showUserModal" user_id="{{ $user->id }}">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                        <button type="button" id="edit-user" class="btn btn-info" data-toggle="modal" data-target="#editUserModal" user_id="{{ $user->id }}">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
-                                        <button type="button" id="delete-user" class="btn btn-danger" user_id="{{ $user->id }}">
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </button>
-                                    </div>
-                                </td>
+                                <th scope="col">#</th>
+                                <th scope="col"> <i class="fa-solid fa-address-card"></i> name</th>
+                                <th scope="col"> <i class="fa-solid fa-envelope"></i> email</th>
+                                <th scope="col"> <i class="fa-solid fa-circle-exclamation"></i> action</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($users as $key => $user)
+                                <tr>
+                                    <th scope="row">{{ $key }}</th>
+                                    <td> {{ Str::ucfirst($user->name) }}</td>
+                                    <td> {{ $user->email }} </td>
+                                    <td>
+                                        <div class="table-buttons">
+                                            <button type="button" id="show-user" class="btn btn-secondary" data-toggle="modal" data-target="#showUserModal" user_id="{{ $user->id }}">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </button>
+                                            <button type="button" id="edit-user" class="btn btn-info" data-toggle="modal" data-target="#editUserModal" user_id="{{ $user->id }}">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                            <button type="button" id="delete-user" class="btn btn-danger" user_id="{{ $user->id }}">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
+
+        @endif
+
+        
 
     </div>
 

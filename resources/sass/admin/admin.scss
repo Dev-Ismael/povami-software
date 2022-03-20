@@ -30,7 +30,7 @@ body{
                 color: #29004f;
             }
             button{
-                border-radius: 30%;
+                border-radius: 50%;
             }
         }
         .ftco-section{
@@ -62,7 +62,24 @@ body{
         }
         
         
-        
+        .no_data{
+            width: 100%;
+            position: relative;
+            img{
+                max-width: 100%; 
+            }
+            p{
+                font-size: 32px;
+                i{
+                    color: #e7d916
+                }
+            }
+            @media (min-width: 768px) { 
+                img{
+                    width: 500px;
+                }
+            }
+        }
 
         /*========= components =========*/
         @import './components/sidebar';
