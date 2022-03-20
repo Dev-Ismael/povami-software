@@ -86,6 +86,8 @@ body{
         @import './components/table';
         @import './components/buttons';
         @import './components/modal';
+        @import './components/pagination';
+        
         /*========= Layouts =========*/
         @import './layout/dashboard';
         @import './layout/users';
