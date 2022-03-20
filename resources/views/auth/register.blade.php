@@ -16,7 +16,7 @@
                 @csrf
                 
                 <p class="title"> Login To Dashboard </p>
-                <div class="content-title-underline"></div>
+                <div class="content-title-underline center"></div>
 
 
                 <label for="name"> <i class="fas fa-user"></i> Username</label>

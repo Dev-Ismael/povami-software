@@ -2,6 +2,7 @@
 $(document).ready( function (){
 
 
+
     /*=================================================================
     ===========  Create Users
     ===================================================================*/
@@ -41,6 +42,8 @@ $(document).ready( function (){
         });  
     });
 
+
+
     /*=================================================================
     ===========  Show Users
     ===================================================================*/
@@ -50,7 +53,7 @@ $(document).ready( function (){
         $.ajax({
             type: "GET",
             enctype : "multipart/form-data" ,
-            url: '/admin/users/' + user_id ,
+            url: '/admin/users/show/' + user_id ,
             processData: false,
             contentType : false , 
             cache    : false,
@@ -74,6 +77,7 @@ $(document).ready( function (){
             }
         });  
     });
+
 
 
     /*=================================================================
@@ -149,8 +153,37 @@ $(document).ready( function (){
 
 
 
-
-
+    /*=================================================================
+    ===========  Delete User
+    ===================================================================*/
+    $(".table-buttons button#delete-user").on("click",function (e){
+        e.preventDefault();
+        var user_id = $(this).attr('user_id');
+        // alert(user_id);
+        $.ajax({
+            type: "POST",
+            url: '/admin/users/delete/' + user_id,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function ( response ) {
+                // console.log(response);
+                if( response.status == 'error' && response.msg == 'user get error'  ){
+                    alert("User get error..");  
+                }
+                else if( response.status == 'error' && response.msg == 'delete operation failed'  ){
+                    alert("Delete operation failed... ");  
+                }
+                else if( response.status == 'success' ){
+                    alert("User deleted!");
+                    window.location.href = "/admin/users";
+                }
+            },
+            error: function(response){
+                alert("Error connections!");   // failed to with url
+            }
+        });  
+    });
 
 
 });  

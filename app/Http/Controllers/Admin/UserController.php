@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::get()->where('role' , 3 );
-        return view("admin.users.index" , compact('users'));
+        return view("admin.users" , compact('users'));
         // return $users;
     }
 
@@ -159,6 +159,31 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        return "destroy.users";
+        
+
+        // Get User
+        $user = User::find( $id );  
+        if(!$user){  // If get user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "user get error" ,
+            ]);
+        }
+
+        // Delete User
+        $delete = $user->delete();
+        if(!$delete){  // If update user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "delete operation failed" ,
+            ]);
+        }
+
+        return response() -> json([
+            "status" => 'success' ,   // updated Successfully
+            "msg" => "user deleted" ,
+        ]);
+
+
     }
 }

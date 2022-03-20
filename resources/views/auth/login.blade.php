@@ -15,7 +15,7 @@
                 @csrf
                 
                 <p class="title"> Login To Dashboard </p>
-                <div class="content-title-underline"></div>
+                <div class="content-title-underline center"></div>
 
 
                 <label for="email"> <i class="fas fa-envelope-open-text"></i> Email</label>

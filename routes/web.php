@@ -36,7 +36,7 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/users" , "UserController@store")->name('users.store');
     Route::get("/users/show/{id}" , "UserController@show")->name('users.show');
     Route::post("/users/update/{id}" , "UserController@update")->name('users.update');
-    Route::post("/users/delete/{id}" , "UserController@delete")->name('users.delete');
+    Route::post("/users/delete/{id}" , "UserController@destroy")->name('users.delete');
 
 
     

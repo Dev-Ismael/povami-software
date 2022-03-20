@@ -40,7 +40,7 @@
                                         <button type="button" id="edit-user" class="btn btn-info" data-toggle="modal" data-target="#editUserModal" user_id="{{ $user->id }}">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
-                                        <button type="button" class="btn btn-danger">
+                                        <button type="button" id="delete-user" class="btn btn-danger" user_id="{{ $user->id }}">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </div>
