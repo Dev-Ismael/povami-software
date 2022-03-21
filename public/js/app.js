@@ -36539,6 +36539,7 @@ $(document).ready(function () {
             }
 
             $("#showAffiliatorModal .get_info." + key + " .text").html(val);
+            $("#showAffiliatorModal .get_info.balance span").removeClass('d-none');
           });
         }
       },

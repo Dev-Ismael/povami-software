@@ -73,6 +73,8 @@ $(document).ready( function (){
                             val = '<i class="fa-solid fa-circle-question"></i>';
                         }
                         $("#showAffiliatorModal .get_info." + key + " .text").html( val );
+
+                        $("#showAffiliatorModal .get_info.balance span").removeClass('d-none');
                     });
                 }
             },

@@ -192,12 +192,23 @@
                 </div>
                 <div class="modal-body">
                     <div class="get_info name">
-                        <p class="heading"> <i class="fa-solid fa-affiliator"></i> Affiliatorname : </p>
+                        <p class="heading"> <i class="fa-solid fa-user"></i> Affiliator Name : </p>
                         <p class="text"></p>
                     </div>
                     <hr>
                     <div class="get_info email">
                         <p class="heading"> <i class="fa-solid fa-envelope"></i> Email : </p>
+                        <p class="text"> </p>
+                    </div>
+                    <hr>
+                    <div class="get_info balance">
+                        <p class="heading"> <i class="fa-solid fa-money-bill-1"></i> balance : </p>
+                        <p class="text"> </p> 
+                        <span class="d-none"> <i class="fa-solid fa-dollar-sign" ></i> </span>
+                    </div>
+                    <hr>
+                    <div class="get_info coupon">
+                        <p class="heading"> <i class="fa-solid fa-scissors"></i> Coupon Code : </p>
                         <p class="text"> </p>
                     </div>
                     <hr>

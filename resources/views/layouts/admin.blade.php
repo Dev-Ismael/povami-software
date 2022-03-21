@@ -36,7 +36,13 @@
 				</div>
 				<div class="p-4">
 					<h4>
-						<a href="index.html" class="logo">Povami Software <span>Abdulrahman ismael</span></a>
+						<a href="{{route("home")}}" class="logo">
+							<img src="{{asset('images/logo_white.png')}}" height="60" alt="Logo">
+							<span> 
+								<img src="https://lh3.googleusercontent.com/a-/AOh14GgNbBoJKX50lJKU6P0Opn0rX_X56TG0jUO4w7dA=s83-c-mo" width="30" class="rounded" alt=""> 
+								{{ Auth::user()->name }}
+							</span>
+						</a>
 					</h4>
 					<ul class="list-unstyled components mb-5">
 						<li class="{{  request()->routeIs('dashboard') ? 'active' : '' }}">

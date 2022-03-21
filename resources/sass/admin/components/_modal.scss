@@ -9,7 +9,7 @@
         border: none !important;
     }
     .get_info{
-        position: relative;
+        display: flex;
         hr{
             width: 90%;
         }
@@ -19,18 +19,34 @@
             }
             margin: 0px;
             color: #000;
-            display: inline;
+            text-transform: uppercase;
+            font-size: 18px;
+            padding-right: 20px;
         }
         .text{
-            color: #7f7f7f;
+            color: #a3a3a3;
+            i{
+                font-size: 25px;
+                color: #eb625a
+            }
         }
-        .fa-circle-question{
-            font-size: 25px;
-            position: absolute;
-            left: 90px;
-            color: #ce3c18;
-            top: 0;
+        &.coupon{
+            .heading{
+                padding-top: 7px;
+            }
+            .text{
+                color: #fff;
+                background-color: #108a10;padding: 7px 12px;
+                border-radius: 3px;
+            }
         }
+        &.balance{
+            .text, span i{
+                color:#108a10 !important;
+                // font-size: 22px !important;
+            }
+        }
+
     }
     .get-no-data{
         p{
