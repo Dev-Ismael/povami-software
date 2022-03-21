@@ -29,15 +29,17 @@ $(document).ready( function (){
                     });
                 }
                 else if( response.status == 'error' && response.msg == 'insert operation failed'  ){
-                    alert("Error at save, please try later.... ");  
+                    swal( response.status , response.msg , response.status );
                 }
-                else if( response.status == 'success' ){
-                    alert("User Saved!");
-                    window.location.href = "/admin/users";
+                else if( response.status == 'success' && response.msg == 'user created successfully'  ){
+                    swal( response.status , response.msg , response.status )
+                    .then((value) => {
+                        window.location.href = "/admin/users";
+                    });
                 }
             },
             error: function(response){
-                alert("Error connections!");   // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
             }
         });  
     });
@@ -59,9 +61,11 @@ $(document).ready( function (){
             cache    : false,
             success: function ( response ) {
                 // console.log(response);
-                if( response.status == 'error' ){
-                    alert("Error get User!");
-                    window.location.href = "/admin/users";
+                if( response.status == 'error' && response.msg == 'get user failed'  ){
+                    swal( response.status , response.msg , response.status )
+                    .then((value) => {
+                        window.location.href = "/admin/users";
+                    });
                 }
                 else if( response.status == 'success' ){
                     $.each( response.user , function( key , val ){
@@ -73,7 +77,7 @@ $(document).ready( function (){
                 }
             },
             error: function(response){
-                alert("Error connections!");   // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
             }
         });  
     });
@@ -95,9 +99,11 @@ $(document).ready( function (){
             contentType : false , 
             cache    : false,
             success: function ( response ) {
-                if( response.status == 'error' ){
-                    alert("Error get User!");
-                    window.location.href = "/admin/users";
+                if( response.status == 'error' && response.msg == 'get user failed'  ){
+                    swal( response.status , response.msg , response.status )
+                    .then((value) => {
+                        window.location.href = "/admin/users";
+                    });
                 }
                 else if( response.status == 'success' ){
                     $.each( response.user , function( key , val ){
@@ -106,7 +112,7 @@ $(document).ready( function (){
                 }
             },
             error: function(response){
-                alert("Error connections!");   // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
             }
         });  
     });
@@ -134,19 +140,21 @@ $(document).ready( function (){
                         $('#editUserModal input[name="'+ key +'"]').addClass("is-invalid");
                     });
                 }
-                else if( response.status == 'error' && response.msg == 'user get error'  ){
-                    alert("User get error..");  
+                else if( response.status == 'error' && response.msg == 'get user failed'  ){
+                    swal( response.status , response.msg , response.status )
                 }
                 else if( response.status == 'error' && response.msg == 'update operation failed'  ){
-                    alert("Update operation failed... ");  
+                    swal( response.status , response.msg , response.status )
                 }
-                else if( response.status == 'success' ){
-                    alert("User updated!");
-                    window.location.href = "/admin/users";
+                else if( response.status == 'success' && response.msg == 'user updated successfully'  ){
+                    swal( response.status , response.msg , response.status )
+                    .then((value) => {
+                        window.location.href = "/admin/users";
+                    });
                 }
             },
             error: function(response){
-                alert("Error connections!");   // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
             }
         });  
     });
@@ -160,29 +168,48 @@ $(document).ready( function (){
         e.preventDefault();
         var user_id = $(this).attr('user_id');
         // alert(user_id);
-        $.ajax({
-            type: "POST",
-            url: '/admin/users/delete/' + user_id,
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            success: function ( response ) {
-                // console.log(response);
-                if( response.status == 'error' && response.msg == 'user get error'  ){
-                    alert("User get error..");  
-                }
-                else if( response.status == 'error' && response.msg == 'delete operation failed'  ){
-                    alert("Delete operation failed... ");  
-                }
-                else if( response.status == 'success' ){
-                    alert("User deleted!");
-                    window.location.href = "/admin/users";
-                }
-            },
-            error: function(response){
-                alert("Error connections!");   // failed to with url
+
+
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this user again!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+              
+                $.ajax({
+                    type: "POST",
+                    url: '/admin/users/delete/' + user_id,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function ( response ) {
+                        // console.log(response);
+                        if( response.status == 'error' && response.msg == 'get user failed'  ){
+                            swal( response.status , response.msg , response.status )
+                        }
+                        else if( response.status == 'error' && response.msg == 'delete operation failed'  ){
+                            swal( response.status , response.msg , response.status )
+                        }
+                        else if( response.status == 'success' && response.msg == 'user deleted successfully'  ){
+                            swal( response.status , response.msg , response.status )
+                            .then((value) => {
+                                window.location.href = "/admin/users";
+                            });
+
+                        }
+                    },
+                    error: function(response){
+                        swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
+                    }
+                });
+
             }
-        });  
+        });
+       
     });
 
 
@@ -241,7 +268,7 @@ $(document).ready( function (){
                 }
             },
             error: function(response){
-                alert("Error connections!");   // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
             }
         });  
     });

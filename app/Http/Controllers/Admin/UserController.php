@@ -69,7 +69,7 @@ class UserController extends Controller
 
         return response() -> json([
             "status" => 'success' ,   // Created Successfully
-            "msg" => "user created" ,
+            "msg" => "user created successfully" ,
         ]);
 
     }
@@ -86,7 +86,7 @@ class UserController extends Controller
         if(!$user){  // If get user fails
             return response() -> json([
                 "status" => 'error' ,   
-                "msg" => "user get error" ,
+                "msg" => "get user failed" ,
             ]);
         }
 
@@ -129,7 +129,7 @@ class UserController extends Controller
         if(!$user){  // If get user fails
             return response() -> json([
                 "status" => 'error' ,   
-                "msg" => "user get error" ,
+                "msg" => "get user failed" ,
             ]);
         }
 
@@ -145,7 +145,7 @@ class UserController extends Controller
 
         return response() -> json([
             "status" => 'success' ,   // updated Successfully
-            "msg" => "user updated" ,
+            "msg" => "user updated successfully" ,
         ]);
 
 
@@ -166,7 +166,7 @@ class UserController extends Controller
         if(!$user){  // If get user fails
             return response() -> json([
                 "status" => 'error' ,   
-                "msg" => "user get error" ,
+                "msg" => "get user failed" ,
             ]);
         }
 
@@ -181,7 +181,7 @@ class UserController extends Controller
 
         return response() -> json([
             "status" => 'success' ,   // updated Successfully
-            "msg" => "user deleted" ,
+            "msg" => "user deleted successfully" ,
         ]);
 
 

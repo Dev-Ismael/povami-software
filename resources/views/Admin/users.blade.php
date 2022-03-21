@@ -22,7 +22,7 @@
                             <h4 class="text-uppercase"> <i class="fa-solid fa-user"></i> Users</h4>
                         </div>
                         <div class="col-6 text-right">
-                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#searchUserModal">
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#searchUserModal">
                                 <i class="fa-solid fa-search"></i>
                             </button>
                             <button type="button" class="btn btn-success" data-toggle="modal"
@@ -88,7 +88,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editUserLabel"> edit User </h5>
+                    <h5 class="modal-title" id="editUserLabel"> <i class="fa-solid fa-pen-to-square"></i> edit User </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -135,7 +135,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createUserLabel"> Create User </h5>
+                    <h5 class="modal-title" id="createUserLabel"> <i class="fa-solid fa-plus-circle"></i> Create User </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -185,7 +185,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="showUserModalLabel">User Info</h5>
+                    <h5 class="modal-title" id="showUserModalLabel"> <i class="fa-solid fa-eye"></i> User Info</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -225,7 +225,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="searchUserLabel"> Search User </h5>
+                    <h5 class="modal-title" id="searchUserLabel"> <i class="fa-solid fa-search"></i> Search User </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
