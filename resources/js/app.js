@@ -11,13 +11,15 @@
 require('./bootstrap');
 
 
+// require Sweet Alert 
+require('./sweetalert.min');
+
+
 // require Web files
 require('./web/custom');
 
 
 // require Admin files
 require('./admin/custom');
-
-
 // require Ajax files
 require('./admin/ajax/users');
