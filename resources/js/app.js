@@ -23,3 +23,4 @@ require('./web/custom');
 require('./admin/custom');
 // require Ajax files
 require('./admin/ajax/users');
+require('./admin/ajax/affiliators');

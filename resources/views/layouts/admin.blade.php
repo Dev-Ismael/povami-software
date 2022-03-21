@@ -45,8 +45,8 @@
 						<li class="{{  request()->routeIs('users.*') ? 'active' : '' }}">
 							<a href="{{route("users.index")}}"> <i class="fa-solid fa-user"></i>  Users </a>
 						</li>
-						<li>
-							<a href="#"><span class="fa fa-briefcase mr-3"></span> Works</a>
+						<li class="{{  request()->routeIs('affiliators.*') ? 'active' : '' }}">
+							<a href="{{route("affiliators.index")}}"> <i class="fa-solid fa-network-wired"></i> Affiliators</a>
 						</li>
 						<li>
 							<a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>

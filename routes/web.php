@@ -31,6 +31,7 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
         
     // Dashboard Page
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    
     // Users Page
     Route::get("/users" , "UserController@index")->name('users.index');
     Route::post("/users" , "UserController@store")->name('users.store');
@@ -38,6 +39,15 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/users/update/{id}" , "UserController@update")->name('users.update');
     Route::post("/users/delete/{id}" , "UserController@destroy")->name('users.delete');
     Route::post("/users/search" , "UserController@search")->name('users.search');
+
+
+    // Affiliators Page
+    Route::get("/affiliators" , "AffiliateController@index")->name('affiliators.index');
+    Route::post("/affiliators" , "AffiliateController@store")->name('affiliators.store');
+    Route::get("/affiliators/show/{id}" , "AffiliateController@show")->name('affiliators.show');
+    Route::post("/affiliators/update/{id}" , "AffiliateController@update")->name('affiliators.update');
+    Route::post("/affiliators/delete/{id}" , "AffiliateController@destroy")->name('affiliators.delete');
+    Route::post("/affiliators/search" , "AffiliateController@search")->name('affiliators.search');
 
 
     
