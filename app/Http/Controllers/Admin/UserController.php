@@ -186,4 +186,39 @@ class UserController extends Controller
 
 
     }
+
+
+    public function search( Request $request ){   // check if {email?} empty
+
+        // Check Validator
+        $validator = Validator::make($request->all(), [
+            'email'     =>  ['required', 'string', 'email', 'max:55'],
+        ]);
+        if ($validator->fails()) {
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'validation error',
+                'errors' => $validator->getMessageBag()->toArray()
+            ]); 
+        }
+
+
+        // Get User
+        $user = User::where("email" , '=' , $request->email)->get();  
+        if($user->isEmpty()){  // If get user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "user not found" ,
+            ]);
+        }
+
+        return response() -> json([
+            'status' => 'success',
+            'user' => $user,
+        ]);
+
+    }
+
+
+
 }

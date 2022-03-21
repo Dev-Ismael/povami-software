@@ -188,6 +188,65 @@ $(document).ready( function (){
 
 
     
+    /*=================================================================
+    ===========  Search Users
+    ===================================================================*/
+    $("#searchUserModal button#search-user").on("click",function (e){
+        var searchFormData = new FormData( $("#searchUserModal form")[0] );
+        e.preventDefault();
+        // alert(email);
+        $.ajax({
+            type: "POST",
+            url: '/admin/users/search',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: searchFormData ,
+            processData: false,
+            contentType : false , 
+            cache    : false,
+            success: function ( response ) {
+                // console.log(response);
+
+                $('#searchUserModal button#search-user').text('Loading...');
+
+
+                if( response.status == 'error' && response.msg == 'validation error' ){
+                    $.each( response.errors , function( key , val ){
+                        $("#searchUserModal small.text-danger." + key ).text(val[0]);
+                        $('#searchUserModal input[name="'+ key +'"]').addClass("is-invalid");
+                        $('#searchUserModal button#search-user').text('Search');
+                    });
+                }
+                else if( response.status == 'error' && response.msg == 'user not found'  ){
+                    $("#searchUserModal .search-info .get-no-data").removeClass("d-none");
+                    $("#searchUserModal .search-info .user-data").addClass("d-none");
+                    $('#searchUserModal button#search-user').text('Search');
+
+                }
+                else if( response.status == 'success' ){
+
+                    $("#searchUserModal .search-info .user-data").removeClass("d-none");
+                    $("#searchUserModal .search-info .get-no-data").addClass("d-none");
+                    $('#searchUserModal button#search-user').text('Search');
+
+                    $.each( response.user[0] , function( key , val ){
+                        if( val === null ){
+                            val = '<i class="fa-solid fa-circle-question"></i>';
+                        }
+                        $("#searchUserModal .get_info." + key + " .text").html( val );
+                    });
+                    $("#searchUserModal form")[0].reset();
+
+                }
+            },
+            error: function(response){
+                alert("Error connections!");   // failed to with url
+            }
+        });  
+    });
+
+
 
 
 });  

@@ -22035,10 +22035,12 @@ body #app.admin-view .btn {
   box-shadow: none !important;
 }
 body #app.admin-view .btn.btn-purple {
+  color: #fff !important;
   background: #29004f !important;
   border-color: #29004f;
 }
-body #app.admin-view .btn.btn-purple:hover, body #app.admin-view .btn.btn-purple:focus {
+body #app.admin-view .btn.btn-purple:hover {
+  color: #29004f !important;
   background: transparent !important;
   border-color: #29004f !important;
 }
@@ -22071,6 +22073,18 @@ body #app.admin-view .modal .get_info .fa-circle-question {
   left: 90px;
   color: #ce3c18;
   top: 0;
+}
+body #app.admin-view .modal .get-no-data p {
+  font-size: 19px;
+}
+body #app.admin-view .modal .get-no-data p i {
+  color: #ead728;
+}
+@media (min-width: 786px) {
+  body #app.admin-view .modal .modal-dialog {
+    max-width: 60%;
+    margin: 1.75rem auto;
+  }
 }
 body #app.admin-view .page-item.active .page-link {
   background-color: #29004f;

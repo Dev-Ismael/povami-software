@@ -4,9 +4,11 @@
 .btn{
     box-shadow: none !important;
     &.btn-purple{
+        color: #fff !important;
         background: #29004f !important;
         border-color: #29004f;
-        &:hover, &:focus{
+        &:hover{
+            color: #29004f !important;
             background: transparent !important;
             border-color: #29004f !important;
         }

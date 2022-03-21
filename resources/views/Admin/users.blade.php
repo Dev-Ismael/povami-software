@@ -22,6 +22,9 @@
                             <h4 class="text-uppercase"> <i class="fa-solid fa-user"></i> Users</h4>
                         </div>
                         <div class="col-6 text-right">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#searchUserModal">
+                                <i class="fa-solid fa-search"></i>
+                            </button>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target="#createUserModal">
                                 <i class="fa-solid fa-plus"></i>
@@ -215,5 +218,66 @@
             </div>
         </div>
     </div>
+
+    <!---------- Search Model ------------>
+    <div class="modal fade" id="searchUserModal" tabindex="-1" role="dialog" aria-labelledby="searchUserLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchUserLabel"> Search User </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form enctype="multipart/form-data">
+                        <label for="email"> <i class="fa-solid fa-envelope"></i> User Email..</label>
+                        <input type="text" name="email" class="form-control" placeholder="Enter email.." />
+                        <small class="form-text text-danger email"> </small>
+                        <br>
+                        <button type="button" id="search-user" class="btn btn-purple float-right"> Search </button>
+                    </form>
+
+                    <div class="search-info pt-5">
+                        <div class="user-data d-none">
+                            <div class="get_info name">
+                                <p class="heading"> <i class="fa-solid fa-user"></i> Username : </p>
+                                <p class="text"></p>
+                            </div>
+                            <hr>
+                            <div class="get_info email">
+                                <p class="heading"> <i class="fa-solid fa-envelope"></i> Email : </p>
+                                <p class="text"> </p>
+                            </div>
+                            <hr>
+                            <div class="get_info phone">
+                                <p class="heading"> <i class="fa-solid fa-phone"></i> Phone : </p>
+                                <p class="text"> </p>
+                            </div>
+                            <hr>
+                            <div class="get_info address">
+                                <p class="heading"> <i class="fa-solid fa-address-card"></i> Address : </p>
+                                <p class="text"> </p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="get-no-data d-none text-center">
+                            <img src="{{ asset('images/no_data.png') }}" width="200px" alt="no_data">
+                            <p>User not found! <i class="fa-solid fa-face-frown"></i></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
 @endsection

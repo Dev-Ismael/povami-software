@@ -32,4 +32,21 @@
             top: 0;
         }
     }
+    .get-no-data{
+        p{
+            font-size: 19px;
+            i{
+                color: #ead728;
+            }
+        }
+    }
+    @media (min-width: 786px){
+        .modal-dialog {
+            max-width: 60%;
+            margin: 1.75rem auto;
+        }
+    }
+
+
+
 }
