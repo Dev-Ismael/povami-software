@@ -206,7 +206,7 @@ class AffiliateController extends Controller
 
 
         // Get Affiliator
-        $affiliator = User::where("email" , '=' , $request->email)->get();  
+        $affiliator = User::where([ ["email" , '=' , $request->email ] , ["role" , '=' , '2' ] ])->get();  
         if($affiliator->isEmpty()){  // If get affiliator fails
             return response() -> json([
                 "status" => 'error' ,   

@@ -19,7 +19,7 @@
                 <div class="table-heading col-12 mt-3 mb-1">
                     <div class="row">
                         <div class="col-6">
-                            <h4 class="text-uppercase"> <i class="fa-solid fa-affiliator"></i> Affiliators</h4>
+                            <h4 class="text-uppercase"> <i class="fa-solid fa-users"></i> Affiliators</h4>
                         </div>
                         <div class="col-6 text-right">
                             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#searchAffiliatorModal">

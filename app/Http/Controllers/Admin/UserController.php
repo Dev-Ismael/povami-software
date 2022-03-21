@@ -204,7 +204,7 @@ class UserController extends Controller
 
 
         // Get User
-        $user = User::where("email" , '=' , $request->email)->get();  
+        $user = User::where([ ["email" , '=' , $request->email ] , ["role" , '=' , '3' ] ])->get(); 
         if($user->isEmpty()){  // If get user fails
             return response() -> json([
                 "status" => 'error' ,   
