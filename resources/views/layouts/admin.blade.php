@@ -57,8 +57,8 @@
 						<li class="{{  request()->routeIs('payment_methods.*') ? 'active' : '' }}">
 							<a href="{{route("payment_methods.index")}}"> <i class="fa-solid fa-money-bill-1"></i> Payment Methods</a>
 						</li>
-						<li>
-							<a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
+						<li class="{{  request()->routeIs('works.*') ? 'active' : '' }}">
+							<a href="{{route("works.index")}}"> <i class="fa-solid fa-image"></i> Works </a>
 						</li>
 						<li>
 							<a href="#"><span class="fa fa-suitcase mr-3"></span> Gallery</a>

@@ -57,7 +57,14 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::get("/payment_methods/show/{id}" , "PaymentMethodController@show")->name('payment_methods.show');
     Route::post("/payment_methods/update/{id}" , "PaymentMethodController@update")->name('payment_methods.update');
     Route::post("/payment_methods/delete/{id}" , "PaymentMethodController@destroy")->name('payment_methods.delete');
-    Route::post("/payment_methods/search" , "PaymentMethodController@search")->name('payment_methods.search');
+
+
+    // works Page
+    Route::get("/works" , "WorkController@index")->name('works.index');
+    Route::post("/works" , "WorkController@store")->name('works.store');
+    Route::get("/works/show/{id}" , "WorkController@show")->name('works.show');
+    Route::post("/works/update/{id}" , "WorkController@update")->name('works.update');
+    Route::post("/works/delete/{id}" , "WorkController@destroy")->name('works.delete');
 
 
     

@@ -2,26 +2,25 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\PaymentMethod;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Work;
 use Illuminate\Support\Facades\Hash; 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-
-class PaymentMethodController extends Controller
+class WorkController extends Controller
 {
-        /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $paymentMethods = PaymentMethod::orderBy('id','desc')->paginate(50);
-        return view("admin.payment_methods" , compact('paymentMethods'));
+        $works = Work::orderBy('id','desc')->paginate(50);
+        return view("admin.works" , compact('works'));
+        // return $works;
     }
 
     /**
@@ -35,32 +34,34 @@ class PaymentMethodController extends Controller
 
         // Check Validator
         $validator = Validator::make($request->all(), [
-            'name'       =>  ['required', 'string', 'max:55'],
-            'account'    =>  ['required', 'string', 'max:255'],
-            'img'        => 'required|mimes:jpeg,png,jpg|max:2048' ,
+            'name'         =>  ['required', 'string', 'max:55'],
+            'description'  =>  ['required', 'string', 'max:500'],
+            'link'         =>  ['required', 'string', 'max:255'], 
+            'img'          =>  'required|mimes:jpeg,png,jpg|max:2048',
         ]);
         if ($validator->fails()) {
             return response() -> json([
                 'status' => 'error',
                 'msg'    => 'validation error',
                 'errors' => $validator->getMessageBag()->toArray()
+        
             ]); 
         }
 
         //  Upload image & Create name img
         $file_extention = $request -> img -> getClientOriginalExtension();
         $file_name = time() . "." . $file_extention;   // name => 3628.png
-        $path = "images/payment_methods" ;
+        $path = "images/works" ;
         $request -> img -> move( $path , $file_name );
 
         // Created PaymentMethod in DB
-        $paymentMethods = PaymentMethod::create([   
+        $work = Work::create([   
             'name'        => $request -> name ,   
-            'account'     => $request -> account , 
+            'link'        => $request -> link , 
+            'description' => $request -> description , 
             'img'         => $file_name ,
         ]);
-
-        if(!$paymentMethods){  // If Created paymentMethods fails
+        if(!$work){  // If Create work fails
             return response() -> json([
                 "status" => 'error' ,   
                 "msg" => "insert operation failed" ,
@@ -69,7 +70,7 @@ class PaymentMethodController extends Controller
 
         return response() -> json([
             "status" => 'success' ,   // Created Successfully
-            "msg" => "paymentMethods created successfully" ,
+            "msg" => "work created successfully" ,
         ]);
 
     }
@@ -82,20 +83,19 @@ class PaymentMethodController extends Controller
      */
     public function show($id)
     {
-        $paymentMethods = PaymentMethod::find( $id );  
-        if(!$paymentMethods){  // If get paymentMethods fails
+        $work = Work::find( $id );  
+        if(!$work){  // If get work fails
             return response() -> json([
                 "status" => 'error' ,   
-                "msg" => "get paymentMethods failed" ,
+                "msg" => "get work failed" ,
             ]);
         }
 
         return response() -> json([
             "status" => 'success' ,   // get Successfully
-            "msg"    => "paymentMethods get successfully" ,
-            "paymentMethods"   => $paymentMethods ,
+            "msg"    => "work get successfully" ,
+            "work"   => $work ,
         ]);
-
     }
 
     /**
@@ -111,27 +111,26 @@ class PaymentMethodController extends Controller
         
         // Check Validator
         $validator = Validator::make($request->all(), [
-            'name'       =>  ['required', 'string', 'max:55'],
-            'account'    =>  ['required', 'string', 'max:255'],
-            'img'        =>  'mimes:jpeg,png,jpg|max:2048',
+            'name'         =>  ['required', 'string', 'max:55'],
+            'description'  =>  ['required', 'string', 'max:500'],
+            'link'         =>  ['required', 'string', 'max:255'], 
+            'img'          =>  'mimes:jpeg,png,jpg|max:2048',
         ]);
         if ($validator->fails()) {
             return response() -> json([
                 'status' => 'error',
                 'msg'    => 'validation error',
                 'errors' => $validator->getMessageBag()->toArray()
+        
             ]); 
         }
 
-        
-        
-
-        // Get payment Method
-        $paymentMethod = PaymentMethod::find( $id );  
-        if(!$paymentMethod){  // If get paymentMethod fails
+        // Get Work
+        $work = Work::find( $id );  
+        if(!$work){  // If get work fails
             return response() -> json([
                 "status" => 'error' ,   
-                "msg" => "get payment Method failed" ,
+                "msg" => "get work failed" ,
             ]);
         }
 
@@ -141,21 +140,22 @@ class PaymentMethodController extends Controller
             //  Upload image & Create name img
             $file_extention = $request -> img -> getClientOriginalExtension();
             $file_name = time() . "." . $file_extention;   // name => 3628.png
-            $path = "images/payment_methods" ;
+            $path = "images/works" ;
             $request -> img -> move( $path , $file_name );
         }else{
-            $file_name = $paymentMethod->img;
+            $file_name = $work->img;
         }
 
 
 
         // Update in DB
-        $update = $paymentMethod-> update([
-            'name'        => $request -> name ,   
-            'account'     => $request -> account , 
-            'img'         => $file_name ,
+        $update = $work-> update([
+            'name'         => $request -> name ,   
+            'description'  => $request -> description , 
+            'link'         => $request -> link , 
+            'img'          => $file_name ,
         ]);
-        if(!$update){  // If update paymentMethod fails
+        if(!$update){  // If update work fails
             return response() -> json([
                 "status" => 'error' ,   
                 "msg" => "update operation failed" ,
@@ -164,7 +164,7 @@ class PaymentMethodController extends Controller
 
         return response() -> json([
             "status" => 'success' ,   // updated Successfully
-            "msg" => "payment Method updated successfully" ,
+            "msg" => "work updated successfully" ,
         ]);
 
 
@@ -180,18 +180,18 @@ class PaymentMethodController extends Controller
     {
         
 
-        // Get PaymentMethod
-        $paymentMethod = PaymentMethod::find( $id );  
-        if(!$paymentMethod){  // If get paymentMethods fails
+        // Get Work
+        $work = Work::find( $id );  
+        if(!$work){  // If get work fails
             return response() -> json([
                 "status" => 'error' ,   
-                "msg" => "get Payment Method failed" ,
+                "msg" => "get work failed" ,
             ]);
         }
 
-        // Delete PaymentMethod
-        $delete = $paymentMethod->delete();
-        if(!$delete){  // If update paymentMethod fails
+        // Delete Work
+        $delete = $work->delete();
+        if(!$delete){  // If update work fails
             return response() -> json([
                 "status" => 'error' ,   
                 "msg" => "delete operation failed" ,
@@ -200,11 +200,14 @@ class PaymentMethodController extends Controller
 
         return response() -> json([
             "status" => 'success' ,   // updated Successfully
-            "msg" => "Payment Method deleted successfully" ,
+            "msg" => "work deleted successfully" ,
         ]);
 
 
     }
+
+
+    
 
 
 }
