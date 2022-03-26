@@ -54,6 +54,9 @@
 						<li class="{{  request()->routeIs('affiliators.*') ? 'active' : '' }}">
 							<a href="{{route("affiliators.index")}}"> <i class="fa-solid fa-users"></i> Affiliators</a>
 						</li>
+						<li class="{{  request()->routeIs('payment_methods.*') ? 'active' : '' }}">
+							<a href="{{route("payment_methods.index")}}"> <i class="fa-solid fa-money-bill-1"></i> Payment Methods</a>
+						</li>
 						<li>
 							<a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
 						</li>

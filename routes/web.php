@@ -22,7 +22,7 @@ Route::group( ['namespace' => 'Web'] ,function(){
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/about', 'AboutController@index')->name('about');
     Route::get('/works', 'WorkController@index')->name('works');
-    Route::get('/affiliate', 'AffiliateController@index')->name('affiliate');
+    Route::get('/affiliate', 'blu@index')->name('affiliate');
     Route::get('/account', 'AccountController@index')->name('account');
 });
 
@@ -48,6 +48,16 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/affiliators/update/{id}" , "AffiliateController@update")->name('affiliators.update');
     Route::post("/affiliators/delete/{id}" , "AffiliateController@destroy")->name('affiliators.delete');
     Route::post("/affiliators/search" , "AffiliateController@search")->name('affiliators.search');
+
+
+
+    // payment_methods Page
+    Route::get("/payment_methods" , "PaymentMethodController@index")->name('payment_methods.index');
+    Route::post("/payment_methods" , "PaymentMethodController@store")->name('payment_methods.store');
+    Route::get("/payment_methods/show/{id}" , "PaymentMethodController@show")->name('payment_methods.show');
+    Route::post("/payment_methods/update/{id}" , "PaymentMethodController@update")->name('payment_methods.update');
+    Route::post("/payment_methods/delete/{id}" , "PaymentMethodController@destroy")->name('payment_methods.delete');
+    Route::post("/payment_methods/search" , "PaymentMethodController@search")->name('payment_methods.search');
 
 
     
