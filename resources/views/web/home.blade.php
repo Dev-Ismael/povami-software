@@ -235,7 +235,7 @@
                         </p>
                     </div>
                     <div class="col-md-5">
-                        <img src="{{ asset("images/skillset.png") }}" alt="" class="img-fulid">
+                        <img src="{{ asset("images/skillset.png") }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
