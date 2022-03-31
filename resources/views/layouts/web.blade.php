@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-
         <!------- CSRF Token ------->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -10,6 +9,9 @@
 
         <!------- IE Compatibility Meta ------->
         <meta http-equiv="X-UA-Compatibale" content="IE-=edge">
+
+        <!------- Responsive Meta ------------->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!------- Theme Color meta ------->
         <meta name="theme-color" content="#ffffff"> 
@@ -20,7 +22,6 @@
         <!------- FontAwesome  ------->
         <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
 
-        
         <!------- StyleSheet ------->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
