@@ -22,7 +22,7 @@ Route::group( ['namespace' => 'Web'] ,function(){
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/about', 'AboutController@index')->name('about');
     Route::get('/works', 'WorkController@index')->name('works');
-    Route::get('/affiliate', 'blu@index')->name('affiliate');
+    Route::get('/affiliate', 'AffiliateController@index')->name('affiliate');
     Route::get('/account', 'AccountController@index')->name('account');
 });
 
