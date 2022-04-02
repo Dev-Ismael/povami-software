@@ -15,6 +15,11 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
+            $table->string('name' , 100);
+            $table->unsignedBigInteger('user_id');	
+            $table->string('content' , 4000);
+            $table->integer('price')->length(10);
+            // $table->integer('bank_id')->length(11);
             $table->timestamps();
         });
     }

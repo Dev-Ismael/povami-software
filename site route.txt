@@ -1,0 +1,58 @@
+Thanks! We'll email you shortly. Our team usually responds within 1-2 business days
+
+
+
+cd C:\Users\Abdulrahman Ismael\Desktop\povami-software\resources\sass
+sass --watch app.scss:../../public/css/app.css
+
+
+
+26402150201895
+
+
+
+web development  
+------------------
+=> works page
+=> Affiliate markting page
+=> dashboard page
+
+
+
+
+
+
+
+profile page
+--------------
+Orders
+Contracts
+Povami Credits
+Profile
+Account
+LogOut
+
+
+
+
+
+
+Admin layout 
+---------------
+dashboard   -> users , orders , contracts , users Affiliate , all money recived  , pendding payment
+comments -> user ,  email , comment ,   
+
+
+
+Orders    -> user , project_name , content , price , time , get resource code , progress bar , download project , [ payment_system => by project | milstons  ], Payment method , payment status
+contracts -> user , project_name , content , price , time ,  
+
+
+
+Contract at web view =>{
+    - check box => (agree policy).
+    - check box => (payment done).
+    - check box => (need free test host & free domain).
+    - check box => (get resource code).
+}
+
