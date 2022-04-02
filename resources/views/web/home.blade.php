@@ -101,7 +101,7 @@
         </div>
 
         <!------ clients ------>
-        <div id="clients" class="content-padding">
+        {{-- <div id="clients" class="content-padding">
 
             <h2 class="text-center"> <i class="fa-solid fa-list-check"></i> Our Clients</h2>
             <div class="content-title-underline center"></div>
@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
 
         <!------ testimonials ------>
         <div id="testimonials" class="content-padding" >

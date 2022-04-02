@@ -71,8 +71,10 @@ $(document).ready( function (){
                     $.each( response.work , function( key , val ){
                         if( val === null || val === '' ){
                             val = '<i class="fa-solid fa-circle-question"></i>';
-                        }else if(key == 'img'){
-                            val = '<img src="/images/works/' + val + '" target="_blank" class="show-work-logo" alt="work-logo">';
+                        }else if( key == 'screen' ){
+                            val = '<img src="/images/works/' + val + '" target="_blank" class="work-screen" alt="work-screen">';
+                        }else if( key == 'brand' ){
+                            val = '<img src="/images/works/' + val + '" target="_blank" class="work-brand" alt="work-brand">';
                         }else if(key == 'link'){
                             val = '<a href="'+ val +'"> '+ val +' </a>';
                         }
@@ -115,9 +117,14 @@ $(document).ready( function (){
                         $("#editWorkModal form [type='text'][name='"+ key +"']").val( val );
                         $("#editWorkModal form [type='hidden'][name='"+ key +"']").val( val );
                         
-                        if( key === 'img' ){
-                            $("#editWorkModal form [for='img'] span")
-                            .html('<img src="/images/works/' + val + '" class="work-logo"  alt="work-logo">');
+                        if( key === 'screen' ){
+                            $("#editWorkModal form [for='screen'] span")
+                            .html('<img src="/images/works/' + val + '" class="work-screen"  alt="work-logo">');
+                        }
+                        
+                        if( key === 'brand' ){
+                            $("#editWorkModal form [for='brand'] span")
+                            .html('<img src="/images/works/' + val + '" class="work-brand"  alt="work-logo">');
                         }
                     });
                     

@@ -10,6 +10,6 @@ class Work extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'img', 'description', 'link' 
+        'name', 'screen', 'brand', 'description', 'link' 
     ];
 }

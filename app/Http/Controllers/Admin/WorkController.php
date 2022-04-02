@@ -37,7 +37,8 @@ class WorkController extends Controller
             'name'         =>  ['required', 'string', 'max:55'],
             'description'  =>  ['required', 'string', 'max:500'],
             'link'         =>  ['required', 'string', 'max:255'], 
-            'img'          =>  'required|mimes:jpeg,png,jpg|max:2048',
+            'screen'       =>  'required|mimes:jpeg,png,jpg|max:2048',
+            'brand'        =>  'required|mimes:jpeg,png,jpg|max:2048',
         ]);
         if ($validator->fails()) {
             return response() -> json([
@@ -48,18 +49,28 @@ class WorkController extends Controller
             ]); 
         }
 
-        //  Upload image & Create name img
-        $file_extention = $request -> img -> getClientOriginalExtension();
-        $file_name = time() . "." . $file_extention;   // name => 3628.png
-        $path = "images/works" ;
-        $request -> img -> move( $path , $file_name );
+        // Create Screen img name
+        $screen_extention = $request -> screen -> getClientOriginalExtension();
+        $screen_name = rand(1000000,10000000) . "." . $screen_extention;   // name => 3628.png
+        
+        // Create Brand img name
+        $brand_extention = $request -> brand -> getClientOriginalExtension();
+        $brand_name = rand(1000000,10000000) . "." . $brand_extention;   // name => 3628.png
 
-        // Created PaymentMethod in DB
+        // Path
+        $path = "images/works" ;
+
+        // Upload
+        $request -> screen -> move( $path , $screen_name );
+        $request -> brand  -> move( $path , $brand_name );
+
+        // Created Work in DB
         $work = Work::create([   
             'name'        => $request -> name ,   
             'link'        => $request -> link , 
             'description' => $request -> description , 
-            'img'         => $file_name ,
+            'screen'      => $screen_name ,
+            'brand'       => $brand_name ,
         ]);
         if(!$work){  // If Create work fails
             return response() -> json([
@@ -114,7 +125,8 @@ class WorkController extends Controller
             'name'         =>  ['required', 'string', 'max:55'],
             'description'  =>  ['required', 'string', 'max:500'],
             'link'         =>  ['required', 'string', 'max:255'], 
-            'img'          =>  'mimes:jpeg,png,jpg|max:2048',
+            'screen'       =>  'mimes:jpeg,png,jpg|max:2048',
+            'brand'        =>  'mimes:jpeg,png,jpg|max:2048',
         ]);
         if ($validator->fails()) {
             return response() -> json([
@@ -135,15 +147,25 @@ class WorkController extends Controller
         }
 
 
-        // Check If There Img Uploaded
-        if( $request -> hasFile("img") ){
-            //  Upload image & Create name img
-            $file_extention = $request -> img -> getClientOriginalExtension();
-            $file_name = time() . "." . $file_extention;   // name => 3628.png
-            $path = "images/works" ;
-            $request -> img -> move( $path , $file_name );
+        // Check If There Images Uploaded
+        $path = "images/works" ;
+
+        if( $request -> hasFile("screen") ){
+            //  Upload image & Create name screen
+            $screen_extention = $request -> screen -> getClientOriginalExtension();
+            $screen_name = rand(1000000,10000000) . "." . $screen_extention;   // name => 3628.png
+            $request -> screen -> move( $path , $screen_name );
         }else{
-            $file_name = $work->img;
+            $screen_name = $work->screen;
+        }
+
+        if( $request -> hasFile("brand") ){
+            //  Upload image & Create name brand
+            $brand_extention = $request -> brand -> getClientOriginalExtension();
+            $brand_name = rand(1000000,10000000) . "." . $brand_extention;   // name => 3628.png
+            $request -> brand -> move( $path , $brand_name );
+        }else{
+            $brand_name = $work->brand;
         }
 
 
@@ -153,7 +175,8 @@ class WorkController extends Controller
             'name'         => $request -> name ,   
             'description'  => $request -> description , 
             'link'         => $request -> link , 
-            'img'          => $file_name ,
+            'screen'       => $screen_name ,
+            'brand'        => $brand_name ,
         ]);
         if(!$update){  // If update work fails
             return response() -> json([

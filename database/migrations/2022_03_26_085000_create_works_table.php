@@ -18,7 +18,8 @@ class CreateWorksTable extends Migration
             $table->string('name' , 55);
             $table->string('description' , 500);
             $table->string('link' , 255);
-            $table->string('img' , 255);
+            $table->string('screen' , 255);
+            $table->string('brand' , 255);
             $table->timestamps();
         });
     }
