@@ -21844,6 +21844,7 @@ body #app.admin-view .no_data {
   position: relative;
 }
 body #app.admin-view .no_data img {
+  box-shadow: none !important;
   max-width: 100%;
 }
 body #app.admin-view .no_data p {

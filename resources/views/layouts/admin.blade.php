@@ -64,6 +64,9 @@
 						<li class="{{  request()->routeIs('works.*') ? 'active' : '' }}">
 							<a href="{{route("works.index")}}"> <i class="fa-solid fa-image"></i> Works </a>
 						</li>
+						<li class="{{  request()->routeIs('contracts.*') ? 'active' : '' }}">
+							<a href="{{route("contracts.index")}}"> <i class="fa-solid fa-file-signature pr-1"></i> Contracts </a>
+						</li>
 						<li>
 							<a href="#"><span class="fa fa-suitcase mr-3"></span> Gallery</a>
 						</li>

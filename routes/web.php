@@ -67,5 +67,13 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/works/delete/{id}" , "WorkController@destroy")->name('works.delete');
 
 
+    // Contracts Page
+    Route::get("/contracts" , "ContractController@index")->name('contracts.index');
+    Route::post("/contracts" , "ContractController@store")->name('contracts.store');
+    Route::get("/contracts/show/{id}" , "ContractController@show")->name('contracts.show');
+    Route::post("/contracts/update/{id}" , "ContractController@update")->name('contracts.update');
+    Route::post("/contracts/delete/{id}" , "ContractController@destroy")->name('contracts.delete');
+
+
     
 });
