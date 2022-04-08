@@ -34,22 +34,19 @@ LogOut
 
 
 
-
-
-
 Admin layout 
 ---------------
-dashboard   -> users , orders , contracts , users Affiliate , all money recived  , pendding payment
+dashboard -> users , orders , contracts , users Affiliate , all money recived  , pendding payment
 comments -> user ,  email , comment ,   
 
 
 
 Orders    -> user , project_name , content , price , time , get resource code , progress bar , download project , [ payment_system => by project | milstons  ], Payment method , payment status
-contracts -> user , project_name , content , price , time ,  
+contracts -> user , project_name , content , price , time 
 
 
 
-Contract at web view =>{
+Contract at user view => {
     - check box => (agree policy).
     - check box => (payment done).
     - check box => (need free test host & free domain).
