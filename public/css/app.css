@@ -21793,6 +21793,9 @@ body #app.admin-view {
   /*=================================================================
   ===========   Users
   ===================================================================*/
+  /*=================================================================
+  ===========   Contracts
+  ===================================================================*/
 }
 body #app.admin-view a {
   transition: 0.3s all ease;
@@ -22146,4 +22149,10 @@ body #app.admin-view #works-page #showWorkModal a {
 }
 body #app.admin-view #works-page #showWorkModal .get_info.img {
   display: block;
+}
+body #app.admin-view #contracts-page .user-link {
+  color: #000;
+}
+body #app.admin-view #contracts-page td.price {
+  color: #5fe71f;
 }

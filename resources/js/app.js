@@ -26,3 +26,4 @@ require('./admin/ajax/users');
 require('./admin/ajax/affiliators');
 require('./admin/ajax/payment_methods');
 require('./admin/ajax/works');
+require('./admin/ajax/contracts');
