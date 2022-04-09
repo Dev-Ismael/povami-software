@@ -26,9 +26,6 @@
                             <h4 class="text-uppercase"> <i class="fa-solid fa-file-signature pr-1"></i> Contracts</h4>
                         </div>
                         <div class="col-6 text-right">
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#searchContractModal">
-                                <i class="fa-solid fa-search"></i>
-                            </button>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target="#createContractModal">
                                 <i class="fa-solid fa-plus"></i>
@@ -43,8 +40,8 @@
                                 <th scope="col"> <i class="fa-solid fa-address-card"></i> title </th>
                                 <th scope="col"> <i class="fa-solid fa-user"></i> user </th>
                                 <th scope="col"> <i class="fa-solid fa-align-left"></i> content </th>
-                                <th scope="col"> <i class="fa-solid fa-dollar-sign"></i> price </th>
-                                <th scope="col"> <i class="fa-solid fa-timer"></i> deadline </th>
+                                <th scope="col"> <i class="fa-solid fa-sack-dollar"></i> price </th>
+                                <th scope="col"> <i class="fa-solid fa-clock"></i> deadline </th>
                                 <th scope="col"> <i class="fa-solid fa-circle-exclamation"></i> action</th>
                             </tr>
                         </thead>
@@ -52,9 +49,9 @@
                             @foreach ($contracts as $key => $contract)
                                 <tr>
                                     <td> {{ Str::ucfirst($contract->title) }}</td>
-                                    <td> <a href="#" class="user-link" > {{ $contract->user->name }} </a> </td>
+                                    <td> <a href="#" class="user-link"> {{ $contract->user->name }} </a> </td>
                                     <td> {{ $contract->content }} </td>
-                                    <td class="price"> ${{ $contract->price }}  </td>
+                                    <td class="price"> ${{ $contract->price }} </td>
                                     <td> {{ $contract->deadline }} </td>
                                     <td>
                                         <div class="table-buttons">
@@ -63,8 +60,9 @@
                                                 contract_id="{{ $contract->id }}">
                                                 <i class="fa-solid fa-eye"></i>
                                             </button>
-                                            <button type="button" id="edit-contract" class="btn btn-info" data-toggle="modal"
-                                                data-target="#editContractModal" contract_id="{{ $contract->id }}">
+                                            <button type="button" id="edit-contract" class="btn btn-info"
+                                                data-toggle="modal" data-target="#editContractModal"
+                                                contract_id="{{ $contract->id }}">
                                                 <i class="fa-solid fa-pen-to-square"></i>
                                             </button>
                                             <button type="button" id="delete-contract" class="btn btn-danger"
@@ -89,12 +87,13 @@
 
 
         <!---------- Add Contract Modal ------------>
-        <div class="modal fade" id="createContractModal" tabindex="-1" role="dialog" aria-labelledby="createContractLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="createContractModal" tabindex="-1" role="dialog"
+            aria-labelledby="createContractLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="createContractLabel"> <i class="fa-solid fa-plus-circle"></i> Create Contract </h5>
+                        <h5 class="modal-title" id="createContractLabel"> <i class="fa-solid fa-plus-circle"></i> Create
+                            Contract </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -103,29 +102,30 @@
                         <form id="create-contract" enctype="multipart/form-data">
 
 
-                            <label for="name"> <i class="fa-solid fa-contract"></i> Contract Name..</label>
-                            <input type="text" name="name" class="form-control" placeholder="Enter Name.." />
-                            <small class="form-text text-danger name"> </small>
-                            <br>
-
-                            <label for="email"> <i class="fa-solid fa-envelope"></i> Contract Email..</label>
+                            <label for="email"> <i class="fa-solid fa-user"></i> User Email..</label>
                             <input type="text" name="email" class="form-control" placeholder="Enter email.." />
                             <small class="form-text text-danger email"> </small>
                             <br>
 
-                            <label for="phone"> <i class="fa-solid fa-phone"></i> Contract Phone..</label>
-                            <input type="text" name="phone" class="form-control" placeholder="Enter Phone.." />
-                            <small class="form-text text-danger phone"> </small>
+                            <label for="title"> <i class="fa-solid fa-address-card"></i> Project Title..</label>
+                            <input type="text" name="title" class="form-control" placeholder="Enter Title.." />
+                            <small class="form-text text-danger title"> </small>
                             <br>
 
-                            <label for="address"> <i class="fa-solid fa-address-card"></i> Contract Address..</label>
-                            <textarea type="text" name="address" class="form-control" placeholder="Enter Address.."></textarea>
-                            <small class="form-text text-danger address"> </small>
+                            <label for="content"> <i class="fa-solid fa-align-left"></i> Contract Content..</label>
+                            <textarea type="text" name="content" class="form-control" rows="10" cols="50"
+                                placeholder="Enter Content.."></textarea>
+                            <small class="form-text text-danger content"> </small>
                             <br>
 
-                            <label for="password"> <i class="fas fa-lock" aria-hidden="true"></i> Contract Password..</label>
-                            <input type="password" name="password" class="form-control" placeholder="Enter Password.." />
-                            <small class="form-text text-danger password"> </small>
+                            <label for="price"> <i class="fa-solid fa-sack-dollar"></i> Project Price..</label>
+                            <input type="number" name="price" class="form-control" placeholder="Enter Price.." />
+                            <small class="form-text text-danger price"> </small>
+                            <br>
+
+                            <label for="deadline"> <i class="fa-solid fa-clock"></i> Project Deadline..</label>
+                            <input type="date" name="deadline" class="form-control" placeholder="Enter Deadline.." />
+                            <small class="form-text text-danger deadline"> </small>
                             <br>
 
                         </form>
@@ -139,12 +139,13 @@
         </div>
 
         <!---------- Show Contract Modal ------------>
-        <div class="modal fade" id="showContractModal" tabindex="-1" role="dialog" aria-labelledby="showContractModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="showContractModal" tabindex="-1" role="dialog"
+            aria-labelledby="showContractModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="showContractModalLabel"> <i class="fa-solid fa-eye"></i> Contract Info</h5>
+                        <h5 class="modal-title" id="showContractModalLabel"> <i class="fa-solid fa-eye"></i> Contract
+                            Info</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

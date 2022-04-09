@@ -22,7 +22,7 @@ class ContractController extends Controller
         return view("admin.contracts" , compact('contracts'));
         // return $contracts;
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -34,11 +34,10 @@ class ContractController extends Controller
 
         // Check Validator
         $validator = Validator::make($request->all(), [
-            'name'      =>  ['required', 'string', 'max:55'],
-            'email'     =>  ['required', 'string', 'email', 'max:55', 'unique:contracts'],
-            'phone'     =>  [ 'max:55' ],
-            'address'   =>  [ 'max:255' ],
-            'password'  =>  ['required', 'string', 'min:8'],
+            'title'      =>  ['required', 'string', 'max:50'],
+            'content'    =>  ['required', 'string', 'max:4000'],
+            'price'      =>  ['required', 'numeric', 'digits_between:1,10'],
+            'deadline'   =>  ['required', 'string', 'max:50'],
         ]);
         if ($validator->fails()) {
             return response() -> json([
@@ -51,14 +50,10 @@ class ContractController extends Controller
 
         // Create Contract in DB
         $contract = Contract::create([   // Contract mean model and 
-            'name'      => $request -> name ,    
-            'email'     => $request -> email , 
-            'phone'     => $request -> phone , 
-            'address'   => $request -> address , 
-            'password' => Hash::make( $request -> password ),
-            'email_verified_at' => now(),
-            'remember_token' => Str::random(10),
-            'coupon' => Str::random(10),
+            'title'     => $request -> title ,    
+            'content'   => $request -> content , 
+            'price'     => $request -> price , 
+            'deadline'  => $request -> deadline , 
         ]);
         if(!$contract){  // If Create contract fails
             return response() -> json([
