@@ -41,8 +41,8 @@ comments -> user ,  email , comment ,
 
 
 
-Orders    -> user , project_name , content , price , time , get resource code , progress bar , download project , [ payment_system => by project | milstons  ], Payment method , payment status
-contracts -> user , project_name , content , price , time 
+Orders    -> user , project_name , content , price , deadline , get resource code , progress bar , download project , [ payment_system => by project | milstons  ], Payment method , payment status
+contracts -> user , project_name , content , price , deadline 
 
 
 
