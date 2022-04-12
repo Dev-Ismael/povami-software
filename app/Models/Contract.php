@@ -11,7 +11,7 @@ class Contract extends Model
 
 
     protected $fillable = [
-        'name', 'content', 'price',  
+        'user_id' , 'title' , 'content', 'price', 'deadline',  
     ];
 
     ############################## Relations ################################

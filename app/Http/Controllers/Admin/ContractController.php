@@ -8,6 +8,8 @@ use App\Models\Contract;
 use Illuminate\Support\Facades\Hash; 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use App\Models\User;
+
 
 class ContractController extends Controller
 {
@@ -34,6 +36,7 @@ class ContractController extends Controller
 
         // Check Validator
         $validator = Validator::make($request->all(), [
+            'email'      =>  ['required', 'string', 'email', 'max:55'],
             'title'      =>  ['required', 'string', 'max:50'],
             'content'    =>  ['required', 'string', 'max:4000'],
             'price'      =>  ['required', 'numeric', 'digits_between:1,10'],
@@ -48,8 +51,14 @@ class ContractController extends Controller
             ]); 
         }
 
+
+        // Get User
+        $user = User::where([ ["email" , '=' , $request->email ] , ["role" , '=' , '3' ] ])->first(); 
+
+        
         // Create Contract in DB
         $contract = Contract::create([   // Contract mean model and 
+            'user_id'   => $user -> id ,    
             'title'     => $request -> title ,    
             'content'   => $request -> content , 
             'price'     => $request -> price , 

@@ -22150,9 +22150,58 @@ body #app.admin-view #works-page #showWorkModal a {
 body #app.admin-view #works-page #showWorkModal .get_info.img {
   display: block;
 }
+body #app.admin-view #contracts-page {
+  /*======= search input ==========*/
+  /*======= input date ==========*/
+}
 body #app.admin-view #contracts-page .user-link {
   color: #000;
 }
 body #app.admin-view #contracts-page td.price {
   color: #3caf07;
+}
+body #app.admin-view #contracts-page .search {
+  position: relative;
+}
+body #app.admin-view #contracts-page .search input {
+  height: 38px;
+  text-indent: 35px;
+}
+body #app.admin-view #contracts-page .search .icon {
+  top: 7px;
+  left: 10px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+body #app.admin-view #contracts-page .search .icon i {
+  transition: all 0.3s ease-in-out;
+  font-size: 24px;
+}
+body #app.admin-view #contracts-page .search .icon i.fa-circle-check {
+  color: #3caf07;
+}
+body #app.admin-view #contracts-page .search .icon i.fa-circle-xmark {
+  color: #dc3545;
+}
+body #app.admin-view #contracts-page .search .icon i.fa-search {
+  color: #29004f;
+}
+body #app.admin-view #contracts-page .search .spinner-grow {
+  width: 24px;
+  height: 24px;
+}
+body #app.admin-view #contracts-page .search button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 38px;
+  width: 120px;
+  background: #29004f;
+  border: 1px solid #29004f;
+}
+body #app.admin-view #contracts-page .search button i {
+  color: #fff;
+}
+body #app.admin-view #contracts-page input[type=date] {
+  cursor: pointer;
 }

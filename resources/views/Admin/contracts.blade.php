@@ -60,11 +60,6 @@
                                                 contract_id="{{ $contract->id }}">
                                                 <i class="fa-solid fa-eye"></i>
                                             </button>
-                                            <button type="button" id="edit-contract" class="btn btn-info"
-                                                data-toggle="modal" data-target="#editContractModal"
-                                                contract_id="{{ $contract->id }}">
-                                                <i class="fa-solid fa-pen-to-square"></i>
-                                            </button>
                                             <button type="button" id="delete-contract" class="btn btn-danger"
                                                 contract_id="{{ $contract->id }}">
                                                 <i class="fa-solid fa-trash-can"></i>
@@ -101,9 +96,14 @@
                     <div class="modal-body">
                         <form id="create-contract" enctype="multipart/form-data">
 
-
                             <label for="email"> <i class="fa-solid fa-user"></i> User Email..</label>
-                            <input type="text" name="email" class="form-control" placeholder="Enter email.." />
+                            <div class="search"> 
+                                <span class="icon"> 
+                                    <i class="fa-solid fa-search"></i>
+                                </span>
+                                <input type="text" name="email" class="form-control" placeholder="Enter Email..">
+                                <button id="search-user" class="btn btn-primary"> <i class="fa fa-search"></i> Search </button> 
+                            </div>
                             <small class="form-text text-danger email"> </small>
                             <br>
 
@@ -137,6 +137,9 @@
                 </div>
             </div>
         </div>
+
+
+
 
         <!---------- Show Contract Modal ------------>
         <div class="modal fade" id="showContractModal" tabindex="-1" role="dialog"
@@ -178,6 +181,14 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
 
 
     </div>

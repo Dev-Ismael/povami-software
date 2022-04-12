@@ -36724,6 +36724,47 @@ $(document).ready(function () {
   /*=================================================================
   ===========  Create Contracts
   ===================================================================*/
+  // Search User 
+  $("#contracts-page button#search-user").on("click", function (e) {
+    e.preventDefault();
+    var email = $("form#create-contract input[name='email']").val();
+    $.ajax({
+      type: "POST",
+      url: '/admin/users/search',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      data: {
+        email: email
+      },
+      success: function success(response) {
+        // console.log(response);
+        if (response.status == 'error' && response.msg == 'validation error') {
+          $.each(response.errors, function (key, val) {
+            $("#createContractModal small.text-danger." + key).text(val[0]);
+            $('#createContractModal input[name="' + key + '"]').addClass("is-invalid");
+            $('#createContractModal button#create-contract').prop("disabled", true);
+          });
+        } else if (response.status == 'error' && response.msg == 'user not found') {
+          $("form#create-contract span.icon").html('<div class="spinner-grow text-info" role="status"> <span class="sr-only">Loading...</span> </div>');
+          $('#createContractModal button#create-contract').prop("disabled", true);
+          setTimeout(function () {
+            $("form#create-contract span.icon").html("<i class='fa-solid fa-circle-xmark'></i>");
+          }, 3000);
+        } else if (response.status == 'success') {
+          $('#createContractModal button#create-contract').prop("disabled", false);
+          $("form#create-contract span.icon").html('<div class="spinner-grow text-info" role="status"> <span class="sr-only">Loading...</span> </div>');
+          setTimeout(function () {
+            $("form#create-contract span.icon").html("<i class='fa-solid fa-circle-check'></i>");
+          }, 3000);
+        }
+      },
+      error: function error(response) {
+        swal("Error!", "connection failed!", 'error'); // failed to with url
+      }
+    });
+  }); // Store Contract
+
   $("#createContractModal button#create-contract").on("click", function (e) {
     e.preventDefault();
     var createFormData = new FormData($("#createContractModal form")[0]);
@@ -36744,6 +36785,7 @@ $(document).ready(function () {
           $.each(response.errors, function (key, val) {
             $("#createContractModal small.text-danger." + key).text(val[0]);
             $('#createContractModal input[name="' + key + '"]').addClass("is-invalid");
+            $('#createContractModal textarea[name="' + key + '"]').addClass("is-invalid");
           });
         } else if (response.status == 'error' && response.msg == 'insert operation failed') {
           swal(response.status, response.msg, response.status);
