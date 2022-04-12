@@ -186,4 +186,42 @@ $(document).ready( function (){
 
 
 
+    /*=================================================================
+    ===========  Show Users
+    ===================================================================*/
+    $("#contracts-page a#show-user").on("click",function (e){
+        var user_id = $(this).attr('user_id');
+        e.preventDefault();
+        $.ajax({
+            type: "GET",
+            enctype : "multipart/form-data" ,
+            url: '/admin/users/show/' + user_id ,
+            processData: false,
+            contentType : false , 
+            cache    : false,
+            success: function ( response ) {
+                // console.log(response);
+                if( response.status == 'error' && response.msg == 'get user failed'  ){
+                    swal( response.status , response.msg , response.status )
+                    .then((value) => {
+                        window.location.href = "/admin/users";
+                    });
+                }
+                else if( response.status == 'success' ){
+                    $.each( response.user , function( key , val ){
+                        if( val === null ){
+                            val = '<i class="fa-solid fa-circle-question"></i>';
+                        }
+                        $("#showUserModal .get_info." + key + " .text").html( val );
+                    });
+                }
+            },
+            error: function(response){
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
+            }
+        });  
+    });
+
+
+
 });  

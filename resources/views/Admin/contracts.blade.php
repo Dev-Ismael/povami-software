@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 @section('content')
+
+
     <div id="contracts-page">
 
 
@@ -49,7 +51,9 @@
                             @foreach ($contracts as $key => $contract)
                                 <tr>
                                     <td> {{ Str::ucfirst($contract->title) }}</td>
-                                    <td> <a href="#" class="user-link"> {{ $contract->user->name }} </a> </td>
+                                    <td> <a href="#" class="user-link" type="button" id="show-user" class="btn btn-secondary"
+                                        data-toggle="modal" data-target="#showUserModal"
+                                        user_id="{{ $contract->user->id }}"> {{ $contract->user->email }} </a> </td>
                                     <td> {{ $contract->content }} </td>
                                     <td class="price"> ${{ $contract->price }} </td>
                                     <td> {{ $contract->deadline }} </td>
@@ -190,6 +194,45 @@
 
 
 
+        <!---------- Show User Modal ------------>
+        <div class="modal fade" id="showUserModal" tabindex="-1" role="dialog" aria-labelledby="showUserModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="showUserModalLabel"> <i class="fa-solid fa-eye"></i> User Info</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="get_info name">
+                            <p class="heading"> <i class="fa-solid fa-user"></i> Username : </p>
+                            <p class="text"></p>
+                        </div>
+                        <hr>
+                        <div class="get_info email">
+                            <p class="heading"> <i class="fa-solid fa-envelope"></i> Email : </p>
+                            <p class="text"> </p>
+                        </div>
+                        <hr>
+                        <div class="get_info phone">
+                            <p class="heading"> <i class="fa-solid fa-phone"></i> Phone : </p>
+                            <p class="text"> </p>
+                        </div>
+                        <hr>
+                        <div class="get_info address">
+                            <p class="heading"> <i class="fa-solid fa-address-card"></i> Address : </p>
+                            <p class="text"> </p>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -197,10 +240,6 @@
 
 
     </div>
-
-
-
-
 
 
 @endsection
