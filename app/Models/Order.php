@@ -15,8 +15,13 @@ class Order extends Model
     ];
 
     ############################## Relations ################################
+    
     public function user(){
         return  $this -> belongsTo("App\Models\User") ;  
+    }
+    
+    public function payment_method(){
+        return  $this -> belongsTo("App\Models\PaymentMethod") ;  
     }
 
 }

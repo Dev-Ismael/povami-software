@@ -11,4 +11,8 @@ class PaymentMethod extends Model
 
 
     protected $fillable = [ 'name' , 'img' , 'account' ];
+    ############################## Relations ################################
+    public function orders(){
+        return  $this -> hasMany("App\Models\Order") ;  
+    }
 }
