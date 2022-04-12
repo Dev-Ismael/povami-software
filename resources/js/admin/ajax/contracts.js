@@ -117,6 +117,9 @@ $(document).ready( function (){
                         if( val === null ){
                             val = '<i class="fa-solid fa-circle-question"></i>';
                         }
+                        if( key === 'user' ){
+                            val = val.email ;  // get user emaill
+                        }
                         $("#showContractModal .get_info." + key + " .text").html( val );
                     });
                 }

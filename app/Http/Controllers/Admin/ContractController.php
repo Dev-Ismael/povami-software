@@ -86,7 +86,7 @@ class ContractController extends Controller
      */
     public function show($id)
     {
-        $contract = Contract::find( $id );  
+        $contract = Contract::with("user")->find( $id );  
         if(!$contract){  // If get contract fails
             return response() -> json([
                 "status" => 'error' ,   

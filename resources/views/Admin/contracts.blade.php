@@ -154,23 +154,28 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="get_info name">
-                            <p class="heading"> <i class="fa-solid fa-contract"></i> Contractname : </p>
+                        <div class="get_info title">
+                            <p class="heading"> <i class="fa-solid fa-address-card"></i> Contract Title : </p>
                             <p class="text"></p>
                         </div>
                         <hr>
-                        <div class="get_info email">
-                            <p class="heading"> <i class="fa-solid fa-envelope"></i> Email : </p>
+                        <div class="get_info user">
+                            <p class="heading"> <i class="fa-solid fa-envelope"></i> User Email : </p>
                             <p class="text"> </p>
                         </div>
                         <hr>
-                        <div class="get_info phone">
-                            <p class="heading"> <i class="fa-solid fa-phone"></i> Phone : </p>
+                        <div class="get_info content">
+                            <p class="heading"> <i class="fa-solid fa-align-left"></i> Content : </p>
                             <p class="text"> </p>
                         </div>
                         <hr>
-                        <div class="get_info address">
-                            <p class="heading"> <i class="fa-solid fa-address-card"></i> Address : </p>
+                        <div class="get_info price">
+                            <p class="heading"> <i class="fa-solid fa-sack-dollar"></i> Price : </p>
+                            <p class="text"> </p>
+                        </div>
+                        <hr>
+                        <div class="get_info deadline">
+                            <p class="heading"> <i class="fa-solid fa-clock"></i> Deadline : </p>
                             <p class="text"> </p>
                         </div>
                         <hr>
