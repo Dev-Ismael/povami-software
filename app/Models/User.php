@@ -43,4 +43,7 @@ class User extends Authenticatable
     public function contracts(){
         return  $this -> hasMany("App\Models\Contract") ;  
     }
+    public function orders(){
+        return  $this -> hasMany("App\Models\Order") ;  
+    }
 }

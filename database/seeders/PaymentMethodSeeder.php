@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\PaymentMethod;
 
-class PaymentMethodsSeeder extends Seeder
+class PaymentMethodSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,7 @@ class PaymentMethodsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        PaymentMethod::factory()->count(50)->create();
+
     }
 }

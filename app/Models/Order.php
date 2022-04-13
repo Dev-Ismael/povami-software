@@ -9,13 +9,12 @@ class Order extends Model
 {
     use HasFactory;
 
-
+    
     protected $fillable = [
-        'user_id' , 'title' , 'content', 'price', 'deadline', 'resource_code', "progress bar" , "link" , "payment_system" , "payment_method" , "payment_status"
+        'user_id' , 'title' , 'content', 'price', 'deadline',  
     ];
 
     ############################## Relations ################################
-    
     public function user(){
         return  $this -> belongsTo("App\Models\User") ;  
     }

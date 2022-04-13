@@ -22,21 +22,21 @@ class ForgienKey extends Migration
             ->onDelete("cascade")       
             ->onUpdate("cascade");     
         });
-        ################ ORDERS ###################
-        // Schema::table('orders', function (Blueprint $table) {
-        //     /* =========== user_id ===============*/ 
-        //     $table->foreign("user_id")
-        //     ->references('id')
-        //     ->on("users")
-        //     ->onDelete("cascade")       
-        //     ->onUpdate("cascade");     
-        //     /* =========== payment_method_id ===============*/ 
-        //     $table->foreign("payment_method_id")
-        //     ->references('id')
-        //     ->on("payment_methods")
-        //     ->onDelete("cascade")       
-        //     ->onUpdate("cascade");     
-        // });
+        // ################ orders ###################
+        Schema::table('orders', function (Blueprint $table) {
+            /* =========== user_id ===============*/ 
+            $table->foreign("user_id")
+            ->references('id')
+            ->on("users")
+            ->onDelete("cascade")       
+            ->onUpdate("cascade");     
+            /* =========== payment_method_id ===============*/ 
+            $table->foreign("payment_method_id")
+            ->references('id')
+            ->on("payment_methods")
+            ->onDelete("cascade")       
+            ->onUpdate("cascade");     
+        });
     }
 
     /**
