@@ -16,14 +16,22 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name', 55);
+            $table->string('first_name' , 55)->nullable();
+            $table->string('last_name' , 55)->nullable();
             $table->string('email' , 55)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('address' , 255 )->nullable();
             $table->string('phone' , 55 )->nullable();
+            $table->string('phone2' , 55 )->nullable();
+            $table->string('facebook' , 255 )->nullable();
+            $table->string('twitter' , 255 )->nullable();
+            $table->string('instagram' , 255 )->nullable();
+            $table->string('country' , 55)->nullable();
+            $table->string('city' , 55)->nullable();
             $table->string('balance', 10)->nullable();
             $table->string('coupon', 55)->nullable(); 
-            $table->tinyInteger('role')->default('3');  // 1=> admin  ,  2=> affiliate  ,  3=> user
+            $table->string('role', 1 )->default('3'); // 1=> admin  ,  2=> affiliator  ,  3=> user
             $table->rememberToken();
             $table->timestamps();
         });
