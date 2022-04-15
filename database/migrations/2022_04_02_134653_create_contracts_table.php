@@ -20,6 +20,7 @@ class CreateContractsTable extends Migration
             $table->string('content' , 4000);
             $table->integer('price')->length(10);
             $table->string('deadline' , 50);
+            $table->string('status', 1 )->default('0');  // 0=> pending  ,  1=> accepted  ,  2=> reject
             $table->timestamps();
         });
     }
