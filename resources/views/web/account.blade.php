@@ -189,97 +189,57 @@
 
 
                             <!--------------- Contracts Section ---------------->
-                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-contracts" role="tabpanel"
-                                aria-labelledby="v-pills-contracts-tab">
-                                <h4 class="font-italic mb-4">
-                                    <i class="fa-solid fa-file-signature pr-1"></i>
-                                    Contracts
-                                </h4>
-                                <div class="contracts-content">
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading active" role="tab" id="headingOne">
-                                                <h4 class="panel-title">
-                                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                                        href="#collapseOne" aria-expanded="true"
-                                                        aria-controls="collapseOne">
-                                                        #1 Collapsible Group Item
-                                                        <i class="fa-solid fa-angles-down"></i>
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
-                                                aria-labelledby="headingOne">
-                                                <div class="panel-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                    nesciunt you probably haven't heard of them accusamus labore
-                                                    sustainable VHS.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingTwo">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                                        aria-controls="collapseTwo">
-                                                        #2 Collapsible Group Item
-                                                        <i class="fa-solid fa-angles-down"></i>
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                                                aria-labelledby="headingTwo">
-                                                <div class="panel-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                    nesciunt you probably haven't heard of them accusamus labore
-                                                    sustainable VHS.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingThree">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-                                                        aria-controls="collapseThree">
-                                                        #3 Collapsible Group Item
-                                                        <i class="fa-solid fa-angles-down"></i>
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                                                aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                    nesciunt you probably haven't heard of them accusamus labore
-                                                    sustainable VHS.
-                                                </div>
-                                            </div>
+                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-contracts" role="tabpanel" aria-labelledby="v-pills-contracts-tab">
+                                @if ($contracts->isEmpty())
+                                    <div class="no_data">
+                                        <div class="container text-center">
+                                            <img src="{{ asset('images/contract.png') }}" class="img-fluid" alt="no_data">
+                                            <p>No contracts yet! ... Contact now with povami support to create one!</p>
                                         </div>
                                     </div>
-                                </div>
+                                @else
+                                    <h4 class="font-italic mb-4">
+                                        <i class="fa-solid fa-file-signature pr-1"></i>
+                                        Contracts
+                                    </h4>
+                                    <div class="contracts-content">
+                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                                            @foreach ($contracts as $key => $contract)
+
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading active" role="tab" id="{{'heading' . $key }}">
+                                                        <h4 class="panel-title">
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                                href="#{{'collapse' . $key }}" aria-expanded="true"
+                                                                aria-controls="{{'collapse' . $key }}">
+                                                                #{{( $key + 1 )}} {{ $contract->title }}
+                                                                <i class="fa-solid fa-angles-down"></i>
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="{{'collapse' . $key }}" class="panel-collapse collapse in show" role="tabpanel"
+                                                        aria-labelledby="{{'heading' . $key }}">
+                                                        <div class="panel-body">
+                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                            occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                            nesciunt you probably haven't heard of them accusamus labore
+                                                            sustainable VHS.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            @endforeach
+
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
 
 
