@@ -65,7 +65,7 @@
 
 
                             <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                                        document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
@@ -85,99 +85,99 @@
 
 
 
+
                             <!----------- Orders Section------------->
-                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-orders"
+                            <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-orders"
                                 role="tabpanel" aria-labelledby="v-pills-orders-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa-solid fa-bars-staggered pr-1"></i>
                                     Orders
                                 </h4>
                                 <div class="orders-content">
-                                        <div class="panel-group" id="accordion" role="tablist"
-                                            aria-multiselectable="true">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading active" role="tab" id="headingOne">
-                                                    <h4 class="panel-title">
-                                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                                            href="#collapseOne" aria-expanded="true"
-                                                            aria-controls="collapseOne">
-                                                            #1 Collapsible Group Item 
-                                                            <i class="fa-solid fa-angles-down"></i>
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
-                                                    aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                        single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                        occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                        nesciunt you probably haven't heard of them accusamus labore
-                                                        sustainable VHS.
-                                                    </div>
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading active" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseOne" aria-expanded="true"
+                                                        aria-controls="collapseOne">
+                                                        #1 Collapsible Group Item
+                                                        <i class="fa-solid fa-angles-down"></i>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
+                                                aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                    nesciunt you probably haven't heard of them accusamus labore
+                                                    sustainable VHS.
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading" role="tab" id="headingTwo">
-                                                    <h4 class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                                            data-parent="#accordion" href="#collapseTwo"
-                                                            aria-expanded="false" aria-controls="collapseTwo">
-                                                            #2 Collapsible Group Item
-                                                            <i class="fa-solid fa-angles-down"></i>
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                                                    aria-labelledby="headingTwo">
-                                                    <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                        single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                        occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                        nesciunt you probably haven't heard of them accusamus labore
-                                                        sustainable VHS.
-                                                    </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo">
+                                                        #2 Collapsible Group Item
+                                                        <i class="fa-solid fa-angles-down"></i>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                    nesciunt you probably haven't heard of them accusamus labore
+                                                    sustainable VHS.
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading" role="tab" id="headingThree">
-                                                    <h4 class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                                            data-parent="#accordion" href="#collapseThree"
-                                                            aria-expanded="false" aria-controls="collapseThree">
-                                                            #3 Collapsible Group Item
-                                                            <i class="fa-solid fa-angles-down"></i>
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                                                    aria-labelledby="headingThree">
-                                                    <div class="panel-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                        single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                        occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                        nesciunt you probably haven't heard of them accusamus labore
-                                                        sustainable VHS.
-                                                    </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                                        aria-controls="collapseThree">
+                                                        #3 Collapsible Group Item
+                                                        <i class="fa-solid fa-angles-down"></i>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                    nesciunt you probably haven't heard of them accusamus labore
+                                                    sustainable VHS.
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
 
 
@@ -189,18 +189,97 @@
 
 
                             <!--------------- Contracts Section ---------------->
-                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-contracts" role="tabpanel"
+                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-contracts" role="tabpanel"
                                 aria-labelledby="v-pills-contracts-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa-solid fa-file-signature pr-1"></i>
                                     Contracts
                                 </h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                    qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="contracts-content">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading active" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseOne" aria-expanded="true"
+                                                        aria-controls="collapseOne">
+                                                        #1 Collapsible Group Item
+                                                        <i class="fa-solid fa-angles-down"></i>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
+                                                aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                    nesciunt you probably haven't heard of them accusamus labore
+                                                    sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo">
+                                                        #2 Collapsible Group Item
+                                                        <i class="fa-solid fa-angles-down"></i>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                    nesciunt you probably haven't heard of them accusamus labore
+                                                    sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                                        aria-controls="collapseThree">
+                                                        #3 Collapsible Group Item
+                                                        <i class="fa-solid fa-angles-down"></i>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                                aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                    nesciunt you probably haven't heard of them accusamus labore
+                                                    sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
 
@@ -209,7 +288,7 @@
 
 
                             <!--------------- Povami Credits Section ---------------->
-                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-credits" role="tabpanel"
+                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-credits" role="tabpanel"
                                 aria-labelledby="v-pills-credits-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa-solid fa-money-check-dollar pr-1"></i>
@@ -230,7 +309,7 @@
 
 
                             <!----------- Personal information Section ------------->
-                            <div class="tab-pane fade shadow rounded bg-white p-5 presonal-info" id="v-pills-presonal-info"
+                            <div class="tab-pane fade shadow rounded bg-white presonal-info" id="v-pills-presonal-info"
                                 role="tabpanel" aria-labelledby="v-pills-presonal-info-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
@@ -540,7 +619,8 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="city" class="text-black"> <i class="fa-solid fa-city"></i> City
+                                            <label for="city" class="text-black"> <i class="fa-solid fa-city"></i>
+                                                City
                                             </label>
                                             <input type="text" class="form-control" id="city"
                                                 placeholder="Type Your Located City...">

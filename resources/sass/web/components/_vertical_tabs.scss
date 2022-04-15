@@ -28,11 +28,14 @@
     }
     .tab-content{
         .tab-pane{
-            min-height: 600px;
+            min-height: 500px;
         }
     }
     h4 i {
         color: #29004f
+    }
+    div.tab-pane{
+        padding: 20px !important
     }
     /* Add indicator arrow for the active tab */
     @media (min-width: 992px) {
@@ -48,6 +51,9 @@
             transform: translateY(-50%);
             opacity: 0;
         }
+        div.tab-pane{
+            padding: 40px !important
+        }
     }
-    
+
 }
