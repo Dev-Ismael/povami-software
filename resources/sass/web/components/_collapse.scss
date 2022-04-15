@@ -1,0 +1,62 @@
+/*==================================================================
+============== collapse  ===========================================
+=================================================================*/
+#account-page {
+
+    .wrapper {
+        width: 70%;
+    }
+
+    @media(max-width:992px) {
+        .wrapper {
+            width: 100%;
+        }
+    }
+
+    .panel-heading {
+        padding: 0;
+        border: 0;
+    }
+
+    .panel-title>a,
+    .panel-title>a:active {
+        display: block;
+        padding: 15px;
+        color: #555;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        text-decoration: none;
+    }
+
+    .panel-heading a i {
+        float: right;
+        transition: all 0.5s;
+    }
+
+
+    .panel-heading.active a i {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    // Custom Style
+    h4.panel-title{
+        background-color: #29004f1c;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .panel.panel-default{
+        border-bottom: 1px solid rgb(223, 223, 223);
+        margin: 10px 0px;
+    }
+    #collapseOne{
+        padding: 10px 20px;
+    }
+
+}

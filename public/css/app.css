@@ -10608,7 +10608,7 @@ body #app.web-view {
   ===========  Navbar 
   ===================================================================*/
   /*==================================================================
-  ============== Absolute Icons =============================================
+  ============== Absolute Icons ======================================
   =================================================================*/
   /*====== Responsive ========*/
   /*=================================================================
@@ -10624,6 +10624,9 @@ body #app.web-view {
   /*=================================================================
   ===========  vertical-tabs 
   ===================================================================*/
+  /*==================================================================
+  ============== collapse  ===========================================
+  =================================================================*/
   /*========= layout =========*/
   /*=================================================================
   ===========  Header 
@@ -11097,6 +11100,9 @@ body #app.web-view #vertical-tabs .nav-pills-custom .nav-link.logout:hover {
 body #app.web-view #vertical-tabs .tab-content .tab-pane {
   min-height: 600px;
 }
+body #app.web-view #vertical-tabs h4 i {
+  color: #29004f;
+}
 @media (min-width: 992px) {
   body #app.web-view #vertical-tabs .nav-pills-custom .nav-link::before {
     content: "";
@@ -11110,6 +11116,54 @@ body #app.web-view #vertical-tabs .tab-content .tab-pane {
     transform: translateY(-50%);
     opacity: 0;
   }
+}
+body #app.web-view #account-page .wrapper {
+  width: 70%;
+}
+@media (max-width: 992px) {
+  body #app.web-view #account-page .wrapper {
+    width: 100%;
+  }
+}
+body #app.web-view #account-page .panel-heading {
+  padding: 0;
+  border: 0;
+}
+body #app.web-view #account-page .panel-title > a,
+body #app.web-view #account-page .panel-title > a:active {
+  display: block;
+  padding: 15px;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  text-decoration: none;
+}
+body #app.web-view #account-page .panel-heading a i {
+  float: right;
+  transition: all 0.5s;
+}
+body #app.web-view #account-page .panel-heading.active a i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+body #app.web-view #account-page h4.panel-title {
+  background-color: #29004f1c;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+body #app.web-view #account-page .panel.panel-default {
+  border-bottom: 1px solid #dfdfdf;
+  margin: 10px 0px;
+}
+body #app.web-view #account-page #collapseOne {
+  padding: 10px 20px;
 }
 body #app.web-view #register #header {
   background-image: url("/images/backgrounds/register_bg.jpg");

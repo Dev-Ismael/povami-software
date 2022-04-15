@@ -1,29 +1,27 @@
 @extends('layouts.web')
 @section('content')
-
-
     <div id="account-page">
 
 
         <!----- Header ----->
         <div id="header" class="bg-parallax">
-            <div class="overlay"></div>   
+            <div class="overlay"></div>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-10 offset-md-1">
-                        <h3> 
+                        <h3>
                             Hi, {{ Str::ucfirst(Auth::user()->name) }} <br>
                             @php
                                 $hour = date('H');
-                                $dayTerm = ($hour > 17) ? "Evening" : (($hour > 12) ? "Afternoon" : "Morning");
-                                echo "Good " . $dayTerm . "!";
+                                $dayTerm = $hour > 17 ? 'Evening' : ($hour > 12 ? 'Afternoon' : 'Morning');
+                                echo 'Good ' . $dayTerm . '!';
                             @endphp
                             <i class="fa-solid fa-face-grin-wide" style="color:#ffe817"></i>
                         </h3>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
 
 
 
@@ -34,34 +32,40 @@
 
                     <!----------- Tabs nav ---------->
                     <div class="col-md-3">
-                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            
-        
-                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-orders-tab" data-toggle="pill" href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false">
+                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+
+
+                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-orders-tab" data-toggle="pill"
+                                href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false">
                                 <i class="fa-solid fa-bars-staggered pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">orders</span>
                             </a>
-        
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-contracts-tab" data-toggle="pill" href="#v-pills-contracts" role="tab" aria-controls="v-pills-contracts" aria-selected="false">
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-contracts-tab" data-toggle="pill"
+                                href="#v-pills-contracts" role="tab" aria-controls="v-pills-contracts"
+                                aria-selected="false">
                                 <i class="fa-solid fa-file-signature pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">contracts</span>
                             </a>
-        
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-credits-tab" data-toggle="pill" href="#v-pills-credits" role="tab" aria-controls="v-pills-credits" aria-selected="false">
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-credits-tab" data-toggle="pill"
+                                href="#v-pills-credits" role="tab" aria-controls="v-pills-credits" aria-selected="false">
                                 <i class="fa-solid fa-money-check-dollar pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">Povami Credits</span>
                             </a>
-        
-                            
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-presonal-info-tab" data-toggle="pill" href="#v-pills-presonal-info" role="tab" aria-controls="v-pills-presonal-info" aria-selected="true">
+
+
+                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-presonal-info-tab" data-toggle="pill"
+                                href="#v-pills-presonal-info" role="tab" aria-controls="v-pills-presonal-info"
+                                aria-selected="true">
                                 <i class="fa fa-user-circle-o mr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">Personal information</span>
                             </a>
-        
-        
-                            <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
+
+
+                            <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
@@ -71,69 +75,220 @@
 
                         </div>
                     </div>
-        
-        
-                    <!-- Tabs content -->
+
+
+                    <!-- Tabs Content -->
                     <div class="col-md-9">
                         <div class="tab-content" id="v-pills-tabContent">
-                            
-                            
-                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
-                                <h4 class="font-italic mb-4">Orders</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                            
-                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-contracts" role="tabpanel" aria-labelledby="v-pills-contracts-tab">
-                                <h4 class="font-italic mb-4">Contracts</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                            
-                            
-                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-credits" role="tabpanel" aria-labelledby="v-pills-credits-tab">
-                                <h4 class="font-italic mb-4">Povami Credits</h4>
-                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+
+
+                            <!----------- Orders Section------------->
+                            <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-orders"
+                                role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                                <h4 class="font-italic mb-4">
+                                    <i class="fa-solid fa-bars-staggered pr-1"></i>
+                                    Orders
+                                </h4>
+                                <div class="orders-content">
+                                        <div class="panel-group" id="accordion" role="tablist"
+                                            aria-multiselectable="true">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading active" role="tab" id="headingOne">
+                                                    <h4 class="panel-title">
+                                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                            href="#collapseOne" aria-expanded="true"
+                                                            aria-controls="collapseOne">
+                                                            #1 Collapsible Group Item 
+                                                            <i class="fa-solid fa-angles-down"></i>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel"
+                                                    aria-labelledby="headingOne">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                        single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                        occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                        nesciunt you probably haven't heard of them accusamus labore
+                                                        sustainable VHS.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingTwo">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion" href="#collapseTwo"
+                                                            aria-expanded="false" aria-controls="collapseTwo">
+                                                            #2 Collapsible Group Item
+                                                            <i class="fa-solid fa-angles-down"></i>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="headingTwo">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                        single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                        occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                        nesciunt you probably haven't heard of them accusamus labore
+                                                        sustainable VHS.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingThree">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                            data-parent="#accordion" href="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                            #3 Collapsible Group Item
+                                                            <i class="fa-solid fa-angles-down"></i>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                                    aria-labelledby="headingThree">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                        single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                                                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                                        occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                                        nesciunt you probably haven't heard of them accusamus labore
+                                                        sustainable VHS.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
 
-                            <div class="tab-pane fade shadow rounded bg-white p-5 presonal-info" id="v-pills-presonal-info" role="tabpanel" aria-labelledby="v-pills-presonal-info-tab">
-                                <h4 class="font-italic mb-4">Personal information</h4>
+
+
+
+
+
+
+
+
+                            <!--------------- Contracts Section ---------------->
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-contracts" role="tabpanel"
+                                aria-labelledby="v-pills-contracts-tab">
+                                <h4 class="font-italic mb-4">
+                                    <i class="fa-solid fa-file-signature pr-1"></i>
+                                    Contracts
+                                </h4>
+                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+
+
+
+
+
+
+                            <!--------------- Povami Credits Section ---------------->
+                            <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-credits" role="tabpanel"
+                                aria-labelledby="v-pills-credits-tab">
+                                <h4 class="font-italic mb-4">
+                                    <i class="fa-solid fa-money-check-dollar pr-1"></i>
+                                    Povami Credits
+                                </h4>
+                                <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+
+
+
+
+
+
+
+                            <!----------- Personal information Section ------------->
+                            <div class="tab-pane fade shadow rounded bg-white p-5 presonal-info" id="v-pills-presonal-info"
+                                role="tabpanel" aria-labelledby="v-pills-presonal-info-tab">
+                                <h4 class="font-italic mb-4">
+                                    <i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
+                                    Personal information
+                                </h4>
                                 <form action="#">
                                     <div class="row">
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="firstName" class="text-black"> <i class="fa-solid fa-file-signature"></i> First Name</label>
-                                            <input type="text" class="form-control" id="firstName"  placeholder="Type First Name...">
+                                            <label for="firstName" class="text-black"> <i
+                                                    class="fa-solid fa-file-signature"></i> First Name</label>
+                                            <input type="text" class="form-control" id="firstName"
+                                                placeholder="Type First Name...">
                                         </div>
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="lastName" class="text-black"> <i class="fa-solid fa-file-signature"></i> Last Name</label>
-                                            <input type="text" class="form-control" id="lastName" placeholder="Type Last Name...">
+                                            <label for="lastName" class="text-black"> <i
+                                                    class="fa-solid fa-file-signature"></i> Last Name</label>
+                                            <input type="text" class="form-control" id="lastName"
+                                                placeholder="Type Last Name...">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="phone" class="text-black"> <i class="fa-solid fa-phone-volume"></i> Phone </label>
-                                            <input type="text" class="form-control" id="phone" placeholder="Type Phone Number...">
+                                            <label for="phone" class="text-black"> <i
+                                                    class="fa-solid fa-phone-volume"></i> Phone </label>
+                                            <input type="text" class="form-control" id="phone"
+                                                placeholder="Type Phone Number...">
                                         </div>
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="phone_2" class="text-black"> <i class="fa-solid fa-phone-volume"></i> Second Phone (optional) </label>
-                                            <input type="text" class="form-control" id="phone_2" placeholder="Type Phone Number...">
+                                            <label for="phone_2" class="text-black"> <i
+                                                    class="fa-solid fa-phone-volume"></i> Second Phone (optional) </label>
+                                            <input type="text" class="form-control" id="phone_2"
+                                                placeholder="Type Phone Number...">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group text-left">
-                                            <label for="facebook" class="text-black"> <i class="fa-brands fa-facebook-square"></i> Facebook Profile </label>
-                                            <input type="text" class="form-control" id="facebook" placeholder="Type Facebook Profile Link...">
+                                            <label for="facebook" class="text-black"> <i
+                                                    class="fa-brands fa-facebook-square"></i> Facebook Profile </label>
+                                            <input type="text" class="form-control" id="facebook"
+                                                placeholder="Type Facebook Profile Link...">
                                         </div>
                                         <div class="col-md-12 form-group text-left">
-                                            <label for="twitter" class="text-black"> <i class="fa-brands fa-twitter-square"></i> Twitter Profile </label>
-                                            <input type="text" class="form-control" id="twitter" placeholder="Type Twitter Profile Link...">
+                                            <label for="twitter" class="text-black"> <i
+                                                    class="fa-brands fa-twitter-square"></i> Twitter Profile </label>
+                                            <input type="text" class="form-control" id="twitter"
+                                                placeholder="Type Twitter Profile Link...">
                                         </div>
                                         <div class="col-md-12 form-group text-left">
-                                            <label for="instagram" class="text-black"> <i class="fa-brands fa-instagram-square"></i> Instagram Profile </label>
-                                            <input type="text" class="form-control" id="instagram" placeholder="Type Instagram Profile Link...">
+                                            <label for="instagram" class="text-black"> <i
+                                                    class="fa-brands fa-instagram-square"></i> Instagram Profile </label>
+                                            <input type="text" class="form-control" id="instagram"
+                                                placeholder="Type Instagram Profile Link...">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="country" class="text-black"> <i class="fa-solid fa-earth-africa"></i> Country </label>
+                                            <label for="country" class="text-black"> <i
+                                                    class="fa-solid fa-earth-africa"></i> Country </label>
                                             <select id="country" class="form-control" name="country">
                                                 <option value="0" selected="selected"> Choose Your Country... </option>
                                                 <option value="Afganistan">Afghanistan</option>
@@ -385,25 +540,30 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="city" class="text-black"> <i class="fa-solid fa-city"></i> City </label>
-                                            <input type="text" class="form-control" id="city"  placeholder="Type Your Located City...">
+                                            <label for="city" class="text-black"> <i class="fa-solid fa-city"></i> City
+                                            </label>
+                                            <input type="text" class="form-control" id="city"
+                                                placeholder="Type Your Located City...">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group text-left">
-                                            <label for="address" class="text-black"> <i class="fa-solid fa-location-dot"></i> Address </label>
-                                            <input type="text" class="form-control" id="address" placeholder="Type Address Details...">
+                                            <label for="address" class="text-black"> <i
+                                                    class="fa-solid fa-location-dot"></i> Address </label>
+                                            <input type="text" class="form-control" id="address"
+                                                placeholder="Type Address Details...">
                                         </div>
                                     </div>
-                                    <div class="mt-5 text-right"><button class="btn purple profile-button" type="button"> <i class="fa-solid fa-floppy-disk"></i> Save Profile</button></div>
+                                    <div class="mt-5 text-right"><button class="btn purple profile-button" type="button">
+                                            <i class="fa-solid fa-floppy-disk"></i> Save Profile</button></div>
                                 </form>
                             </div>
 
 
                         </div>
                     </div>
-        
-        
+
+
                 </div>
             </div>
         </div>
@@ -412,8 +572,6 @@
 
 
 
-        
+
     </div>
-
-
 @endsection
