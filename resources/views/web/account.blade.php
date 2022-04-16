@@ -30,6 +30,11 @@
             <div class="container">
                 <div class="row">
 
+
+
+
+
+
                     <!----------- Tabs nav ---------->
                     <div class="col-md-3">
                         <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
@@ -77,11 +82,19 @@
                     </div>
 
 
+
+
+
                     <!-- Tabs Content -->
                     <div class="col-md-9">
                         <div class="tab-content" id="v-pills-tabContent">
 
 
+
+
+
+
+                            
 
 
 
@@ -235,26 +248,24 @@
                                                                 <span class="text"> {{ $contract->price }}$ </span>
                                                             </div>
                                                             <div class="deadline">
-                                                                <span class="custom-calnder">
-
                                                                         @php
 
                                                                             $date = str_replace("/","-",$contract->deadline);  // Replace "/"  ==> '-'
                                                                             $date = strtotime($date);  // Convert string to time
-                                                                            $day_weekly   = date('l', $date);
+                                                                            $weekday   = date('l', $date);
                                                                             $day   = date('jS', $date);
                                                                             $month = date('F', $date);
                                                                             $year  = date('Y', $date);
                                                                             
                                                                         @endphp
-                                                                    <section class="ftco-section">
+                                                                    <section class="custom-calnder ftco-section">
                                                                         <h6 class="text-center"> 
                                                                             <span class="title"> <i class="fa-solid fa-clock"></i> Project Deadline </span>
                                                                         </h6>
                                                                         <div class="row justify-content-center">
                                                                             <div class="col-10 col-md-8 col-lg-6">
                                                                                 <div class="today">
-                                                                                    <div class="today-piece  top  day"> {{ $day_weekly }} </div>
+                                                                                    <div class="today-piece  top  day"> {{ $weekday }} </div>
                                                                                     <div class="today-piece  middle  month"> {{ $month }} </div>
                                                                                     <div class="today-piece  middle  date"> {{ $day }} </div>
                                                                                     <div class="today-piece  bottom  year"> {{ $year }} </div>
@@ -263,12 +274,12 @@
                                                                         </div>
                                                                     </section>
 
-                                                                </span>
-
                                                                 
                                                             </div>
                                                             <div class="text-right mt-2 mb-2">
-                                                                <button href="#" class="btn purple ">
+                                                                <button type="button" id="accept-contract" class="btn purple"
+                                                                    data-toggle="modal" data-target="#acceptContractModal"
+                                                                    contract_id="{{ $contract->id }}">
                                                                     <i class="fa-solid fa-check"></i> Accept Contract
                                                                 </button>
                                                                 <button href="#" class="btn cancle ">
@@ -644,6 +655,13 @@
                             </div>
 
 
+
+
+
+
+
+
+
                         </div>
                     </div>
 
@@ -654,6 +672,57 @@
 
 
 
+        <!------------- Accept Contract Modal ------------>
+        <div class="modal fade" id="acceptContractModal" tabindex="-1" role="dialog"
+            aria-labelledby="acceptContractLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="acceptContractLabel"> <i class="fa-solid fa-plus-circle"></i> Create
+                            Order </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="create-order" enctype="multipart/form-data">
+
+                            <div class="get_info title">
+                                <span class="heading"> <i class="fa-solid fa-address-card"></i> Contract Title : </span>
+                                <span class="text"></span>
+                            </div>
+                            <hr>
+                            <div class="get_info content">
+                                <span class="heading"> <i class="fa-solid fa-align-left"></i> Content : </span>
+                                <span class="text"> </span>
+                            </div>
+                            <hr>
+                            <div class="get_info deadline text-center">
+                                <span class="heading"> <i class="fa-solid fa-clock"></i> Deadline  </span>
+                                <section class="custom-calnder ftco-section">
+                                    <div class="row justify-content-center">
+                                        <div class="col-10 col-md-8 col-lg-6">
+                                            <div class="today">
+                                                <div class="today-piece  top  day">  </div>
+                                                <div class="today-piece  middle  month">  </div>
+                                                <div class="today-piece  middle  date">  </div>
+                                                <div class="today-piece  bottom  year">  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <hr>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="create-contract" class="btn purple"> <i class="fa-solid fa-check"></i> Confirm </button>
+                        <button type="button" class="btn cancle" data-dismiss="modal"> <i class="fa-solid fa-xmark"></i> Close </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

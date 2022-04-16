@@ -203,14 +203,7 @@
         <script src="{{ asset('js/app.js') }} "></script>
 
         
-        <script>
-            $(document).ready( function (){
-                "use strict";
-                $(".panel-group .panel.panel-default:first-child .panel-heading").addClass("active");
-                $(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
 
-            });
-        </script>
         
     </body>
 </html>

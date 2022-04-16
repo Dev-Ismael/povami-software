@@ -24,4 +24,24 @@ class AccountController extends Controller
         return view("web.account" , compact('contracts'));
 
     }
+
+
+    public function showContract($id)
+    {
+        $contract = Contract::with("user")->find( $id );  
+        if(!$contract){  // If get contract fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "get contract failed" ,
+            ]);
+        }
+
+        return response() -> json([
+            "status" => 'success' ,   // get Successfully
+            "msg"    => "contract get successfully" ,
+            "contract"   => $contract ,
+        ]);
+    }
+
+    
 }

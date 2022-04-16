@@ -15,11 +15,24 @@ require('./bootstrap');
 require('./sweetalert.min');
 
 
-// require Web files
+
+
+
+/*=====================================================
+============ Web Files ================================
+=====================================================*/
 require('./web/custom');
+// require Ajax files
+require('./web/ajax/order');
 
 
-// require Admin files
+
+
+
+
+/*======================================================
+============ Ajax Files ================================
+======================================================*/
 require('./admin/custom');
 // require Ajax files
 require('./admin/ajax/users');

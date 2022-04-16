@@ -37,4 +37,5 @@ $(document).ready( function (){
 		$(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
 
 
+		
 }); 

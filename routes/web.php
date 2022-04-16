@@ -23,7 +23,11 @@ Route::group( ['namespace' => 'Web'] ,function(){
     Route::get('/about', 'AboutController@index')->name('about');
     Route::get('/works', 'WorkController@index')->name('works');
     Route::get('/affiliate', 'AffiliateController@index')->name('affiliate');
+
+    // Account Page
     Route::get('/account', 'AccountController@index')->name('account');
+    Route::get("/account/contract/show/{id}" , "AccountController@showContract");
+    
 });
 
 // Admin
