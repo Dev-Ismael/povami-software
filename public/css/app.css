@@ -10627,6 +10627,9 @@ body #app.web-view {
   /*==================================================================
   ============== collapse  ===========================================
   =================================================================*/
+  /*==================================================================
+  ============== collapse  ===========================================
+  =================================================================*/
   /*========= layout =========*/
   /*=================================================================
   ===========  Header 
@@ -10721,7 +10724,7 @@ body #app.web-view #header .overlay {
   background-color: #1c003782;
 }
 body #app.web-view .btn {
-  padding: 7px 20px;
+  padding: 7px 15px;
   border-radius: 25px;
   color: #fff;
   font-size: 16px;
@@ -10742,6 +10745,17 @@ body #app.web-view .btn.purple:hover {
 }
 body #app.web-view .btn.purple:hover i {
   color: #29004f;
+}
+body #app.web-view .btn.cancle {
+  background-color: #dc3545;
+}
+body #app.web-view .btn.cancle:hover {
+  background-color: transparent;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+body #app.web-view .btn.cancle:hover i {
+  color: #dc3545;
 }
 body #app.web-view .btn.green {
   background-color: #00b04e;
@@ -11160,12 +11174,120 @@ body #app.web-view #account-page .panel.panel-default {
 body #app.web-view #account-page .panel-collapse {
   padding: 10px 20px;
 }
+body #app.web-view #account-page .panel-body > div {
+  padding: 15px 0px;
+}
+body #app.web-view #account-page .panel-body .title {
+  font-size: 20px;
+}
+body #app.web-view #account-page .panel-body .title i {
+  color: #29004f;
+}
+body #app.web-view #account-page .panel-body .text {
+  color: #aaa;
+}
+body #app.web-view #account-page .panel-body .price .text {
+  color: #0db20d;
+  font-size: 20px;
+}
 body #app.web-view #account-page .panel-heading.active h4.panel-title {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 body #app.web-view #account-page .panel-collapse.show {
   border-bottom: 1px solid #dfdfdf;
+}
+body #app.web-view #account-page .custom-calnder a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #52de97;
+}
+body #app.web-view #account-page .custom-calnder a:hover,
+body #app.web-view #account-page .custom-calnder a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+body #app.web-view #account-page .custom-calnder h1,
+body #app.web-view #account-page .custom-calnder h2,
+body #app.web-view #account-page .custom-calnder h3,
+body #app.web-view #account-page .custom-calnder h4,
+body #app.web-view #account-page .custom-calnder h5,
+body #app.web-view #account-page .custom-calnder .h1,
+body #app.web-view #account-page .custom-calnder .h2,
+body #app.web-view #account-page .custom-calnder .h3,
+body #app.web-view #account-page .custom-calnder .h4,
+body #app.web-view #account-page .custom-calnder .h5 {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Lato", Arial, sans-serif;
+  color: #000;
+}
+body #app.web-view #account-page .custom-calnder .bg-primary {
+  background: #52de97 !important;
+}
+body #app.web-view #account-page .custom-calnder .ftco-no-pt {
+  padding-top: 0;
+}
+body #app.web-view #account-page .custom-calnder .ftco-no-pb {
+  padding-bottom: 0;
+}
+body #app.web-view #account-page .custom-calnder .heading-section {
+  font-size: 28px;
+  color: #000;
+}
+body #app.web-view #account-page .custom-calnder .img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body #app.web-view #account-page .custom-calnder .today {
+  width: 100%;
+  -webkit-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+  -moz-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+  box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+}
+body #app.web-view #account-page .custom-calnder .today-piece {
+  border-radius: 0.25rem;
+  padding: 1.6rem;
+  font-size: 1.25em;
+  text-align: center;
+  background: white;
+}
+body #app.web-view #account-page .custom-calnder .top {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+body #app.web-view #account-page .custom-calnder .middle {
+  border-radius: 0;
+}
+body #app.web-view #account-page .custom-calnder .bottom {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+body #app.web-view #account-page .custom-calnder .day,
+body #app.web-view #account-page .custom-calnder .year {
+  font-size: 1.65em;
+  font-weight: 200;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: white;
+  background: #52de97;
+}
+body #app.web-view #account-page .custom-calnder .month {
+  padding-top: 1.75rem;
+  padding-bottom: 0;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+body #app.web-view #account-page .custom-calnder .date {
+  padding-top: 0;
+  padding-bottom: 1.75rem;
+  font-size: 3em;
+  font-weight: 100;
+  color: #000;
 }
 body #app.web-view #register #header {
   background-image: url("/images/backgrounds/register_bg.jpg");

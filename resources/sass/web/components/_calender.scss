@@ -1,0 +1,119 @@
+/*==================================================================
+============== collapse  ===========================================
+=================================================================*/
+#account-page {
+
+    .custom-calnder {
+
+
+        a {
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+            color: #52de97;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none !important;
+            outline: none !important;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            line-height: 1.5;
+            font-weight: 400;
+            font-family: "Lato", Arial, sans-serif;
+            color: #000;
+        }
+
+        .bg-primary {
+            background: #52de97 !important;
+        }
+
+        .ftco-no-pt {
+            padding-top: 0;
+        }
+
+        .ftco-no-pb {
+            padding-bottom: 0;
+        }
+
+        .heading-section {
+            font-size: 28px;
+            color: #000;
+        }
+
+        .img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .today {
+            width: 100%;
+            -webkit-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+            -moz-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+            box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+        }
+
+        .today-piece {
+            border-radius: 0.25rem;
+            padding: 1.6rem;
+            font-size: 1.25em;
+            text-align: center;
+            background: white;
+        }
+
+        .top {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .middle {
+            border-radius: 0;
+        }
+
+        .bottom {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .day,
+        .year {
+            font-size: 1.65em;
+            font-weight: 200;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: white;
+            background: #52de97;
+        }
+
+        .month {
+            padding-top: 1.75rem;
+            padding-bottom: 0;
+            font-size: 1.5em;
+            font-weight: 200;
+        }
+
+        .date {
+            padding-top: 0;
+            padding-bottom: 1.75rem;
+            font-size: 3em;
+            font-weight: 100;
+            color: #000;
+        }
+
+    }
+
+}

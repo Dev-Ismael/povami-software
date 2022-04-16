@@ -1,5 +1,5 @@
 .btn{
-    padding: 7px 20px;
+    padding: 7px 15px;
     border-radius: 25px;
     color: #fff ;
     font-size: 16px;
@@ -17,6 +17,17 @@
             border: 1px solid #29004f;
             i{
                 color: #29004f;
+            }
+        }
+    }  
+    &.cancle{
+        background-color: #dc3545;
+        &:hover{
+            background-color: transparent;
+            color: #dc3545;
+            border: 1px solid #dc3545;
+            i{
+                color: #dc3545;
             }
         }
     }  

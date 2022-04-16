@@ -65,7 +65,7 @@
 
 
                             <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false" onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
+                                            document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
@@ -189,11 +189,13 @@
 
 
                             <!--------------- Contracts Section ---------------->
-                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-contracts" role="tabpanel" aria-labelledby="v-pills-contracts-tab">
+                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-contracts" role="tabpanel"
+                                aria-labelledby="v-pills-contracts-tab">
                                 @if ($contracts->isEmpty())
                                     <div class="no_data">
                                         <div class="container text-center">
-                                            <img src="{{ asset('images/contract.png') }}" class="img-fluid" alt="no_data">
+                                            <img src="{{ asset('images/contract.png') }}" class="img-fluid"
+                                                alt="no_data">
                                             <p>No contracts yet! ... Contact now with povami support to create one!</p>
                                         </div>
                                     </div>
@@ -203,38 +205,81 @@
                                         Contracts
                                     </h4>
                                     <div class="contracts-content">
-                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel-group" id="accordion" role="tablist"
+                                            aria-multiselectable="true">
 
                                             @foreach ($contracts as $key => $contract)
-
                                                 <div class="panel panel-default">
-                                                    <div class="panel-heading active" role="tab" id="{{'heading' . $key }}">
+                                                    <div class="panel-heading active" role="tab"
+                                                        id="{{ 'heading' . $key }}">
                                                         <h4 class="panel-title">
                                                             <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                                                href="#{{'collapse' . $key }}" aria-expanded="true"
-                                                                aria-controls="{{'collapse' . $key }}">
-                                                                #{{( $key + 1 )}} {{ $contract->title }}
+                                                                href="#{{ 'collapse' . $key }}" aria-expanded="true"
+                                                                aria-controls="{{ 'collapse' . $key }}">
+                                                                #{{ $key + 1 }} {{ $contract->title }}
                                                                 <i class="fa-solid fa-angles-down"></i>
                                                             </a>
                                                         </h4>
                                                     </div>
-                                                    <div id="{{'collapse' . $key }}" class="panel-collapse collapse in show" role="tabpanel"
-                                                        aria-labelledby="{{'heading' . $key }}">
+                                                    <div id="{{ 'collapse' . $key }}"
+                                                        class="panel-collapse collapse in show" role="tabpanel"
+                                                        aria-labelledby="{{ 'heading' . $key }}">
                                                         <div class="panel-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                                                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                            occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                                            nesciunt you probably haven't heard of them accusamus labore
-                                                            sustainable VHS.
+                                                            <div class="content">
+                                                                <span class="title"> <i
+                                                                        class="fa-solid fa-align-left"></i> Contract Details :</span>
+                                                                <span class="text"> {{ $contract->content }} </span>
+                                                            </div>
+                                                            <div class="price">
+                                                                <span class="title"> <i  class="fa-solid fa-sack-dollar"></i> Project Price :</span>
+                                                                <span class="text"> {{ $contract->price }}$ </span>
+                                                            </div>
+                                                            <div class="deadline">
+                                                                <span class="custom-calnder">
+
+                                                                        @php
+
+                                                                            $date = str_replace("/","-",$contract->deadline);
+                                                                            $date = strtotime($date);
+                                                                            
+                                                                            $day_weekly   = date('l', $date);
+                                                                            $day   = date('jS', $date);
+                                                                            $month = date('F', $date);
+                                                                            $year  = date('Y', $date);
+                                                                            
+                                                                        @endphp
+                                                                    <section class="ftco-section">
+                                                                        <h6 class="text-center"> 
+                                                                            <span class="title"> <i class="fa-solid fa-clock"></i> Project Deadline </span>
+                                                                        </h6>
+                                                                        <div class="row justify-content-center">
+                                                                            <div class="col-md-6">
+                                                                                <div class="today">
+                                                                                    <div class="today-piece  top  day"> {{ $day_weekly }} </div>
+                                                                                    <div class="today-piece  middle  month"> {{ $month }} </div>
+                                                                                    <div class="today-piece  middle  date"> {{ $day }} </div>
+                                                                                    <div class="today-piece  bottom  year"> {{ $year }} </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </section>
+
+                                                                </span>
+
+                                                                
+                                                            </div>
+                                                            <div class="text-right mt-2 mb-2">
+                                                                <button href="#" class="btn purple ">
+                                                                    <i class="fa-solid fa-check"></i> Accept Contract
+                                                                </button>
+                                                                <button href="#" class="btn cancle ">
+                                                                    <i class="fa-solid fa-xmark"></i> Cancle
+                                                                </button>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             @endforeach
 
                                         </div>

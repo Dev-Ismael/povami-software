@@ -43,6 +43,26 @@
     .panel-collapse{
         padding: 10px 20px;
     }
+    .panel-body {
+        >div{
+            padding: 15px 0px;
+        }
+        .title {
+            font-size: 20px;
+            i {
+                color: #29004f;
+            }
+        }
+        .text{
+            color: #aaa;
+        }
+        .price {
+            .text{
+                color: #0db20d;
+                font-size: 20px;
+            }
+        }
+    }
     // at active 
     .panel-heading.active{
         h4.panel-title{
