@@ -32,4 +32,9 @@ $(document).ready( function (){
 			$(this).siblings('.panel-heading').removeClass('active');
 		});
 
+		// Add Active Class
+		$(".panel-group .panel.panel-default:first-child .panel-heading").addClass("active");
+		$(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
+
+
 }); 

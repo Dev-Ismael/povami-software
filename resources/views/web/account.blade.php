@@ -207,22 +207,22 @@
                                     <div class="contracts-content">
                                         <div class="panel-group" id="accordion" role="tablist"
                                             aria-multiselectable="true">
-
+                                            @php $arraycount = count($contracts) @endphp
                                             @foreach ($contracts as $key => $contract)
                                                 <div class="panel panel-default">
-                                                    <div class="panel-heading active" role="tab"
+                                                    <div class="panel-heading" role="tab"
                                                         id="{{ 'heading' . $key }}">
                                                         <h4 class="panel-title">
                                                             <a role="button" data-toggle="collapse" data-parent="#accordion"
                                                                 href="#{{ 'collapse' . $key }}" aria-expanded="true"
                                                                 aria-controls="{{ 'collapse' . $key }}">
-                                                                #{{ $key + 1 }} {{ $contract->title }}
+                                                                #{{ $arraycount - $key  }} {{ $contract->title }}
                                                                 <i class="fa-solid fa-angles-down"></i>
                                                             </a>
                                                         </h4>
                                                     </div>
                                                     <div id="{{ 'collapse' . $key }}"
-                                                        class="panel-collapse collapse in show" role="tabpanel"
+                                                        class="panel-collapse collapse in" role="tabpanel"
                                                         aria-labelledby="{{ 'heading' . $key }}">
                                                         <div class="panel-body">
                                                             <div class="content">
@@ -239,9 +239,8 @@
 
                                                                         @php
 
-                                                                            $date = str_replace("/","-",$contract->deadline);
-                                                                            $date = strtotime($date);
-                                                                            
+                                                                            $date = str_replace("/","-",$contract->deadline);  // Replace "/"  ==> '-'
+                                                                            $date = strtotime($date);  // Convert string to time
                                                                             $day_weekly   = date('l', $date);
                                                                             $day   = date('jS', $date);
                                                                             $month = date('F', $date);
@@ -253,7 +252,7 @@
                                                                             <span class="title"> <i class="fa-solid fa-clock"></i> Project Deadline </span>
                                                                         </h6>
                                                                         <div class="row justify-content-center">
-                                                                            <div class="col-md-6">
+                                                                            <div class="col-10 col-md-8 col-lg-6">
                                                                                 <div class="today">
                                                                                     <div class="today-piece  top  day"> {{ $day_weekly }} </div>
                                                                                     <div class="today-piece  middle  month"> {{ $month }} </div>

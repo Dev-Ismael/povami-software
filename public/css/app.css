@@ -11164,7 +11164,7 @@ body #app.web-view #account-page .panel-heading.active a i {
 }
 body #app.web-view #account-page h4.panel-title {
   background-color: #29004f1c;
-  border-radius: 7px;
+  border-radius: 10px;
   margin: 0px;
   padding: 0px;
 }
@@ -11173,6 +11173,9 @@ body #app.web-view #account-page .panel.panel-default {
 }
 body #app.web-view #account-page .panel-collapse {
   padding: 10px 20px;
+  -webkit-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+  -moz-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+  box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
 }
 body #app.web-view #account-page .panel-body > div {
   padding: 15px 0px;
@@ -11195,7 +11198,11 @@ body #app.web-view #account-page .panel-heading.active h4.panel-title {
   border-bottom-right-radius: 0px;
 }
 body #app.web-view #account-page .panel-collapse.show {
-  border-bottom: 1px solid #dfdfdf;
+  border: 1px solid #dfdfdf;
+  border-top: 0px;
+  -webkit-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+  -moz-box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
+  box-shadow: 0px 15px 30px -16px rgba(0, 0, 0, 0.438);
 }
 body #app.web-view #account-page .custom-calnder a {
   -webkit-transition: 0.3s all ease;
