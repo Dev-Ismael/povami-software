@@ -13,6 +13,8 @@ require('./bootstrap');
 
 // require Sweet Alert 
 require('./sweetalert.min');
+// require ddslick  
+require('./ddslick.min');
 
 
 

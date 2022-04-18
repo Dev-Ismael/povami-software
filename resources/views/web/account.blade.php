@@ -70,7 +70,7 @@
 
 
                             <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false" onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
+                                                document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
@@ -94,7 +94,7 @@
 
 
 
-                            
+
 
 
 
@@ -223,62 +223,72 @@
                                             @php $arraycount = count($contracts) @endphp
                                             @foreach ($contracts as $key => $contract)
                                                 <div class="panel panel-default">
-                                                    <div class="panel-heading" role="tab"
-                                                        id="{{ 'heading' . $key }}">
+                                                    <div class="panel-heading" role="tab" id="{{ 'heading' . $key }}">
                                                         <h4 class="panel-title">
                                                             <a role="button" data-toggle="collapse" data-parent="#accordion"
                                                                 href="#{{ 'collapse' . $key }}" aria-expanded="true"
                                                                 aria-controls="{{ 'collapse' . $key }}">
-                                                                #{{ $arraycount - $key  }} {{ $contract->title }}
+                                                                #{{ $arraycount - $key }} {{ $contract->title }}
                                                                 <i class="fa-solid fa-angles-down"></i>
                                                             </a>
                                                         </h4>
                                                     </div>
-                                                    <div id="{{ 'collapse' . $key }}"
-                                                        class="panel-collapse collapse in" role="tabpanel"
-                                                        aria-labelledby="{{ 'heading' . $key }}">
+                                                    <div id="{{ 'collapse' . $key }}" class="panel-collapse collapse in"
+                                                        role="tabpanel" aria-labelledby="{{ 'heading' . $key }}">
                                                         <div class="panel-body">
                                                             <div class="content">
                                                                 <span class="title"> <i
-                                                                        class="fa-solid fa-align-left"></i> Contract Details :</span>
-                                                                <span class="text"> {{ $contract->content }} </span>
+                                                                        class="fa-solid fa-align-left"></i> Contract Details
+                                                                    :</span>
+                                                                <span class="text"> {{ $contract->content }}
+                                                                </span>
                                                             </div>
                                                             <div class="price">
-                                                                <span class="title"> <i  class="fa-solid fa-sack-dollar"></i> Project Price :</span>
-                                                                <span class="text"> {{ $contract->price }}$ </span>
+                                                                <span class="title"> <i
+                                                                        class="fa-solid fa-sack-dollar"></i> Project Price
+                                                                    :</span>
+                                                                <span class="text"> {{ $contract->price }}$
+                                                                </span>
                                                             </div>
                                                             <div class="deadline">
-                                                                        @php
-
-                                                                            $date = str_replace("/","-",$contract->deadline);  // Replace "/"  ==> '-'
-                                                                            $date = strtotime($date);  // Convert string to time
-                                                                            $weekday   = date('l', $date);
-                                                                            $day   = date('jS', $date);
-                                                                            $month = date('F', $date);
-                                                                            $year  = date('Y', $date);
-                                                                            
-                                                                        @endphp
-                                                                    <section class="custom-calnder ftco-section">
-                                                                        <h6 class="text-center"> 
-                                                                            <span class="title"> <i class="fa-solid fa-clock"></i> Project Deadline </span>
-                                                                        </h6>
-                                                                        <div class="row justify-content-center">
-                                                                            <div class="col-10 col-md-8 col-lg-6">
-                                                                                <div class="today">
-                                                                                    <div class="today-piece  top  day"> {{ $weekday }} </div>
-                                                                                    <div class="today-piece  middle  month"> {{ $month }} </div>
-                                                                                    <div class="today-piece  middle  date"> {{ $day }} </div>
-                                                                                    <div class="today-piece  bottom  year"> {{ $year }} </div>
-                                                                                </div>
+                                                                @php
+                                                                    
+                                                                    $date = str_replace('/', '-', $contract->deadline); // Replace "/"  ==> '-'
+                                                                    $date = strtotime($date); // Convert string to time
+                                                                    $weekday = date('l', $date);
+                                                                    $day = date('jS', $date);
+                                                                    $month = date('F', $date);
+                                                                    $year = date('Y', $date);
+                                                                    
+                                                                @endphp
+                                                                <section class="custom-calnder ftco-section">
+                                                                    <h6 class="text-center">
+                                                                        <span class="title"> <i
+                                                                                class="fa-solid fa-clock"></i> Project
+                                                                            Deadline </span>
+                                                                    </h6>
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-10 col-md-8 col-lg-6">
+                                                                            <div class="today">
+                                                                                <div class="today-piece  top  day">
+                                                                                    {{ $weekday }} </div>
+                                                                                <div class="today-piece  middle  month">
+                                                                                    {{ $month }} </div>
+                                                                                <div class="today-piece  middle  date">
+                                                                                    {{ $day }} </div>
+                                                                                <div class="today-piece  bottom  year">
+                                                                                    {{ $year }} </div>
                                                                             </div>
                                                                         </div>
-                                                                    </section>
+                                                                    </div>
+                                                                </section>
 
-                                                                
+
                                                             </div>
                                                             <div class="text-right mt-2 mb-2">
-                                                                <button type="button" id="accept-contract" class="btn purple"
-                                                                    data-toggle="modal" data-target="#acceptContractModal"
+                                                                <button type="button" id="accept-contract"
+                                                                    class="btn purple" data-toggle="modal"
+                                                                    data-target="#acceptContractModal"
                                                                     contract_id="{{ $contract->id }}">
                                                                     <i class="fa-solid fa-check"></i> Accept Contract
                                                                 </button>
@@ -678,7 +688,8 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="acceptContractLabel"> <i class="fa-solid fa-plus-circle"></i> Create
+                        <h5 class="modal-title" id="acceptContractLabel"> <i class="fa-solid fa-plus-circle"></i>
+                            Create
                             Order </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -688,7 +699,8 @@
                         <form id="create-order" enctype="multipart/form-data">
 
                             <div class="get_info title">
-                                <span class="heading"> <i class="fa-solid fa-address-card"></i> Contract Title : </span>
+                                <span class="heading"> <i class="fa-solid fa-address-card"></i> Contract Title :
+                                </span>
                                 <span class="text"></span>
                             </div>
                             <hr>
@@ -698,15 +710,15 @@
                             </div>
                             <hr>
                             <div class="get_info deadline text-center">
-                                <span class="heading"> <i class="fa-solid fa-clock"></i> Deadline  </span>
+                                <span class="heading"> <i class="fa-solid fa-clock"></i> Deadline </span>
                                 <section class="custom-calnder ftco-section">
                                     <div class="row justify-content-center">
                                         <div class="col-10 col-md-8 col-lg-6">
                                             <div class="today">
-                                                <div class="today-piece  top  day">  </div>
-                                                <div class="today-piece  middle  month">  </div>
-                                                <div class="today-piece  middle  date">  </div>
-                                                <div class="today-piece  bottom  year">  </div>
+                                                <div class="today-piece  top  day"> </div>
+                                                <div class="today-piece  middle  month"> </div>
+                                                <div class="today-piece  middle  date"> </div>
+                                                <div class="today-piece  bottom  year"> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -714,11 +726,54 @@
                             </div>
                             <hr>
 
+
+                            <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
+
+                            <select id="myDropdown" class="form-control">
+                                
+                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
+                                    >Paypal</option>
+                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
+                                    >Paypal</option>
+                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
+                                    >Paypal</option>
+                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
+                                    >Paypal</option>
+                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
+                                    >Paypal</option>
+                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
+                                    >Paypal</option>
+                                
+                            </select>
+                            
+                            <small class="form-text text-danger payment_method"> </small>
+                            <br>
+
+                            {{-- <label for="content"> <i class="fa-solid fa-align-left"></i> Contract Content..</label>
+                            <textarea type="text" name="content" class="form-control" rows="10" cols="50"
+                                placeholder="Enter Content.."></textarea>
+                            <small class="form-text text-danger content"> </small>
+                            <br>
+
+                            <label for="price"> <i class="fa-solid fa-sack-dollar"></i> Project Price..</label>
+                            <input type="number" name="price" class="form-control" placeholder="Enter Price.." />
+                            <small class="form-text text-danger price"> </small>
+                            <br>
+
+                            <label for="deadline"> <i class="fa-solid fa-clock"></i> Project Deadline..</label>
+                            <input type="date" name="deadline" class="form-control" placeholder="Enter Deadline.." />
+                            <small class="form-text text-danger deadline"> </small>
+                            <br> --}}
+
+
+
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="create-contract" class="btn purple"> <i class="fa-solid fa-check"></i> Confirm </button>
-                        <button type="button" class="btn cancle" data-dismiss="modal"> <i class="fa-solid fa-xmark"></i> Close </button>
+                        <button type="button" id="create-contract" class="btn purple"> <i
+                                class="fa-solid fa-check"></i> Confirm </button>
+                        <button type="button" class="btn cancle" data-dismiss="modal"> <i
+                                class="fa-solid fa-xmark"></i> Close </button>
                     </div>
                 </div>
             </div>
