@@ -728,24 +728,15 @@
 
 
                             <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
+                            <select id="myDropdown">
 
-                            <select id="myDropdown" class="form-control">
-                                
-                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
-                                    >Paypal</option>
-                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
-                                    >Paypal</option>
-                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
-                                    >Paypal</option>
-                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
-                                    >Paypal</option>
-                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
-                                    >Paypal</option>
-                                <option value="0" data-imagesrc="{{ asset("images/payment_methods/1648222945.png") }}"
-                                    >Paypal</option>
-                                
+                                <option value="0" selected> Choose Payment Method... </option>
+                                @foreach ($payment_methods as $payment_method)
+                                    <option value="{{ $payment_method->id }}" data-imagesrc="{{ asset("images/payment_methods/" . $payment_method->img ) }}"
+                                        > {{ ucfirst($payment_method->name) }} </option>
+                                @endforeach
+
                             </select>
-                            
                             <small class="form-text text-danger payment_method"> </small>
                             <br>
 
@@ -765,7 +756,7 @@
                             <small class="form-text text-danger deadline"> </small>
                             <br> --}}
 
-
+                    
 
                         </form>
                     </div>

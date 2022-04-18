@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Contract;
+use App\Models\PaymentMethod;
 
 class AccountController extends Controller
 {
@@ -19,9 +20,10 @@ class AccountController extends Controller
 
         $user_id = Auth::id();
         $contracts = Contract::where('user_id' , $user_id )->orderBy('id','desc') ->paginate(50) ;
+        $payment_methods = PaymentMethod::get();
 
         // View Account Blade
-        return view("web.account" , compact('contracts'));
+        return view("web.account" , compact( 'contracts' , 'payment_methods' ));
 
     }
 
@@ -42,6 +44,8 @@ class AccountController extends Controller
             "contract"   => $contract ,
         ]);
     }
+
+
 
     
 }
