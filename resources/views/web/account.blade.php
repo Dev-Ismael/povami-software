@@ -70,7 +70,7 @@
 
 
                             <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false" onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
@@ -698,17 +698,22 @@
                     <div class="modal-body">
                         <form id="create-order" enctype="multipart/form-data">
 
+                            <!----------- Title -------------->
                             <div class="get_info title">
                                 <span class="heading"> <i class="fa-solid fa-address-card"></i> Contract Title :
                                 </span>
                                 <span class="text"></span>
                             </div>
                             <hr>
+
+                            <!----------- content -------------->
                             <div class="get_info content">
                                 <span class="heading"> <i class="fa-solid fa-align-left"></i> Content : </span>
                                 <span class="text"> </span>
                             </div>
                             <hr>
+
+                            <!----------- deadline -------------->
                             <div class="get_info deadline text-center">
                                 <span class="heading"> <i class="fa-solid fa-clock"></i> Deadline </span>
                                 <section class="custom-calnder ftco-section">
@@ -726,37 +731,40 @@
                             </div>
                             <hr>
 
-
+                            <!----------- Payment Method -------------->
                             <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
                             <select id="myDropdown">
-
                                 <option value="0" selected> Choose Payment Method... </option>
                                 @foreach ($payment_methods as $payment_method)
-                                    <option value="{{ $payment_method->id }}" data-imagesrc="{{ asset("images/payment_methods/" . $payment_method->img ) }}"
-                                        > {{ ucfirst($payment_method->name) }} </option>
+                                    <option value="{{ $payment_method->id }}"
+                                        data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}">
+                                        {{ ucfirst($payment_method->name) }} </option>
                                 @endforeach
-
                             </select>
                             <small class="form-text text-danger payment_method"> </small>
-                            <br>
+                            <hr>
 
-                            {{-- <label for="content"> <i class="fa-solid fa-align-left"></i> Contract Content..</label>
-                            <textarea type="text" name="content" class="form-control" rows="10" cols="50"
-                                placeholder="Enter Content.."></textarea>
-                            <small class="form-text text-danger content"> </small>
-                            <br>
+                            <!----------- Payment System -------------->
+                            <label for="payment-system"> <i class="fa-solid fa-list-check"></i> Payment System..</label>
+                            <div class="custom-radios">
+                                <div class="wrapper">
+                                    <input type="radio" name="select" id="option-1" checked>
+                                    <input type="radio" name="select" id="option-2">
+                                    <label for="option-1" class="option option-1">
+                                        <div class="dot"></div>
+                                        <span>By Project</span>
+                                    </label>
+                                    <label for="option-2" class="option option-2">
+                                        <div class="dot"></div>
+                                        <span>Milstons</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <small class="form-text text-danger payment_method"> </small>
+                            <hr>
 
-                            <label for="price"> <i class="fa-solid fa-sack-dollar"></i> Project Price..</label>
-                            <input type="number" name="price" class="form-control" placeholder="Enter Price.." />
-                            <small class="form-text text-danger price"> </small>
-                            <br>
 
-                            <label for="deadline"> <i class="fa-solid fa-clock"></i> Project Deadline..</label>
-                            <input type="date" name="deadline" class="form-control" placeholder="Enter Deadline.." />
-                            <small class="form-text text-danger deadline"> </small>
-                            <br> --}}
 
-                    
 
                         </form>
                     </div>

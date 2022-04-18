@@ -10636,6 +10636,9 @@ body #app.web-view {
   /*=================================================================
   ===========  ddslick 
   ===================================================================*/
+  /*=================================================================
+  ===========  Radio 
+  ===================================================================*/
   /*========= layout =========*/
   /*=================================================================
   ===========  Header 
@@ -11384,6 +11387,74 @@ body #app.web-view #myDropdown img {
 }
 body #app.web-view #myDropdown ul.dd-options li:nth-of-type(1) {
   display: none;
+}
+body #app.web-view .custom-radios .wrapper {
+  display: inline-flex;
+  background: #fff;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 0px 16px;
+}
+body #app.web-view .custom-radios .wrapper .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 7px 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+body #app.web-view .custom-radios .wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+body #app.web-view .custom-radios .wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #29004f;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+body #app.web-view .custom-radios input[type=radio] {
+  display: none;
+}
+body #app.web-view .custom-radios #option-1:checked:checked ~ .option-1,
+body #app.web-view .custom-radios #option-2:checked:checked ~ .option-2 {
+  border-color: #29004f;
+  background: #29004f;
+}
+body #app.web-view .custom-radios #option-1:checked:checked ~ .option-1 .dot,
+body #app.web-view .custom-radios #option-2:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+body #app.web-view .custom-radios #option-1:checked:checked ~ .option-1 .dot::before,
+body #app.web-view .custom-radios #option-2:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+body #app.web-view .custom-radios .wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+body #app.web-view .custom-radios #option-1:checked:checked ~ .option-1 span,
+body #app.web-view .custom-radios #option-2:checked:checked ~ .option-2 span {
+  color: #fff;
 }
 body #app.web-view #register #header {
   background-image: url("/images/backgrounds/register_bg.jpg");
