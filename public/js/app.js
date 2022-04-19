@@ -40059,17 +40059,13 @@ $(document).ready(function () {
   $(".panel-group .panel.panel-default:first-child .panel-heading").addClass("active");
   $(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
   /*============= ddSlick Plugin =============*/
-  // $('#myDropdown').ddslick({ 
-  // 	selectText: "Select your favorite social network",
-  // });
-  // var ddBasic = [
-  // 	{ text: "Facebook", value: 1, },
-  // 	{ text: "Twitter", value: 2, },
-  // 	{ text: "LinkedIn", value: 3, },
-  // 	{ text: "Foursquare", value: 4, }
-  // ];
 
   $('#myDropdown').ddslick({});
+  /*============= payment system radio checked =============*/
+
+  $(".custom-radios label.option").click(function (e) {
+    $(".custom-radios .milestone-text").toggleClass("d-none");
+  });
 });
 
 /***/ }),
@@ -40092,8 +40088,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Abdulrahman Ismael\Desktop\povami-software\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Abdulrahman Ismael\Desktop\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\PC\Desktop\Works\povami-software\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\PC\Desktop\Works\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

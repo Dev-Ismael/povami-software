@@ -37,10 +37,12 @@ $(document).ready( function (){
 		$(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
 
 		/*============= ddSlick Plugin =============*/
-
 		$('#myDropdown').ddslick({ });
 
-
+		/*============= payment system radio checked =============*/
+		$(".custom-radios label.option").click(function(e){
+			$(".custom-radios .milestone-text").toggleClass("d-none");
+		});
 
 		
 }); 

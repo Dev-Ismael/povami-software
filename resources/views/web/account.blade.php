@@ -731,18 +731,6 @@
                             </div>
                             <hr>
 
-                            <!----------- Payment Method -------------->
-                            <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
-                            <select id="myDropdown">
-                                <option value="0" selected> Choose Payment Method... </option>
-                                @foreach ($payment_methods as $payment_method)
-                                    <option value="{{ $payment_method->id }}"
-                                        data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}">
-                                        {{ ucfirst($payment_method->name) }} </option>
-                                @endforeach
-                            </select>
-                            <small class="form-text text-danger payment_method"> </small>
-                            <hr>
 
                             <!----------- Payment System -------------->
                             <label for="payment-system"> <i class="fa-solid fa-list-check"></i> Payment System..</label>
@@ -759,11 +747,27 @@
                                         <span>Milstons</span>
                                     </label>
                                 </div>
+                                <p class="milestone-text d-none">
+                                    Choose milestone you will be able to pay project price at 2 steps... 50% of price at first at you can pay the rest after we finish you 'll get half of your project ,
+                                    milestones are individually funded and provide a way to work through a large project in smaller steps. 
+                                </p>
                             </div>
                             <small class="form-text text-danger payment_method"> </small>
                             <hr>
 
 
+                            <!----------- Payment Method -------------->
+                            <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
+                            <select id="myDropdown">
+                                <option value="0" selected> Choose Payment Method... </option>
+                                @foreach ($payment_methods as $payment_method)
+                                    <option value="{{ $payment_method->id }}"
+                                        data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}">
+                                        {{ ucfirst($payment_method->name) }} </option>
+                                @endforeach
+                            </select>
+                            <small class="form-text text-danger payment_method"> </small>
+                            <hr>
 
 
                         </form>

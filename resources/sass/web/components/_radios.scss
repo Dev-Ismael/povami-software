@@ -11,7 +11,7 @@
         align-items: center;
         justify-content: space-evenly;
         border-radius: 5px;
-        padding: 0px 16px;
+        padding: 0px 15px;
     }
 
     .wrapper .option {
@@ -80,5 +80,13 @@
     #option-1:checked:checked~.option-1 span,
     #option-2:checked:checked~.option-2 span {
         color: #fff;
+    }
+
+
+    // Custom Style
+
+    .milestone-text{
+        width: 80%;
+        padding: 10px 25px;
     }
 }
