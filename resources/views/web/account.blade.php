@@ -769,7 +769,7 @@
                             <select id="myDropdown">
                                 <option value="0" selected> Choose Payment Method... </option>
                                 @foreach ($payment_methods as $payment_method)
-                                    <option value="{{ $payment_method->id }}"
+                                    <option value="{{ $payment_method->id }}" 
                                         data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}">
                                         {{ ucfirst($payment_method->name) }} </option>
                                 @endforeach
@@ -780,7 +780,7 @@
 
 
                             <!----------- Account Payment Method -------------->
-                            <div class="accounts d-flex">
+                            <div class="accounts d-none">
                                 <div class="input-box">
                                     <label for="client_payment_method_account"> <i class="fa-solid fa-money-check"></i> Your Payment Account </label>
                                     <input <input type="text" name="client_payment_method_account" class="form-control" placeholder="Enter Your Account.." />

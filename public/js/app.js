@@ -39939,7 +39939,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   !*** ./resources/js/web/ajax/order.js ***!
   \****************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
+    functions = _require.functions;
 
 $(document).ready(function () {
   function ordinal_suffix_of(i) {
@@ -40012,8 +40015,43 @@ $(document).ready(function () {
     });
   });
   /*=================================================================
-  ===========  Create Order
+  ===========  Get Payment Account
   ===================================================================*/
+
+  $("#account-page .dd-options .dd-option").click(function (e) {
+    e.preventDefault();
+    $("#account-page .accounts").removeClass("d-none").addClass('d-flex');
+    var paymentMethod_id = $(this).find("input.dd-option-value").val();
+    $.ajax({
+      type: "GET",
+      enctype: "multipart/form-data",
+      url: '/account/payment_method/show/' + paymentMethod_id,
+      processData: false,
+      contentType: false,
+      cache: false,
+      success: function success(response) {
+        // console.log(response);
+        if (response.status == 'error' && response.msg == 'get Payment Method failed') {
+          swal(response.status, response.msg, response.status).then(function (value) {
+            window.location.href = "/account";
+          });
+        } else if (response.status == 'success') {
+          $.each(response.paymentMethods, function (key, val) {
+            if (val === null || val === '') {
+              val = '<i class="fa-solid fa-circle-question"></i>';
+            } else if (key == 'img') {
+              val = '<img src="/images/payment_methods/' + val + '" height="30"  alt="paymentMethod-logo">';
+            }
+
+            $("#showPaymentMethodModal .get_info." + key + " .text").html(val);
+          });
+        }
+      },
+      error: function error(response) {
+        swal("Error!", "connection failed!", 'error'); // failed to with url
+      }
+    });
+  });
 });
 
 /***/ }),

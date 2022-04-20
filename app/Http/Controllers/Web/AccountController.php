@@ -46,6 +46,22 @@ class AccountController extends Controller
     }
 
 
+    public function showPaymentMethod($id)
+    {
+        $paymentMethods = PaymentMethod::find( $id );  
+        if(!$paymentMethods){  // If get paymentMethods fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "get paymentMethods failed" ,
+            ]);
+        }
 
+        return response() -> json([
+            "status" => 'success' ,   // get Successfully
+            "msg"    => "paymentMethods get successfully" ,
+            "paymentMethods"   => $paymentMethods ,
+        ]);
+
+    }
     
 }

@@ -27,6 +27,7 @@ Route::group( ['namespace' => 'Web'] ,function(){
     // Account Page
     Route::get('/account', 'AccountController@index')->name('account');
     Route::get("/account/contract/show/{id}" , "AccountController@showContract");
+    Route::get("/account/payment_method/show/{id}" , "AccountController@showPaymentMethod");
     
 });
 
