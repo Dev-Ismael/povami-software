@@ -731,6 +731,14 @@
                             </div>
                             <hr>
 
+                            <!----------- price -------------->
+                            <div class="get_info price">
+                                <span class="heading"> <i class="fa-solid fa-sack-dollar"></i> Price : </span>
+                                <span class="text"> </span> <i class="fa-solid fa-dollar"></i>
+                            </div>
+                            <hr>
+
+
 
                             <!----------- Payment System -------------->
                             <label for="payment-system"> <i class="fa-solid fa-list-check"></i> Payment System..</label>
@@ -767,6 +775,26 @@
                                 @endforeach
                             </select>
                             <small class="form-text text-danger payment_method"> </small>
+                            <hr>
+
+
+
+                            <!----------- Account Payment Method -------------->
+                            <div class="accounts d-flex">
+                                <div class="input-box">
+                                    <label for="client_payment_method_account"> <i class="fa-solid fa-money-check"></i> Your Payment Account </label>
+                                    <input <input type="text" name="client_payment_method_account" class="form-control" placeholder="Enter Your Account.." />
+                                    <small class="form-text text-danger payment_method"> </small>
+                                </div>
+                                <div class="arrow-box">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </div>
+                                <div class="input-box">
+                                    <label for="our_payment_method_account"> <i class="fa-solid fa-money-check"></i> Our Payment Account </label>
+                                    <input <input type="text" name="our_payment_method_account" class="form-control" value="Povami@gmail.com" disabled/>
+                                    <small class="form-text text-danger payment_method"> </small>
+                                </div>
+                            </div>
                             <hr>
 
 

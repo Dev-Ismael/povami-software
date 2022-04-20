@@ -61,6 +61,23 @@
             }
         }
     }
+    // Accounts
+    .accounts{
+        position: relative;
+        .input-box{
+            width: 45%;
+        }
+        .arrow-box{
+            width: 10%;
+            position: relative;
+            i{
+                position: absolute;
+                bottom: 5px;
+                left: calc(50% - 23px);
+                font-size: 46px;
+            }
+        }
+    }
     @media (min-width: 786px){
         .modal-dialog {
             max-width: 60%;
