@@ -763,9 +763,11 @@
                                                             <p class="text-center sub-heading2">with order of $ 25 of more</p>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group row mb-3">
-                                                        <div class="col-8 mb-0 px-0 pr-2"> <input id="e-mail" type="text" placeholder="Enter coupon here..." name="email" class="form-control input-box rm-border text-left"> </div>
-                                                        <div class="col-4 px-0"> <input type="submit" value="GET IT NOW!" class="btn btn-block btn-green rm-border"> </div>
+                                                    <div class="form-group row mb-3 text-center">
+                                                        <form id="get-coupon">
+                                                            <div class="col-9 mb-0 px-0 pr-2"> <input type="text" id="coupon" name="coupon" placeholder="Enter coupon here..." class="form-control input-box rm-border text-left"> </div>
+                                                            <div class="col-3 px-0"> <a class="btn purple w-100 h-100 get-coupon"> GET IT NOW! </a> </div>    
+                                                        </form>
                                                     </div>
                                                     <div class="form-group row justify-content-center mb-0">
                                                         <div class="col-md-12 px-3 mt-2"> <a href="#">

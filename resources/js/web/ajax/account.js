@@ -120,6 +120,65 @@ $(document).ready( function (){
 
 
 
+    /*=================================================================
+    ===========  Get Coupon 
+    ===================================================================*/
+    $("#account-page a.get-coupon").click(function (e){
+        
+        e.preventDefault();
+        var searchFormData = new FormData( $("#account-page form#get-coupon")[0] );
+
+        $.ajax({
+            type: "POST",
+            url: '/account/coupon/search',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: searchFormData ,
+            processData: false,
+            contentType : false , 
+            cache    : false,
+            success: function ( response ) {
+                console.log(response);
+
+                // $('#searchUserModal button#search-user').text('Loading...');
+
+
+                // if( response.status == 'error' && response.msg == 'validation error' ){
+                //     $.each( response.errors , function( key , val ){
+                //         $("#searchUserModal small.text-danger." + key ).text(val[0]);
+                //         $('#searchUserModal input[name="'+ key +'"]').addClass("is-invalid");
+                //         $('#searchUserModal button#search-user').text('Search');
+                //     });
+                // }
+                // else if( response.status == 'error' && response.msg == 'user not found'  ){
+                //     $("#searchUserModal .search-info .get-no-data").removeClass("d-none");
+                //     $("#searchUserModal .search-info .user-data").addClass("d-none");
+                //     $('#searchUserModal button#search-user').text('Search');
+
+                // }
+                // else if( response.status == 'success' ){
+
+                //     $("#searchUserModal .search-info .user-data").removeClass("d-none");
+                //     $("#searchUserModal .search-info .get-no-data").addClass("d-none");
+                //     $('#searchUserModal button#search-user').text('Search');
+
+                //     $.each( response.user[0] , function( key , val ){
+                //         if( val === null ){
+                //             val = '<i class="fa-solid fa-circle-question"></i>';
+                //         }
+                //         $("#searchUserModal .get_info." + key + " .text").html( val );
+                //     });
+                //     $("#searchUserModal form")[0].reset();
+
+                // }
+            },
+            error: function(response){
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
+            }
+        });  
+
+    });
 
 
 

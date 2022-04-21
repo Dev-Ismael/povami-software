@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Contract;
 use App\Models\PaymentMethod;
+use App\Models\User;
+use Illuminate\Support\Facades\Validator;
+
 
 class AccountController extends Controller
 {
@@ -64,5 +67,43 @@ class AccountController extends Controller
         ]);
 
     }
+
+    public function searchCoupon(Request $request){
+        
+        // Check Validator
+        $validator = Validator::make($request->all(), [
+            'coupon'     =>  ['string',  'max:55'],
+        ]);
+
+        return response() -> json([
+            'coupon' => $request->all(),
+        ]); 
+
+
+        // if ($validator->fails()) {
+        //     return response() -> json([
+        //         'status' => 'error',
+        //         'msg'    => 'validation error',
+        //         'errors' => $validator->getMessageBag()->toArray()
+        //     ]); 
+        // }
+
+
+        // // Get User
+        // $user = User::where([ ["coupon" , '=' , $request->coupon ]  ])->get(); 
+        // if($user->isEmpty()){  // If get user fails
+        //     return response() -> json([
+        //         "status" => 'error' ,   
+        //         "msg" => "user not found" ,
+        //     ]);
+        // }
+
+        // return response() -> json([
+        //     'status' => 'success',
+        //     'user' => $user,
+        // ]);
+
+    }
+
     
 }
