@@ -740,6 +740,47 @@
 
 
 
+
+                            <!----------- Coupon -------------->
+                            <div class="coupon">
+                                <div class="container">
+                                    <div class="row justify justify-content-center">
+                                        <div class="col-12 card">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-9 col-11">
+                                                    <div class="row mt-0">
+                                                        <div class="col-md-12 ">
+                                                            <p class="text-center sub-heading1">enter your coupon and get discount up to</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-0">
+                                                        <div class="col-md-12 ">
+                                                            <h4 class="text-center heading"> 30% off</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-0">
+                                                        <div class="col-md-12 ">
+                                                            <p class="text-center sub-heading2">with order of $ 25 of more</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row mb-3">
+                                                        <div class="col-8 mb-0 px-0 pr-2"> <input id="e-mail" type="text" placeholder="Enter coupon here..." name="email" class="form-control input-box rm-border text-left"> </div>
+                                                        <div class="col-4 px-0"> <input type="submit" value="GET IT NOW!" class="btn btn-block btn-green rm-border"> </div>
+                                                    </div>
+                                                    <div class="form-group row justify-content-center mb-0">
+                                                        <div class="col-md-12 px-3 mt-2"> <a href="#">
+                                                                <p class="thanks">no thanks</p>
+                                                            </a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+
+
                             <!----------- Payment System -------------->
                             <label for="payment-system"> <i class="fa-solid fa-list-check"></i> Payment System..</label>
                             <div class="custom-radios">

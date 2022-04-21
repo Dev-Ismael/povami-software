@@ -44,5 +44,9 @@ $(document).ready( function (){
 			$(".custom-radios .milestone-text").toggleClass("d-none");
 		});
 
-		
+
+		/*============= coupon =============*/
+		$("#account-page .coupon p.thanks").click(function (e){
+			$("#account-page #acceptContractModal .coupon").addClass("d-none");
+		});
 }); 
