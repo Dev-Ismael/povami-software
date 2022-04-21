@@ -37937,7 +37937,7 @@ __webpack_require__(/*! ./ddslick.min */ "./resources/js/ddslick.min.js");
 __webpack_require__(/*! ./web/custom */ "./resources/js/web/custom.js"); // require Ajax files
 
 
-__webpack_require__(/*! ./web/ajax/order */ "./resources/js/web/ajax/order.js");
+__webpack_require__(/*! ./web/ajax/account */ "./resources/js/web/ajax/account.js");
 /*======================================================
 ============ Ajax Files ================================
 ======================================================*/
@@ -39934,10 +39934,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
 /***/ }),
 
-/***/ "./resources/js/web/ajax/order.js":
-/*!****************************************!*\
-  !*** ./resources/js/web/ajax/order.js ***!
-  \****************************************/
+/***/ "./resources/js/web/ajax/account.js":
+/*!******************************************!*\
+  !*** ./resources/js/web/ajax/account.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40005,17 +40005,24 @@ $(document).ready(function () {
               );
             }
 
+            if (key === 'price') {
+              val = val + "$";
+            }
+
             $("#acceptContractModal .get_info." + key + " .text").html(val);
           });
         }
       },
       error: function error(response) {
-        swal("Error!", "connection failed!", 'error'); // failed to with url
+        // failed to with url
+        swal("Error!", "connection failed!", 'error').then(function (value) {
+          window.location.href = "/account";
+        });
       }
     });
   });
   /*=================================================================
-  ===========  Get Payment Account
+  ===========  Get Payment Method Account
   ===================================================================*/
 
   $("#account-page .dd-options .dd-option").click(function (e) {
@@ -40030,25 +40037,22 @@ $(document).ready(function () {
       contentType: false,
       cache: false,
       success: function success(response) {
-        // console.log(response);
-        if (response.status == 'error' && response.msg == 'get Payment Method failed') {
+        console.log(response);
+
+        if (response.status == 'error' && response.msg == 'get paymentMethod failed') {
           swal(response.status, response.msg, response.status).then(function (value) {
             window.location.href = "/account";
           });
         } else if (response.status == 'success') {
-          $.each(response.paymentMethods, function (key, val) {
-            if (val === null || val === '') {
-              val = '<i class="fa-solid fa-circle-question"></i>';
-            } else if (key == 'img') {
-              val = '<img src="/images/payment_methods/' + val + '" height="30"  alt="paymentMethod-logo">';
-            }
-
-            $("#showPaymentMethodModal .get_info." + key + " .text").html(val);
-          });
+          $("#account-page .accounts label span").text(response.paymentMethod.name);
+          $("#account-page .accounts input[name='our_payment_method_account']").val(response.paymentMethod.account);
         }
       },
       error: function error(response) {
-        swal("Error!", "connection failed!", 'error'); // failed to with url
+        // failed to with url
+        swal("Error!", "connection failed!", 'error').then(function (value) {
+          window.location.href = "/account";
+        });
       }
     });
   });
@@ -40126,8 +40130,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\PC\Desktop\Works\povami-software\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\PC\Desktop\Works\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Abdulrahman Ismael\Desktop\povami-software\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Abdulrahman Ismael\Desktop\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

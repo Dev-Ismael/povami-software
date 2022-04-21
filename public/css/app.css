@@ -10805,7 +10805,7 @@ body #app.web-view #account-page .custom-calnder .date {
   color: #000;
 }
 body #app.web-view .modal {
-  z-index: 10000000000000000;
+  z-index: 9999;
 }
 body #app.web-view .modal button i {
   color: #fff;
@@ -10836,23 +10836,8 @@ body #app.web-view .modal .get_info .text i {
   font-size: 25px;
   color: #eb625a;
 }
-body #app.web-view .modal .get_info.coupon .heading {
-  padding-top: 7px;
-}
-body #app.web-view .modal .get_info.coupon .text {
-  color: #fff;
-  background-color: #108a10;
-  padding: 7px 12px;
-  border-radius: 3px;
-}
-body #app.web-view .modal .get_info.balance .text, body #app.web-view .modal .get_info.balance span i {
-  color: #108a10 !important;
-}
-body #app.web-view .modal .get-no-data p {
-  font-size: 19px;
-}
-body #app.web-view .modal .get-no-data p i {
-  color: #ead728;
+body #app.web-view .modal .get_info.price .text {
+  color: #0db20d;
 }
 body #app.web-view .modal .accounts {
   position: relative;
@@ -10869,6 +10854,9 @@ body #app.web-view .modal .accounts .arrow-box i {
   bottom: 5px;
   left: calc(50% - 23px);
   font-size: 46px;
+}
+body #app.web-view .modal .accounts label span {
+  text-transform: capitalize;
 }
 @media (min-width: 786px) {
   body #app.web-view .modal .modal-dialog {

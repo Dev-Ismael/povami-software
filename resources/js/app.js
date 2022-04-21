@@ -25,7 +25,7 @@ require('./ddslick.min');
 =====================================================*/
 require('./web/custom');
 // require Ajax files
-require('./web/ajax/order');
+require('./web/ajax/account');
 
 
 

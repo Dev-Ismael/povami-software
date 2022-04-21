@@ -59,12 +59,18 @@ $(document).ready( function (){
                             ); 
 
                         }
+                        if( key === 'price' ){
+                            val = val + "$";
+                        }
                         $("#acceptContractModal .get_info." + key + " .text").html( val );
                     });
                 }
             },
-            error: function(response){
-                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
+            error: function(response){  // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   
+                .then((value) => {
+                    window.location.href = "/account";
+                });
             }
         });  
     });
@@ -72,14 +78,12 @@ $(document).ready( function (){
 
 
     /*=================================================================
-    ===========  Get Payment Account
+    ===========  Get Payment Method Account
     ===================================================================*/
     $("#account-page .dd-options .dd-option").click(function (e){
         
         e.preventDefault();
         $("#account-page .accounts").removeClass("d-none").addClass('d-flex');
-
-
 
         var paymentMethod_id = $(this).find("input.dd-option-value").val();
         $.ajax({
@@ -90,26 +94,23 @@ $(document).ready( function (){
             contentType : false,
             cache    : false,
             success: function ( response ) {
-                // console.log(response);
-                if( response.status == 'error' && response.msg == 'get Payment Method failed'  ){
+                console.log(response);
+                if( response.status == 'error' && response.msg == 'get paymentMethod failed'  ){
                     swal( response.status , response.msg , response.status )
                     .then((value) => {
                         window.location.href = "/account";
                     });
                 }
                 else if( response.status == 'success' ){
-                    $.each( response.paymentMethods , function( key , val ){
-                        if( val === null || val === '' ){
-                            val = '<i class="fa-solid fa-circle-question"></i>';
-                        }else if(key == 'img'){
-                            val = '<img src="/images/payment_methods/' + val + '" height="30"  alt="paymentMethod-logo">';
-                        }
-                        $("#showPaymentMethodModal .get_info." + key + " .text").html( val );
-                    });
+                    $("#account-page .accounts label span").text(response.paymentMethod.name);
+                    $("#account-page .accounts input[name='our_payment_method_account']").val(response.paymentMethod.account);
                 }
             },
-            error: function(response){
-                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
+            error: function(response){  // failed to with url
+                swal( "Error!" , "connection failed!" , 'error' )   
+                .then((value) => {
+                    window.location.href = "/account";
+                });
             }
         });
 
