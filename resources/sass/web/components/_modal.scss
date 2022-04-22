@@ -8,13 +8,19 @@
             color:#fff
         }
     }
-    i{
-        color: #29004f;
-    }
     .modal-footer{
         border: none !important;
     }
-
+    label{
+        i{
+            color: #29004f;
+        }
+    }
+    .arrow-box{
+        i{
+            color: #29004f;
+        }
+    }
     // get_info
     .get_info{
         hr{
@@ -38,14 +44,26 @@
             }
         }
         &.price{
-            .text{
+            .text , .price-discounted{
                 color: #0db20d;
+                font-size: 22px;
+                &.discounted{
+                    color: #aaa;
+                    text-decoration: line-through;
+                }
             }   
+            .ask-for-coupon{
+                text-decoration: underline;
+                cursor: pointer;
+                text-transform: uppercase;
+                color: #29004f;
+            }
         }
     }
 
     // coupon
     .coupon{
+        display: none;
         .thanks,
         .heading,
         .sub-heading1,
@@ -90,7 +108,6 @@
         input.input-box,
         textarea.input-box {
             background-color: #ffffff;
-            border: 1px solid #000000;
             color: #212121;
             font-size: 15px;
             padding: 15px auto 15px auto !important;

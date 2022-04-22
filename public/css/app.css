@@ -10280,8 +10280,11 @@ body #app.web-view .btn.green {
   background-color: #00b04e;
 }
 body #app.web-view .btn.green:hover {
-  background-color: #009242;
-  color: #fff;
+  background-color: transparent;
+  color: #00b04e;
+  border: 1px solid #00b04e;
+}
+body #app.web-view .btn.green:hover i {
   color: #00b04e;
 }
 body #app.web-view nav.navbar {
@@ -10810,11 +10813,14 @@ body #app.web-view .modal {
 body #app.web-view .modal button i {
   color: #fff;
 }
-body #app.web-view .modal i {
-  color: #29004f;
-}
 body #app.web-view .modal .modal-footer {
   border: none !important;
+}
+body #app.web-view .modal label i {
+  color: #29004f;
+}
+body #app.web-view .modal .arrow-box i {
+  color: #29004f;
 }
 body #app.web-view .modal .get_info hr {
   width: 90%;
@@ -10836,8 +10842,22 @@ body #app.web-view .modal .get_info .text i {
   font-size: 25px;
   color: #eb625a;
 }
-body #app.web-view .modal .get_info.price .text {
+body #app.web-view .modal .get_info.price .text, body #app.web-view .modal .get_info.price .price-discounted {
   color: #0db20d;
+  font-size: 22px;
+}
+body #app.web-view .modal .get_info.price .text.discounted, body #app.web-view .modal .get_info.price .price-discounted.discounted {
+  color: #aaa;
+  text-decoration: line-through;
+}
+body #app.web-view .modal .get_info.price .ask-for-coupon {
+  text-decoration: underline;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #29004f;
+}
+body #app.web-view .modal .coupon {
+  display: none;
 }
 body #app.web-view .modal .coupon .thanks,
 body #app.web-view .modal .coupon .heading,
@@ -10876,7 +10896,6 @@ body #app.web-view .modal .coupon #e-mail {
 body #app.web-view .modal .coupon input.input-box,
 body #app.web-view .modal .coupon textarea.input-box {
   background-color: #ffffff;
-  border: 1px solid #000000;
   color: #212121;
   font-size: 15px;
   padding: 15px auto 15px auto !important;
@@ -10995,15 +11014,18 @@ body #app.web-view .custom-radios .wrapper .option .dot {
 body #app.web-view .custom-radios .wrapper .option .dot::before {
   position: absolute;
   content: "";
-  top: 4px;
+  top: 5px;
   left: 4px;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   background: #29004f;
   border-radius: 50%;
   opacity: 0;
   transform: scale(1.5);
   transition: all 0.3s ease;
+}
+body #app.web-view .custom-radios .wrapper .option.option-1 .dot {
+  left: 5px;
 }
 body #app.web-view .custom-radios input[type=radio] {
   display: none;

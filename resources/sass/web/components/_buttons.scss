@@ -34,9 +34,12 @@
     &.green{
         background-color: #00b04e;
         &:hover{
-            background-color: rgba(0, 146, 66);
-            color: #fff;
+            background-color: transparent;
             color: #00b04e;
+            border: 1px solid #00b04e;
+            i{
+                color: #00b04e;
+            }
         }
     } 
 }

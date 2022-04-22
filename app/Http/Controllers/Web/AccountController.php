@@ -68,42 +68,40 @@ class AccountController extends Controller
 
     }
 
-    public function searchCoupon(Request $request){
-        
+    public function searchCoupon( Request $request ){   // check if {email?} empty
+
+
         // Check Validator
         $validator = Validator::make($request->all(), [
-            'coupon'     =>  ['string',  'max:55'],
-        ]);
-
-        return response() -> json([
-            'coupon' => $request->all(),
+            'coupon'     =>  ['string',  'max:10'],
         ]); 
 
 
-        // if ($validator->fails()) {
-        //     return response() -> json([
-        //         'status' => 'error',
-        //         'msg'    => 'validation error',
-        //         'errors' => $validator->getMessageBag()->toArray()
-        //     ]); 
-        // }
+        if ($validator->fails()) {
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'coupon not valid',
+            ]); 
+        }
 
 
-        // // Get User
-        // $user = User::where([ ["coupon" , '=' , $request->coupon ]  ])->get(); 
-        // if($user->isEmpty()){  // If get user fails
-        //     return response() -> json([
-        //         "status" => 'error' ,   
-        //         "msg" => "user not found" ,
-        //     ]);
-        // }
+        // Get Coupon
+        $user = User::where([ ["coupon" , '=' , $request->coupon ] , ["role" , "=" , "2"]  ])->get(); 
+        if($user->isEmpty()){  // If get user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "coupon not valid" ,
+            ]);
+        }
 
-        // return response() -> json([
-        //     'status' => 'success',
-        //     'user' => $user,
-        // ]);
+        return response() -> json([
+            'status' => 'success',
+            'user' => $user,
+        ]);
+
 
     }
+    
 
     
 }

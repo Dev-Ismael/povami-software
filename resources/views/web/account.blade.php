@@ -734,7 +734,9 @@
                             <!----------- price -------------->
                             <div class="get_info price">
                                 <span class="heading"> <i class="fa-solid fa-sack-dollar"></i> Price : </span>
-                                <span class="text"> </span> 
+                                <span class="text">  </span> 
+                                <span class="price-discounted ml-3"></span>
+                                <span class="ask-for-coupon float-right"> Have a coupon ? </span>
                             </div>
                             <hr>
 
@@ -764,14 +766,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group row mb-3 text-center">
-                                                        <form id="get-coupon">
-                                                            <div class="col-9 mb-0 px-0 pr-2"> <input type="text" id="coupon" name="coupon" placeholder="Enter coupon here..." class="form-control input-box rm-border text-left"> </div>
-                                                            <div class="col-3 px-0"> <a class="btn purple w-100 h-100 get-coupon"> GET IT NOW! </a> </div>    
-                                                        </form>
+                                                        <div class="col-9 mb-0 px-0 pr-2"> <input type="text" id="coupon" name="coupon" placeholder="Enter coupon here..." class="form-control input-box rm-border h-100 text-left"> </div>
+                                                        <div class="col-3 px-0"> 
+                                                            <a class="btn purple w-100 h-100 get-coupon-btn"> GET IT NOW! </a>
+                                                        </div>
+                                                        <small class="form-text text-danger coupon"> </small>    
                                                     </div>
-                                                    <div class="form-group row justify-content-center mb-0">
-                                                        <div class="col-md-12 px-3 mt-2"> <a href="#">
-                                                                <p class="thanks">no thanks</p>
+                                                    <div class="form-group row mb-0">
+                                                        <div class="col-md-12 px-3 mt-2  d-flex justify-content-center"> <a href="#" class="thanks">no thanks
                                                             </a> </div>
                                                     </div>
                                                 </div>
@@ -779,8 +781,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr>
                             </div>
-                            <hr>
 
 
                             <!----------- Payment System -------------->

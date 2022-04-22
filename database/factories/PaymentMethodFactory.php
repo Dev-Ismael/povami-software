@@ -14,9 +14,7 @@ class PaymentMethodFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'img' => $this->faker->name,
-            'account' => $this->faker->name,
+
         ];
     }
 }

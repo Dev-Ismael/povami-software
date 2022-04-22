@@ -40,13 +40,23 @@ $(document).ready( function (){
 		$('#myDropdown').ddslick({ });
 
 		/*============= payment system radio checked =============*/
-		$(".custom-radios label.option").click(function(e){
-			$(".custom-radios .milestone-text").toggleClass("d-none");
+		$(".custom-radios label.option-2").click(function(e){
+			$(".custom-radios .milestone-text").removeClass("d-none");
+		});
+		$(".custom-radios label.option-1").click(function(e){
+			$(".custom-radios .milestone-text").addClass("d-none");
 		});
 
 
 		/*============= coupon =============*/
-		$("#account-page .coupon p.thanks").click(function (e){
-			$("#account-page #acceptContractModal .coupon").addClass("d-none");
+		$("#account-page .ask-for-coupon").click(function (e){
+			$("#account-page #acceptContractModal div.coupon").slideToggle();
+			// alert("clicked");
 		});
+
+		$("#account-page .coupon .thanks").click(function (e){
+			$("#account-page #acceptContractModal div.coupon").slideToggle();
+		});
+
+
 }); 

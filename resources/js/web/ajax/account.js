@@ -123,11 +123,10 @@ $(document).ready( function (){
     /*=================================================================
     ===========  Get Coupon 
     ===================================================================*/
-    $("#account-page a.get-coupon").click(function (e){
-        
+    $("#account-page .get-coupon-btn").on("click",function (e){
+        $("#account-page .get-coupon-btn").removeClass("cancle green").addClass("purple");
+        var searchFormData = new FormData( $("#account-page #acceptContractModal form")[0] );
         e.preventDefault();
-        var searchFormData = new FormData( $("#account-page form#get-coupon")[0] );
-
         $.ajax({
             type: "POST",
             url: '/account/coupon/search',
@@ -139,45 +138,47 @@ $(document).ready( function (){
             contentType : false , 
             cache    : false,
             success: function ( response ) {
+                
                 console.log(response);
 
-                // $('#searchUserModal button#search-user').text('Loading...');
+                $("#account-page .get-coupon-btn").html(' <i class="fa fa-spinner fa-spin mr-2"></i> Loading...');
 
 
-                // if( response.status == 'error' && response.msg == 'validation error' ){
-                //     $.each( response.errors , function( key , val ){
-                //         $("#searchUserModal small.text-danger." + key ).text(val[0]);
-                //         $('#searchUserModal input[name="'+ key +'"]').addClass("is-invalid");
-                //         $('#searchUserModal button#search-user').text('Search');
-                //     });
-                // }
-                // else if( response.status == 'error' && response.msg == 'user not found'  ){
-                //     $("#searchUserModal .search-info .get-no-data").removeClass("d-none");
-                //     $("#searchUserModal .search-info .user-data").addClass("d-none");
-                //     $('#searchUserModal button#search-user').text('Search');
+                if( response.status == 'error' ){
 
-                // }
-                // else if( response.status == 'success' ){
+                    setTimeout(() => {
+                        $("#acceptContractModal small.text-danger.coupon" ).text(response.msg);
+                        $('#acceptContractModal input[name="coupon"]').addClass("is-invalid");
+                        $(".modal .get_info.price .text").removeClass("discounted");
+                        $("#acceptContractModal .get-coupon-btn").removeClass("purple green").addClass("cancle").html(' <i class="fa-solid fa-xmark mr-2"></i> Not valid');
+                    }, 3000);
+                    
+                }
 
-                //     $("#searchUserModal .search-info .user-data").removeClass("d-none");
-                //     $("#searchUserModal .search-info .get-no-data").addClass("d-none");
-                //     $('#searchUserModal button#search-user').text('Search');
+                else if( response.status == 'success' ){
 
-                //     $.each( response.user[0] , function( key , val ){
-                //         if( val === null ){
-                //             val = '<i class="fa-solid fa-circle-question"></i>';
-                //         }
-                //         $("#searchUserModal .get_info." + key + " .text").html( val );
-                //     });
-                //     $("#searchUserModal form")[0].reset();
+                    var price = $(".modal .get_info.price .text").text();
+                        price = price.replace("$" , '');
+                    var price_discounted = price - ( price * 0.2 ) ;
 
-                // }
+
+                    setTimeout(() => {
+
+                        $(".modal .get_info.price .text").addClass("discounted");
+                        $(".modal .get_info.price .price-discounted").text( price_discounted + "$" );
+                        $("#acceptContractModal .get-coupon-btn").removeClass("purple cancle").addClass("green").html(' <i class="fa-solid fa-check mr-2"></i> Great');
+                    }, 3000);
+                    setTimeout( () => {
+                        $("#account-page #acceptContractModal div.coupon").slideToggle();
+                    }, 4000);                    
+                }
+
+
             },
             error: function(response){
                 swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
             }
         });  
-
     });
 
 
