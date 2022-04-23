@@ -64,6 +64,10 @@
                                                 contract_id="{{ $contract->id }}">
                                                 <i class="fa-solid fa-eye"></i>
                                             </button>
+                                            <button type="button" id="edit-contract" class="btn btn-info" data-toggle="modal"
+                                                data-target="#editContractModal" contract_id="{{ $contract->id }}">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
                                             <button type="button" id="delete-contract" class="btn btn-danger"
                                                 contract_id="{{ $contract->id }}">
                                                 <i class="fa-solid fa-trash-can"></i>
@@ -143,6 +147,66 @@
         </div>
 
 
+
+
+        <!---------- Edit Contract Modal ------------>
+        <div class="modal fade" id="editContractModal" tabindex="-1" role="dialog" aria-labelledby="editContractLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editContractLabel"> <i class="fa-solid fa-pen-to-square"></i> edit Contract </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="edit-contract" enctype="multipart/form-data">
+
+
+                            <input type="hidden" name="id">
+
+                            <label for="email"> <i class="fa-solid fa-user"></i> User Email..</label>
+                            <div class="search"> 
+                                <span class="icon"> 
+                                    <i class="fa-solid fa-search"></i>
+                                </span>
+                                <input type="text" name="email" class="form-control" placeholder="Enter Email..">
+                                <button id="search-user" class="btn btn-primary"> <i class="fa fa-search"></i> Search </button> 
+                            </div>
+                            <small class="form-text text-danger email"> </small>
+                            <br>
+
+                            <label for="title"> <i class="fa-solid fa-address-card"></i> Project Title..</label>
+                            <input type="text" name="title" class="form-control" placeholder="Enter Title.." />
+                            <small class="form-text text-danger title"> </small>
+                            <br>
+
+                            <label for="content"> <i class="fa-solid fa-align-left"></i> Contract Content..</label>
+                            <textarea type="text" name="content" class="form-control" rows="10" cols="50"
+                                placeholder="Enter Content.."></textarea>
+                            <small class="form-text text-danger content"> </small>
+                            <br>
+
+                            <label for="price"> <i class="fa-solid fa-sack-dollar"></i> Project Price..</label>
+                            <input type="number" name="price" class="form-control" placeholder="Enter Price.." />
+                            <small class="form-text text-danger price"> </small>
+                            <br>
+
+                            <label for="deadline"> <i class="fa-solid fa-clock"></i> Project Deadline..</label>
+                            <input type="date" name="deadline" class="form-control" placeholder="Enter Deadline.." />
+                            <small class="form-text text-danger deadline"> </small>
+                            <br>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+                        <button type="button" id="update-contract" class="btn btn-primary"> Save </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!---------- Show Contract Modal ------------>

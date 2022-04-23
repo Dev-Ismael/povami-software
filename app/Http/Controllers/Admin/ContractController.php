@@ -54,7 +54,17 @@ class ContractController extends Controller
 
         // Get User
         $user = User::where([ ["email" , '=' , $request->email ] , ["role" , '=' , '3' ] ])->first(); 
+        if(!$user){  // If User Not Found
 
+            $validator->getMessageBag()->add('email', 'User not found');
+
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'validation error',
+                'errors' => $validator->getMessageBag()->toArray()
+            ]);
+
+        }
         
         // Create Contract in DB
         $contract = Contract::create([   // Contract mean model and 
@@ -100,6 +110,76 @@ class ContractController extends Controller
             "contract"   => $contract ,
         ]);
     }
+
+    public function update(Request $request, $id)
+    {
+
+        
+        // Check Validator
+        $validator = Validator::make($request->all(), [
+            'email'      =>  ['required', 'string', 'email', 'max:55'],
+            'title'      =>  ['required', 'string', 'max:50'],
+            'content'    =>  ['required', 'string', 'max:4000'],
+            'price'      =>  ['required', 'numeric', 'digits_between:1,10'],
+            'deadline'   =>  ['required', 'string', 'max:50'],
+        ]);
+        if ($validator->fails()) {
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'validation error',
+                'errors' => $validator->getMessageBag()->toArray()
+            ]); 
+        }
+
+
+
+        // Get User
+        $user = User::where([ ["email" , '=' , $request->email ] , ["role" , '=' , '3' ] ])->first(); 
+        if(!$user){  // If User Not Found
+
+            $validator->getMessageBag()->add('email', 'User not found');
+
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'validation error',
+                'errors' => $validator->getMessageBag()->toArray()
+            ]);
+
+        }
+        
+        // Get Contract
+        $contract = Contract::find( $id );  
+        if(!$contract){  // If get contract fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "get contract failed" ,
+            ]);
+        }
+
+
+        // Update in DB
+        $update = $contract-> update([
+            'user_id'   => $user -> id ,    
+            'title'     => $request -> title ,    
+            'content'   => $request -> content , 
+            'price'     => $request -> price , 
+            'deadline'  => $request -> deadline , 
+        ]);
+        if(!$update){  // If update contract fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "update operation failed" ,
+            ]);
+        }
+
+        return response() -> json([
+            "status" => 'success' ,   // updated Successfully
+            "msg" => "contract updated successfully" ,
+        ]);
+
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *

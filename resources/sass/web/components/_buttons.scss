@@ -12,7 +12,7 @@
     &.purple{
         background-color: #29004f;
         &:hover{
-            background-color: transparent;
+            background-color: #fff;
             color: #29004f;
             border: 1px solid #29004f;
             i{
@@ -23,7 +23,7 @@
     &.cancle{
         background-color: #dc3545;
         &:hover{
-            background-color: transparent;
+            background-color: #fff;
             color: #dc3545;
             border: 1px solid #dc3545;
             i{
@@ -34,7 +34,7 @@
     &.green{
         background-color: #00b04e;
         &:hover{
-            background-color: transparent;
+            background-color: #fff;
             color: #00b04e;
             border: 1px solid #00b04e;
             i{
