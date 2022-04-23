@@ -111,8 +111,8 @@ class AccountController extends Controller
 
         // Check Validator
         $validator = Validator::make($request->all(), [
-            'first_name'     =>  [  'string' , 'max:55' ],
-            'last_name'      =>  [  'string' , 'max:55' ],
+            'first_name'     =>  [ 'nullable' , 'string' , 'max:55' ],
+            'last_name'      =>  [ 'nullable' , 'string' , 'max:55' ],
             'phone'          =>  [ 'nullable' , 'string' , 'max:55' ],
             'phone2'         =>  [ 'nullable' , 'string' , 'max:55' ],
             'facebook'       =>  [ 'nullable' , 'url' , 'max:255' ],

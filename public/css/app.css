@@ -10593,7 +10593,7 @@ body {
 }
 body::-webkit-scrollbar, body::-webkit-scrollbar {
   background-color: rgba(108, 117, 125, 0.2117647059);
-  width: 5px;
+  width: 8px;
   right: -10px;
 }
 body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
