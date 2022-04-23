@@ -58,5 +58,18 @@ $(document).ready( function (){
 			$("#account-page #acceptContractModal div.coupon").slideToggle();
 		});
 
+		/*============= Selcet Option Country =============*/
+		var user_country = $("select#country").attr('user_country');
 
+		$("select#country option").each( function() {
+
+			if( $(this).val() == user_country ){ 
+				$(this).attr("selected","selected");    
+			}
+
+		});
+
+
+		
+		
 }); 

@@ -340,62 +340,70 @@
                                     <i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
                                     Personal information
                                 </h4>
-                                <form action="#">
+                                <form id="presonal-info" enctype="multipart/form-data">
+
                                     <div class="row">
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="firstName" class="text-black"> <i
+                                            <label for="first_name" class="text-black"> <i
                                                     class="fa-solid fa-file-signature"></i> First Name</label>
-                                            <input type="text" class="form-control" id="firstName"
-                                                placeholder="Type First Name...">
+                                            <input type="text" class="form-control" id="first_name" name="first_name"
+                                                placeholder="Type First Name..." value="{{ $user_info->first_name }}">
+                                                <small class="form-text text-danger first_name"> </small>
                                         </div>
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="lastName" class="text-black"> <i
+                                            <label for="last_name" class="text-black"> <i
                                                     class="fa-solid fa-file-signature"></i> Last Name</label>
-                                            <input type="text" class="form-control" id="lastName"
-                                                placeholder="Type Last Name...">
+                                            <input type="text" class="form-control" id="last_name" name="last_name"
+                                                placeholder="Type Last Name..." value="{{ $user_info->last_name }}">
+                                            <small class="form-text text-danger last_name"> </small>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 form-group text-left">
                                             <label for="phone" class="text-black"> <i
                                                     class="fa-solid fa-phone-volume"></i> Phone </label>
-                                            <input type="text" class="form-control" id="phone"
-                                                placeholder="Type Phone Number...">
+                                            <input type="text" class="form-control" id="phone" name="phone"
+                                                placeholder="Type Phone Number..." value="{{ $user_info->phone }}">
+                                                <small class="form-text text-danger phone"> </small>
                                         </div>
                                         <div class="col-md-6 form-group text-left">
-                                            <label for="phone_2" class="text-black"> <i
+                                            <label for="phone2" class="text-black"> <i
                                                     class="fa-solid fa-phone-volume"></i> Second Phone (optional) </label>
-                                            <input type="text" class="form-control" id="phone_2"
-                                                placeholder="Type Phone Number...">
+                                            <input type="text" class="form-control" id="phone2" name="phone2"
+                                                placeholder="Type Phone Number..." value="{{ $user_info->phone2 }}">
+                                                <small class="form-text text-danger phone2"> </small>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group text-left">
                                             <label for="facebook" class="text-black"> <i
                                                     class="fa-brands fa-facebook-square"></i> Facebook Profile </label>
-                                            <input type="text" class="form-control" id="facebook"
-                                                placeholder="Type Facebook Profile Link...">
+                                            <input type="text" class="form-control" id="facebook" name="facebook"
+                                                placeholder="Type Facebook Profile Link..." value="{{ $user_info->facebook }}">
+                                                <small class="form-text text-danger facebook"> </small>
                                         </div>
                                         <div class="col-md-12 form-group text-left">
                                             <label for="twitter" class="text-black"> <i
                                                     class="fa-brands fa-twitter-square"></i> Twitter Profile </label>
-                                            <input type="text" class="form-control" id="twitter"
-                                                placeholder="Type Twitter Profile Link...">
+                                            <input type="text" class="form-control" id="twitter" name="twitter"
+                                                placeholder="Type Twitter Profile Link..." value="{{ $user_info->twitter }}">
+                                                <small class="form-text text-danger twitter"> </small>
                                         </div>
                                         <div class="col-md-12 form-group text-left">
                                             <label for="instagram" class="text-black"> <i
                                                     class="fa-brands fa-instagram-square"></i> Instagram Profile </label>
-                                            <input type="text" class="form-control" id="instagram"
-                                                placeholder="Type Instagram Profile Link...">
+                                            <input type="text" class="form-control" id="instagram" name="instagram"
+                                                placeholder="Type Instagram Profile Link..." value="{{ $user_info->instagram }}">
+                                                <small class="form-text text-danger instagram"> </small>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 form-group text-left">
                                             <label for="country" class="text-black"> <i
                                                     class="fa-solid fa-earth-africa"></i> Country </label>
-                                            <select id="country" class="form-control" name="country">
-                                                <option value="0" selected="selected"> Choose Your Country... </option>
-                                                <option value="Afganistan">Afghanistan</option>
+                                            <select id="country" class="form-control" name="country" user_country="{{ $user_info->country }}">
+                                                <option value="" class="d-none"> Choose Your Country... </option>
+                                                <option value="Afghanistan" >Afghanistan</option>
                                                 <option value="Albania">Albania</option>
                                                 <option value="Algeria">Algeria</option>
                                                 <option value="American Samoa">American Samoa</option>
@@ -642,24 +650,27 @@
                                                 <option value="Zambia">Zambia</option>
                                                 <option value="Zimbabwe">Zimbabwe</option>
                                             </select>
+                                            <small class="form-text text-danger country"> </small>
                                         </div>
                                         <div class="col-md-6 form-group text-left">
                                             <label for="city" class="text-black"> <i class="fa-solid fa-city"></i>
                                                 City
                                             </label>
-                                            <input type="text" class="form-control" id="city"
-                                                placeholder="Type Your Located City...">
+                                            <input type="text" class="form-control" id="city" name="city"
+                                                placeholder="Type Your Located City..." value="{{ $user_info->city }}">
+                                                <small class="form-text text-danger city"> </small>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group text-left">
                                             <label for="address" class="text-black"> <i
                                                     class="fa-solid fa-location-dot"></i> Address </label>
-                                            <input type="text" class="form-control" id="address"
-                                                placeholder="Type Address Details...">
+                                            <input type="text" class="form-control" id="address" name="address"
+                                                placeholder="Type Address Details..." value="{{ $user_info->address }}">
+                                                <small class="form-text text-danger address"> </small>
                                         </div>
                                     </div>
-                                    <div class="mt-5 text-right"><button class="btn purple profile-button" type="button">
+                                    <div class="mt-5 text-right"><button id="update-user-info"class="btn purple" type="button">
                                             <i class="fa-solid fa-floppy-disk"></i> Save Profile</button></div>
                                 </form>
                             </div>

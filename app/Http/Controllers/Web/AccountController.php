@@ -22,11 +22,12 @@ class AccountController extends Controller
     {
 
         $user_id = Auth::id();
+        $user_info = User::find($user_id);
         $contracts = Contract::where('user_id' , $user_id )->orderBy('id','desc') ->paginate(50) ;
         $payment_methods = PaymentMethod::get();
 
         // View Account Blade
-        return view("web.account" , compact( 'contracts' , 'payment_methods' ));
+        return view("web.account" , compact( 'contracts' , 'payment_methods' , 'user_info' ));
 
     }
 
@@ -102,6 +103,61 @@ class AccountController extends Controller
 
     }
     
+
+
+
+    public function updateUserInfo(Request $request)
+    {
+
+        // Check Validator
+        $validator = Validator::make($request->all(), [
+            'first_name'     =>  [  'string' , 'max:55' ],
+            'last_name'      =>  [  'string' , 'max:55' ],
+            'phone'          =>  [ 'nullable' , 'string' , 'max:55' ],
+            'phone2'         =>  [ 'nullable' , 'string' , 'max:55' ],
+            'facebook'       =>  [ 'nullable' , 'url' , 'max:255' ],
+            'twitter'        =>  [ 'nullable' , 'url' , 'max:255' ],
+            'instagram'      =>  [ 'nullable' , 'url' , 'max:255' ],
+            'country'        =>  [ 'nullable' , 'string' , 'max:55' ],
+            'city'           =>  [ 'nullable' , 'string' , 'max:55' ],
+            'address'        =>  [ 'nullable' , 'string' , 'max:255' ],
+        ]);
+        if ($validator->fails()) {
+            return response() -> json([
+                'status' => 'error',
+                'msg'    => 'validation error',
+                'errors' => $validator->getMessageBag()->toArray()
+            ]); 
+        }
+
+
+        // Get User
+        $user_id = Auth::id();
+        $user = User::find( $user_id );  
+        if(!$user){  // If get user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "get user failed" ,
+            ]);
+        }
+
+
+        // Update in DB
+        $update = $user-> update( $request->all() );
+        if(!$update){  // If update user fails
+            return response() -> json([
+                "status" => 'error' ,   
+                "msg" => "update operation failed" ,
+            ]);
+        }
+
+        return response() -> json([
+            "status" => 'success' ,   // updated Successfully
+            "msg" => "information updated successfully" ,
+        ]);
+
+
+    }
 
     
 }

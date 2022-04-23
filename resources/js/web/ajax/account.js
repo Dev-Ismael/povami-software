@@ -184,4 +184,60 @@ $(document).ready( function (){
 
 
 
+
+    
+
+
+    /*=================================================================
+    ===========  Create Personal Info  
+    ===================================================================*/
+    $("#account-page #update-user-info").on("click",function (e){
+
+        e.preventDefault();
+        var updateFormData = new FormData( $("#account-page form#presonal-info")[0] );
+        
+        $.ajax({
+            type: "POST",
+            enctype : "multipart/form-data" ,
+            url: '/account/user/update',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: updateFormData  ,
+            processData: false,
+            contentType : false , 
+            cache    : false,
+            success: function ( response ) {
+                console.log(response);
+                if( response.status == 'error' && response.msg == 'validation error' ){
+                    $.each( response.errors , function( key , val ){
+                        $("#account-page form#presonal-info small.text-danger." + key ).text(val[0]);
+                        $('#account-page form#presonal-info input[name="'+ key +'"]').addClass("is-invalid");
+                    });
+                }
+                else if( response.status == 'error' && response.msg == 'update operation failed'  ){
+                    swal( response.status , response.msg , response.status )
+                    .then((value) => {
+                        window.location.href = "/account";
+                    });
+                }
+                else if( response.status == 'success' && response.msg == 'information updated successfully'  ){
+                    swal( response.status , response.msg , response.status )
+                }
+            },
+            error: function(response){
+                swal( "Error!" , "connection failed!" , 'error' )   // failed to with url
+            }
+        });  
+
+
+    });
+
+
+
+
+
+
+
+
 });

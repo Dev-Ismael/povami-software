@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('first_name' , 55)->nullable();
             $table->string('last_name' , 55)->nullable();
             $table->string('email' , 55)->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('address' , 255 )->nullable();
             $table->string('phone' , 55 )->nullable();
@@ -29,9 +28,10 @@ class CreateUsersTable extends Migration
             $table->string('instagram' , 255 )->nullable();
             $table->string('country' , 55)->nullable();
             $table->string('city' , 55)->nullable();
-            $table->string('balance', 10)->nullable();
-            $table->string('coupon', 10)->nullable(); 
+            $table->string('balance', 20)->default('0');
+            $table->string('coupon', 10); 
             $table->string('role', 1 )->default('3'); // 1=> admin  ,  2=> affiliator  ,  3=> user
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

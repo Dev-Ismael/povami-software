@@ -29,6 +29,9 @@ Route::group( ['namespace' => 'Web'] ,function(){
     Route::get("/account/contract/show/{id}" , "AccountController@showContract");
     Route::get("/account/payment_method/show/{id}" , "AccountController@showPaymentMethod");
     Route::post("/account/coupon/search" , "AccountController@searchCoupon");
+    Route::post("/account/user/update" , "AccountController@updateUserInfo");
+
+
     
 });
 
