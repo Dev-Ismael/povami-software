@@ -37,10 +37,10 @@ class ContractController extends Controller
         // Check Validator
         $validator = Validator::make($request->all(), [
             'email'      =>  ['required', 'string', 'email', 'max:55'],
-            'title'      =>  ['required', 'string', 'max:50'],
+            'title'      =>  ['required', 'string', 'max:100'],
             'content'    =>  ['required', 'string', 'max:4000'],
             'price'      =>  ['required', 'numeric', 'digits_between:1,10'],
-            'deadline'   =>  ['required', 'string', 'max:50'],
+            'deadline'   =>  ['required', 'string', 'max:55'],
         ]);
         if ($validator->fails()) {
             return response() -> json([
@@ -118,10 +118,10 @@ class ContractController extends Controller
         // Check Validator
         $validator = Validator::make($request->all(), [
             'email'      =>  ['required', 'string', 'email', 'max:55'],
-            'title'      =>  ['required', 'string', 'max:50'],
+            'title'      =>  ['required', 'string', 'max:100'],
             'content'    =>  ['required', 'string', 'max:4000'],
             'price'      =>  ['required', 'numeric', 'digits_between:1,10'],
-            'deadline'   =>  ['required', 'string', 'max:50'],
+            'deadline'   =>  ['required', 'string', 'max:55'],
         ]);
         if ($validator->fails()) {
             return response() -> json([

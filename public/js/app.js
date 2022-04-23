@@ -36852,8 +36852,7 @@ $(document).ready(function () {
       contentType: false,
       cache: false,
       success: function success(response) {
-        console.log(response);
-
+        // console.log(response);
         if (response.status == 'error' && response.msg == 'get contract failed') {
           swal(response.status, response.msg, response.status).then(function (value) {
             window.location.href = "/admin/contracts";

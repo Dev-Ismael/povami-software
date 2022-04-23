@@ -16,10 +16,10 @@ class CreateContractsTable extends Migration
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');	
-            $table->string('title' , 50);
+            $table->string('title' , 100);
             $table->string('content' , 4000);
-            $table->integer('price')->length(10);
-            $table->string('deadline' , 50);
+            $table->mediumInteger('price');
+            $table->string('deadline' , 55);
             $table->string('status', 1 )->default('0');  // 0=> pending  ,  1=> accepted  ,  2=> reject
             $table->timestamps();
         });
