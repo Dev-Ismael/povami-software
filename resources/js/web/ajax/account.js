@@ -60,9 +60,12 @@ $(document).ready( function (){
 
                         }
                         if( key === 'price' ){
+                            $("#acceptContractModal .milestone-text .milestone-price").html( val/2 + "$" );  // Show price at milestone
                             val = val + "$";
                         }
                         $("#acceptContractModal .get_info." + key + " .text").html( val );
+                        // show at milestone
+
                     });
                 }
             },
@@ -148,6 +151,7 @@ $(document).ready( function (){
 
                     setTimeout(() => {
                         $("#acceptContractModal small.text-danger.coupon" ).text(response.msg);
+                        $(".modal .get_info.price .price-discounted").text('');
                         $('#acceptContractModal input[name="coupon"]').addClass("is-invalid");
                         $(".modal .get_info.price .text").removeClass("discounted");
                         $("#acceptContractModal .get-coupon-btn").removeClass("purple green").addClass("cancle").html(' <i class="fa-solid fa-xmark mr-2"></i> Not valid');
@@ -185,7 +189,13 @@ $(document).ready( function (){
 
 
 
-    
+        
+
+
+    /*=================================================================
+    ===========  Payment System  
+    ===================================================================*/
+
 
 
     /*=================================================================

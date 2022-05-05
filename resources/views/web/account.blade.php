@@ -709,7 +709,7 @@
                     <div class="modal-body">
                         <form id="create-order" enctype="multipart/form-data">
 
-                            <!----------- Title -------------->
+                            {{-- <!----------- Title -------------->
                             <div class="get_info title">
                                 <span class="heading"> <i class="fa-solid fa-address-card"></i> Contract Title :
                                 </span>
@@ -740,7 +740,7 @@
                                     </div>
                                 </section>
                             </div>
-                            <hr>
+                            <hr> --}}
 
                             <!----------- price -------------->
                             <div class="get_info price">
@@ -812,8 +812,10 @@
                                     </label>
                                 </div>
                                 <p class="milestone-text d-none">
-                                    Choose milestone you will be able to pay project price at 2 steps... 50% of price at first at you can pay the rest after we finish you 'll get half of your project ,
+                                    - Choose milestone you will be able to pay project price at 2 steps... 50% of price at first at you can pay the rest after we finish you 'll get half of your project ,
                                     milestones are individually funded and provide a way to work through a large project in smaller steps. 
+                                    <br>
+                                    - Now you should pay only <span style="color: #0db20d;" class="milestone-price"></span> at frist.
                                 </p>
                             </div>
                             <small class="form-text text-danger payment_method"> </small>

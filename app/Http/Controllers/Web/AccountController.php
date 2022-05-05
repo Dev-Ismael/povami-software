@@ -79,6 +79,7 @@ class AccountController extends Controller
 
 
         if ($validator->fails()) {
+            // Session::set('priceDiscounted', false);
             return response() -> json([
                 'status' => 'error',
                 'msg'    => 'coupon not valid',
@@ -89,6 +90,7 @@ class AccountController extends Controller
         // Get Coupon
         $user = User::where([ ["coupon" , '=' , $request->coupon ] , ["role" , "=" , "2"]  ])->get(); 
         if($user->isEmpty()){  // If get user fails
+            // Session::set('priceDiscounted', false);
             return response() -> json([
                 "status" => 'error' ,   
                 "msg" => "coupon not valid" ,
@@ -99,6 +101,7 @@ class AccountController extends Controller
             'status' => 'success',
             'user' => $user,
         ]);
+        // Session::set('priceDiscounted', true);
 
 
     }
