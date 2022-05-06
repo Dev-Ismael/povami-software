@@ -39,18 +39,15 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="{{ route('home') }}"> <i class="fa-solid fa-house-chimney"></i>  Home  </a>
+                                <a class="nav-item nav-link" href="{{ route('affiliate.overview') }}"> <i class="fa-solid fa-diagram-project"></i>  Overview  </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-circle-question"></i> About Us  </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-item nav-link" href="{{ route('works') }}"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
+                                <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-percent"></i> Commission  </a>
                             </li>
 
                             @guest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
+                                    <a class="nav-link" href="{{ route('affiliate.login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
                                 </li>
                             @else
                                 <li class="nav-item dropdown">

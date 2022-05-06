@@ -22,7 +22,6 @@ Route::group( ['namespace' => 'Web'] ,function(){
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/about', 'AboutController@index')->name('about');
     Route::get('/works', 'WorkController@index')->name('works');
-    Route::get('/affiliate', 'AffiliateController@index')->name('affiliate');
 
     // Account Page
     Route::get('/account', 'AccountController@index')->name('account');
@@ -31,16 +30,28 @@ Route::group( ['namespace' => 'Web'] ,function(){
     Route::post("/account/coupon/search" , "AccountController@searchCoupon");
     Route::post("/account/user/update" , "AccountController@updateUserInfo");
 
-
-    
 });
+
+
+
+
+// Affiliate
+Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'affiliate.'] ,function(){
+
+    Route::get('/', 'AffiliateController@index')->name('overview');
+    Route::get('/commission', 'CommissionController@index')->name('commission');
+    Route::get('/login', 'AuthController@login')->name('login');
+    Route::post('/login', 'AuthController@login')->name('login');
+
+});
+
 
 // Admin
 Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin'] ,function(){
-        
+
     // Dashboard Page
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    
+
     // Users Page
     Route::get("/users" , "UserController@index")->name('users.index');
     Route::post("/users" , "UserController@store")->name('users.store');
@@ -93,5 +104,5 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/orders/delete/{id}" , "OrderController@destroy")->name('orders.delete');
 
 
-    
+
 });

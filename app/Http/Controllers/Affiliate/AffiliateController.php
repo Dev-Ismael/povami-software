@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace App\Http\Controllers\Affiliate;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,7 +14,7 @@ class AffiliateController extends Controller
      */
     public function index()
     {
-        return view("web/affiliate");
+        return view("affiliate/affiliate");
     }
 
     /**
