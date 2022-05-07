@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('country' , 55)->nullable();
             $table->string('city' , 55)->nullable();
             $table->string('balance', 20)->default('0');
-            $table->string('coupon', 10); 
+            $table->string('coupon', 10)->nullable();
             $table->string('role', 1 )->default('3'); // 1=> admin  ,  2=> affiliator  ,  3=> user
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
