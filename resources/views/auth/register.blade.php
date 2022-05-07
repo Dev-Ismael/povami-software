@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div id="register">
+<div id="auth">
 
 
     <!----- Header ----->

@@ -26,6 +26,8 @@ body {
         right: -10px;
     }
     #app.web-view{
+        min-height: 100vh;
+        position: relative;
         // Scroll Bar
         .content-padding {
             padding: 60px 0px;
@@ -82,8 +84,9 @@ body {
         @import "components/radios";
         /*========= layout =========*/
         // Register
-        @import "layout/register/header";
-        @import "layout/register/register";
+        @import "layout/auth/header";
+        @import "layout/auth/register";
+        @import "layout/auth/verify_email";
         // Home
         @import "layout/home/header";
         @import "layout/home/clients";

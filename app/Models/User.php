@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name' , 'first_name' , 'last_name' , 'email' , 'password' , 'address', 'phone', 'phone2' , 'facebook' , 'twitter' , 'instagram' , 'country' , 'city' , 'balance' , 'coupon' , 'role' ,  'email_verified_at' , 'remember_token' 
+        'name' , 'first_name' , 'last_name' , 'email' , 'password' , 'address', 'phone', 'phone2' , 'facebook' , 'twitter' , 'instagram' , 'country' , 'city' , 'balance' , 'coupon' , 'role' ,  'email_verified_at' , 'remember_token'
     ];
 
     /**
@@ -38,12 +38,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    
+
     ############################## Relations ################################
     public function contracts(){
-        return  $this -> hasMany("App\Models\Contract") ;  
+        return  $this -> hasMany("App\Models\Contract") ;
     }
     public function orders(){
-        return  $this -> hasMany("App\Models\Order") ;  
+        return  $this -> hasMany("App\Models\Order") ;
     }
 }

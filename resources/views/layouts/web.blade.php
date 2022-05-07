@@ -90,7 +90,7 @@
 
 
             <!---- Add/Remove footer from register pages ---->
-            @if( preg_match('(login|register)', url()->current()) !== 1 )
+            @if( preg_match('(login|register|verify|reset)', url()->current()) !== 1 )
 
                 <!---- Footer ---->
                 <div id="footer"  class="bg-parallax">

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Auth
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 // Web
@@ -45,7 +45,7 @@ Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'af
     Route::post('/register', 'AuthController@register')->name('register');
 
     Route::get('/', 'AffiliateController@index')->name('overview');
-    Route::get('/commission', 'CommissionController@index')->name('commission');
+    // Route::get('/commission', 'CommissionController@index')->name('commission');
 
 });
 

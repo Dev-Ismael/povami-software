@@ -15,7 +15,7 @@ class AccountController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
 
     public function index()
@@ -34,10 +34,10 @@ class AccountController extends Controller
 
     public function showContract($id)
     {
-        $contract = Contract::with("user")->find( $id );  
+        $contract = Contract::with("user")->find( $id );
         if(!$contract){  // If get contract fails
             return response() -> json([
-                "status" => 'error' ,   
+                "status" => 'error' ,
                 "msg" => "get contract failed" ,
             ]);
         }
@@ -52,11 +52,11 @@ class AccountController extends Controller
 
     public function showPaymentMethod($id)
     {
-        
-        $paymentMethod = PaymentMethod::find( $id );  
+
+        $paymentMethod = PaymentMethod::find( $id );
         if(!$paymentMethod){  // If get paymentMethods fails
             return response() -> json([
-                "status" => 'error' ,   
+                "status" => 'error' ,
                 "msg" => "get paymentMethod failed" ,
             ]);
         }
@@ -75,7 +75,7 @@ class AccountController extends Controller
         // Check Validator
         $validator = Validator::make($request->all(), [
             'coupon'     =>  ['string',  'max:10'],
-        ]); 
+        ]);
 
 
         if ($validator->fails()) {
@@ -83,16 +83,16 @@ class AccountController extends Controller
             return response() -> json([
                 'status' => 'error',
                 'msg'    => 'coupon not valid',
-            ]); 
+            ]);
         }
 
 
         // Get Coupon
-        $user = User::where([ ["coupon" , '=' , $request->coupon ] , ["role" , "=" , "2"]  ])->get(); 
+        $user = User::where([ ["coupon" , '=' , $request->coupon ] , ["role" , "=" , "2"]  ])->get();
         if($user->isEmpty()){  // If get user fails
             // Session::set('priceDiscounted', false);
             return response() -> json([
-                "status" => 'error' ,   
+                "status" => 'error' ,
                 "msg" => "coupon not valid" ,
             ]);
         }
@@ -105,7 +105,7 @@ class AccountController extends Controller
 
 
     }
-    
+
 
 
 
@@ -130,16 +130,16 @@ class AccountController extends Controller
                 'status' => 'error',
                 'msg'    => 'validation error',
                 'errors' => $validator->getMessageBag()->toArray()
-            ]); 
+            ]);
         }
 
 
         // Get User
         $user_id = Auth::id();
-        $user = User::find( $user_id );  
+        $user = User::find( $user_id );
         if(!$user){  // If get user fails
             return response() -> json([
-                "status" => 'error' ,   
+                "status" => 'error' ,
                 "msg" => "get user failed" ,
             ]);
         }
@@ -149,7 +149,7 @@ class AccountController extends Controller
         $update = $user-> update( $request->all() );
         if(!$update){  // If update user fails
             return response() -> json([
-                "status" => 'error' ,   
+                "status" => 'error' ,
                 "msg" => "update operation failed" ,
             ]);
         }
@@ -162,5 +162,5 @@ class AccountController extends Controller
 
     }
 
-    
+
 }
