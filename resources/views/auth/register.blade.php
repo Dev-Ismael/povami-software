@@ -7,15 +7,15 @@
 
 
     <!----- Header ----->
-    <div id="header" class="bg-parallax"></div> 
+    <div id="header" class="bg-parallax"></div>
 
 
     <div id="form">
         <div class="form-inner">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
-                
-                <p class="title"> Login To Dashboard </p>
+
+                <p class="title"> Login To Account </p>
                 <div class="content-title-underline center"></div>
 
 
@@ -57,7 +57,7 @@
             </form>
         </div>
     </div>
-    
+
 </div>
 
 @endsection

@@ -110,11 +110,9 @@
                         <div class="col-md-8">
                             <h2> Recommend Services. Earn Commissions. </h2>
                             @guest
-                                <a href="#" class="btn purple">Join Now!</a>
-
+                                <a href="{{ route("affiliate.login") }}" class="btn purple">Join Now!</a>
                             @else
-                                <a href="#" class="btn purple">Join Now!</a>
-
+                                <a href="#" class="btn purple">Dashboard</a>
                             @endguest
                         </div>
                     </div>

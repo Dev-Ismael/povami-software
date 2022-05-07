@@ -13,9 +13,25 @@ class AuthController extends Controller
      * @return \Illuminate\Http\Response
     */
 
-    public function login()
+    public function showLoginForm()
     {
         return view("affiliate/login");
+    }
+
+    public function login()
+    {
+
+    }
+
+    public function showRegisterForm()
+    {
+        return view("affiliate/register");
+
+    }
+
+    public function register()
+    {
+        
     }
 
 

@@ -38,10 +38,14 @@ Route::group( ['namespace' => 'Web'] ,function(){
 // Affiliate
 Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'affiliate.'] ,function(){
 
+    // Auth
+    Route::get('/login', 'AuthController@showLoginForm')->name('login');
+    Route::post('/login', 'AuthController@login')->name('login');
+    Route::get('/register', 'AuthController@showRegisterForm')->name('register');
+    Route::post('/register', 'AuthController@register')->name('register');
+
     Route::get('/', 'AffiliateController@index')->name('overview');
     Route::get('/commission', 'CommissionController@index')->name('commission');
-    Route::get('/login', 'AuthController@login')->name('login');
-    Route::post('/login', 'AuthController@login')->name('login');
 
 });
 
@@ -51,6 +55,7 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
 
     // Dashboard Page
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 
     // Users Page
     Route::get("/users" , "UserController@index")->name('users.index');
@@ -68,7 +73,6 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/affiliators/update/{id}" , "AffiliateController@update")->name('affiliators.update');
     Route::post("/affiliators/delete/{id}" , "AffiliateController@destroy")->name('affiliators.delete');
     Route::post("/affiliators/search" , "AffiliateController@search")->name('affiliators.search');
-
 
 
     // payment_methods Page
@@ -95,14 +99,11 @@ Route::group( ['prefix'=>'admin' , 'namespace'=> 'Admin' , 'middleware'=> 'admin
     Route::post("/contracts/delete/{id}" , "ContractController@destroy")->name('contracts.delete');
 
 
-
     // Orders Page
     Route::get("/orders" , "OrderController@index")->name('orders.index');
     Route::post("/orders" , "OrderController@store")->name('orders.store');
     Route::get("/orders/show/{id}" , "OrderController@show")->name('orders.show');
     Route::post("/orders/update/{id}" , "OrderController@update")->name('orders.update');
     Route::post("/orders/delete/{id}" , "OrderController@destroy")->name('orders.delete');
-
-
 
 });

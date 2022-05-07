@@ -1,9 +1,10 @@
-@extends('layouts.web')
+@extends('layouts.affiliate')
 
 @section('content')
 
 
-<div id="register">
+<div id="affiliate-register">
+
 
     <!----- Header ----->
     <div id="header" class="bg-parallax"></div>
@@ -11,12 +12,21 @@
 
     <div id="form">
         <div class="form-inner">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <p class="title"> Login To Account </p>
+                <p class="title"> Login To Dashboard </p>
                 <div class="content-title-underline center"></div>
 
+
+                <label for="name"> <i class="fas fa-user"></i> Username</label>
+                <input type="text" name="name" class="form-control"  @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="Type Username..">
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                <br>
 
                 <label for="email"> <i class="fas fa-envelope-open-text"></i> Email</label>
                 <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Type Email..">
@@ -28,7 +38,6 @@
                 <br>
 
 
-
                 <label for="password"> <i class="fas fa-lock"></i> Password</label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Type Password..">
                 @error('password')
@@ -38,22 +47,16 @@
                 @enderror
                 <br>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
+                <label for="password-confirm"> <i class="fas fa-lock"></i> Confirm Password </label>
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password.." required autocomplete="new-password">
                 <br>
 
-                <a href="{{route('register')}}" class="form-question">Don't Have an account yet ?!</a>
-                <button type="submit" class="btn purple"> <i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                <a href="{{route('affiliate.login')}}" class="form-question">Already have an account?!</a>
+                <button type="submit" class="btn purple"> <i class="fa-solid fa-right-to-bracket"></i> SignUp</button>
 
             </form>
         </div>
     </div>
-
 
 </div>
 

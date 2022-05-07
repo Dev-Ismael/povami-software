@@ -99,12 +99,17 @@ body {
         // Works
         @import "layout/works/header";
         @import "layout/works/works_examples";
-        // Affiliate
-        @import "layout/affiliate/header";
-        @import "layout/affiliate/how_it_works";
-        @import "layout/affiliate/recommend";
         // Account
         @import "layout/account/header";
         @import "layout/account/presonal_info";
+        /*====== Affiliate =====*/
+        // Overview
+        @import "layout/affiliate/overview/header";
+        @import "layout/affiliate/overview/how_it_works";
+        @import "layout/affiliate/overview/recommend";
+        // Register
+        @import "layout/affiliate/register/header";
+        @import "layout/affiliate/register/register";
+
     }
 }
