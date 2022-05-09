@@ -50,34 +50,17 @@
 
                             @guest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
+                                    <a class="nav-item nav-link" href="{{ route('login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
                                 </li>
                             @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Str::ucfirst(Auth::user()->name) }}
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        @if( Auth::user()->role === '1' )
-                                                <a class="dropdown-item" href="{{ route('dashboard') }}"  >
-                                                    <i class="fa-solid fa-gauge"></i> Dashboard
-                                                </a>
-                                        @endif
-                                        <a class="dropdown-item" href="{{ route('account') }}" >
-                                            <i class="fa fa-user-circle-o mr-2"></i> Account
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            <i class="fa-solid fa-door-open pr-2"></i>  Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-item nav-link" href="{{ route('account') }}"> <i class="fa-solid fa-user"></i> Profile </a>
                                 </li>
+                                @if( Auth::user()->role === '1' )
+                                    <li class="nav-item">
+                                        <a class="nav-item nav-link" href="{{ route('dashboard') }}"  > <i class="fa-solid fa-gauge"></i> Dashboard </a>
+                                    </li>
+                                @endif
                             @endguest
                         </div>
                     </div>

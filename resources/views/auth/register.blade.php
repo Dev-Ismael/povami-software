@@ -28,7 +28,7 @@
                 @enderror
                 <br>
 
-                <label for="email"> <i class="fas fa-envelope-open-text"></i> Email</label>
+                <label for="email"> <i class="fas fa-envelope-open-text"></i> Email Address </label>
                 <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Type Email..">
                 @error('email')
                     <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
 
                 <button type="submit" class="btn purple"> <i class="fa-solid fa-right-to-bracket"></i> SignUp</button>
 
-                <p class="mt-2 text-center"> Have an account ?<a href="{{route('login')}}" class="form-question "> Login Now !</a>   </p>
+                <p class="mt-2 text-center"> Have an account ?<a href="{{route('login')}}" class="form-question "> Login Now!</a>   </p>
 
 
             </form>

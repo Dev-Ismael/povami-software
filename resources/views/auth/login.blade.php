@@ -18,7 +18,7 @@
                 <div class="content-title-underline center"></div>
 
 
-                <label for="email"> <i class="fas fa-envelope-open-text"></i> Email</label>
+                <label for="email"> <i class="fas fa-envelope-open-text"></i> Email Address </label>
                 <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Type Email..">
                 @error('email')
                     <span class="invalid-feedback" role="alert">

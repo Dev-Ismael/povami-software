@@ -39,10 +39,15 @@ Route::group( ['namespace' => 'Web'] ,function(){
 Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'affiliate.'] ,function(){
 
     // Auth
-    Route::get('/login', 'AuthController@showLoginForm')->name('login');
-    Route::post('/login', 'AuthController@login')->name('login');
-    Route::get('/register', 'AuthController@showRegisterForm')->name('register');
-    Route::post('/register', 'AuthController@register')->name('register');
+    Auth::routes(['verify' => true]);
+
+
+    //    // Auth
+    //    Route::get('/login', 'AuthController@showLoginForm')->name('login');
+    //    Route::post('/login', 'AuthController@login')->name('login');
+    //    Route::get('/register', 'AuthController@showRegisterForm')->name('register');
+    //    Route::post('/register', 'AuthController@register')->name('register');
+
 
     Route::get('/', 'AffiliateController@index')->name('overview');
     // Route::get('/commission', 'CommissionController@index')->name('commission');
