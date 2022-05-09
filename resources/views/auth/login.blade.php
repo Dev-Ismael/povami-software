@@ -38,17 +38,23 @@
                 @enderror
                 <br>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
+                            <label class="form-check-label" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a href="{{route('password.request')}}" class="form-question">Forget Your Password ?</a>
+                    </div>
                 </div>
-                <br>
 
-                <a href="{{route('register')}}" class="form-question">Don't Have an account yet ?!</a>
-                <button type="submit" class="btn purple"> <i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                <button type="submit" class="btn purple mt-2"> <i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                <p class="mt-2 text-center">Not a member ? <a href="{{route('register')}}" class="form-question display-inline">SignUp Now!</a> </p>
 
             </form>
         </div>

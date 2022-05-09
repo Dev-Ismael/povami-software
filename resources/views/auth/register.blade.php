@@ -51,8 +51,10 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password.." required autocomplete="new-password">
                 <br>
 
-                <a href="{{route('login')}}" class="form-question">Already have an account?!</a>
                 <button type="submit" class="btn purple"> <i class="fa-solid fa-right-to-bracket"></i> SignUp</button>
+
+                <p class="mt-2 text-center"> Have an account ?<a href="{{route('login')}}" class="form-question "> Login Now !</a>   </p>
+
 
             </form>
         </div>

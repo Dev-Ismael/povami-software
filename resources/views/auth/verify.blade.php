@@ -12,8 +12,8 @@
                 <div class="col-md-8 offset-md-2">
                     <div id="content-box">
 
-                        <h4 class="text-center"> <i class="fa-solid fa-clipboard-check"></i>Verify Your Email Address</h4>
-                        <div class="content-title-underline center mb-3"></div>
+                            <h4 class="text-center"> <i class="fa-solid fa-clipboard-check"></i>Verify Your Email Address</h4>
+                            <div class="content-title-underline center mb-3"></div>
 
                         @if (session('resent'))
                             <div class="alert alert-success" role="alert">
