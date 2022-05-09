@@ -29,7 +29,7 @@
 
 
 
-                <label for="password"> <i class="fas fa-lock"></i> Password</label>
+                <label for="password"> <i class="fas fa-lock"></i> Password </label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Type Password..">
                 @error('password')
                     <span class="invalid-feedback" role="alert">

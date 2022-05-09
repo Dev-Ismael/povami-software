@@ -11618,7 +11618,7 @@ body #app.web-view #auth #content-box {
   background-color: #fff;
   max-width: 650px;
 }
-body #app.web-view #auth #content-box h4 i {
+body #app.web-view #auth #content-box h4 i, body #app.web-view #auth #content-box label i {
   padding-right: 5px;
   color: #29004f;
 }
