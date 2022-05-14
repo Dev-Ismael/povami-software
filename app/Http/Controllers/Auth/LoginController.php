@@ -21,13 +21,6 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /*======================================================
-    ================ Customize Blade View
-    =======================================================*/
-    public function showLoginForm()
-    {
-        return view('affiliate.auth.login');
-    }
 
     /**
      * Where to redirect users after login.

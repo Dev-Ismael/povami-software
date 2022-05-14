@@ -11,7 +11,7 @@ sass --watch app.scss:../../public/css/app.css
 
 
 
-web development  
+web development
 ------------------
 => works page
 => Affiliate markting page
@@ -34,17 +34,43 @@ LogOut
 
 
 
-Admin layout 
+Admin layout
 ---------------
 dashboard -> users , orders , contracts , users Affiliate , all money recived  , pendding payment
-comments -> user ,  email , comment ,   
+comments -> user ,  email , comment ,
 
 
 
 Orders    -> user , project_name , content , price , deadline , progress bar , download project , [ payment_system => by project | milstons  ], Payment method , payment status , Coupon , price
-contracts -> user , project_name , content , price , deadline 
+contracts -> user , project_name , content , price , deadline
 
+affiliators -> {
+    - name
+    - first_name
+    - last_name
+    - email
+    - password
+    - address
+    - phone
+    - phone2
+    - facebook
+    - twitter
+    - instagram
+    - country
+    - city
+    - balance
+    - coupon
+    - role
+    - review        { 0 => pendding , 1 => accepted , 2 => reject   }
+    - info_inserted     {1,0}
+    - youtube_channel   {json}
+    - facebook_page     {json}
+    - has_blog          {json}
+    - government_issued_id
+    - address_prof
+    - advertising_direction   {  USA & Europe => 1 , Arab & Middel East & Others => 0   }
 
+}
 
 Contract at user view => {
     - check box => (agree policy).
@@ -59,7 +85,7 @@ Contract at user view => {
 
 
 
-$table->unsignedBigInteger('user_id');	
+$table->unsignedBigInteger('user_id');
 $table->string('title' , 50);
 $table->string('content' , 4000);
 $table->integer('price')->length(10);
@@ -67,7 +93,7 @@ $table->string('deadline' , 50);
 $table->integer('progress_bar')->length(2);
 $table->string('project' , 200);
 $table->string('payment_system' , 200);
-$table->unsignedBigInteger('payment_method_id');	
+$table->unsignedBigInteger('payment_method_id');
 $table->integer('payment_status')->length(2);
-$table->string('coupon', 55); 
+$table->string('coupon', 55);
 $table->integer('price_discounted')->length(10);
