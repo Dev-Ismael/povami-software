@@ -36,7 +36,10 @@
             </form>
 
         @endif
-
+        <br>
+        @auth('affiliator', 'web')
+            Hello guest
+        @endguest
 
 
         <!---------- How It Works ----------->
