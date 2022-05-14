@@ -42,15 +42,11 @@ Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'af
     Auth::routes(['verify' => true]);
 
 
-    //    // Auth
-    //    Route::get('/login', 'AuthController@showLoginForm')->name('login');
-    //    Route::post('/login', 'CustomLoginController@login')->name('login');
-    //    Route::get('/register', 'AuthController@showRegisterForm')->name('register');
-    //    Route::post('/register', 'AuthController@register')->name('register');
 
 
     Route::get('/', 'AffiliateController@index')->name('overview');
     // Route::get('/commission', 'CommissionController@index')->name('commission');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 });
 

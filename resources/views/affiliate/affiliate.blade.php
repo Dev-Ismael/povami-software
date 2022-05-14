@@ -23,28 +23,6 @@
             </div>
         </div>
 
-        @if (Auth::guard('affiliator')->check())
-            Hello affiliator
-            <br>
-
-            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> logout </a>
-            <form id="logout-form" action="{{ route('affiliate.logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-
-        @endif
-        <br>
-        @if (Auth::guard('web')->check())
-            Hello User
-            <br>
-
-            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> logout </a>
-            <form id="logout-form" action="{{ route('affiliate.logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-
-        @endif
-
 
         <!---------- How It Works ----------->
         <div id="how-it-works" class="content-padding">
