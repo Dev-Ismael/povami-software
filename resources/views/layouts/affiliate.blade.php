@@ -45,18 +45,13 @@
                                 <a class="nav-item nav-link" href="{{ route('about') }}"> <i class="fa-solid fa-percent"></i> Commission  </a>
                             </li>
 
-                            @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('affiliate.login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
-                                </li>
-                            @else
+                            @if (Auth::guard('affiliator')->check())
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Str::ucfirst(Auth::user()->name) }}
+                                        {{ Str::ucfirst(Auth::guard('affiliator')->user()->name) }}
                                     </a>
-
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        @if( Auth::user()->role === '1' )
+                                        @if( Auth::guard('affiliator')->user()->role === '1' )
                                                 <a class="dropdown-item" href="{{ route('dashboard') }}"  >
                                                     <i class="fa-solid fa-gauge"></i> Dashboard
                                                 </a>
@@ -75,7 +70,11 @@
                                         </form>
                                     </div>
                                 </li>
-                            @endguest
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('affiliate.login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
+                                </li>
+                            @endif
                         </div>
                     </div>
                 </div>

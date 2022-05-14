@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'affiliator' => [  // guard name auth:affiliator
+            'driver' => 'session',
+            'provider' => 'affiliators',  // take username , pass and search in admins DB
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -70,7 +75,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+        'affiliators' => [  // in DB table admins
+            'driver' => 'eloquent',
+            'model' => App\Models\Affiliator::class, // in Admin Model
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

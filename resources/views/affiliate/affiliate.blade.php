@@ -5,8 +5,6 @@
     <div id="affiliate-page">
 
 
-
-
         <!----- Header ----->
         <div id="header" class="bg-parallax">
             <div class="overlay"></div>
@@ -24,6 +22,21 @@
                 </div>
             </div>
         </div>
+
+        @if (Auth::guard('affiliator')->check())
+            Affiliator Here
+            <br>
+            {{ Auth::guard('affiliator')->user()->name }}
+
+
+
+            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> logout </a>
+            <form id="logout-form" action="{{ route('affiliate.logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+
+        @endif
+
 
 
         <!---------- How It Works ----------->

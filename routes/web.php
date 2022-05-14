@@ -44,7 +44,7 @@ Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'af
 
     //    // Auth
     //    Route::get('/login', 'AuthController@showLoginForm')->name('login');
-    //    Route::post('/login', 'AuthController@login')->name('login');
+    //    Route::post('/login', 'CustomLoginController@login')->name('login');
     //    Route::get('/register', 'AuthController@showRegisterForm')->name('register');
     //    Route::post('/register', 'AuthController@register')->name('register');
 

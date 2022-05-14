@@ -16,6 +16,10 @@ class Affiliator extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
+
+    protected $guard = 'affiliator';
+
+
     protected $fillable = [
         'name' , 'first_name' , 'last_name' , 'email' , 'password' , 'address', 'phone', 'phone2' , 'facebook' , 'twitter' , 'instagram' , 'country' , 'city' , 'balance' , 'coupon' , 'email_verified_at' , 'remember_token'
     ];
