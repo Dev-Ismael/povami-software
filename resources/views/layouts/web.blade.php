@@ -61,11 +61,11 @@
                                 </li>
                             @endif
 
-                            {{-- @if( Auth::user()->role === '1' )
+                            @if( Auth::user()->role === '1' )
                                 <li class="nav-item">
                                     <a class="nav-item nav-link" href="{{ route('dashboard') }}"  > <i class="fa-solid fa-gauge"></i> Dashboard </a>
                                 </li>
-                            @endif --}}
+                            @endif
 
                         </div>
                     </div>

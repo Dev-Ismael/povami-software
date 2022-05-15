@@ -83,8 +83,6 @@ Contract at user view => {
 
 
 
-
-
 $table->unsignedBigInteger('user_id');
 $table->string('title' , 50);
 $table->string('content' , 4000);
@@ -97,3 +95,18 @@ $table->unsignedBigInteger('payment_method_id');
 $table->integer('payment_status')->length(2);
 $table->string('coupon', 55);
 $table->integer('price_discounted')->length(10);
+
+
+
+
+
+
+
+
+Affiliator Dashboard => {
+
+    
+
+}
+
+
