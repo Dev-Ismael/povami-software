@@ -113,6 +113,10 @@ body {
         // Register
         @import "layout/affiliate/register/header";
         @import "layout/affiliate/register/register";
+        // dashboard
+        @import "layout/affiliate/dashboard/header";
+        @import "layout/affiliate/dashboard/presonal_info";
+        @import "layout/affiliate/dashboard/statistics";
 
     }
 }

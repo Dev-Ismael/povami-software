@@ -1,0 +1,21 @@
+/*=================================================================
+===========  Account Header
+===================================================================*/
+#dashboard-page {
+
+    h5  i, h4 i {
+        color: #29004f;
+    }
+
+    .table-hover tbody tr:hover{
+        background-color: #29004f09 !important;
+    }
+    .table-hover{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
+    }
+    table thead{
+        background-color: #29004f1a;
+    }
+}
