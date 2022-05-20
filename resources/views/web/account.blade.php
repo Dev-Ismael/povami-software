@@ -37,32 +37,32 @@
 
                     <!----------- Tabs nav ---------->
                     <div class="col-md-3">
-                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                        <div class="nav flex-column nav-pills nacustom" id="tab" role="tablist"
                             aria-orientation="vertical">
 
 
-                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-orders-tab" data-toggle="pill"
-                                href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false">
+                            <a class="nav-link mb-3 p-3 shadow active" id="orders-tab" data-toggle="pill"
+                                href="#orders" role="tab" aria-controls="orders" aria-selected="false">
                                 <i class="fa-solid fa-bars-staggered pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">orders</span>
                             </a>
 
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-contracts-tab" data-toggle="pill"
-                                href="#v-pills-contracts" role="tab" aria-controls="v-pills-contracts"
+                            <a class="nav-link mb-3 p-3 shadow" id="contracts-tab" data-toggle="pill"
+                                href="#contracts" role="tab" aria-controls="contracts"
                                 aria-selected="false">
                                 <i class="fa-solid fa-file-signature pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">contracts</span>
                             </a>
 
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-credits-tab" data-toggle="pill"
-                                href="#v-pills-credits" role="tab" aria-controls="v-pills-credits" aria-selected="false">
+                            <a class="nav-link mb-3 p-3 shadow" id="credits-tab" data-toggle="pill"
+                                href="#credits" role="tab" aria-controls="credits" aria-selected="false">
                                 <i class="fa-solid fa-money-check-dollar pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">Povami Credits</span>
                             </a>
 
 
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-presonal-info-tab" data-toggle="pill"
-                                href="#v-pills-presonal-info" role="tab" aria-controls="v-pills-presonal-info"
+                            <a class="nav-link mb-3 p-3 shadow" id="presonal-info-tab" data-toggle="pill"
+                                href="#presonal-info" role="tab" aria-controls="presonal-info"
                                 aria-selected="true">
                                 <i class="fa fa-user-circle-o mr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">Personal information</span>
@@ -87,7 +87,7 @@
 
                     <!-- Tabs Content -->
                     <div class="col-md-9">
-                        <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-content" id="tabContent">
 
 
 
@@ -100,8 +100,8 @@
 
 
                             <!----------- Orders Section------------->
-                            <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-orders"
-                                role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                            <div class="tab-pane fade shadow rounded bg-white show active" id="orders"
+                                role="tabpanel" aria-labelledby="orders-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa-solid fa-bars-staggered pr-1"></i>
                                     Orders
@@ -202,8 +202,8 @@
 
 
                             <!--------------- Contracts Section ---------------->
-                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-contracts" role="tabpanel"
-                                aria-labelledby="v-pills-contracts-tab">
+                            <div class="tab-pane fade shadow rounded bg-white" id="contracts" role="tabpanel"
+                                aria-labelledby="contracts-tab">
                                 @if ($contracts->isEmpty())
                                     <div class="no_data">
                                         <div class="container text-center">
@@ -252,14 +252,14 @@
                                                             </div>
                                                             <div class="deadline">
                                                                 @php
-                                                                    
+
                                                                     $date = str_replace('/', '-', $contract->deadline); // Replace "/"  ==> '-'
                                                                     $date = strtotime($date); // Convert string to time
                                                                     $weekday = date('l', $date);
                                                                     $day = date('jS', $date);
                                                                     $month = date('F', $date);
                                                                     $year = date('Y', $date);
-                                                                    
+
                                                                 @endphp
                                                                 <section class="custom-calnder ftco-section">
                                                                     <h6 class="text-center">
@@ -313,8 +313,8 @@
 
 
                             <!--------------- Povami Credits Section ---------------->
-                            <div class="tab-pane fade shadow rounded bg-white" id="v-pills-credits" role="tabpanel"
-                                aria-labelledby="v-pills-credits-tab">
+                            <div class="tab-pane fade shadow rounded bg-white" id="credits" role="tabpanel"
+                                aria-labelledby="credits-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa-solid fa-money-check-dollar pr-1"></i>
                                     Povami Credits
@@ -334,8 +334,8 @@
 
 
                             <!----------- Personal information Section ------------->
-                            <div class="tab-pane fade shadow rounded bg-white presonal-info" id="v-pills-presonal-info"
-                                role="tabpanel" aria-labelledby="v-pills-presonal-info-tab">
+                            <div class="tab-pane fade shadow rounded bg-white presonal-info" id="presonal-info"
+                                role="tabpanel" aria-labelledby="presonal-info-tab">
                                 <h4 class="font-italic mb-4">
                                     <i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i>
                                     Personal information
@@ -745,7 +745,7 @@
                             <!----------- price -------------->
                             <div class="get_info price">
                                 <span class="heading"> <i class="fa-solid fa-sack-dollar"></i> Price : </span>
-                                <span class="text">  </span> 
+                                <span class="text">  </span>
                                 <span class="price-discounted ml-3"></span>
                                 <span class="ask-for-coupon float-right"> Have a coupon ? </span>
                             </div>
@@ -778,10 +778,10 @@
                                                     </div>
                                                     <div class="form-group row mb-3 text-center">
                                                         <div class="col-9 mb-0 px-0 pr-2"> <input type="text" id="coupon" name="coupon" placeholder="Enter coupon here..." class="form-control input-box rm-border h-100 text-left"> </div>
-                                                        <div class="col-3 px-0"> 
+                                                        <div class="col-3 px-0">
                                                             <a class="btn purple w-100 h-100 get-coupon-btn"> GET IT NOW! </a>
                                                         </div>
-                                                        <small class="form-text text-danger coupon"> </small>    
+                                                        <small class="form-text text-danger coupon"> </small>
                                                     </div>
                                                     <div class="form-group row mb-0">
                                                         <div class="col-md-12 px-3 mt-2  d-flex justify-content-center"> <a href="#" class="thanks">no thanks
@@ -813,7 +813,7 @@
                                 </div>
                                 <p class="milestone-text d-none">
                                     - Choose milestone you will be able to pay project price at 2 steps... 50% of price at first at you can pay the rest after we finish you 'll get half of your project ,
-                                    milestones are individually funded and provide a way to work through a large project in smaller steps. 
+                                    milestones are individually funded and provide a way to work through a large project in smaller steps.
                                     <br>
                                     - Now you should pay only <span style="color: #0db20d;" class="milestone-price"></span> at frist.
                                 </p>
@@ -827,7 +827,7 @@
                             <select id="myDropdown">
                                 <option value="0" selected> Choose Payment Method... </option>
                                 @foreach ($payment_methods as $payment_method)
-                                    <option value="{{ $payment_method->id }}" 
+                                    <option value="{{ $payment_method->id }}"
                                         data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}">
                                         {{ ucfirst($payment_method->name) }} </option>
                                 @endforeach

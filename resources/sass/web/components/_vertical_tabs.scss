@@ -1,8 +1,8 @@
 /*=================================================================
-===========  vertical-tabs 
+===========  vertical-tabs
 ===================================================================*/
 #vertical-tabs{
-    .nav-pills-custom .nav-link {
+    .nacustom .nav-link {
         cursor: pointer;
         color: #aaa;
         background: #fff;
@@ -39,7 +39,7 @@
     }
     /* Add indicator arrow for the active tab */
     @media (min-width: 992px) {
-        .nav-pills-custom .nav-link::before {
+        .nacustom .nav-link::before {
             content: '';
             display: block;
             border-top: 8px solid transparent;

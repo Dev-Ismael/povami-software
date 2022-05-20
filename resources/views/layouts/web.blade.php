@@ -47,26 +47,27 @@
                             <li class="nav-item">
                                 <a class="nav-item nav-link" href="{{ route('works') }}"> <i class="fa-solid fa-file-lines"></i> Our Works   </a>
                             </li>
-
-                            @if( Auth::guard('web')->check()  )
-                                <li class="nav-item">
-                                    <a class="nav-item nav-link" href="{{ route('account') }}"> <i class="fa-solid fa-user"></i> Profile </a>
-                                </li>
-                            @elseif( Auth::guard('affiliator')->check()  )
-
-
-                            @else
+                            @guest
                                 <li class="nav-item">
                                     <a class="nav-item nav-link" href="{{ route('login') }}"> <i class="fa-solid fa-right-to-bracket"></i> Login </a>
                                 </li>
-                            @endif
+                            @else
+                                @if( Auth::guard('web')->check()  )
+                                    <li class="nav-item">
+                                        <a class="nav-item nav-link" href="{{ route('account') }}"> <i class="fa-solid fa-user"></i> Profile </a>
+                                    </li>
+                                @endif
 
-                            @if( Auth::user()->role === '1' )
-                                <li class="nav-item">
-                                    <a class="nav-item nav-link" href="{{ route('dashboard') }}"  > <i class="fa-solid fa-gauge"></i> Dashboard </a>
-                                </li>
-                            @endif
+                                @if( Auth::guard('affiliator')->check()  )
 
+                                @endif
+
+                                @if( Auth::user()->role === '1' )
+                                    <li class="nav-item">
+                                        <a class="nav-item nav-link" href="{{ route('dashboard') }}"  > <i class="fa-solid fa-gauge"></i> Dashboard </a>
+                                    </li>
+                                @endif
+                            @endguest
                         </div>
                     </div>
                 </div>

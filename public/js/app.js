@@ -40329,6 +40329,25 @@ $(document).ready(function () {
       $(this).attr("selected", "selected");
     }
   });
+  /*============= Copy Text =============*/
+
+  function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(element).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+
+  $(".copybtn button").on("click", function () {
+    $(this).find('span').text('COPIED!');
+    var inputContent = $(this).parent().siblings('input').val(); // alert(inputContent);
+
+    copyToClipboard(inputContent);
+  });
+  $(".copybtn button").on("mouseout", function () {
+    $(this).find('span').text('COPY');
+  });
 });
 
 /***/ }),
@@ -40351,8 +40370,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\devis\OneDrive\Desktop\Works\povami-software\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\devis\OneDrive\Desktop\Works\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\povami-software\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

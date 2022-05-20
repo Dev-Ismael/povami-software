@@ -10,7 +10,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-10 offset-md-1">
                         <h3>
-                            Hi, {{ Str::ucfirst(Auth::user()->name) }} <br>
+                            Hi, {{ Str::ucfirst(Auth::guard('affiliator')->user()->name) }} <br>
                             @php
                                 $hour = date('H');
                                 $dayTerm = $hour > 17 ? 'Evening' : ($hour > 12 ? 'Afternoon' : 'Morning');
@@ -37,32 +37,32 @@
 
                     <!----------- Tabs nav ---------->
                     <div class="col-md-3">
-                        <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+                        <div class="nav flex-column nav-pills nacustom" id="tab" role="tablist"
                             aria-orientation="vertical">
 
 
-                            <a class="nav-link mb-3 p-3 shadow active" id="v-pills-statistics-tab" data-toggle="pill"
-                                href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="false">
+                            <a class="nav-link mb-3 p-3 shadow active" id="statistics-tab" data-toggle="pill"
+                                href="#statistics" role="tab" aria-controls="statistics"
+                                aria-selected="false">
                                 <i class="fa-solid fa-gauge pr-1"></i>
-                                <span class="font-weight-bold small text-uppercase">Dashboard</span>
+                                <span class="font-weight-bold small text-uppercase">Statistics</span>
                             </a>
 
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-contracts-tab" data-toggle="pill"
-                                href="#v-pills-contracts" role="tab" aria-controls="v-pills-contracts"
-                                aria-selected="false">
-                                <i class="fa-solid fa-file-signature pr-1"></i>
+                            <a class="nav-link mb-3 p-3 shadow" id="tools-tab" data-toggle="pill"
+                                href="#tools" role="tab" aria-controls="tools" aria-selected="false">
+                                <i class="fa-solid fa-screwdriver-wrench pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">My Tools</span>
                             </a>
 
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-credits-tab" data-toggle="pill"
-                                href="#v-pills-credits" role="tab" aria-controls="v-pills-credits" aria-selected="false">
+                            <a class="nav-link mb-3 p-3 shadow" id="credits-tab" data-toggle="pill"
+                                href="#credits" role="tab" aria-controls="credits" aria-selected="false">
                                 <i class="fa-solid fa-money-check-dollar pr-1"></i>
                                 <span class="font-weight-bold small text-uppercase">Povami Credits</span>
                             </a>
 
 
-                            <a class="nav-link mb-3 p-3 shadow" id="v-pills-presonal-info-tab" data-toggle="pill"
-                                href="#v-pills-presonal-info" role="tab" aria-controls="v-pills-presonal-info"
+                            <a class="nav-link mb-3 p-3 shadow" id="presonal-info-tab" data-toggle="pill"
+                                href="#presonal-info" role="tab" aria-controls="presonal-info"
                                 aria-selected="true">
                                 <i class="fa fa-user-circle-o mr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">Personal information</span>
@@ -70,7 +70,7 @@
 
 
                             <a class="nav-link mb-3 p-3 shadow logout" aria-selected="false" onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
+                                                                    document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-door-open pr-2"></i>
                                 <span class="font-weight-bold small text-uppercase">logout</span>
                             </a>
@@ -97,7 +97,7 @@
 
                     <!-- Tabs Content -->
                     <div class="col-md-9">
-                        <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-content" id="tabContent">
 
 
 
@@ -109,8 +109,8 @@
 
 
                             <!----------- statistics Section ------------->
-                            <div class="tab-pane fade shadow rounded bg-white show active" id="v-pills-statistics"
-                                role="tabpanel" aria-labelledby="v-pills-statistics-tab">
+                            <div class="tab-pane fade shadow rounded bg-white show active" id="statistics"
+                                role="tabpanel" aria-labelledby="statistics-tab">
                                 <h4 class="font-italic mb-3">
                                     <i class="fa-solid fa-gauge"></i>
                                     Statistics
@@ -261,6 +261,80 @@
 
 
 
+
+
+
+
+                            <!----------- statistics Section ------------->
+                            <div class="tab-pane fade shadow rounded bg-white" id="tools"
+                                role="tabpanel" aria-labelledby="tools-tab">
+                                <h4 class="font-italic mb-3">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    My Tools
+                                </h4>
+
+                                <div class="coupon-container pt-3">
+                                    <ul>
+                                        <li>
+                                            Share your coupon code with clients this will provide clients more discounts at our services ,
+                                            you’ll be more likely to convince your target audience to make a purchase.
+                                        </li>
+                                        <li>
+                                            We will know that the client is recommended for our services through you by using the discount coupon,
+                                            so be sure to provide the client with the coupon so that you get your percentage of the profits
+                                        </li>
+                                        <li>
+                                            To know more info about commission system <a href="#">Click Here</a>
+                                        </li>
+                                    </ul>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="main">
+                                                <div class="co-img">
+                                                    <img src="{{ asset("images/favicon.png") }}" alt="povami-icon"/>
+                                                </div>
+                                                <div class="vertical"></div>
+                                                <div class="content">
+                                                    <h2>POVAMI SOFTWARE</h2>
+                                                    <h1>7% <span>Coupon</span></h1>
+                                                    <p>For every complete service</p>
+                                                </div>
+                                            </div>
+                                            <div class="copy-button">
+                                                <input id="copyvalue" type="text" readonly value="GOFREE" />
+                                                <div class="copybtn">
+                                                    <button>
+                                                        <i class="fa-solid fa-copy pr-1"></i>
+                                                        <span> COPY </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="referral-container  pt-3">
+                                    <ul>
+                                        <li>
+                                            Also you can use referral link to invite other affiliators like you for signup at POVAMI affiliator system and
+                                            work in marketing and attracting clients...
+                                            This will make you have many affiliators in your network
+                                        </li>
+                                        <li>
+                                            Affiliators in your network will working to get clients and without any interference from you in the process you will get 1% for every complete service
+                                        </li>
+                                    </ul>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" value="http://povamisoftware.co/affiliate/dashboard#v-pills-toolshttp://povamisoftware.co/affiliate/dashboard#v-pills-tools" readonly/>
+                                        <div class="input-group-append copybtn">
+                                            <button class="input-group-text d-flex justify-content-center">
+                                                <i class="fa-solid fa-copy pr-1"></i>
+                                                <span> COPY </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
