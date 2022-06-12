@@ -18,7 +18,7 @@ class CreateContractsTable extends Migration
             $table->unsignedBigInteger('user_id');	
             $table->string('title' , 100);
             $table->string('content' , 4000);
-            $table->mediumInteger('price');
+            $table->float('price', 8, 2);
             $table->string('deadline' , 10);
             $table->string('status', 1 )->default('0');  // 0=> pending  ,  1=> accepted  ,  2=> reject
             $table->timestamps();

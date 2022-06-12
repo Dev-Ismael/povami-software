@@ -37,6 +37,21 @@ class ForgienKey extends Migration
             ->onDelete("cascade")       
             ->onUpdate("cascade");     
         });
+        // ################ withdrawals ###################
+        Schema::table('withdrawals', function (Blueprint $table) {
+            /* =========== affiliator_id ===============*/ 
+            $table->foreign("affiliator_id")
+            ->references('id')
+            ->on("affiliators")
+            ->onDelete("cascade")       
+            ->onUpdate("cascade");        
+            /* =========== payment_method_id ===============*/ 
+            $table->foreign("payment_method_id")
+            ->references('id')
+            ->on("payment_methods")
+            ->onDelete("cascade")       
+            ->onUpdate("cascade");        
+        });
     }
 
     /**

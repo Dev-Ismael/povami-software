@@ -37,7 +37,15 @@ $(document).ready(function () {
     $(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
 
     /*============= ddSlick Plugin =============*/
-    $('#myDropdown').ddslick({});
+    // $('#myDropdown').ddslick({});
+    $('#myDropdown').ddslick({  
+        onSelected: function(data){  
+            if(data.selectedIndex > 0) {
+                // $('#hidCflag').val(data.selectedData.value);
+                alert( data.selectedData.value );
+            }   
+        }    
+    }); 
 
     /*============= payment system radio checked =============*/
     $(".custom-radios label.option-2").click(function (e) {

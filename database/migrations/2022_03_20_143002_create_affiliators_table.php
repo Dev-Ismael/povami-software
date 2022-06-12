@@ -28,7 +28,7 @@ class CreateAffiliatorsTable extends Migration
             $table->string('instagram' , 255 )->nullable();
             $table->string('country' , 55)->nullable();
             $table->string('city' , 55)->nullable();
-            $table->string('balance', 20)->default('0');
+            $table->float('balance', 8, 2)->default('0');
             $table->string('coupon', 10)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

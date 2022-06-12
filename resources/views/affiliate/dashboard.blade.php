@@ -355,7 +355,7 @@
 
 
 
-                            <!----------- statistics Section ------------->
+                            <!----------- Withdrawals Section ------------->
                             <div class="tab-pane fade shadow rounded bg-white" id="withdrawals" role="tabpanel"
                                 aria-labelledby="withdrawals-tab">
                                 <h4 class="font-italic mb-3">
@@ -430,17 +430,32 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form id="create-order" enctype="multipart/form-data">
+                                                <form id="request-withdrawal-form" enctype="multipart/form-data">
 
+                                                    <label for="amount"> <i class="fa-solid fa-money-bill-1 pr-1"></i> Amount..</label>
+                                                    <input type="text" class="form-control" value="{{ Auth::guard('affiliator')->user()->balance }}$" disabled/>
+                                                    <small class="form-text text-danger amount"> </small>
+                                                    <br>
 
+                                                    <!----------- Payment Method -------------->
+                                                    <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
+                                                    <select id="myDropdown" name="payment_method">
+                                                        <option dd-option-value="0" selected> Choose Payment Method... </option>
+                                                        @foreach ($payment_methods as $payment_method)
+                                                            <option value="{{ $payment_method->id }}" data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}"> 
+                                                                {{ ucfirst($payment_method->name) }} 
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                    <input type="hidden" name="hidCflag" id="hidCflag" value="" />
 
-
-
+                                                    <small class="form-text text-danger payment_method"> </small>
+                                                    <hr>
 
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" id="create-contract" class="btn purple"> <i
+                                                <button type="button" id="create-request-withdrawal" class="btn purple"> <i
                                                         class="fa-solid fa-check"></i> Confirm </button>
                                                 <button type="button" class="btn cancle" data-dismiss="modal"> <i
                                                         class="fa-solid fa-xmark"></i> Close </button>

@@ -40258,6 +40258,38 @@ $(document).ready(function () {
       }
     });
   });
+  /*=================================================================
+  ===========  Create request withdrwal  
+  ===================================================================*/
+
+  $("#dashboard-page #create-request-withdrawal").on("click", function (e) {
+    e.preventDefault();
+    var RequestWithdrawalFormData = new FormData($("#dashboard-page form#request-withdrawal-form")[0]);
+    $.ajax({
+      type: "POST",
+      enctype: "multipart/form-data",
+      url: '/affiliate/withdrawal/request',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      data: RequestWithdrawalFormData,
+      processData: false,
+      contentType: false,
+      cache: false,
+      success: function success(response) {
+        if (response.status == 'error' && response.msg == 'validation error') {
+          $.each(response.errors, function (key, val) {
+            $("#createRequestModal small.text-danger." + key).text(val[0]);
+            $('#createRequestModal input[name="' + key + '"]').addClass("is-invalid");
+          });
+        } // swal(response.status, response.msg, response.status)
+
+      },
+      error: function error(response) {
+        swal("Error!", "connection failed!", 'error'); // failed to with url
+      }
+    });
+  });
 });
 
 /***/ }),
@@ -40303,8 +40335,16 @@ $(document).ready(function () {
   $(".panel-group .panel.panel-default:first-child .panel-heading").addClass("active");
   $(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
   /*============= ddSlick Plugin =============*/
+  // $('#myDropdown').ddslick({});
 
-  $('#myDropdown').ddslick({});
+  $('#myDropdown').ddslick({
+    onSelected: function onSelected(data) {
+      if (data.selectedIndex > 0) {
+        // $('#hidCflag').val(data.selectedData.value);
+        alert(data.selectedData.value);
+      }
+    }
+  });
   /*============= payment system radio checked =============*/
 
   $(".custom-radios label.option-2").click(function (e) {
@@ -40370,8 +40410,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\povami-software\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\PC\Desktop\Works\povami-software\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\PC\Desktop\Works\povami-software\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

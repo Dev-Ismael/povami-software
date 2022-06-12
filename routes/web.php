@@ -47,6 +47,7 @@ Route::group( [ 'prefix'=>'affiliate' , 'namespace' => 'Affiliate' , 'as' => 'af
     Route::get('/', 'AffiliateController@index')->name('overview');
     // Route::get('/commission', 'CommissionController@index')->name('commission');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::post('/withdrawal/request', 'DashboardController@withdrawalRequest')->name('withdrawalRequest');
 
 });
 
