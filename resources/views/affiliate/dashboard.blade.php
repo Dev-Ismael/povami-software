@@ -358,68 +358,71 @@
                             <!----------- Withdrawals Section ------------->
                             <div class="tab-pane fade shadow rounded bg-white" id="withdrawals" role="tabpanel"
                                 aria-labelledby="withdrawals-tab">
-                                <h4 class="font-italic mb-3">
-                                    <i class="fa-solid fa-money-bill-1 pr-1"></i>
-                                    Withdrawals Money
-                                </h4>
-
-                                <!---------------- withdrawals Table ------------------>
-                                <div class="affiliator-list">
-                                    <div class="table-header  mt-5 mb-2 d-flex">
-                                        <h5 class="font-italic">
-                                            <i class="fa-solid fa-list-check"></i>
-                                            Your withdrawal requests
-                                        </h5>
-                                        @if ( $affiliator->balance != 0 )
-                                            <button class="btn purple ml-auto mb-2" data-toggle="modal" data-target="#createRequestModal">
-                                                <i class="fa-solid fa-paper-plane"></i> Request
-                                            </button>
-                                        @else
-                                            <button class="btn purple ml-auto mb-2 request-no-balance">
-                                                <i class="fa-solid fa-paper-plane"></i> Request
-                                            </button>
-                                        @endif
-                                    </div>
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Amount</th>
-                                                <th scope="col">Payment Method</th>
-                                                <th scope="col">Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>20.03$</td>
-                                                <td>Paypal</td>
-                                                <td>
-                                                    <span class="badge badge-success p-2"> <i
-                                                            class="fa-solid fa-check pr-1"></i> Sent </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>12.35$</td>
-                                                <td>Payeer</td>
-                                                <td>
-                                                    <span class="badge badge-warning p-2"> <i
-                                                            class="fa-solid fa-spinner pr-1"></i> Pending </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>10$</td>
-                                                <td>Vodafone</td>
-                                                <td>
-                                                    <span class="badge badge-danger p-2"> <i
-                                                            class="fa-solid fa-x pr-1"></i> Failed</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="d-flex">
+                                    <h4 class="font-italic mb-3">
+                                        <i class="fa-solid fa-money-bill-1 pr-1"></i>
+                                        Withdrawals Money
+                                    </h4>
+                                    @if ( $affiliator->balance != 0 )
+                                        <button class="btn purple ml-auto mb-2" data-toggle="modal" data-target="#createRequestModal">
+                                            <i class="fa-solid fa-paper-plane"></i> Request
+                                        </button>
+                                    @else
+                                        <button class="btn purple ml-auto mb-2 request-no-balance">
+                                            <i class="fa-solid fa-paper-plane"></i> Request
+                                        </button>
+                                    @endif
                                 </div>
+                                <!---------------- withdrawals Table ------------------>
+                                @if ($withdrawals->isEmpty())
+                                    <div class="row">
+                                        <div class="col-md-8 offset-md-2 text-center">
+                                            <img src="{{ asset("images/no_data.png") }}" alt="no-data" class="img-fluid">
+                                            <p> You don't have withdrawal requests yet... </p>
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="affiliator-list">
+                                        <div class="table-header  mt-5 mb-2 d-flex">
+                                            <h5 class="font-italic">
+                                                <i class="fa-solid fa-list-check"></i>
+                                                Your withdrawal requests
+                                            </h5>
+    
+                                        </div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Payment Method</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ( $withdrawals as $key => $withdrawal )
+                                                    <tr>
+                                                        <th scope="row">{{ $key + 1 }}</th>
+                                                        <td>{{ $withdrawal->amount }}$</td>
+                                                        <td>{{ $withdrawal->payment_method->name }}</td>
+                                                        <td>
+                                                            @if ( $withdrawal->status == "0" )
+                                                                <span class="badge badge-danger p-2"> <i
+                                                                    class="fa-solid fa-x pr-1"></i> Failed</span>
+                                                            @elseif( $withdrawal->status == "1" )
+                                                                <span class="badge badge-warning p-2"> <i
+                                                                    class="fa-solid fa-spinner pr-1"></i> Pending </span>
+                                                            @elseif( $withdrawal->status == "2" )
+                                                                <span class="badge badge-success p-2"> <i
+                                                                class="fa-solid fa-check pr-1"></i> Sent </span>
+                                                            @endif
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                @endif
                                 <!---------------- Request withdrawals Modal ------------------>
                                 <div class="modal fade" id="createRequestModal" tabindex="-1" role="dialog"
                                     aria-labelledby="createRequestLabel" aria-hidden="true">

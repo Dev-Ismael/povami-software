@@ -49,7 +49,7 @@ $(document).ready(function () {
         swal({
             icon: 'error',
             title: 'Oops...',
-            text: "You don't balance to create withrawal request!" ,
+            text: "You don't have a balance to create withrawal request!" ,
         })
     });
 

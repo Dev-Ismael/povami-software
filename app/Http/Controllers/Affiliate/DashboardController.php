@@ -19,10 +19,19 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $payment_methods = PaymentMethod::get();
-        $affiliator_id = Auth::guard('affiliator')->user()->id ;
+        
+        $affiliator_id   = Auth::guard('affiliator')->user()->id ;
+        
+        // get affiliator data
         $affiliator      = Affiliator::where("id" , $affiliator_id )->first();
-        return view("affiliate/dashboard" , compact('payment_methods','affiliator'));
+
+        // get payment methods
+        $payment_methods = PaymentMethod::get();
+
+        // get payment methods
+        $withdrawals     = Withdrawal::where("affiliator_id" , $affiliator_id )->with('payment_method')->get();
+
+        return view("affiliate/dashboard" , compact('payment_methods','affiliator' , 'withdrawals') );
     }
 
 

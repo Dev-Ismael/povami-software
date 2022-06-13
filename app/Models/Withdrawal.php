@@ -12,4 +12,9 @@ class Withdrawal extends Model
     protected $fillable = [
         'affiliator_id', 'payment_method_id', 'amount', 'status' 
     ];
+
+    ############################## Relations ################################
+    public function payment_method(){
+        return  $this -> belongsTo("App\Models\PaymentMethod") ;  
+    }
 }
