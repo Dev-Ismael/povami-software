@@ -824,7 +824,7 @@
 
                             <!----------- Payment Method -------------->
                             <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
-                            <select id="myDropdown">
+                            <select id="ddSlick-dropdown">
                                 <option value="0" selected> Choose Payment Method... </option>
                                 @foreach ($payment_methods as $payment_method)
                                     <option value="{{ $payment_method->id }}"

@@ -37,15 +37,8 @@ $(document).ready(function () {
     $(".panel-group .panel.panel-default:first-child .panel-collapse").addClass("show");
 
     /*============= ddSlick Plugin =============*/
-    // $('#myDropdown').ddslick({});
-    $('#myDropdown').ddslick({  
-        onSelected: function(data){  
-            if(data.selectedIndex > 0) {
-                // $('#hidCflag').val(data.selectedData.value);
-                alert( data.selectedData.value );
-            }   
-        }    
-    }); 
+    $('#account-page #ddSlick-dropdown').ddslick({});
+
 
     /*============= payment system radio checked =============*/
     $(".custom-radios label.option-2").click(function (e) {
@@ -56,46 +49,5 @@ $(document).ready(function () {
     });
 
 
-    /*============= coupon =============*/
-    $("#account-page .ask-for-coupon").click(function (e) {
-        $("#account-page #acceptContractModal div.coupon").slideToggle();
-        // alert("clicked");
-    });
-
-    $("#account-page .coupon .thanks").click(function (e) {
-        $("#account-page #acceptContractModal div.coupon").slideToggle();
-    });
-
-    /*============= Selcet Option Country =============*/
-    var user_country = $("select#country").attr('user_country');
-
-    $("select#country option").each(function () {
-
-        if ($(this).val() == user_country) {
-            $(this).attr("selected", "selected");
-        }
-
-    });
-
-
-
-
-    /*============= Copy Text =============*/
-    function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val(element).select();
-        document.execCommand("copy");
-        $temp.remove();
-    }
-    $(".copybtn button").on("click", function () {
-        $(this).find('span').text('COPIED!');
-        var inputContent = $(this).parent().siblings('input').val();
-        // alert(inputContent);
-        copyToClipboard(inputContent);
-    })
-    $(".copybtn button").on("mouseout" ,function(){
-        $(this).find('span').text('COPY');
-    });
-
-});
+ 
+});   

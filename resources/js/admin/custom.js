@@ -19,14 +19,13 @@ $(document).ready( function (){
 		
 
     /*================= Remove text danger Inputs =================*/
-    $('form input , form textarea').on("click", function(){
+    $('form .form-control').on("click", function(){
 
         // get Attr name=['']
         var attr_name = $(this).attr('name');
 
         $(this).removeClass('is-invalid');
         $("form small.text-danger." + attr_name ).text('');
-
 
     });
 

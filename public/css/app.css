@@ -10111,6 +10111,22 @@ body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
   border-radius: 8px;
   right: -10px;
 }
+body .swal-button.swal-button--confirm {
+  padding: 7px 15px !important;
+  background-color: #29004f !important;
+  color: #fff !important;
+  border: 1px solid #29004f !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+  border-radius: 25px !important;
+}
+body .swal-button.swal-button--confirm:hover {
+  padding: 7px 15px !important;
+  background-color: #fff !important;
+  color: #29004f !important;
+  border: 1px solid #29004f !important;
+}
 body #app.web-view {
   min-height: 100vh;
   position: relative;
@@ -10981,31 +10997,31 @@ body #app.web-view .modal .accounts label span {
     margin: 1.75rem auto;
   }
 }
-body #app.web-view #myDropdown {
+body #app.web-view #ddSlick-dropdown {
   width: 100% !important;
   background-color: transparent !important;
 }
-body #app.web-view #myDropdown .dd-option-image,
-body #app.web-view #myDropdown .dd-selected-image {
+body #app.web-view #ddSlick-dropdown .dd-option-image,
+body #app.web-view #ddSlick-dropdown .dd-selected-image {
   float: none;
 }
-body #app.web-view #myDropdown .dd-options {
+body #app.web-view #ddSlick-dropdown .dd-options {
   width: 100% !important;
 }
-body #app.web-view #myDropdown .dd-select {
+body #app.web-view #ddSlick-dropdown .dd-select {
   width: 100% !important;
   background-color: transparent !important;
   border-radius: 5px !important;
 }
-body #app.web-view #myDropdown label.dd-option-text, body #app.web-view #myDropdown label.dd-selected-text {
+body #app.web-view #ddSlick-dropdown label.dd-option-text, body #app.web-view #ddSlick-dropdown label.dd-selected-text {
   line-height: normal !important;
   font-weight: normal !important;
   margin-bottom: 0rem !important;
 }
-body #app.web-view #myDropdown img {
+body #app.web-view #ddSlick-dropdown img {
   height: 30px !important;
 }
-body #app.web-view #myDropdown ul.dd-options li:nth-of-type(1) {
+body #app.web-view #ddSlick-dropdown ul.dd-options li:nth-of-type(1) {
   display: none;
 }
 body #app.web-view .custom-radios .wrapper {

@@ -370,9 +370,15 @@
                                             <i class="fa-solid fa-list-check"></i>
                                             Your withdrawal requests
                                         </h5>
-                                        <button class="btn purple ml-auto mb-2" data-toggle="modal" data-target="#createRequestModal">
-                                            <i class="fa-solid fa-paper-plane"></i> Request
-                                        </button>
+                                        @if ( $affiliator->balance != 0 )
+                                            <button class="btn purple ml-auto mb-2" data-toggle="modal" data-target="#createRequestModal">
+                                                <i class="fa-solid fa-paper-plane"></i> Request
+                                            </button>
+                                        @else
+                                            <button class="btn purple ml-auto mb-2 request-no-balance">
+                                                <i class="fa-solid fa-paper-plane"></i> Request
+                                            </button>
+                                        @endif
                                     </div>
                                     <table class="table table-hover">
                                         <thead>
@@ -434,22 +440,20 @@
 
                                                     <label for="amount"> <i class="fa-solid fa-money-bill-1 pr-1"></i> Amount..</label>
                                                     <input type="text" class="form-control" value="{{ Auth::guard('affiliator')->user()->balance }}$" disabled/>
-                                                    <small class="form-text text-danger amount"> </small>
                                                     <br>
 
                                                     <!----------- Payment Method -------------->
-                                                    <label for="payment_method"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
-                                                    <select id="myDropdown" name="payment_method">
-                                                        <option dd-option-value="0" selected> Choose Payment Method... </option>
+                                                    <label for="payment_method_options"> <i class="fa-solid fa-money-check"></i> Payment Method..</label>
+                                                    <select id="ddSlick-dropdown" name="payment_method_options">
+                                                        <option value="0" selected> Choose Payment Method... </option>
                                                         @foreach ($payment_methods as $payment_method)
                                                             <option value="{{ $payment_method->id }}" data-imagesrc="{{ asset('images/payment_methods/' . $payment_method->img) }}"> 
                                                                 {{ ucfirst($payment_method->name) }} 
                                                             </option>
                                                         @endforeach
                                                     </select>
-                                                    <input type="hidden" name="hidCflag" id="hidCflag" value="" />
-
-                                                    <small class="form-text text-danger payment_method"> </small>
+                                                    <input type="hidden" name="payment_method" id="payment_method" value=""/>
+                                                    <small class="form-text text-danger payment_method_options"> </small>
                                                     <hr>
 
                                                 </form>

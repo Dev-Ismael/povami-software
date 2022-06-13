@@ -13,6 +13,7 @@ require('./bootstrap');
 
 // require Sweet Alert 
 require('./sweetalert.min');
+
 // require ddslick  
 require('./ddslick.min');
 
@@ -26,6 +27,15 @@ require('./ddslick.min');
 require('./web/custom');
 // require Ajax files
 require('./web/ajax/account');
+
+
+
+/*=====================================================
+============ Affiliate Files ==========================
+=====================================================*/
+require('./affiliate/custom');
+// require Ajax files
+require('./affiliate/ajax/dashboard');
 
 
 

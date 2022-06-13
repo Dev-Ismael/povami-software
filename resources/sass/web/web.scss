@@ -25,6 +25,23 @@ body {
         border-radius: 8px;
         right: -10px;
     }
+    // Sweet alert
+    .swal-button.swal-button--confirm{
+        padding: 7px 15px !important;
+        background-color: #29004f !important;
+        color: #fff !important;
+        border: 1px solid #29004f !important;
+        font-size: 16px !important;
+        transition: all 0.3s ease-in-out !important;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 30%) !important;
+        border-radius: 25px !important;
+        &:hover{
+            padding: 7px 15px !important;
+            background-color: #fff !important;
+            color: #29004f !important;
+            border: 1px solid #29004f !important;
+        }
+    }
     #app.web-view{
         min-height: 100vh;
         position: relative;
